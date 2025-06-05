@@ -83,9 +83,9 @@ format:
       - top=1.00in
       - textheight=8.25in
       #- showframe
-    include-in-header: preamble.tex
-    include-before-body: first.tex
-    include-after-body: backcover.tex
+    #include-in-header: preamble.tex
+    #include-before-body: first.tex
+    #include-after-body: backcover.tex
     toc: true
     colorlinks: true
     fig-width: 5
