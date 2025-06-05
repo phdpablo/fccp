@@ -1,0 +1,96 @@
+project:
+  type: book
+  output-dir: docs
+execute: 
+  #echo: false
+  warning: false
+#filters: 
+  #- webr
+  #- abstract-section:
+lang: pt
+book:
+  #google-analytics: "G-JB1J9LKDKC"
+  favicon: img/psicoeconometria.png
+  title: "Finanças Corporativas de Curto Prazo"
+  #subtitle: "Jornada de Open Science na Prática"
+  author: "Pablo Rogers"
+  date: last-modified
+  date-format: long
+  #doi: 10.5281/zenodo.12593928
+  cover-image: img/cover.png
+  downloads: pdf
+  reader-mode: true
+  sidebar:
+    align: left
+    collapse-level: 1
+  page-footer:
+    left: <a href="https://www.phdpablo.com">by Pablo Rogers</a>
+    right: This course was built with ❤️ and <a href="https://quarto.org/">Quarto</a> 
+  site-url: "https://phdpablo.github.io/fccp/"
+  repo-url: "https://github.com/phdpablo/fccp/"
+  #repo-actions: [edit,issue]
+  sharing: [twitter, facebook, linkedin]
+  open-graph: true
+  
+  chapters:
+    - index.qmd
+    - 00-prework.qmd
+    - 00-schedule.qmd
+    - 01-intro.qmd
+    - 02-giro.qmd
+    - 03-caixa.qmd
+    - 04-credito.qmd
+    - 05-estoque.qmd
+    - 06-aval.qmd
+    - references.qmd
+
+bibliography: references.bib
+csl: apa7ed.csl
+
+format:
+  html:
+    title-block-style: none
+    toc: true
+    collapse: true
+    html-math-method: mathjax
+    #include-in-header: header-includes.html
+    #css: style.css
+    #code-link: true
+    theme:
+      light: flatly
+      dark: darkly
+    number-sections: true
+    link-external-newwindow: true
+    fig-width: 5
+    fig-height: 5
+    fig-align: left
+  
+  pdf:
+    documentclass: book
+    #cover-image: img/cover-book.pdf
+    papersize: A4
+    #abstract: "Working in progress"
+    author: "Pablo Rogers"
+    date: last-modified
+    date-format: "MMM, YYYY"
+    top-level-division: default
+    #code-block-bg: gray
+    geometry:
+      - paperwidth=8.27in
+      - paperheight=11.69in
+      - left=1.25in
+      - textwidth= 5.25in
+      - top=1.00in
+      - textheight=8.25in
+      #- showframe
+    include-in-header: preamble.tex
+    include-before-body: first.tex
+    include-after-body: backcover.tex
+    toc: true
+    colorlinks: true
+    fig-width: 5
+    fig-height: 5
+    fig-align: left
+    keep-tex: true
+
+editor: visual

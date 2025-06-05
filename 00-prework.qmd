@@ -1,0 +1,21 @@
+# Pré-requisitos 📇 {#sec-prework .unnumbered}
+
+Falar sobre os pre-requisitos e intercessões entre as outras disciplinas e áreas do conhecimento...
+
+::: {#tip-prompt .callout-important collapse="true"}
+## Chats de IA para seus trabalhos acadêmicos
+
+Os resumos das bibliografias, mapas mentais, ou qualquer estrutura analítica do conteúdo da disciplina, que apresento em cada uma das seções, foram elaborados com o auxílio do Gemini 2.5 Pro, seja pelo o [webapp do Google](https://gemini.google.com/), pelo [NotebookLM](https://notebooklm.google.com/) ou [Google AI Studio](https://aistudio.google.com/) da Microsoft.\vspace{0.5em}
+
+:::
+
+::: {.callout-caution collapse="true"}
+## Não confie cegamente na IA
+
+Eu simplesmente copio e colo os resultados do meu chatboot favorito para compilar notas de leituras, resumir bibliografia, ou de maneira geral, escrever textos sobre determinado assunto? **NÃO**. Após a saída do chatboot eu reviso o texto e faço ajustes, que somente são possíveis, porque li antes ou tenho bastante conhecimento do material que estou interagindo. A despeito do App de IA fazer um bom serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes esses que você não pode deixar passar num texto público para fins de ensino, e somente seriam captados a partir da leitura do material ou sendo conhecedor do assunto abordado.
+
+Comentar sobre o código de conduto para uso de IA do Ricardo...
+
+:::
+
+

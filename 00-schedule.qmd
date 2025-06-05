@@ -1,0 +1,18 @@
+# Cronograma 📅 {#sec-schedule .unnumbered .unlisted}
+
+**Em construção...**
+
+Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. De uma forma geral, as aulas presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30 durante o período 02/06/2025 a 29/09/2025.
+
+Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥\] e leituras básica sobre os conteúdos (📓).
+
+| Aula/Conteúdo |       Data        | Material Principal |
+|:--------------|:-----------------:|:------------------:|
+| @sec-intro    | 📅04/06/24⏲️19:00 |     [🗣🎥📓]()      |
+| @sec-giro     | 📅06/06/24⏲️19:00 |     [🗣🎥📓]()      |
+| @sec-caixa    | 📅11/06/24⏲️19:00 |     [🗣🎥📓]()      |
+| @sec-credito  | 📅13/06/24⏲️19:00 |     [🗣🎥📓]()      |
+| @sec-estoque  | 📅18/06/24⏲️19:00 |     [🗣🎥📓]()      |
+| @sec-aval     | 📅20/06/24⏲️19:00 |     [🗣🎥📓]()      |
+|               | 📅25/06/24⏲️19:00 |     [🗣🎥📓]()      |
+|               | 📅27/06/24⏲️19:00 |     [🗣🎥📓]()      |

@@ -1,0 +1,48 @@
+---
+bibliography: references.bib
+---
+
+# O Curso 🏢 {#sec-home .unnumbered}
+
+Página da disciplina **"Finanças Corporativas I"** do curso de [Ciência Contábeis](https://www.facic.ufu.br/) da [Universidade Federal de Uberlândia](https://ufu.br/) . Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre o **Finanças Corporativas de Curto Prazo** (artigos, notas de aulas, blogs, vídeos, etc.).
+
+## Sobre o professor {#sec-instrutor .unnumbered .unlisted}
+
+A disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers, doutor em administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em meu [site pessoal](https://phdpablo.com/) você encontra mais detalhes sobre minhas formações, competências, trajetória e projetos.
+
+## Objetivos {#sec-about .unnumbered .unlisted}
+
+O curso tem como objetivo apresentar os principais conceitos e práticas de finanças corporativas de curto prazo...
+
+## Ementa {#sec-ementa .unnumbered .unlisted}
+
+A ementa oficial da disciplina encontra-se [aqui](https://www.facic.ufu.br/system/files/conteudo/28fagen39532_financas_corporativas_i.pdf).
+
+## Metodologia {#sec-method .unnumbered .unlisted}
+
+O material do curso organizado nesse repositório refere-se ao roteiro estruturado (enrendo) de tudo que se vê nas aulas presenciais e conteúdos adicionais (bibliografia, notas de aulas, links, etc).
+
+A proposta do curso busca seguir de perto a mensagem de @dogucu2022. Nesse artigo as autoras abordam a importância da reprodutibilidade na pesquisa e ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
+
+\newpage
+
+## Citação {#sec-cite .unnumbered .unlisted}
+
+Se você utilizar o material dessa disciplina em algum trabalho acadêmico, por favor, cite o ebook da disciplina da seguinte forma:
+
+::: {.callout-important appearance="minimal" icon="false"}
+:::
+
+BibTex:
+
+``` r
+
+```
+
+## Licença {.unnumbered .unlisted}
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+
+<a property="dct:title" rel="cc:attributionURL" href="https://phdpablo.github.io/curso-open-science/">Finanças Corporativas de Curto Prazo</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/phdpablo/">Pablo Rogers</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a>
+
+</p>
