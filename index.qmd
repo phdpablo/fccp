@@ -1,43 +1,82 @@
----
-bibliography: references.bib
----
-
 # O Curso 🏢 {#sec-home .unnumbered}
 
-Página da disciplina **"Finanças Corporativas I"** do curso de [Ciência Contábeis](https://www.facic.ufu.br/) da [Universidade Federal de Uberlândia](https://ufu.br/) . Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre o **Finanças Corporativas de Curto Prazo** (artigos, notas de aulas, blogs, vídeos, etc.).
+Página da disciplina **"Finanças Corporativas I"** do curso da [Faculdade de Ciência Contábeis](https://www.facic.ufu.br/) (FACIC) da [Universidade Federal de Uberlândia](https://ufu.br/) (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre **Finanças Corporativas de Curto Prazo** (artigos, notas de aulas, blogs, vídeos, etc.).
 
 ## Sobre o professor {#sec-instrutor .unnumbered .unlisted}
 
-A disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers, doutor em administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em meu [site pessoal](https://phdpablo.com/) você encontra mais detalhes sobre minhas formações, competências, trajetória e projetos.
+A disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers 😉, doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu [site pessoal](https://phdpablo.com/) você encontrará mais detalhes sobre minhas formações, competências, trajetória e projetos.
 
 ## Objetivos {#sec-about .unnumbered .unlisted}
 
-O curso tem como objetivo apresentar os principais conceitos e práticas de finanças corporativas de curto prazo...
+O curso tem como objetivo apresentar os principais conceitos e práticas de finanças corporativas de curto prazo. A disciplina visa prover aos alunos uma visão teórica e prática da **Administração do Capital de Giro** como base fundamental para o planejamento e controle financeiro do curto prazo. Especificamente, ao final do curso pretende-se que o aluno:
 
-## Ementa {#sec-ementa .unnumbered .unlisted}
+-   Compreenda as teorias que embasam a gestão do capital de curto prazo;
 
-A ementa oficial da disciplina encontra-se [aqui](https://www.facic.ufu.br/system/files/conteudo/28fagen39532_financas_corporativas_i.pdf).
+-   Entenda a dinâmica da gestão do capital de giro;
+
+-   Conheça as estratégias e modelos da gestão do caixa;
+
+-   Compreenda a gestão de valores a receber, suas políticas e riscos envolvidos;
+
+-   Assimile os aspectos gerais da gestão de estoques e seus modelos de análise.
+
+## Programa {#sec-programa .unnumbered .unlisted}
+
+A ementa oficial da disciplina encontra-se [aqui](https://www.facic.ufu.br/system/files/conteudo/28fagen39532_financas_corporativas_i.pdf). O Plano de Ensino aprovado pela coordenação da FACIC/UFU pode ser acessado no [Moodle](https://moodle.ufu.br/login/index.php), onde materemos a comunicação e organização das avaliações. Em linhas gerais o programa do curso versará sobre os seguintes conteúdos:
+
+1.  Introdução às Finanças Corporativas de Curto Prazo (FCCP)
+
+    Relação Risco e Retorno em Finanças
+
+    Gestão de Curto Prazo x Gestão de Longo Prazo
+
+    Teorias de Finanças
+
+2.  Administração Financeira do Curto Prazo (Capital de Giro)
+
+    Conceitos de Capital de Giro
+
+    Dinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro
+
+    Investimento em Capital de Giro
+
+    Financiamento do Capital de Giro
+
+    Necessidade de Investimento em Giro (NIG)
+
+3.  Administração de Caixa
+
+    Razões da demanda de moeda e manutenção de caixa
+
+    Ciclo de caixa e controle de seu saldo
+
+    Modelos de administração de caixa
+
+4.  Administração de Valores a Receber (Recebíveis)
+
+    Avaliação do risco de crédito
+
+    Elementos de uma política geral de crédito
+
+5.  Administração de Estoques
+
+    Aspectos básicos dos estoques
+
+    Modelos de análise e controle dos estoques
 
 ## Metodologia {#sec-method .unnumbered .unlisted}
 
-O material do curso organizado nesse repositório refere-se ao roteiro estruturado (enrendo) de tudo que se vê nas aulas presenciais e conteúdos adicionais (bibliografia, notas de aulas, links, etc).
+O material do curso organizado nesse repositório refere-se ao roteiro estruturado (enredo) de parte que discutiremos nas aulas presenciais e conteúdos adicionais (bibliografia, notas de aulas, links, dicas de vídeos, etc). Na sala de aula teremos discussões conceituais e resoluções de exercícios, e por aqui, num primeiro momento, focarei em introduzir os **conceitos basilares da FCCP**.
 
 A proposta do curso busca seguir de perto a mensagem de @dogucu2022. Nesse artigo as autoras abordam a importância da reprodutibilidade na pesquisa e ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
 
-\newpage
+## Bibliografia {#sec-biblio .unnumbered .unlisted}
 
-## Citação {#sec-cite .unnumbered .unlisted}
+A literatura de finanças é vasta. No Brasil, temos vários bons manuais em língua portuguesa. Muitos livros-textos são traduções de autores americanos, ou seja, conteúdo ambientado em um mercado diferente do nosso. No entanto, existem alguns manuais de autores brasileiros, cujo conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois! 😉
 
-Se você utilizar o material dessa disciplina em algum trabalho acadêmico, por favor, cite o ebook da disciplina da seguinte forma:
+Geralmente, esses manuais percorrem diversos assuntos de finanças, entretanto, nosso foco será na **FCCP**. Os outros assuntos serão tratados em disciplinas correlatas: Matemática Financeira, Finanças Corporativas II (Longo Prazo), Governança Corporativa, Avaliação Econômica de Empresas e Mercado de Capitais. Sem falar das áreas correlatas, tais como Economia (Micro e Macroeconomia), Matemática, Estatística e Ciência da Computação. Na verdade, o conteúdo do curso de Ciências Contábeis, no meu entender, é aquele que talvez dá a melhor base para a formação de **Administrador Financeiro**, até mesmo mais que o próprio curso de Administração 🤐🤫.
 
-::: {.callout-important appearance="minimal" icon="false"}
-:::
-
-BibTex:
-
-``` r
-
-```
+Como bibliografia base para os fundamentos do curso, utilizaremos as recomendações da ementa oficial, e adotaremos as referências atualizadas das bibliografias básica e complementar: @assafneto2014, @gitman2010, @matias2007, @ross2015 e @brealey2013.
 
 ## Licença {.unnumbered .unlisted}
 

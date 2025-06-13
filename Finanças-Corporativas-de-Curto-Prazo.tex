@@ -53,46 +53,6 @@
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -151,15 +111,6 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-
-\usepackage{makeidx}
-\makeindex
-\usepackage{titling}
-\usepackage{pdfpages}
-\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
-\let\oldmaketitle\maketitle
-\AtBeginDocument{\let\maketitle\relax}
-\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}} % Discard next blank page
 
 \makeatletter
 \@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
@@ -252,20 +203,11 @@
 
 \title{Finanças Corporativas de Curto Prazo}
 \author{Pablo Rogers}
-\date{5 de junho de 2025}
+\date{13 de junho de 2025}
 
 \begin{document}
 \frontmatter
 \maketitle
-
-\begin{center}
-\includepdf[fitpaper=true,pages=-]{img/cover-book}
-\end{center}
-\let\maketitle\oldmaketitle
-\maketitle
-\AtBeginShipoutNext{\AtBeginShipoutDiscard}
-\mainmatter
-%\pagestyle{plain}
 
 \renewcommand*\contentsname{Índice}
 {
@@ -281,11 +223,11 @@
 
 \markboth{O Curso 🏢}{O Curso 🏢}
 
-Página da disciplina \textbf{``Finanças Corporativas I''} do curso de
-\href{https://www.facic.ufu.br/}{Ciência Contábeis} da
-\href{https://ufu.br/}{Universidade Federal de Uberlândia} . Aqui você
-encontrará informações sobre o programa do curso, materiais para seu
-acompanhamento e sugestões de leituras sobre o \textbf{Finanças
+Página da disciplina \textbf{``Finanças Corporativas I''} do curso da
+\href{https://www.facic.ufu.br/}{Faculdade de Ciência Contábeis} (FACIC)
+da \href{https://ufu.br/}{Universidade Federal de Uberlândia} (UFU).
+Aqui você encontrará informações sobre o programa do curso, materiais
+para seu acompanhamento e sugestões de leituras sobre \textbf{Finanças
 Corporativas de Curto Prazo} (artigos, notas de aulas, blogs, vídeos,
 etc.).
 
@@ -293,10 +235,10 @@ etc.).
 
 \markright{Sobre o professor}
 
-A disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers,
-doutor em administração pela Universidade de São Paulo (FEA/USP) e
-professor de finanças e métodos quantitativos desde 2005. Em meu
-\href{https://phdpablo.com/}{site pessoal} você encontra mais detalhes
+A disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers 😉,
+doutor em Administração pela Universidade de São Paulo (FEA/USP) e
+professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu
+\href{https://phdpablo.com/}{site pessoal} você encontrará mais detalhes
 sobre minhas formações, competências, trajetória e projetos.
 
 \section*{Objetivos}\label{sec-about}
@@ -304,22 +246,92 @@ sobre minhas formações, competências, trajetória e projetos.
 \markright{Objetivos}
 
 O curso tem como objetivo apresentar os principais conceitos e práticas
-de finanças corporativas de curto prazo\ldots{}
+de finanças corporativas de curto prazo. A disciplina visa prover aos
+alunos uma visão teórica e prática da \textbf{Administração do Capital
+de Giro} como base fundamental para o planejamento e controle financeiro
+do curto prazo. Especificamente, ao final do curso pretende-se que o
+aluno:
 
-\section*{Ementa}\label{sec-ementa}
+\begin{itemize}
+\item
+  Compreenda as teorias que embasam a gestão do capital de curto prazo;
+\item
+  Entenda a dinâmica da gestão do capital de giro;
+\item
+  Conheça as estratégias e modelos da gestão do caixa;
+\item
+  Compreenda a gestão de valores a receber, suas políticas e riscos
+  envolvidos;
+\item
+  Assimile os aspectos gerais da gestão de estoques e seus modelos de
+  análise.
+\end{itemize}
 
-\markright{Ementa}
+\section*{Programa}\label{sec-programa}
+
+\markright{Programa}
 
 A ementa oficial da disciplina encontra-se
 \href{https://www.facic.ufu.br/system/files/conteudo/28fagen39532_financas_corporativas_i.pdf}{aqui}.
+O Plano de Ensino aprovado pela coordenação da FACIC/UFU pode ser
+acessado no \href{https://moodle.ufu.br/login/index.php}{Moodle}, onde
+materemos a comunicação e organização das avaliações. Em linhas gerais o
+programa do curso versará sobre os seguintes conteúdos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Introdução às Finanças Corporativas de Curto Prazo (FCCP)
+
+  Relação Risco e Retorno em Finanças
+
+  Gestão de Curto Prazo x Gestão de Longo Prazo
+
+  Teorias de Finanças
+\item
+  Administração Financeira do Curto Prazo (Capital de Giro)
+
+  Conceitos de Capital de Giro
+
+  Dinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro
+
+  Investimento em Capital de Giro
+
+  Financiamento do Capital de Giro
+
+  Necessidade de Investimento em Giro (NIG)
+\item
+  Administração de Caixa
+
+  Razões da demanda de moeda e manutenção de caixa
+
+  Ciclo de caixa e controle de seu saldo
+
+  Modelos de administração de caixa
+\item
+  Administração de Valores a Receber (Recebíveis)
+
+  Avaliação do risco de crédito
+
+  Elementos de uma política geral de crédito
+\item
+  Administração de Estoques
+
+  Aspectos básicos dos estoques
+
+  Modelos de análise e controle dos estoques
+\end{enumerate}
 
 \section*{Metodologia}\label{sec-method}
 
 \markright{Metodologia}
 
 O material do curso organizado nesse repositório refere-se ao roteiro
-estruturado (enrendo) de tudo que se vê nas aulas presenciais e
-conteúdos adicionais (bibliografia, notas de aulas, links, etc).
+estruturado (enredo) de parte que discutiremos nas aulas presenciais e
+conteúdos adicionais (bibliografia, notas de aulas, links, dicas de
+vídeos, etc). Na sala de aula teremos discussões conceituais e
+resoluções de exercícios, e por aqui, num primeiro momento, focarei em
+introduzir os \textbf{conceitos basilares da FCCP}.
 
 A proposta do curso busca seguir de perto a mensagem de Dogucu \&
 Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância
@@ -331,26 +343,32 @@ exclusivamente nas ferramentas para o ensino (todos os materiais de
 ensino devem ser computacionalmente reprodutíveis, bem documentados e
 abertos).
 
-\newpage
+\section*{Bibliografia}\label{sec-biblio}
 
-\section*{Citação}\label{sec-cite}
+\markright{Bibliografia}
 
-\markright{Citação}
+A literatura de finanças é vasta. No Brasil, temos vários bons manuais
+em língua portuguesa. Muitos livros-textos são traduções de autores
+americanos, ou seja, conteúdo ambientado em um mercado diferente do
+nosso. No entanto, existem alguns manuais de autores brasileiros, cujo
+conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois!
+😉
 
-Se você utilizar o material dessa disciplina em algum trabalho
-acadêmico, por favor, cite o ebook da disciplina da seguinte forma:
+Geralmente, esses manuais percorrem diversos assuntos de finanças,
+entretanto, nosso foco será na \textbf{FCCP}. Os outros assuntos serão
+tratados em disciplinas correlatas: Matemática Financeira, Finanças
+Corporativas II (Longo Prazo), Governança Corporativa, Avaliação
+Econômica de Empresas e Mercado de Capitais. Sem falar das áreas
+correlatas, tais como Economia (Micro e Macroeconomia), Matemática,
+Estatística e Ciência da Computação. Na verdade, o conteúdo do curso de
+Ciências Contábeis, no meu entender, é aquele que talvez dá a melhor
+base para a formação de \textbf{Administrador Financeiro}, até mesmo
+mais que o próprio curso de Administração 🤐🤫.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, left=2mm, colback=white, opacityback=0, arc=.35mm, toprule=.15mm, breakable, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, leftrule=.75mm]
-
-\end{tcolorbox}
-
-BibTex:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-
-\end{Highlighting}
-\end{Shaded}
+Como bibliografia base para os fundamentos do curso, utilizaremos as
+recomendações da ementa oficial, e adotaremos as referências atualizadas
+das bibliografias básica e complementar: Assaf Neto (2014), Gitman
+(2010), Matias (2007), Ross et al. (2015) e Brealey et al. (2013).
 
 \section*{Licença}\label{licenuxe7a}
 
@@ -369,7 +387,7 @@ CC BY-NC-SA 4.0
 Falar sobre os pre-requisitos e intercessões entre as outras disciplinas
 e áreas do conhecimento\ldots{}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, left=2mm, bottomtitle=1mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, arc=.35mm, coltitle=black, opacityback=0, breakable, colframe=quarto-callout-important-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: Chats de IA para seus trabalhos acadêmicos}]
+\begin{tcolorbox}[enhanced jigsaw, breakable, left=2mm, arc=.35mm, leftrule=.75mm, opacitybacktitle=0.6, colframe=quarto-callout-important-color-frame, toptitle=1mm, rightrule=.15mm, colback=white, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: Chats de IA para seus trabalhos acadêmicos}, opacityback=0, titlerule=0mm, bottomtitle=1mm, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomrule=.15mm]
 
 \quartocallouttip{tip-prompt} 
 
@@ -383,7 +401,7 @@ Microsoft.\vspace{0.5em}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, left=2mm, bottomtitle=1mm, colbacktitle=quarto-callout-caution-color!10!white, colback=white, opacitybacktitle=0.6, leftrule=.75mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, arc=.35mm, coltitle=black, opacityback=0, breakable, colframe=quarto-callout-caution-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}]
+\begin{tcolorbox}[enhanced jigsaw, breakable, left=2mm, arc=.35mm, leftrule=.75mm, opacitybacktitle=0.6, colframe=quarto-callout-caution-color-frame, toptitle=1mm, rightrule=.15mm, colback=white, coltitle=black, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, opacityback=0, titlerule=0mm, bottomtitle=1mm, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm, bottomrule=.15mm]
 
 Eu simplesmente copio e colo os resultados do meu chatboot favorito para
 compilar notas de leituras, resumir bibliografia, ou de maneira geral,
@@ -468,20 +486,35 @@ Capítulo~\ref{sec-aval} & 📅20/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-assafneto2014}
+Assaf Neto, A. (2014). \emph{Finan{ç}as Corporativas e Valor} (7. ed.).
+Atlas.
+
+\bibitem[\citeproctext]{ref-brealey2013}
+Brealey, R. A., Myers, S. C., \& Allen, F. (2013). \emph{Princ{í}pios de
+Finan{ç}as Corporativas} (10. ed.). AMGH.
+
 \bibitem[\citeproctext]{ref-dogucu2022}
 Dogucu, M., \& Çetinkaya-Rundel, M. (2022). Tools and Recommendations
 for Reproducible Teaching. \emph{Journal of Statistics and Data Science
 Education}, \emph{30}(3), 251--260.
 \url{https://doi.org/10.1080/26939169.2022.2138645}
 
+\bibitem[\citeproctext]{ref-gitman2010}
+Gitman, L. J. (2010). \emph{Princ{í}pios de Administra{ç}{ã}o
+Financeira} (12. ed.). Pearson Prentice Hall.
+
+\bibitem[\citeproctext]{ref-matias2007}
+Matias, A. M. (Ed.). (2007). \emph{Finan{ç}as Corporativas de Curto
+Prazo, Volume 1: A Gest{ã}o Do Valor Do Capital de Giro}. Atlas.
+
+\bibitem[\citeproctext]{ref-ross2015}
+Ross, S. A., Westerfield, R. W., Jaffe, J., \& Lamb, R. (2015).
+\emph{Administra{ç}{ã}o Financeira} (10. ed.). AMGH.
+
 \end{CSLReferences}
 
 
 \backmatter
-
-\printindex
-%back cover
-\includepdf[fitpaper=true,pages=-]{img/back-cover}
-\pagenumbering{gobble} 
 
 \end{document}

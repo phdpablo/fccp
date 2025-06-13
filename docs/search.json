@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Finanças Corporativas de Curto Prazo",
+    "section": "",
+    "text": "O Curso 🏢\nPágina da disciplina “Finanças Corporativas I” do curso da Faculdade de Ciência Contábeis (FACIC) da Universidade Federal de Uberlândia (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre Finanças Corporativas de Curto Prazo (artigos, notas de aulas, blogs, vídeos, etc.).",
+    "crumbs": [
+      "O Curso 🏢"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-instrutor",
+    "href": "index.html#sec-instrutor",
+    "title": "Finanças Corporativas de Curto Prazo",
+    "section": "Sobre o professor",
+    "text": "Sobre o professor\nA disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers 😉, doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu site pessoal você encontrará mais detalhes sobre minhas formações, competências, trajetória e projetos.",
+    "crumbs": [
+      "O Curso 🏢"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-about",
+    "href": "index.html#sec-about",
+    "title": "Finanças Corporativas de Curto Prazo",
+    "section": "Objetivos",
+    "text": "Objetivos\nO curso tem como objetivo apresentar os principais conceitos e práticas de finanças corporativas de curto prazo. A disciplina visa prover aos alunos uma visão teórica e prática da Administração do Capital de Giro como base fundamental para o planejamento e controle financeiro do curto prazo. Especificamente, ao final do curso pretende-se que o aluno:\n\nCompreenda as teorias que embasam a gestão do capital de curto prazo;\nEntenda a dinâmica da gestão do capital de giro;\nConheça as estratégias e modelos da gestão do caixa;\nCompreenda a gestão de valores a receber, suas políticas e riscos envolvidos;\nAssimile os aspectos gerais da gestão de estoques e seus modelos de análise.",
+    "crumbs": [
+      "O Curso 🏢"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-programa",
+    "href": "index.html#sec-programa",
+    "title": "Finanças Corporativas de Curto Prazo",
+    "section": "Programa",
+    "text": "Programa\nA ementa oficial da disciplina encontra-se aqui. O Plano de Ensino aprovado pela coordenação da FACIC/UFU pode ser acessado no Moodle, onde materemos a comunicação e organização das avaliações. Em linhas gerais o programa do curso versará sobre os seguintes conteúdos:\n\nIntrodução às Finanças Corporativas de Curto Prazo (FCCP)\nRelação Risco e Retorno em Finanças\nGestão de Curto Prazo x Gestão de Longo Prazo\nTeorias de Finanças\nAdministração Financeira do Curto Prazo (Capital de Giro)\nConceitos de Capital de Giro\nDinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro\nInvestimento em Capital de Giro\nFinanciamento do Capital de Giro\nNecessidade de Investimento em Giro (NIG)\nAdministração de Caixa\nRazões da demanda de moeda e manutenção de caixa\nCiclo de caixa e controle de seu saldo\nModelos de administração de caixa\nAdministração de Valores a Receber (Recebíveis)\nAvaliação do risco de crédito\nElementos de uma política geral de crédito\nAdministração de Estoques\nAspectos básicos dos estoques\nModelos de análise e controle dos estoques",
+    "crumbs": [
+      "O Curso 🏢"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-method",
+    "href": "index.html#sec-method",
+    "title": "Finanças Corporativas de Curto Prazo",
+    "section": "Metodologia",
+    "text": "Metodologia\nO material do curso organizado nesse repositório refere-se ao roteiro estruturado (enredo) de parte que discutiremos nas aulas presenciais e conteúdos adicionais (bibliografia, notas de aulas, links, dicas de vídeos, etc). Na sala de aula teremos discussões conceituais e resoluções de exercícios, e por aqui, num primeiro momento, focarei em introduzir os conceitos basilares da FCCP.\nA proposta do curso busca seguir de perto a mensagem de Dogucu & Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância da reprodutibilidade na pesquisa e ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).",
+    "crumbs": [
+      "O Curso 🏢"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-biblio",
+    "href": "index.html#sec-biblio",
+    "title": "Finanças Corporativas de Curto Prazo",
+    "section": "Bibliografia",
+    "text": "Bibliografia\nA literatura de finanças é vasta. No Brasil, temos vários bons manuais em língua portuguesa. Muitos livros-textos são traduções de autores americanos, ou seja, conteúdo ambientado em um mercado diferente do nosso. No entanto, existem alguns manuais de autores brasileiros, cujo conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois! 😉\nGeralmente, esses manuais percorrem diversos assuntos de finanças, entretanto, nosso foco será na FCCP. Os outros assuntos serão tratados em disciplinas correlatas: Matemática Financeira, Finanças Corporativas II (Longo Prazo), Governança Corporativa, Avaliação Econômica de Empresas e Mercado de Capitais. Sem falar das áreas correlatas, tais como Economia (Micro e Macroeconomia), Matemática, Estatística e Ciência da Computação. Na verdade, o conteúdo do curso de Ciências Contábeis, no meu entender, é aquele que talvez dá a melhor base para a formação de Administrador Financeiro, até mesmo mais que o próprio curso de Administração 🤐🤫.\nComo bibliografia base para os fundamentos do curso, utilizaremos as recomendações da ementa oficial, e adotaremos as referências atualizadas das bibliografias básica e complementar: Assaf Neto (2014), Gitman (2010), Matias (2007), Ross et al. (2015) e Brealey et al. (2013).",
+    "crumbs": [
+      "O Curso 🏢"
+    ]
+  },
+  {
+    "objectID": "index.html#licença",
+    "href": "index.html#licença",
+    "title": "Finanças Corporativas de Curto Prazo",
+    "section": "Licença",
+    "text": "Licença\n\nFinanças Corporativas de Curto Prazo by Pablo Rogers is licensed under CC BY-NC-SA 4.0\n\n\n\n\n\nAssaf Neto, A. (2014). Finanças Corporativas e Valor (7. ed.). Atlas.\n\n\nBrealey, R. A., Myers, S. C., & Allen, F. (2013). Princípios de Finanças Corporativas (10. ed.). AMGH.\n\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. Journal of Statistics and Data Science Education, 30(3), 251–260. https://doi.org/10.1080/26939169.2022.2138645\n\n\nGitman, L. J. (2010). Princípios de Administração Financeira (12. ed.). Pearson Prentice Hall.\n\n\nMatias, A. M. (Ed.). (2007). Finanças Corporativas de Curto Prazo, Volume 1: A Gestão Do Valor Do Capital de Giro. Atlas.\n\n\nRoss, S. A., Westerfield, R. W., Jaffe, J., & Lamb, R. (2015). Administração Financeira (10. ed.). AMGH.",
+    "crumbs": [
+      "O Curso 🏢"
+    ]
+  },
+  {
+    "objectID": "00-prework.html",
+    "href": "00-prework.html",
+    "title": "Pré-requisitos 📇",
+    "section": "",
+    "text": "Falar sobre os pre-requisitos e intercessões entre as outras disciplinas e áreas do conhecimento…\n\n\n\n\n\n\nTip 1: Chats de IA para seus trabalhos acadêmicos\n\n\n\n\n\nOs resumos das bibliografias, mapas mentais, ou qualquer estrutura analítica do conteúdo da disciplina, que apresento em cada uma das seções, foram elaborados com o auxílio do Gemini 2.5 Pro, seja pelo o webapp do Google, pelo NotebookLM ou Google AI Studio da Microsoft.\n\n\n\n\n\n\n\n\n\nNão confie cegamente na IA\n\n\n\n\n\nEu simplesmente copio e colo os resultados do meu chatboot favorito para compilar notas de leituras, resumir bibliografia, ou de maneira geral, escrever textos sobre determinado assunto? NÃO. Após a saída do chatboot eu reviso o texto e faço ajustes, que somente são possíveis, porque li antes ou tenho bastante conhecimento do material que estou interagindo. A despeito do App de IA fazer um bom serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes esses que você não pode deixar passar num texto público para fins de ensino, e somente seriam captados a partir da leitura do material ou sendo conhecedor do assunto abordado.\nComentar sobre o código de conduto para uso de IA do Ricardo…",
+    "crumbs": [
+      "Pré-requisitos 📇"
+    ]
+  },
+  {
+    "objectID": "00-schedule.html",
+    "href": "00-schedule.html",
+    "title": "Cronograma 📅",
+    "section": "",
+    "text": "Em construção…\nPlanejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. De uma forma geral, as aulas presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30 durante o período 02/06/2025 a 29/09/2025.\nNa seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥] e leituras básica sobre os conteúdos (📓).\n\n\n\nAula/Conteúdo\nData\nMaterial Principal\n\n\n\n\n1  Introdução à Finanças Corporativas\n📅04/06/24⏲️19:00\n🗣🎥📓\n\n\n2  Capital de Giro\n📅06/06/24⏲️19:00\n🗣🎥📓\n\n\n3  Administração do Caixa\n📅11/06/24⏲️19:00\n🗣🎥📓\n\n\n4  Administração de Recebíveis\n📅13/06/24⏲️19:00\n🗣🎥📓\n\n\n5  Administração de Estoques\n📅18/06/24⏲️19:00\n🗣🎥📓\n\n\n6  Projetos em Grupo\n📅20/06/24⏲️19:00\n🗣🎥📓\n\n\n\n📅25/06/24⏲️19:00\n🗣🎥📓\n\n\n\n📅27/06/24⏲️19:00\n🗣🎥📓",
+    "crumbs": [
+      "Cronograma 📅"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Referências",
+    "section": "",
+    "text": "Assaf Neto, A. (2014). Finanças corporativas e\nvalor (7. ed.). Atlas.\n\n\nBrealey, R. A., Myers, S. C., & Allen, F. (2013).\nPrincípios de finanças corporativas\n(10. ed.). AMGH.\n\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations\nfor Reproducible Teaching. Journal of Statistics and Data Science\nEducation, 30(3), 251–260. https://doi.org/10.1080/26939169.2022.2138645\n\n\nGitman, L. J. (2010). Princípios de\nadministração financeira (12. ed.).\nPearson Prentice Hall.\n\n\nMatias, A. M. (Ed.). (2007). Finanças corporativas de\ncurto prazo, volume 1: A gestão do valor do capital de\ngiro. Atlas.\n\n\nRoss, S. A., Westerfield, R. W., Jaffe, J., & Lamb, R. (2015).\nAdministração financeira (10. ed.).\nAMGH.",
+    "crumbs": [
+      "Referências"
+    ]
+  }
+]
