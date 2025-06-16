@@ -1,18 +1,16 @@
-# Cronograma 📅 {#sec-schedule .unnumbered .unlisted}
+# 📅 Cronograma {#sec-schedule .unnumbered .unlisted}
 
-**Em construção...**
+Planejamento dos dias (📅) e horários dos **conteúdos** (⏲️) conforme nosso *Plano de Ensino*. De uma forma geral, as aulas presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30 durante o período 09/06/2025 a 29/09/2025. O cronograma detalhado, com as datas de todas as nossas avaliações, encontra-se em nosso **Plano de Ensino no Moodle**.
 
-Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. De uma forma geral, as aulas presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30 durante o período 02/06/2025 a 29/09/2025.
+A ideia aqui nessa página é apenas roterizar o conteúdo da disciplina FCCP, com direcionamento de materiais suplementares, para o aluno **organizar suas leituras prévias**.
 
-Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥\] e leituras básica sobre os conteúdos (📓).
+Na seção de cada um dos módulos (tópicos) do conteúdo programático temos a indicação da **bibliografia básica**. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥\] e **leituras complementares** sobre os conteúdos (📓).
 
-| Aula/Conteúdo |       Data        | Material Principal |
-|:--------------|:-----------------:|:------------------:|
-| @sec-intro    | 📅04/06/24⏲️19:00 |     [🗣🎥📓]()      |
-| @sec-giro     | 📅06/06/24⏲️19:00 |     [🗣🎥📓]()      |
-| @sec-caixa    | 📅11/06/24⏲️19:00 |     [🗣🎥📓]()      |
-| @sec-credito  | 📅13/06/24⏲️19:00 |     [🗣🎥📓]()      |
-| @sec-estoque  | 📅18/06/24⏲️19:00 |     [🗣🎥📓]()      |
-| @sec-aval     | 📅20/06/24⏲️19:00 |     [🗣🎥📓]()      |
-|               | 📅25/06/24⏲️19:00 |     [🗣🎥📓]()      |
-|               | 📅27/06/24⏲️19:00 |     [🗣🎥📓]()      |
+| Aula/Conteúdo |       Data        | Material Complementar |
+|:--------------|:-----------------:|:---------------------:|
+| @sec-intro    | 📅20/06/25⏲️19:00 |         🗣🎥📓         |
+| @sec-giro     | 📅27/06/25⏲️19:00 |         🗣🎥📓         |
+| @sec-caixa    | 📅18/07/25⏲️19:00 |         🗣🎥📓         |
+| @sec-credito  | 📅01/08/25⏲️19:00 |         🗣🎥📓         |
+| @sec-estoque  | 📅19/08/25⏲️19:00 |         🗣🎥📓         |
+| @sec-aval     | 📅29/08/25⏲️19:00 |         🗣🎥📓         |

@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Finanças Corporativas de Curto Prazo",
     "section": "",
-    "text": "O Curso 🏢\nPágina da disciplina “Finanças Corporativas I” do curso da Faculdade de Ciência Contábeis (FACIC) da Universidade Federal de Uberlândia (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre Finanças Corporativas de Curto Prazo (artigos, notas de aulas, blogs, vídeos, etc.).",
+    "text": "🏢 O Curso\nPágina da disciplina “Finanças Corporativas I” do curso da Faculdade de Ciência Contábeis (FACIC) da Universidade Federal de Uberlândia (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre Finanças Corporativas de Curto Prazo (artigos, notas de aulas, blogs, vídeos, etc.).",
     "crumbs": [
-      "O Curso 🏢"
+      "🏢 O Curso"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "Sobre o professor",
     "text": "Sobre o professor\nA disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers 😉, doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu site pessoal você encontrará mais detalhes sobre minhas formações, competências, trajetória e projetos.",
     "crumbs": [
-      "O Curso 🏢"
+      "🏢 O Curso"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "Objetivos",
     "text": "Objetivos\nO curso tem como objetivo apresentar os principais conceitos e práticas de finanças corporativas de curto prazo. A disciplina visa prover aos alunos uma visão teórica e prática da Administração do Capital de Giro como base fundamental para o planejamento e controle financeiro do curto prazo. Especificamente, ao final do curso pretende-se que o aluno:\n\nCompreenda as teorias que embasam a gestão do capital de curto prazo;\nEntenda a dinâmica da gestão do capital de giro;\nConheça as estratégias e modelos da gestão do caixa;\nCompreenda a gestão de valores a receber, suas políticas e riscos envolvidos;\nAssimile os aspectos gerais da gestão de estoques e seus modelos de análise.",
     "crumbs": [
-      "O Curso 🏢"
+      "🏢 O Curso"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "section": "Programa",
     "text": "Programa\nA ementa oficial da disciplina encontra-se aqui. O Plano de Ensino aprovado pela coordenação da FACIC/UFU pode ser acessado no Moodle, onde materemos a comunicação e organização das avaliações. Em linhas gerais o programa do curso versará sobre os seguintes conteúdos:\n\nIntrodução às Finanças Corporativas de Curto Prazo (FCCP)\nRelação Risco e Retorno em Finanças\nGestão de Curto Prazo x Gestão de Longo Prazo\nTeorias de Finanças\nAdministração Financeira do Curto Prazo (Capital de Giro)\nConceitos de Capital de Giro\nDinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro\nInvestimento em Capital de Giro\nFinanciamento do Capital de Giro\nNecessidade de Investimento em Giro (NIG)\nAdministração de Caixa\nRazões da demanda de moeda e manutenção de caixa\nCiclo de caixa e controle de seu saldo\nModelos de administração de caixa\nAdministração de Valores a Receber (Recebíveis)\nAvaliação do risco de crédito\nElementos de uma política geral de crédito\nAdministração de Estoques\nAspectos básicos dos estoques\nModelos de análise e controle dos estoques",
     "crumbs": [
-      "O Curso 🏢"
+      "🏢 O Curso"
     ]
   },
   {
@@ -46,7 +46,7 @@
     "section": "Metodologia",
     "text": "Metodologia\nO material do curso organizado nesse repositório refere-se ao roteiro estruturado (enredo) de parte que discutiremos nas aulas presenciais e conteúdos adicionais (bibliografia, notas de aulas, links, dicas de vídeos, etc). Na sala de aula teremos discussões conceituais e resoluções de exercícios, e por aqui, num primeiro momento, focarei em introduzir os conceitos basilares da FCCP.\nA proposta do curso busca seguir de perto a mensagem de Dogucu & Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância da reprodutibilidade na pesquisa e ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).",
     "crumbs": [
-      "O Curso 🏢"
+      "🏢 O Curso"
     ]
   },
   {
@@ -56,7 +56,7 @@
     "section": "Bibliografia",
     "text": "Bibliografia\nA literatura de finanças é vasta. No Brasil, temos vários bons manuais em língua portuguesa. Muitos livros-textos são traduções de autores americanos, ou seja, conteúdo ambientado em um mercado diferente do nosso. No entanto, existem alguns manuais de autores brasileiros, cujo conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois! 😉\nGeralmente, esses manuais percorrem diversos assuntos de finanças, entretanto, nosso foco será na FCCP. Os outros assuntos serão tratados em disciplinas correlatas: Matemática Financeira, Finanças Corporativas II (Longo Prazo), Governança Corporativa, Avaliação Econômica de Empresas e Mercado de Capitais. Sem falar das áreas correlatas, tais como Economia (Micro e Macroeconomia), Matemática, Estatística e Ciência da Computação. Na verdade, o conteúdo do curso de Ciências Contábeis, no meu entender, é aquele que talvez dá a melhor base para a formação de Administrador Financeiro, até mesmo mais que o próprio curso de Administração 🤐🤫.\nComo bibliografia base para os fundamentos do curso, utilizaremos as recomendações da ementa oficial, e adotaremos as referências atualizadas das bibliografias básica e complementar: Assaf Neto (2014), Gitman (2010), Matias (2007), Ross et al. (2015) e Brealey et al. (2013).",
     "crumbs": [
-      "O Curso 🏢"
+      "🏢 O Curso"
     ]
   },
   {
@@ -66,27 +66,27 @@
     "section": "Licença",
     "text": "Licença\n\nFinanças Corporativas de Curto Prazo by Pablo Rogers is licensed under CC BY-NC-SA 4.0\n\n\n\n\n\nAssaf Neto, A. (2014). Finanças Corporativas e Valor (7. ed.). Atlas.\n\n\nBrealey, R. A., Myers, S. C., & Allen, F. (2013). Princípios de Finanças Corporativas (10. ed.). AMGH.\n\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. Journal of Statistics and Data Science Education, 30(3), 251–260. https://doi.org/10.1080/26939169.2022.2138645\n\n\nGitman, L. J. (2010). Princípios de Administração Financeira (12. ed.). Pearson Prentice Hall.\n\n\nMatias, A. M. (Ed.). (2007). Finanças Corporativas de Curto Prazo, Volume 1: A Gestão Do Valor Do Capital de Giro. Atlas.\n\n\nRoss, S. A., Westerfield, R. W., Jaffe, J., & Lamb, R. (2015). Administração Financeira (10. ed.). AMGH.",
     "crumbs": [
-      "O Curso 🏢"
+      "🏢 O Curso"
     ]
   },
   {
     "objectID": "00-prework.html",
     "href": "00-prework.html",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "",
-    "text": "Falar sobre os pre-requisitos e intercessões entre as outras disciplinas e áreas do conhecimento…\n\n\n\n\n\n\nTip 1: Chats de IA para seus trabalhos acadêmicos\n\n\n\n\n\nOs resumos das bibliografias, mapas mentais, ou qualquer estrutura analítica do conteúdo da disciplina, que apresento em cada uma das seções, foram elaborados com o auxílio do Gemini 2.5 Pro, seja pelo o webapp do Google, pelo NotebookLM ou Google AI Studio da Microsoft.\n\n\n\n\n\n\n\n\n\nNão confie cegamente na IA\n\n\n\n\n\nEu simplesmente copio e colo os resultados do meu chatboot favorito para compilar notas de leituras, resumir bibliografia, ou de maneira geral, escrever textos sobre determinado assunto? NÃO. Após a saída do chatboot eu reviso o texto e faço ajustes, que somente são possíveis, porque li antes ou tenho bastante conhecimento do material que estou interagindo. A despeito do App de IA fazer um bom serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes esses que você não pode deixar passar num texto público para fins de ensino, e somente seriam captados a partir da leitura do material ou sendo conhecedor do assunto abordado.\nComentar sobre o código de conduto para uso de IA do Ricardo…",
+    "text": "O único pré-requisito para a disciplina é boa vontade e fazer as pré-leituras indicadas antes de cada aula. Para isso, sempre monitorar nosso Cronograma, para não perder nenhum prazo, é importante 🤢. Diferente da disciplina de Matemática Financeira (e/ou Análise de Investimentos) que, geralmente, vem antes do conteúdo de finanças de curto prazo nos currículos programáticos das universidades brasileiras, essa disciplina depende “mais” de leituras das teorias (conceitos) subjacentes.\nDe qualquer forma, creio ser importante situar os alunos sobre os assuntos (disciplinas) correlatos que perfaz (vem antes e depois) o conteúdo típico de finanças em currículos da área de negócios. Especialmente, aqui na FACIC/UFU temos o seguinte panorama:\n\n\n\n\n\n\n\n\n\nDisciplina\nFoco Principal da Disciplina\nContribuição Chave para o Entendimento Financeiro Geral\nRelação Específica e Relevância para Finanças Corporativas de Curto Prazo (FCCP)\n\n\n\n\nMatemática Financeira\nJuros, descontos, taxas, séries de pagamento, valor do dinheiro no tempo, análise básica de investimentos.\nFornece as ferramentas quantitativas fundamentais para toda a análise financeira.\nEssencial para calcular custos de financiamento de curto prazo, avaliar descontos, analisar fluxos de caixa do capital de giro. Base para todas as decisões quantitativas em FCCP.\n\n\nFinanças Corporativas (I) de Curto Prazo\nGestão do capital de giro (caixa, contas a receber, estoques), ciclo de conversão de caixa, financiamento de curto prazo.\nDesenvolve a compreensão da gestão financeira operacional e da manutenção da liquidez da empresa.\nÉ o foco principal desta disciplina; estabelece os fundamentos da gestão financeira diária.\n\n\nFinanças Corporativas (II) de Longo Prazo\nEstrutura de capital, custo de capital, política de dividendos, orçamento de capital avançado, fusões e aquisições.\nAprofunda nas decisões financeiras estratégicas de longo prazo que moldam o futuro e o valor da empresa.\nA saúde financeira de curto prazo sustenta a capacidade de planejar e executar estratégias de longo prazo.\n\n\nAvaliação Econômica de Empresas\nMétodos de avaliação (FCD, múltiplos), goodwill, ativos intangíveis, gestão baseada em valor.\nCapacita na determinação do valor de uma empresa, crucial para decisões de investimento, fusões e aquisições.\nA gestão eficiente do capital de giro (FCCP) impacta diretamente os fluxos de caixa, que são inputs chave nos modelos de avaliação. A GBV conecta decisões de curto prazo ao valor da empresa.\n\n\nGovernança Corporativa\nPrincípios (transparência, equidade, accountability), mecanismos de controle, ética, relação com stakeholders.\nEstabelece o arcabouço para a tomada de decisão ética e responsável, visando proteger os interesses dos investidores.\nAs decisões de FCCP devem ser tomadas dentro de um sistema de boa governança. Controles internos sobre o capital de giro são cruciais para prevenir fraudes e má gestão.\n\n\nMercado de Capitais\nSistema Financeiro Nacional, mercado de crédito, títulos (renda fixa/variável), mercado de ações, derivativos.\nProporciona o entendimento do ambiente financeiro externo onde as empresas captam recursos e investidores aplicam seu capital.\nO mercado de capitais influencia o custo das fontes de financiamento de curto prazo e oferece opções para aplicação de caixa excedente. Algumas empresas podem acessar o mercado para financiamento de curto prazo.\n\n\n\nMas claro, no limite, podemos considerar que todo conteúdo da disciplina FCCP está conectado com outras áreas do conhecimento, tal como transcorre nossa formação num curso típico da área de negócios (economia, administração, contabilidade, etc.):\n\n\n\n\n\n\n\n\nDisciplina Relacionada\nPrincipais Contribuições para Finanças Corporativas de Curto Prazo\nExemplos de Aplicação Prática em Finanças de Curto Prazo\n\n\n\n\nContabilidade\nFornecimento de dados financeiros (DRE, Balanço, DFC), princípios de mensuração e reconhecimento, base para análise de custos e desempenho.\nAnálise de índices de liquidez a partir do Balanço Patrimonial; uso da DRE para calcular a margem de contribuição; elaboração do Fluxo de Caixa para gestão da tesouraria.\n\n\nEconomia (Micro e Macro)\nTeoria dos preços, análise de custos, estruturas de mercado (Micro); taxas de juros, inflação, ciclos econômicos, políticas fiscais e monetárias (Macro).\nDefinição de política de preços considerando a elasticidade da demanda; impacto da taxa Selic no custo de empréstimos de curto prazo; ajuste de estoques com base na previsão de crescimento do PIB.\n\n\nMatemática\nLógica, álgebra, cálculo (implícito em modelos de otimização), e especificamente Matemática Financeira (valor do dinheiro no tempo, taxas, etc.).\nCálculo do custo efetivo de um desconto financeiro oferecido por fornecedor; determinação do ponto de equilíbrio; modelagem do saldo ótimo de caixa.\n\n\nEstatística\nTeoria da probabilidade, análise de regressão, previsão de séries temporais, amostragem, testes de hipóteses, estatística descritiva.\nPrevisão de vendas para planejar estoques; análise de risco de crédito de clientes; cálculo da média e desvio padrão de prazos de pagamento; uso da Curva ABC para classificar clientes ou produtos.\n\n\n\nO que deve ficar claro é que, apesar de não haver pré-requisitos formais, o conhecimento prévio em matemática financeira e contabilidade é extremamente útil para o sucesso na disciplina. Além disso, a compreensão dos conceitos econômicos e estatísticos pode enriquecer a análise financeira e a tomada de decisões. Portanto, é recomendável que os alunos tenham uma base sólida nessas áreas, caso deseja desempenhar funções que se relacione com finanças corporativas de curto prazo. Fica a dica!\nA grande área de finanças abarca um vasto campo de estudo e prática que se estende desde as decisões de um indivíduo até a complexa arquitetura do sistema financeiro global. Tal formulação sugere que finanças atuam como uma meta-disciplina, orquestrando e integrando conhecimentos de diversas outras áreas – como contabilidade, economia e estatística – para otimizar os resultados financeiros e a sustentabilidade das organizações. Assim, a disciplina de FCCP se posiciona como um elo crucial nesse ecossistema, focando na gestão eficiente dos recursos financeiros no dia a dia das empresas, garantindo não apenas a sobrevivência, mas também o crescimento e a competitividade no mercado.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "📇 Pré-requisitos"
     ]
   },
   {
     "objectID": "00-schedule.html",
     "href": "00-schedule.html",
-    "title": "Cronograma 📅",
+    "title": "📅 Cronograma",
     "section": "",
-    "text": "Em construção…\nPlanejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. De uma forma geral, as aulas presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30 durante o período 02/06/2025 a 29/09/2025.\nNa seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥] e leituras básica sobre os conteúdos (📓).\n\n\n\nAula/Conteúdo\nData\nMaterial Principal\n\n\n\n\n1  Introdução à Finanças Corporativas\n📅04/06/24⏲️19:00\n🗣🎥📓\n\n\n2  Capital de Giro\n📅06/06/24⏲️19:00\n🗣🎥📓\n\n\n3  Administração do Caixa\n📅11/06/24⏲️19:00\n🗣🎥📓\n\n\n4  Administração de Recebíveis\n📅13/06/24⏲️19:00\n🗣🎥📓\n\n\n5  Administração de Estoques\n📅18/06/24⏲️19:00\n🗣🎥📓\n\n\n6  Projetos em Grupo\n📅20/06/24⏲️19:00\n🗣🎥📓\n\n\n\n📅25/06/24⏲️19:00\n🗣🎥📓\n\n\n\n📅27/06/24⏲️19:00\n🗣🎥📓",
+    "text": "Planejamento dos dias (📅) e horários dos conteúdos (⏲️) conforme nosso Plano de Ensino. De uma forma geral, as aulas presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30 durante o período 09/06/2025 a 29/09/2025. O cronograma detalhado, com as datas de todas as nossas avaliações, encontra-se em nosso Plano de Ensino no Moodle.\nA ideia aqui nessa página é apenas roterizar o conteúdo da disciplina FCCP, com direcionamento de materiais suplementares, para o aluno organizar suas leituras prévias.\nNa seção de cada um dos módulos (tópicos) do conteúdo programático temos a indicação da bibliografia básica. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥] e leituras complementares sobre os conteúdos (📓).\n\n\n\nAula/Conteúdo\nData\nMaterial Complementar\n\n\n\n\n1  Introdução à Finanças Corporativas\n📅20/06/25⏲️19:00\n🗣🎥📓\n\n\n2  Capital de Giro\n📅27/06/25⏲️19:00\n🗣🎥📓\n\n\n3  Administração do Caixa\n📅18/07/25⏲️19:00\n🗣🎥📓\n\n\n4  Administração de Recebíveis\n📅01/08/25⏲️19:00\n🗣🎥📓\n\n\n5  Administração de Estoques\n📅19/08/25⏲️19:00\n🗣🎥📓\n\n\n6  Projetos em Grupo\n📅29/08/25⏲️19:00\n🗣🎥📓",
     "crumbs": [
-      "Cronograma 📅"
+      "📅 Cronograma"
     ]
   },
   {

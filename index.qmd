@@ -1,4 +1,4 @@
-# O Curso 🏢 {#sec-home .unnumbered}
+# 🏢 O Curso {#sec-home .unnumbered}
 
 Página da disciplina **"Finanças Corporativas I"** do curso da [Faculdade de Ciência Contábeis](https://www.facic.ufu.br/) (FACIC) da [Universidade Federal de Uberlândia](https://ufu.br/) (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre **Finanças Corporativas de Curto Prazo** (artigos, notas de aulas, blogs, vídeos, etc.).
 

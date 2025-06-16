@@ -113,22 +113,6 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
-\definecolor{quarto-callout-color}{HTML}{909090}
-\definecolor{quarto-callout-note-color}{HTML}{0758E5}
-\definecolor{quarto-callout-important-color}{HTML}{CC1914}
-\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
-\definecolor{quarto-callout-tip-color}{HTML}{00A047}
-\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
-\definecolor{quarto-callout-color-frame}{HTML}{acacac}
-\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
-\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
-\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
-\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
-\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
-\makeatother
-\makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
 \makeatletter
@@ -172,8 +156,6 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-\newcounter{quartocallouttipno}
-\newcommand{\quartocallouttip}[1]{\refstepcounter{quartocallouttipno}\label{#1}}
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
 \else
@@ -203,7 +185,7 @@
 
 \title{Finanças Corporativas de Curto Prazo}
 \author{Pablo Rogers}
-\date{13 de junho de 2025}
+\date{16 de junho de 2025}
 
 \begin{document}
 \frontmatter
@@ -218,10 +200,10 @@
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter*{O Curso 🏢}\label{sec-home}
-\addcontentsline{toc}{chapter}{O Curso 🏢}
+\chapter*{🏢 O Curso}\label{sec-home}
+\addcontentsline{toc}{chapter}{🏢 O Curso}
 
-\markboth{O Curso 🏢}{O Curso 🏢}
+\markboth{🏢 O Curso}{🏢 O Curso}
 
 Página da disciplina \textbf{``Finanças Corporativas I''} do curso da
 \href{https://www.facic.ufu.br/}{Faculdade de Ciência Contábeis} (FACIC)
@@ -379,78 +361,187 @@ CC BY-NC-SA 4.0
 
 \bookmarksetup{startatroot}
 
-\chapter*{Pré-requisitos 📇}\label{sec-prework}
-\addcontentsline{toc}{chapter}{Pré-requisitos 📇}
+\chapter*{📇 Pré-requisitos}\label{sec-prework}
+\addcontentsline{toc}{chapter}{📇 Pré-requisitos}
 
-\markboth{Pré-requisitos 📇}{Pré-requisitos 📇}
+\markboth{📇 Pré-requisitos}{📇 Pré-requisitos}
 
-Falar sobre os pre-requisitos e intercessões entre as outras disciplinas
-e áreas do conhecimento\ldots{}
+O único pré-requisito para a disciplina é \textbf{boa vontade e fazer as
+pré-leituras indicadas antes de cada aula}. Para isso, sempre monitorar
+nosso \href{http://fccp.phdpablo.com/00-schedule.html}{Cronograma}, para
+não perder nenhum prazo, é importante 🤢. Diferente da disciplina de
+Matemática Financeira (e/ou Análise de Investimentos) que, geralmente,
+vem antes do conteúdo de finanças de curto prazo nos currículos
+programáticos das universidades brasileiras, essa disciplina depende
+``mais'' de leituras das teorias (conceitos) subjacentes.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, left=2mm, arc=.35mm, leftrule=.75mm, opacitybacktitle=0.6, colframe=quarto-callout-important-color-frame, toptitle=1mm, rightrule=.15mm, colback=white, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: Chats de IA para seus trabalhos acadêmicos}, opacityback=0, titlerule=0mm, bottomtitle=1mm, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, bottomrule=.15mm]
+De qualquer forma, creio ser importante situar os alunos sobre os
+assuntos (disciplinas) correlatos que perfaz (vem antes e depois) o
+conteúdo típico de finanças em currículos da área de negócios.
+Especialmente, aqui na FACIC/UFU temos o seguinte panorama:
 
-\quartocallouttip{tip-prompt} 
-
-Os resumos das bibliografias, mapas mentais, ou qualquer estrutura
-analítica do conteúdo da disciplina, que apresento em cada uma das
-seções, foram elaborados com o auxílio do Gemini 2.5 Pro, seja pelo o
-\href{https://gemini.google.com/}{webapp do Google}, pelo
-\href{https://notebooklm.google.com/}{NotebookLM} ou
-\href{https://aistudio.google.com/}{Google AI Studio} da
-Microsoft.\vspace{0.5em}
-
-\end{tcolorbox}
-
-\begin{tcolorbox}[enhanced jigsaw, breakable, left=2mm, arc=.35mm, leftrule=.75mm, opacitybacktitle=0.6, colframe=quarto-callout-caution-color-frame, toptitle=1mm, rightrule=.15mm, colback=white, coltitle=black, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, opacityback=0, titlerule=0mm, bottomtitle=1mm, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm, bottomrule=.15mm]
-
-Eu simplesmente copio e colo os resultados do meu chatboot favorito para
-compilar notas de leituras, resumir bibliografia, ou de maneira geral,
-escrever textos sobre determinado assunto? \textbf{NÃO}. Após a saída do
-chatboot eu reviso o texto e faço ajustes, que somente são possíveis,
-porque li antes ou tenho bastante conhecimento do material que estou
-interagindo. A despeito do App de IA fazer um bom serviço nesse sentido,
-ele ainda comete muitos deslizes. Deslizes esses que você não pode
-deixar passar num texto público para fins de ensino, e somente seriam
-captados a partir da leitura do material ou sendo conhecedor do assunto
-abordado.
-
-Comentar sobre o código de conduto para uso de IA do Ricardo\ldots{}
-
-\end{tcolorbox}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Cronograma 📅}\label{sec-schedule}
-
-\markboth{Cronograma 📅}{Cronograma 📅}
-
-\textbf{Em construção\ldots{}}
-
-Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa
-do curso. De uma forma geral, as aulas presenciais da disciplina
-ocorrerão às sexta-feiras das 19:00 às 22:30 durante o período
-02/06/2025 a 29/09/2025.
-
-Na seção de cada uma das aulas temos materiais adicionais para o
-respectivo conteúdo. Quando disponível, por aqui, poderás acessar os
-slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo
-(🎥{]} e leituras básica sobre os conteúdos (📓).
-
-\begin{longtable}[]{@{}lcc@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2603}}@{}}
 \toprule\noalign{}
-Aula/Conteúdo & Data & Material Principal \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Disciplina
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Foco Principal da Disciplina
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Contribuição Chave para o Entendimento Financeiro Geral
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Relação Específica e Relevância para Finanças Corporativas de Curto
+Prazo (FCCP)
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Capítulo~\ref{sec-intro} & 📅04/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
-Capítulo~\ref{sec-giro} & 📅06/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
-Capítulo~\ref{sec-caixa} & 📅11/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
-Capítulo~\ref{sec-credito} & 📅13/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
-Capítulo~\ref{sec-estoque} & 📅18/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
-Capítulo~\ref{sec-aval} & 📅20/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
-& 📅25/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
-& 📅27/06/24⏲️19:00 & \href{}{🗣🎥📓} \\
+\textbf{Matemática Financeira} & Juros, descontos, taxas, séries de
+pagamento, valor do dinheiro no tempo, análise básica de investimentos.
+& Fornece as ferramentas quantitativas fundamentais para toda a análise
+financeira. & Essencial para calcular custos de financiamento de curto
+prazo, avaliar descontos, analisar fluxos de caixa do capital de giro.
+Base para todas as decisões quantitativas em FCCP. \\
+\textbf{Finanças Corporativas (I) de Curto Prazo} & Gestão do capital de
+giro (caixa, contas a receber, estoques), ciclo de conversão de caixa,
+financiamento de curto prazo. & Desenvolve a compreensão da gestão
+financeira operacional e da manutenção da liquidez da empresa. & É o
+foco principal desta disciplina; estabelece os fundamentos da gestão
+financeira diária. \\
+\textbf{Finanças Corporativas (II) de Longo Prazo} & Estrutura de
+capital, custo de capital, política de dividendos, orçamento de capital
+avançado, fusões e aquisições. & Aprofunda nas decisões financeiras
+estratégicas de longo prazo que moldam o futuro e o valor da empresa. &
+A saúde financeira de curto prazo sustenta a capacidade de planejar e
+executar estratégias de longo prazo. \\
+\textbf{Avaliação Econômica de Empresas} & Métodos de avaliação (FCD,
+múltiplos), goodwill, ativos intangíveis, gestão baseada em valor. &
+Capacita na determinação do valor de uma empresa, crucial para decisões
+de investimento, fusões e aquisições. & A gestão eficiente do capital de
+giro (FCCP) impacta diretamente os fluxos de caixa, que são inputs chave
+nos modelos de avaliação. A GBV conecta decisões de curto prazo ao valor
+da empresa. \\
+\textbf{Governança Corporativa} & Princípios (transparência, equidade,
+accountability), mecanismos de controle, ética, relação com
+stakeholders. & Estabelece o arcabouço para a tomada de decisão ética e
+responsável, visando proteger os interesses dos investidores. & As
+decisões de FCCP devem ser tomadas dentro de um sistema de boa
+governança. Controles internos sobre o capital de giro são cruciais para
+prevenir fraudes e má gestão. \\
+\textbf{Mercado de Capitais} & Sistema Financeiro Nacional, mercado de
+crédito, títulos (renda fixa/variável), mercado de ações, derivativos. &
+Proporciona o entendimento do ambiente financeiro externo onde as
+empresas captam recursos e investidores aplicam seu capital. & O mercado
+de capitais influencia o custo das fontes de financiamento de curto
+prazo e oferece opções para aplicação de caixa excedente. Algumas
+empresas podem acessar o mercado para financiamento de curto prazo. \\
+\end{longtable}
+
+Mas claro, no limite, podemos considerar que todo conteúdo da disciplina
+FCCP está conectado com outras áreas do conhecimento, tal como
+transcorre nossa formação num curso típico da área de negócios
+(economia, administração, contabilidade, etc.):
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4028}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3472}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Disciplina Relacionada
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Principais Contribuições para Finanças Corporativas de Curto Prazo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Exemplos de Aplicação Prática em Finanças de Curto Prazo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Contabilidade} & Fornecimento de dados financeiros (DRE,
+Balanço, DFC), princípios de mensuração e reconhecimento, base para
+análise de custos e desempenho. & Análise de índices de liquidez a
+partir do Balanço Patrimonial; uso da DRE para calcular a margem de
+contribuição; elaboração do Fluxo de Caixa para gestão da tesouraria. \\
+\textbf{Economia (Micro e Macro)} & Teoria dos preços, análise de
+custos, estruturas de mercado (Micro); taxas de juros, inflação, ciclos
+econômicos, políticas fiscais e monetárias (Macro). & Definição de
+política de preços considerando a elasticidade da demanda; impacto da
+taxa Selic no custo de empréstimos de curto prazo; ajuste de estoques
+com base na previsão de crescimento do PIB. \\
+\textbf{Matemática} & Lógica, álgebra, cálculo (implícito em modelos de
+otimização), e especificamente Matemática Financeira (valor do dinheiro
+no tempo, taxas, etc.). & Cálculo do custo efetivo de um desconto
+financeiro oferecido por fornecedor; determinação do ponto de
+equilíbrio; modelagem do saldo ótimo de caixa. \\
+\textbf{Estatística} & Teoria da probabilidade, análise de regressão,
+previsão de séries temporais, amostragem, testes de hipóteses,
+estatística descritiva. & Previsão de vendas para planejar estoques;
+análise de risco de crédito de clientes; cálculo da média e desvio
+padrão de prazos de pagamento; uso da Curva ABC para classificar
+clientes ou produtos. \\
+\end{longtable}
+
+O que deve ficar claro é que, apesar de não haver pré-requisitos
+formais, o conhecimento prévio em matemática financeira e contabilidade
+é extremamente útil para o sucesso na disciplina. Além disso, a
+compreensão dos conceitos econômicos e estatísticos pode enriquecer a
+análise financeira e a tomada de decisões. Portanto, é recomendável que
+os alunos tenham uma base sólida nessas áreas, caso deseja desempenhar
+funções que se relacione com finanças corporativas de curto prazo. Fica
+a dica!
+
+A grande área de finanças abarca um vasto campo de estudo e prática que
+se estende desde as decisões de um indivíduo até a complexa arquitetura
+do sistema financeiro global. Tal formulação sugere que finanças atuam
+como uma meta-disciplina, orquestrando e integrando conhecimentos de
+diversas outras áreas -- como contabilidade, economia e estatística --
+para otimizar os resultados financeiros e a sustentabilidade das
+organizações. Assim, a disciplina de FCCP se posiciona como um elo
+crucial nesse ecossistema, focando na gestão eficiente dos recursos
+financeiros no dia a dia das empresas, garantindo não apenas a
+sobrevivência, mas também o crescimento e a competitividade no mercado.
+
+\bookmarksetup{startatroot}
+
+\chapter*{📅 Cronograma}\label{sec-schedule}
+
+\markboth{📅 Cronograma}{📅 Cronograma}
+
+Planejamento dos dias (📅) e horários dos \textbf{conteúdos} (⏲️)
+conforme nosso \emph{Plano de Ensino}. De uma forma geral, as aulas
+presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30
+durante o período 09/06/2025 a 29/09/2025. O cronograma detalhado, com
+as datas de todas as nossas avaliações, encontra-se em nosso
+\textbf{Plano de Ensino no Moodle}.
+
+A ideia aqui nessa página é apenas roterizar o conteúdo da disciplina
+FCCP, com direcionamento de materiais suplementares, para o aluno
+\textbf{organizar suas leituras prévias}.
+
+Na seção de cada um dos módulos (tópicos) do conteúdo programático temos
+a indicação da \textbf{bibliografia básica}. Quando disponível, por
+aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas
+gravadas ou indicações de vídeo (🎥{]} e \textbf{leituras
+complementares} sobre os conteúdos (📓).
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule\noalign{}
+Aula/Conteúdo & Data & Material Complementar \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Capítulo~\ref{sec-intro} & 📅20/06/25⏲️19:00 & 🗣🎥📓 \\
+Capítulo~\ref{sec-giro} & 📅27/06/25⏲️19:00 & 🗣🎥📓 \\
+Capítulo~\ref{sec-caixa} & 📅18/07/25⏲️19:00 & 🗣🎥📓 \\
+Capítulo~\ref{sec-credito} & 📅01/08/25⏲️19:00 & 🗣🎥📓 \\
+Capítulo~\ref{sec-estoque} & 📅19/08/25⏲️19:00 & 🗣🎥📓 \\
+Capítulo~\ref{sec-aval} & 📅29/08/25⏲️19:00 & 🗣🎥📓 \\
 \end{longtable}
 
 \bookmarksetup{startatroot}
