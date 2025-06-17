@@ -4,6 +4,8 @@ O único pré-requisito para a disciplina é **boa vontade e fazer as pré-leitu
 
 De qualquer forma, creio ser importante situar os alunos sobre os assuntos (disciplinas) correlatos que perfaz (vem antes e depois) o conteúdo típico de finanças em currículos da área de negócios. Especialmente, aqui na FACIC/UFU temos o seguinte panorama:
 
+<br>
+
 | Disciplina                                    | Foco Principal da Disciplina                                                                                              | Contribuição Chave para o Entendimento Financeiro Geral                                                                        | Relação Específica e Relevância para Finanças Corporativas de Curto Prazo (FCCP)                                                                                                                                    |
 |------------------|------------------|------------------|-------------------|
 | **Matemática Financeira**                     | Juros, descontos, taxas, séries de pagamento, valor do dinheiro no tempo, análise básica de investimentos.                | Fornece as ferramentas quantitativas fundamentais para toda a análise financeira.                                              | Essencial para calcular custos de financiamento de curto prazo, avaliar descontos, analisar fluxos de caixa do capital de giro. Base para todas as decisões quantitativas em FCCP.                                  |
@@ -13,7 +15,11 @@ De qualquer forma, creio ser importante situar os alunos sobre os assuntos (disc
 | **Governança Corporativa**                    | Princípios (transparência, equidade, accountability), mecanismos de controle, ética, relação com stakeholders.            | Estabelece o arcabouço para a tomada de decisão ética e responsável, visando proteger os interesses dos investidores.          | As decisões de FCCP devem ser tomadas dentro de um sistema de boa governança. Controles internos sobre o capital de giro são cruciais para prevenir fraudes e má gestão.                                            |
 | **Mercado de Capitais**                       | Sistema Financeiro Nacional, mercado de crédito, títulos (renda fixa/variável), mercado de ações, derivativos.            | Proporciona o entendimento do ambiente financeiro externo onde as empresas captam recursos e investidores aplicam seu capital. | O mercado de capitais influencia o custo das fontes de financiamento de curto prazo e oferece opções para aplicação de caixa excedente. Algumas empresas podem acessar o mercado para financiamento de curto prazo. |
 
+<br>
+
 Mas claro, no limite, podemos considerar que todo conteúdo da disciplina FCCP está conectado com outras áreas do conhecimento, tal como transcorre nossa formação num curso típico da área de negócios (economia, administração, contabilidade, etc.):
+
+<br>
 
 | Disciplina Relacionada       | Principais Contribuições para Finanças Corporativas de Curto Prazo                                                                                        | Exemplos de Aplicação Prática em Finanças de Curto Prazo                                                                                                                                             |
 |------------------|-----------------------------|-------------------------|
@@ -21,6 +27,8 @@ Mas claro, no limite, podemos considerar que todo conteúdo da disciplina FCCP e
 | **Economia (Micro e Macro)** | Teoria dos preços, análise de custos, estruturas de mercado (Micro); taxas de juros, inflação, ciclos econômicos, políticas fiscais e monetárias (Macro). | Definição de política de preços considerando a elasticidade da demanda; impacto da taxa Selic no custo de empréstimos de curto prazo; ajuste de estoques com base na previsão de crescimento do PIB. |
 | **Matemática**               | Lógica, álgebra, cálculo (implícito em modelos de otimização), e especificamente Matemática Financeira (valor do dinheiro no tempo, taxas, etc.).         | Cálculo do custo efetivo de um desconto financeiro oferecido por fornecedor; determinação do ponto de equilíbrio; modelagem do saldo ótimo de caixa.                                                 |
 | **Estatística**              | Teoria da probabilidade, análise de regressão, previsão de séries temporais, amostragem, testes de hipóteses, estatística descritiva.                     | Previsão de vendas para planejar estoques; análise de risco de crédito de clientes; cálculo da média e desvio padrão de prazos de pagamento; uso da Curva ABC para classificar clientes ou produtos. |
+
+<br>
 
 O que deve ficar claro é que, apesar de não haver pré-requisitos formais, o conhecimento prévio em matemática financeira e contabilidade é extremamente útil para o sucesso na disciplina. Além disso, a compreensão dos conceitos econômicos e estatísticos pode enriquecer a análise financeira e a tomada de decisões. Portanto, é recomendável que os alunos tenham uma base sólida nessas áreas, caso deseja desempenhar funções que se relacione com finanças corporativas de curto prazo. Fica a dica!
 

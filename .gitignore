@@ -5,3 +5,5 @@
 /.quarto/
 /_book/
 /adm/
+_temp/
+site_libs/

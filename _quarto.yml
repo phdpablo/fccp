@@ -1,6 +1,11 @@
 project:
   type: book
   output-dir: docs
+  pre-render:
+    - quarto render resources/*.qmd
+  resources:
+    - resources/*.*
+
 execute: 
   #echo: false
   warning: false
