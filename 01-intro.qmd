@@ -37,7 +37,7 @@ As empresas enfrentam continuamente os seguintes tipos principais de decisões f
 <br>
 
 | Critério de Comparação          | Finanças de Curto Prazo                                                                                                   | Finanças de Longo Prazo                                                                                            |
-|---------------|-----------------------------|----------------------------|
+|------------------|----------------------------|--------------------------|
 | *Horizonte Temporal*            | Tipicamente até um ano; foco no ciclo operacional.                                                                        | Geralmente mais de um ano; foco no crescimento e na estratégia de longo prazo.                                     |
 | *Decisões Chave*                | Gestão de caixa, contas a receber, estoques, financiamento de curto prazo.                                                | Orçamento de capital (investimentos em ativos fixos), estrutura de capital, política de dividendos.                |
 | *Ativos e Passivos Gerenciados* | Ativos Circulantes (caixa, bancos, clientes, estoques) e Passivos Circulantes (fornecedores, empréstimos de curto prazo). | Ativos Não Circulantes (imobilizado, intangível, investimentos) e Passivos Não Circulantes e Patrimônio Líquido.   |
@@ -135,7 +135,7 @@ Para o **imóvel**, o valor futuro é marcadamente especulativo. Embora exista u
 A tabela a seguir sintetiza a análise detalhada, oferecendo uma referência visual clara das diferenças fundamentais entre os dois tipos de investimento.
 
 | Característica                    | Renda Fixa (ex: CDB)                      | Imóvel (Residencial)                               |
-|--------------------|------------------------|-----------------------------|
+|--------------------|------------------------|----------------------------|
 | Perfil de Retorno                 | Primariamente Juros                       | Receita de Aluguel & Ganhos de Capital             |
 | Previsibilidade do Retorno        | Alta (Contratualmente definida)           | Baixa (Dependente do mercado, inquilino)           |
 | Garantia de Inadimplência         | FGC (até o limite, sem custo direto)      | Inexistente (Requer seguro privado custoso)        |
@@ -249,7 +249,7 @@ Para aplicar corretamente as ferramentas da matemática financeira, algumas conv
 -   **Forma Unitária nos Cálculos:** Embora as taxas sejam comumente discutidas em formato percentual (ex: 12%), elas devem ser inseridas nas equações em sua **forma unitária (decimal)**. *Uma taxa de 12% ao ano entra na fórmula como 0,12*. Esquecer essa conversão é uma fonte comum de erros para iniciantes e deve ser evitado rigorosamente.
 :::
 
-## Conclusão {.unnumbered}
+## Outros recursos didáticos {.unnumbered}
 
 Nesta seção, introduzimos os conceitos fundamentais de finanças corporativas, com foco na relação risco-retorno. Discutimos como as decisões financeiras são tomadas em um ambiente de incerteza e como o custo de oportunidade e a taxa de juros influenciam essas decisões. A compreensão desses princípios é essencial para a boa gestão das finanças de curto prazo de uma empresa.
 
@@ -257,5 +257,20 @@ Abaixo, você encontrará outros recursos didáticos que objetiva resumir os con
 
 > [**Slides da Aula**](/resources/intro-ppt.html)
 
+```{=html}
+<iframe src="/resources/intro-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+> [**Resumo Interativo**](/resources/intro-interativo.html) ➔ **Resumo do resumo!** 🥱
 
-> [**Resumo Interativo**](/resources/intro-interativo.html)
+```{=html}
+<iframe src="/resources/intro-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+> [**Podcast do Conteúdo**](resources/intro-podcast.mp3)
+
+::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+<iframe 
+    src="resources/intro-podcast.mp3" 
+    width="400" 
+    height="60" 
+    style="border: 1px solid #e0e0e0; border-radius: 15px;"> </iframe>
+:::
