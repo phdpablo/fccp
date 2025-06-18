@@ -4,6 +4,8 @@
 
 Bem-vindos à disciplina de Finanças Corporativas (I) de Curto Prazo (FCCP)! Essa seção introdutória tem como objetivo fornecer uma visão geral da disciplina FCCP no contexto da área de finanças. Também vamos discutir a relação risco-retorno em finanças. Essas duas frentes perfazem nosso primeiro módulo da disciplina, e a leitura básica, geralmente, encontra-se em capítulos iniciais de manuais (livros-textos) de finanças, tal como nossa bibliografia: Capítulo 1 do @assafneto2014 e do @gitman2010 e, complementarmente, também o Capítulo 1 do @ross2015.
 
+Para "relaxar" 😂 eu sugiro o livro do @bernstein2019. "Desafio aos Deuses" não é um manual de finanças! Ele discorre sobre a história do risco. Uma leitura narrativa não ficcional muito agradável. Em nossas [leituras complementares](https://fccp.phdpablo.com/00-schedule.html) indico uma resenha desse livro.
+
 Cabe ressaltar que as teorias de finanças, conforme nossa ementa oficial, tal como Teoria de Agência, Utilidade, etc., vamos tratar mais detalhadamente nos [Projetos em Grupo](https://fccp.phdpablo.com/06-aval.html) ao final do curso.
 
 <br>
@@ -268,9 +270,11 @@ Abaixo, você encontrará outros recursos didáticos que objetiva resumir os con
 > [**Podcast do Conteúdo**](resources/intro-podcast.mp3)
 
 ::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-<iframe 
-    src="resources/intro-podcast.mp3" 
-    width="400" 
-    height="60" 
-    style="border: 1px solid #e0e0e0; border-radius: 15px;"> </iframe>
+::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+<audio controls src="resources/intro-podcast.mp3" style="width: 400px;">
+
+Seu navegador não suporta o elemento de áudio.
+
+</audio>
+:::
 :::
