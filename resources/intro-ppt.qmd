@@ -1,5 +1,5 @@
 ---
-title: "Introdução as Finanças"
+title: "Introdução à Finanças Corporativas"
 subtitle: "Custo de Oportunidade"
 author: "Pablo Rogers"
 format:
@@ -16,14 +16,12 @@ format:
 <br>
 
 ::: incremental
-
 1.  **Introdução:** O Trade-off Risco vs. Retorno
 2.  **Estudo de Caso:** Renda Fixa vs. Imóveis
 3.  **Decisão Racional:** Dominância e Prêmio pelo Risco
 4.  **Conceito-Chave:** O Custo de Oportunidade
 5.  **Fundamento Essencial:** O Valor do Dinheiro no Tempo
 6.  **A Linguagem da Matemática Financeira**
-
 :::
 
 ## 1. O Dilema Central das Finanças
@@ -90,7 +88,6 @@ Para tornar os conceitos abstratos mais concretos, vamos analisar um dilema de i
 -   **Renda Fixa:** **Alta liquidez**. Resgate rápido com pouco ou nenhum impacto no preço.
 -   **Imóvel:** **Baixa liquidez**. Vender pode levar meses. Para vender rápido, é preciso dar um grande desconto, ou seja, **perder valor**.
 
-
 > A iliquidez é uma forma de risco. Ela aprisiona o capital e gera um **custo de oportunidade**.
 
 ## Previsibilidade do Valor Futuro
@@ -123,8 +120,7 @@ Para tornar os conceitos abstratos mais concretos, vamos analisar um dilema de i
 
 <br>
 
-Como um investidor "racional" escolhe entre diferentes ativos?
-Vamos usar um modelo simples com 3 ativos hipotéticos: A, B e C.
+Como um investidor "racional" escolhe entre diferentes ativos? Vamos usar um modelo simples com 3 ativos hipotéticos: A, B e C.
 
 <br>
 
@@ -235,7 +231,7 @@ A **taxa de juros** é o "preço do dinheiro". Ela representa o **custo de oport
 -   **M** ou **VF (FV)**: Montante ou Valor Futuro
 -   **C** ou **VP (PV)**: Capital ou Valor Presente
 -   **J**: Juros
--   **$i$**: Taxa de juros (por período)
+-   $i$: Taxa de juros (por período)
 -   **n**: Prazo (número de períodos)
 
 ## Equações Fundamentais (Juros Simples)
@@ -244,7 +240,7 @@ A **taxa de juros** é o "preço do dinheiro". Ela representa o **custo de oport
 
 O montante é o capital inicial mais os juros acumulados. $$M = C + J$$
 
-O montante pode ser calculado diretamente a partir do capital. $$M = C \times (1 + i \times n)$$ \
+O montante pode ser calculado diretamente a partir do capital. $$M = C \times (1 + i \times n)$$\
 
 ## Diagrama de Fluxo de Caixa
 

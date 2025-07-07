@@ -8,11 +8,11 @@ Na seção de cada um dos módulos (tópicos) do conteúdo programático temos a
 
 <br>
 
-| Aula/Conteúdo |       Data        |                                                                   Material Complementar                                                                   |
-|:--------------|:-----------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| @sec-intro    | 📅20/06/25⏲️19:00 | [🗣](/resources/intro-ppt.html)🎥[📓](https://medium.com/@fabiofigueiredo_44303/resenha-do-livro-desafio-aos-deuses-a-hist%C3%B3ria-do-risco-9607fab2aa30) |
-| @sec-giro     | 📅27/06/25⏲️19:00 |                                                                           🗣🎥📓                                                                           |
-| @sec-caixa    | 📅18/07/25⏲️19:00 |                                                                           🗣🎥📓                                                                           |
-| @sec-credito  | 📅01/08/25⏲️19:00 |                                                                           🗣🎥📓                                                                           |
-| @sec-estoque  | 📅19/08/25⏲️19:00 |                                                                           🗣🎥📓                                                                           |
-| @sec-aval     | 📅29/08/25⏲️19:00 |                                                                           🗣🎥📓                                                                           |
+| Aula/Conteúdo |       Data        |                                                                                   Material Complementar                                                                                   |
+|:--------------|:-----------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| @sec-intro    | 📅20/06/25⏲️19:00 | [🗣](/resources/intro-ppt.html)[🎥](https://youtu.be/oN2CVy1lHGc)[📓](https://medium.com/@fabiofigueiredo_44303/resenha-do-livro-desafio-aos-deuses-a-hist%C3%B3ria-do-risco-9607fab2aa30) |
+| @sec-giro     | 📅27/06/25⏲️19:00 |                                                                                           🗣🎥📓                                                                                           |
+| @sec-caixa    | 📅18/07/25⏲️19:00 |                                                                                           🗣🎥📓                                                                                           |
+| @sec-credito  | 📅01/08/25⏲️19:00 |                                                                                           🗣🎥📓                                                                                           |
+| @sec-estoque  | 📅19/08/25⏲️19:00 |                                                                                           🗣🎥📓                                                                                           |
+| @sec-aval     | 📅29/08/25⏲️19:00 |                                           [🗣](/resources/teorias-ppt.html)[🎥](https://www.youtube.com/live/OCt4f9IdO6U?si=tVw5wrVo7cVmkptu)📓                                            |
