@@ -1,7 +1,7 @@
 ---
 title: "Introdução à Finanças Corporativas"
 subtitle: "Custo de Oportunidade"
-author: "Pablo Rogers"
+author: "Dr. Pablo Rogers"
 format:
   revealjs:
     theme: sky
@@ -9,6 +9,16 @@ format:
     chalkboard: true
     height: 750
     width: 1600
+    preview-links: auto
+    logo: ""
+    footer: "FCCP | Custo de Oportunidade"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
 ---
 
 ## Roteiro da Aula

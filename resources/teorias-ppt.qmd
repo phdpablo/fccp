@@ -1,7 +1,7 @@
 ---
 title: "Introdução à Finanças Corporativas"
 subtitle: "Objetivos, Governança e Teoria Financeira"
-author: "Pablo Rogers"
+author: "Dr. Pablo Rogers"
 format:
   revealjs:
     theme: sky
@@ -9,6 +9,16 @@ format:
     chalkboard: true
     height: 750
     width: 1600
+    preview-links: auto
+    logo: ""
+    footer: "FCCP | Introdução"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
 ---
 
 ## Roteiro da Aula
@@ -123,8 +133,8 @@ A contabilidade usa o **regime de competência** (reconhece a receita na venda).
 :::
 
 ::: incremental
-- Sua necessidade surge da **separação entre propriedade (acionistas) e gestão (administradores)** nas grandes corporações.
-- Isso cria o **Problema de Agência**.
+-   Sua necessidade surge da **separação entre propriedade (acionistas) e gestão (administradores)** nas grandes corporações.
+-   Isso cria o **Problema de Agência**.
 :::
 
 ## O Conflito de Agência
@@ -134,9 +144,10 @@ A contabilidade usa o **regime de competência** (reconhece a receita na venda).
 ::: fragment
 Ocorre quando os interesses do **agente** (administrador) não estão alinhados com os do **principal** (acionista).
 :::
+
 ::: incremental
 -   **Exemplo:** Um administrador pode evitar um projeto arriscado, mas lucrativo, para proteger seu emprego, mesmo que os acionistas desejem o projeto.
-- Os custos gerados por esse conflito são chamados de **Custos de Agência**.
+-   Os custos gerados por esse conflito são chamados de **Custos de Agência**.
 :::
 
 ## Conflitos de Agência: Brasil vs. EUA
@@ -170,7 +181,7 @@ A natureza do principal conflito de agência varia com a estrutura de propriedad
 Como alinhar os interesses e reduzir os custos de agência?
 
 ::: incremental
--   **Conselho de Administração:** Eleito pelos acionistas para supervisionar a gestão. A presença de conselheiros independentes é fundamental. -   **Remuneração dos Executivos:** Planos de incentivo que atrelam a remuneração ao desempenho das ações (ex: opções de ações, bônus).
+-   **Conselho de Administração:** Eleito pelos acionistas para supervisionar a gestão. A presença de conselheiros independentes é fundamental. - **Remuneração dos Executivos:** Planos de incentivo que atrelam a remuneração ao desempenho das ações (ex: opções de ações, bônus).
 -   **Monitoramento Externo:** Auditores independentes, analistas de mercado e grandes investidores institucionais.
 -   **Ameaça de Aquisição (Takeover):** Empresas mal administradas tornam-se alvos para outras empresas, o que motiva a gestão a performar melhor
 :::
@@ -196,7 +207,6 @@ Como alinhar os interesses e reduzir os custos de agência?
 
 -   **Finanças Comportamentais (Kahneman & Tversky):** Contraponto à racionalidade total. Estuda como vieses psicológicos (ex: excesso de confiança, aversão à perda) afetam as decisões dos investidores e podem criar anomalias no mercado.
 :::
-
 
 ## Conclusão e Próximos Passos
 

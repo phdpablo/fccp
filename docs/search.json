@@ -210,6 +210,76 @@
     ]
   },
   {
+    "objectID": "02-giro.html",
+    "href": "02-giro.html",
+    "title": "2  Capital de Giro",
+    "section": "",
+    "text": "2.1 Capital de Giro (CG) ou Capital Circulante (CC)\nO Capital Circulante (CC), também conhecido como Capital de Giro (CG), é a interpretação mais ampla do conceito e corresponde, em sua essência, ao ativo circulante de uma empresa. Ele representa o valor total dos recursos necessários para financiar o ciclo operacional diário da empresa.\nAs decisões de compra e venda da empresa, assim como suas atividades operacionais e financeiras, envolvem a administração do capital de giro. Sua função é garantir a execução adequada das políticas de estocagem, compra de materiais, produção, venda de produtos/mercadorias e prazo de recebimento.\nA importância e o volume do capital de giro variam em função das características da empresa (como volume de vendas e sazonalidade), do desempenho da economia (fatores cíclicos), da tecnologia empregada e da política de negócios adotada.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capital de Giro</span>"
+    ]
+  },
+  {
+    "objectID": "02-giro.html#capital-de-giro-cg-ou-capital-circulante-cc",
+    "href": "02-giro.html#capital-de-giro-cg-ou-capital-circulante-cc",
+    "title": "2  Capital de Giro",
+    "section": "",
+    "text": "2.1.1 Capital Circulante Líquido (CCL) ou Capital de Giro Líquido (CGL)\nO Capital Circulante Líquido (CCL), frequentemente chamado de Capital de Giro Líquido (CGL), é uma das interpretações mais usuais do capital de giro. Ele representa o valor líquido das aplicações processadas no ativo circulante da empresa, após a dedução das dívidas de curto prazo.\nA forma mais direta de calculá-lo é pela simples diferença entre o Ativo Circulante (AC) e o Passivo Circulante (PC):\n\\[CCL = \\text{Ativo Circulante} - \\text{Passivo Circulante}\\]\nDe uma perspectiva mais rigorosa e conceitual, o Capital Circulante Líquido (CCL) representa a parcela dos recursos de longo prazo (recursos permanentes) que é aplicada em itens ativos de curto prazo (circulantes). Essa interpretação é feita “de baixo para cima” no balanço patrimonial, identificando os valores do passivo de longo prazo (próprios ou de terceiros) que estão financiando o ativo circulante. Algebricamente, pode ser obtido pela expressão:\n\\[\n\\begin{split}\nCCL = & (\\text{Passivo Não Circulante} + \\text{Patrimônio Líquido}) \\\\\n      & - (\\text{Realizável a Longo Prazo} + \\text{Ativo Permanente}) = (PNC + PL) - ANC\n\\end{split}\n\\]\nAmbas as identidades resultam no mesmo valor para o CCL. Para uma empresa, um CCL positivo indica que parte de suas obrigações de longo prazo está financiando seu ativo circulante, proporcionando uma folga na liquidez. Isso significa que a empresa possui mais direitos a receber do que a pagar no curto prazo. No mundo real, espera-se que essa diferença seja positiva.\n\n\n\n2.1.2 Capital de Giro Próprio (CGP)\nO Capital de Giro Próprio (CGP) é um indicador de capital de giro que representa a parcela de recursos próprios que a empresa tem aplicada em seu ativo circulante. Ele é comumente obtido pela seguinte expressão:\n\\[CGP = \\text{Patrimônio Líquido (PL)} - \\text{Ativo Não Circulante (ANC)}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capital de Giro</span>"
+    ]
+  },
+  {
+    "objectID": "02-giro.html#dinâmica-empresarial-análise-dos-ciclos-operacional-e-financeiro",
+    "href": "02-giro.html#dinâmica-empresarial-análise-dos-ciclos-operacional-e-financeiro",
+    "title": "2  Capital de Giro",
+    "section": "2.2 Dinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro",
+    "text": "2.2 Dinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro\nEntender os ciclos operacionais e financeiros de uma empresa é essencial para a administração financeira de curto prazo, pois eles revelam a dinâmica dos fluxos de caixa e a necessidade de financiamento.\n\n\n2.2.1 Ciclo Operacional\nO ciclo operacional é o período que a empresa leva desde a compra de matéria-prima (ou mercadorias para revenda) até o recebimento das vendas de seus produtos.\nPara uma manufatura, o ciclo operacional pode ser decomposto nas seguintes fases:\n\nPMEMP (Prazo Médio de Estocagem de Matéria-Prima)\nPMF (Prazo Médio de Fabricação)\nPMEPA (Prazo Médio de Estocagem de Produtos Acabados)\nPMR (Prazo Médio de Recebimento) ou PMC (Prazo Médio de Cobrança)\n\nCiclo Operacional Total (CO) = PMEMP + PMF + PMEPA (ou PME) + PMR (ou PMC)\nNo entanto, em um comércio essa “sopa de letrinhas pode ser simplificada”:\n\\[CO = PME + PMR\\] \n\n\n2.2.2 Ciclo Financeiro (Ciclo de Caixa)\nO ciclo financeiro (CF), também conhecido como ciclo de caixa (CC), focaliza as movimentações de caixa, abrangendo o período entre o momento em que a empresa realiza os pagamentos e o momento em que recebe pelas vendas.\n\\[CC = CO - PMP\\] \n\n\n2.2.3 Cálculo dos Prazos Médios\nAs expressões de cálculo das durações de cada fase operacional, considerando um empresa comercial, são:\n\nPrazo Médio de Estoques (PME): \\[PME = \\frac{\\text{Estoque Médio}}{\\text{Custo das Mercadorias Vendidas Diário}}\\]\nPrazo Médio de Recebimento (PMR): \\[PMR = \\frac{\\text{Contas a Receber Médias}}{\\text{Vendas Líquidas Diárias}}\\]\nPrazo Médio de Pagamento a Fornecedores (PMP): \\[PMP = \\frac{\\text{Contas a Pagar Médias}}{\\text{Custo das Mercadorias Vendidas Diário}}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capital de Giro</span>"
+    ]
+  },
+  {
+    "objectID": "02-giro.html#investimento-em-capital-de-giro",
+    "href": "02-giro.html#investimento-em-capital-de-giro",
+    "title": "2  Capital de Giro",
+    "section": "2.3 Investimento em Capital de Giro",
+    "text": "2.3 Investimento em Capital de Giro\nO investimento em capital de giro é fundamentalmente direcionado à sustentação da atividade operacional da empresa. As empresas enfrentam um dilema risco-rentabilidade na definição de suas políticas de investimento em capital de giro:\n\nConservadora: Maiores saldos de caixa, política de crédito mais frouxa e maiores estoques. Reduz o risco de liquidez, mas pode diminuir a rentabilidade.\nAgressiva: Reduções progressivas nos investimentos em ativos circulantes. Eleva o risco da empresa, mas incrementa a rentabilidade.\nMédia: Uma abordagem intermediária que busca um equilíbrio entre risco e rentabilidade.\n\nA determinação do nível ideal de investimento exige um balanço entre os custos de carregamento (carrying costs) e os custos de falta (shortage costs).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capital de Giro</span>"
+    ]
+  },
+  {
+    "objectID": "02-giro.html#financiamento-do-capital-de-giro",
+    "href": "02-giro.html#financiamento-do-capital-de-giro",
+    "title": "2  Capital de Giro",
+    "section": "2.4 Financiamento do Capital de Giro",
+    "text": "2.4 Financiamento do Capital de Giro\nAs decisões de financiamento buscam a melhor proporção entre capital de terceiros e capital próprio.\n\nComportamento das Taxas de Juros a Curto e Longo Prazos\n\nGeralmente, o custo de um crédito a longo prazo é mais caro que o de curto prazo.\n\nDilema Risco-Retorno na Composição de Financiamento\n\nOptar por uma maior participação do passivo circulante pode aumentar os resultados líquidos (menores custos), mas também aumenta o risco financeiro.\n\n\n2.4.1 Abordagens para o Financiamento do Capital de Giro\nO capital de giro é classificado como permanente (ou fixo) e sazonal (ou variável). As principais abordagens de financiamento são:\n\nAbordagem pelo Equilíbrio Financeiro Tradicional: Ativo permanente e capital de giro permanente financiados por recursos de longo prazo; necessidades sazonais de capital de giro cobertas por exigibilidades de curto prazo.\nAbordagem de Risco Mínimo (Conservadora): A empresa é totalmente financiada por recursos permanentes (longo prazo).\nAbordagem Restritiva (Agressiva): Usa financiamento de longo prazo apenas para as necessidades permanentes de ativos imobilizados e capital de giro.\n\n\n\n\n2.4.2 Fontes de Financiamento de Curto Prazo\nAs fontes podem ser espontâneas (contas a pagar a fornecedores, despesas a pagar) ou negociadas (empréstimos bancários, commercial papers, empréstimos com garantia).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capital de Giro</span>"
+    ]
+  },
+  {
+    "objectID": "02-giro.html#necessidade-de-investimento-em-capital-de-giro-nig",
+    "href": "02-giro.html#necessidade-de-investimento-em-capital-de-giro-nig",
+    "title": "2  Capital de Giro",
+    "section": "2.5 Necessidade de Investimento em Capital de Giro (NIG)",
+    "text": "2.5 Necessidade de Investimento em Capital de Giro (NIG)\nA Necessidade de Investimento em Giro (NIG) reflete o volume líquido de recursos demandado pelo ciclo operacional da empresa.\n\n\n2.5.1 Distinção entre Componentes da NIG\nA Necessidade de Capital de Giro (NCG) é a diferença entre os usos operacionais (Ativo Circulante Operacional - ACO) e as fontes operacionais (Passivo Circulante Operacional - PCO):\n\\[NCG = ACO - PCO\\] \n\n\n2.5.2 Saldo de Tesouraria e o Efeito Tesoura\nA diferença entre a Necessidade de Capital de Giro (NCG) e o Capital de Giro (CDG) é conhecida como Saldo de Tesouraria (ST):\n\\[ST = CDG - NCG\\]\nO “efeito tesoura” é uma situação crítica que ocorre quando o índice NCG/Vendas cresce de forma mais rápida do que o índice CDG/Vendas, levando a uma necessidade de aportes financeiros crescente.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capital de Giro</span>"
+    ]
+  },
+  {
+    "objectID": "02-giro.html#outros-recursos-didáticos",
+    "href": "02-giro.html#outros-recursos-didáticos",
+    "title": "2  Capital de Giro",
+    "section": "Outros recursos didáticos",
+    "text": "Outros recursos didáticos\nNesta seção, falamos um pouco sobre os principais indicadores de eficiência da gestão de curto prazo, tal como ciclos (operacional e de caixa), prazos médios e investimento/financiamento do capital de giro.\nAbaixo, você encontrará outros recursos didáticos que objetiva resumir os conceitos apresentados por aqui:\n\nSlides da Aula\n\n\n\nResumo Interativo ➔ Resumo do resumo! 🥱\n\n\n\nPodcast do Conteúdo\n\n\n\n\nSeu navegador não suporta o elemento de áudio.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Capital de Giro</span>"
+    ]
+  },
+  {
     "objectID": "06-aval.html",
     "href": "06-aval.html",
     "title": "6  Projetos em Grupo",

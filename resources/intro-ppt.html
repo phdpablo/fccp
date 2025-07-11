@@ -10,7 +10,7 @@
 <link href="intro-ppt_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
-  <meta name="author" content="Pablo Rogers">
+  <meta name="author" content="Dr.&nbsp;Pablo Rogers">
   <title>Introdução à Finanças Corporativas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,6 +31,22 @@
     }
   </style>
   <link rel="stylesheet" href="intro-ppt_files/libs/revealjs/dist/theme/quarto.css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
   <link href="intro-ppt_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="intro-ppt_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="intro-ppt_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -246,6 +262,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -334,13 +351,13 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Pablo Rogers 
+Dr.&nbsp;Pablo Rogers 
 </div>
 </div>
 </div>
 
 </section>
-<section id="roteiro-da-aula" class="slide level2">
+<section id="roteiro-da-aula" class="slide level2 center scrollable">
 <h2>Roteiro da Aula</h2>
 <p><br></p>
 <div>
@@ -354,7 +371,7 @@ Pablo Rogers
 </ol>
 </div>
 </section>
-<section id="o-dilema-central-das-finanças" class="slide level2">
+<section id="o-dilema-central-das-finanças" class="slide level2 center">
 <h2>1. O Dilema Central das Finanças</h2>
 <p><br></p>
 <h3 id="o-que-é-finanças">O que é Finanças?</h3>
@@ -367,7 +384,7 @@ Pablo Rogers
 <li><strong>Risco:</strong> A exposição à perda.</li>
 </ul>
 </section>
-<section id="estudo-de-caso-renda-fixa-vs.-imóvel" class="slide level2">
+<section id="estudo-de-caso-renda-fixa-vs.-imóvel" class="slide level2 center">
 <h2>2. Estudo de Caso: Renda Fixa vs.&nbsp;Imóvel</h2>
 <p><br></p>
 <p>Para tornar os conceitos abstratos mais concretos, vamos analisar um dilema de investimento comum.</p>
@@ -389,21 +406,21 @@ Pablo Rogers
 </tbody>
 </table>
 </section>
-<section id="natureza-dos-retornos" class="slide level2">
+<section id="natureza-dos-retornos" class="slide level2 center">
 <h2>Natureza dos Retornos</h2>
 <p><br></p>
 <h3 id="renda-fixa">Renda Fixa</h3>
 <ul>
-<li><strong>Retorno:</strong> <span class="math inline">\(Juros\)</span></li>
+<li><strong>Retorno:</strong> <span class="math inline">Juros</span></li>
 <li><strong>Previsibilidade:</strong> O retorno é contratualmente definido. Você sabe o que esperar.</li>
 </ul>
 <h3 id="imóvel">Imóvel</h3>
 <ul>
-<li><strong>Retorno 1:</strong> <span class="math inline">\(Aluguel\)</span>. Análogo aos juros, mas com maior incerteza.</li>
+<li><strong>Retorno 1:</strong> <span class="math inline">Aluguel</span>. Análogo aos juros, mas com maior incerteza.</li>
 <li><strong>Retorno 2:</strong> Ganho de Capital. A valorização do imóvel. É especulativo e não garantido.</li>
 </ul>
 </section>
-<section id="o-panorama-do-risco" class="slide level2">
+<section id="o-panorama-do-risco" class="slide level2 center">
 <h2>O Panorama do Risco</h2>
 <h3 id="garantias-e-custos">Garantias e Custos</h3>
 <ul>
@@ -416,7 +433,7 @@ Pablo Rogers
 <li><strong>Imóvel:</strong> Incerteza. Risco de <strong>vacância</strong> (imóvel vazio) e <strong>inadimplência</strong> do inquilino.</li>
 </ul>
 </section>
-<section id="o-papel-crítico-da-liquidez" class="slide level2">
+<section id="o-papel-crítico-da-liquidez" class="slide level2 center">
 <h2>O Papel Crítico da Liquidez</h2>
 <h3 id="definição">Definição</h3>
 <p><strong>Liquidez</strong> é a capacidade de um ativo ser convertido em dinheiro <strong>rapidamente</strong> e <strong>sem perda significativa de valor</strong>.</p>
@@ -428,7 +445,7 @@ Pablo Rogers
 <p>A iliquidez é uma forma de risco. Ela aprisiona o capital e gera um <strong>custo de oportunidade</strong>.</p>
 </blockquote>
 </section>
-<section id="previsibilidade-do-valor-futuro" class="slide level2">
+<section id="previsibilidade-do-valor-futuro" class="slide level2 center">
 <h2>Previsibilidade do Valor Futuro</h2>
 <p><br></p>
 <h3 id="renda-fixa-1">Renda Fixa</h3>
@@ -442,7 +459,7 @@ Pablo Rogers
 <li>Ex: Crise de 2008 (EUA), ciclos de baixa no Brasil.</li>
 </ul>
 </section>
-<section id="análise-comparativa-resumo" class="slide level2">
+<section id="análise-comparativa-resumo" class="slide level2 center">
 <h2>Análise Comparativa: Resumo</h2>
 <table class="caption-top">
 <colgroup>
@@ -496,7 +513,7 @@ Pablo Rogers
 </tbody>
 </table>
 </section>
-<section id="o-cálculo-da-escolha-racional" class="slide level2">
+<section id="o-cálculo-da-escolha-racional" class="slide level2 center">
 <h2>3. O Cálculo da Escolha Racional</h2>
 <p><br></p>
 <p>Como um investidor “racional” escolhe entre diferentes ativos? Vamos usar um modelo simples com 3 ativos hipotéticos: A, B e C.</p>
@@ -528,7 +545,7 @@ Pablo Rogers
 </tbody>
 </table>
 </section>
-<section id="o-princípio-da-dominância" class="slide level2">
+<section id="o-princípio-da-dominância" class="slide level2 center">
 <h2>O Princípio da Dominância</h2>
 <h3 id="cenário-1-mesmo-risco-retorno-diferente">Cenário 1: Mesmo Risco, Retorno Diferente</h3>
 <ul>
@@ -543,7 +560,7 @@ Pablo Rogers
 <li><strong>Escolha Racional:</strong> <strong>Ativo C</strong>. Ele também <strong>domina</strong> o Ativo B.</li>
 </ul>
 </section>
-<section id="risco-e-retorno-esperado" class="slide level2">
+<section id="risco-e-retorno-esperado" class="slide level2 center">
 <h2>Risco e Retorno Esperado</h2>
 <p><br></p>
 <p>A máxima popular “quanto maior o risco, maior o retorno” é uma simplificação…</p>
@@ -556,7 +573,7 @@ Pablo Rogers
 <li>O resultado <em>ex-post</em> (depois do fato) pode ser diferente, mas isso não invalida a racionalidade da decisão inicial.</li>
 </ul>
 </section>
-<section id="o-prêmio-pelo-risco" class="slide level2">
+<section id="o-prêmio-pelo-risco" class="slide level2 center">
 <h2>O Prêmio pelo Risco</h2>
 <p><br></p>
 <p>E quando não há dominância?</p>
@@ -568,9 +585,9 @@ Pablo Rogers
 </ul></li>
 </ul>
 <p>Aqui temos um <strong>trade-off</strong> real. A escolha depende do <strong>perfil de investidor</strong>.</p>
-<p>A diferença de retorno (<span class="math inline">\(15\% - 10\% = 5\%\)</span>) é o <strong>prêmio pelo risco</strong>: o retorno adicional que o investidor exige para aceitar o risco extra do Ativo B.</p>
+<p>A diferença de retorno (<span class="math inline">15\% - 10\% = 5\%</span>) é o <strong>prêmio pelo risco</strong>: o retorno adicional que o investidor exige para aceitar o risco extra do Ativo B.</p>
 </section>
-<section id="custo-de-oportunidade-a-definição-correta" class="slide level2">
+<section id="custo-de-oportunidade-a-definição-correta" class="slide level2 center">
 <h2>4. Custo de Oportunidade: A Definição Correta</h2>
 <p><br></p>
 <p>O que acontece se um investidor escolhe o Ativo A (dominado) em vez do Ativo C (dominante)?</p>
@@ -582,7 +599,7 @@ Pablo Rogers
 </ul>
 <p>A frase-chave é: <strong>“de igual risco”</strong>.</p>
 </section>
-<section id="custo-de-oportunidade-na-prática" class="slide level2">
+<section id="custo-de-oportunidade-na-prática" class="slide level2 center">
 <h2>Custo de Oportunidade na Prática</h2>
 <p><br></p>
 <p>Comparar o retorno de um imóvel com o a renda fixa pode ser um erro.</p>
@@ -594,7 +611,7 @@ Pablo Rogers
 <p>O conceito de custo de oportunidade ajustado pelo risco é fundamental para decisões financeiras racionais. Ele evita comparações inadequadas entre ativos com perfis de risco distintos.</p>
 </blockquote>
 </section>
-<section id="o-valor-do-dinheiro-no-tempo" class="slide level2">
+<section id="o-valor-do-dinheiro-no-tempo" class="slide level2 center scrollable">
 <h2>5. O Valor do Dinheiro no Tempo</h2>
 <p><br></p>
 <p>Princípio fundamental:</p>
@@ -607,8 +624,8 @@ Pablo Rogers
 <li><p><strong>Custo de Oportunidade:</strong> R$ 1.000 hoje podem ser investidos para se tornarem mais de R$ 1.000 no futuro. Deixar de receber hoje significa perder esse potencial de ganho.</p></li>
 </ol>
 </section>
-<section id="a-taxa-de-juros-i" class="slide level2">
-<h2>A Taxa de Juros (<span class="math inline">\(i\)</span>)</h2>
+<section id="a-taxa-de-juros-i" class="slide level2 center">
+<h2>A Taxa de Juros (<span class="math inline">i</span>)</h2>
 <p><br></p>
 <p>A <strong>taxa de juros</strong> é o “preço do dinheiro”. Ela representa o <strong>custo de oportunidade de deter dinheiro</strong>.</p>
 <p>É a compensação exigida para:</p>
@@ -621,7 +638,7 @@ Pablo Rogers
 <p>A taxa de juros é um dos “insumos” principais das finanças.</p>
 </blockquote>
 </section>
-<section id="a-linguagem-da-matemática-financeira" class="slide level2">
+<section id="a-linguagem-da-matemática-financeira" class="slide level2 center">
 <h2>6. A Linguagem da Matemática Financeira</h2>
 <p><br></p>
 <h3 id="variáveis-centrais">Variáveis Centrais</h3>
@@ -629,42 +646,42 @@ Pablo Rogers
 <li><strong>M</strong> ou <strong>VF (FV)</strong>: Montante ou Valor Futuro</li>
 <li><strong>C</strong> ou <strong>VP (PV)</strong>: Capital ou Valor Presente</li>
 <li><strong>J</strong>: Juros</li>
-<li><span class="math inline">\(i\)</span>: Taxa de juros (por período)</li>
+<li><span class="math inline">i</span>: Taxa de juros (por período)</li>
 <li><strong>n</strong>: Prazo (número de períodos)</li>
 </ul>
 </section>
-<section id="equações-fundamentais-juros-simples" class="slide level2">
+<section id="equações-fundamentais-juros-simples" class="slide level2 center">
 <h2>Equações Fundamentais (Juros Simples)</h2>
 <p><br></p>
-<p>O montante é o capital inicial mais os juros acumulados. <span class="math display">\[M = C + J\]</span></p>
-<p>O montante pode ser calculado diretamente a partir do capital. <span class="math display">\[M = C \times (1 + i \times n)\]</span><br>
+<p>O montante é o capital inicial mais os juros acumulados. <span class="math display">M = C + J</span></p>
+<p>O montante pode ser calculado diretamente a partir do capital. <span class="math display">M = C \times (1 + i \times n)</span><br>
 </p>
 </section>
-<section id="diagrama-de-fluxo-de-caixa" class="slide level2">
+<section id="diagrama-de-fluxo-de-caixa" class="slide level2 center">
 <h2>Diagrama de Fluxo de Caixa</h2>
 <p><br></p>
 <p>Uma ferramenta visual para representar problemas financeiros.</p>
 <ul>
-<li><strong>Eixo horizontal:</strong> Linha do tempo (<span class="math inline">\(n\)</span>)</li>
+<li><strong>Eixo horizontal:</strong> Linha do tempo (<span class="math inline">n</span>)</li>
 <li><strong>Setas verticais:</strong> Fluxos de caixa</li>
 </ul>
 <p><strong>Convenção Universal:</strong></p>
 <ul>
-<li><strong>Seta para baixo</strong> <span class="math inline">\(\downarrow\)</span> (ou valor negativo): Saída de caixa (investimento, pagamento).</li>
-<li><strong>Seta para cima</strong> <span class="math inline">\(\uparrow\)</span> (ou valor positivo): Entrada de caixa (resgate, recebimento).</li>
+<li><strong>Seta para baixo</strong> <span class="math inline">\downarrow</span> (ou valor negativo): Saída de caixa (investimento, pagamento).</li>
+<li><strong>Seta para cima</strong> <span class="math inline">\uparrow</span> (ou valor positivo): Entrada de caixa (resgate, recebimento).</li>
 </ul>
 </section>
-<section id="convenções-essenciais" class="slide level2">
+<section id="convenções-essenciais" class="slide level2 center scrollable">
 <h2>Convenções Essenciais</h2>
 <p><br></p>
 <ol type="1">
 <li><p><strong>Foco no Caixa:</strong> Matemática financeira usa o regime de <strong>caixa</strong> (quando o dinheiro entra/sai), não o de <strong>competência</strong> da contabilidade (quando a venda ocorre).</p></li>
-<li><p><strong>Alinhamento Taxa-Período:</strong> A taxa (<span class="math inline">\(i\)</span>) e o prazo (<span class="math inline">\(n\)</span>) devem estar <strong>sempre na mesma unidade de tempo</strong> (ex: taxa ao mês, prazo em meses).</p></li>
+<li><p><strong>Alinhamento Taxa-Período:</strong> A taxa (<span class="math inline">i</span>) e o prazo (<span class="math inline">n</span>) devem estar <strong>sempre na mesma unidade de tempo</strong> (ex: taxa ao mês, prazo em meses).</p></li>
 <li><p><strong>Forma Unitária:</strong> Nas fórmulas, a taxa de juros entra como decimal (12% = <strong>0,12</strong>).</p></li>
 </ol>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-
+<p>FCCP | Custo de Oportunidade</p>
 </div>
 </div>
 </section>
@@ -685,7 +702,6 @@ Pablo Rogers
   <script src="intro-ppt_files/libs/revealjs/plugin/notes/notes.js"></script>
   <script src="intro-ppt_files/libs/revealjs/plugin/search/search.js"></script>
   <script src="intro-ppt_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="intro-ppt_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -694,7 +710,7 @@ Pablo Rogers
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -750,7 +766,7 @@ Pablo Rogers
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -826,14 +842,14 @@ Pablo Rogers
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -853,27 +869,9 @@ Pablo Rogers
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
 
-        math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
-          RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom
