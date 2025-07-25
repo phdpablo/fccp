@@ -1,0 +1,222 @@
+---
+title: "Introdução à Finanças Corporativas"
+subtitle: "Objetivos, Governança e Teoria Financeira"
+author: "Dr. Pablo Rogers"
+format:
+  revealjs:
+    theme: sky
+    slide-number: true
+    chalkboard: true
+    height: 750
+    width: 1600
+    preview-links: auto
+    logo: ""
+    footer: "FCCP | Introdução"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
+---
+
+## Roteiro da Aula
+
+<br>
+
+::: incremental
+1.  **O Objetivo da Empresa e da Administração Financeira**
+2.  **Governança Corporativa e Conflitos de Agência**
+3.  **Introdução às Grandes Teorias de Finanças**
+:::
+
+## 1. O Objetivo da Empresa
+
+<br>
+
+### Qual é o objetivo principal de uma empresa?
+
+::: incremental
+-   Uma resposta comum: **Maximizar o Lucro**.
+
+-   Por que essa resposta é **insuficiente**?
+:::
+
+::: incremental
+1.  **Ignora o Tempo:** Lucros de que ano? Aumentar o lucro hoje cortando custos de manutenção pode destruir valor no longo prazo.
+2.  **Ignora o Caixa:** Lucro contábil não é dinheiro no bolso do acionista. Uma empresa pode ter lucro e não ter caixa para pagar suas contas (dividendos).
+3.  **Ignora o Risco:** Dois projetos podem gerar o mesmo lucro, mas um pode ser muito mais arriscado que o outro.
+:::
+
+## O Objetivo da Administração Financeira
+
+<br>
+
+::: incremental
+O objetivo correto é **maximizar a riqueza dos acionistas**, o que é medido pelo **valor de mercado de suas ações**.
+
+-   O preço da ação reflete as expectativas sobre os **fluxos de caixa futuros**, ajustados pelo **risco** e pelo **tempo**.
+-   Se os acionistas estão ganhando, significa que todos os outros stakeholders (funcionários, credores, fornecedores) já foram pagos. Eles são os "proprietários residuais".
+:::
+
+## Shareholders vs. Stakeholders
+
+::: incremental
+-   **Shareholders (Acionistas):** Os proprietários da empresa. O foco principal da gestão financeira em modelos anglo-saxônicos (EUA, Reino Unido).
+-   **Stakeholders (Partes Interessadas):** Qualquer um com interesse na empresa (funcionários, clientes, fornecedores, governo, comunidade).
+:::
+
+::: fragment
+A visão de que a empresa deve servir a todos os stakeholders é mais forte em países como Alemanha e Japão.
+
+*A busca pela maximização da riqueza do acionista, no longo prazo, geralmente beneficia também os stakeholders (gera empregos, produtos de qualidade, etc.).*
+:::
+
+## As Decisões do Administrador Financeiro
+
+O administrador financeiro lida com duas questões fundamentais, refletidas no balanço patrimonial:
+
+<br>
+
+::: columns
+::: column
+### 1. Decisão de Investimento
+
+::: incremental
+-   Onde aplicar os recursos?
+-   Compra de ativos reais (tangíveis e intangíveis).
+-   **Lado Esquerdo do Balanço.**
+-   Ex: Construir uma nova fábrica, lançar um novo produto.
+:::
+:::
+
+::: column
+### 2. Decisão de Financiamento
+
+::: incremental
+-   Como obter os recursos?
+-   Venda de ativos financeiros (ações, dívidas).
+-   **Lado Direito do Balanço.**
+-   Ex: Emitir novas ações, tomar um empréstimo bancário.
+:::
+:::
+:::
+
+## Horizontes de Gestão e o Foco no Caixa
+
+::: incremental
+-   **Gestão de Longo Prazo:** Decisões de investimento (orçamento de capital) e financiamento (estrutura de capital).
+-   **Gestão de Curto Prazo:** Administração do capital de giro (caixa, estoques, contas a receber/pagar).
+:::
+
+::: fragment
+### O Foco no Fluxo de Caixa
+
+A contabilidade usa o **regime de competência** (reconhece a receita na venda). Finanças foca no **regime de caixa** (quando o dinheiro efetivamente entra ou sai).
+
+**Exemplo:** Uma empresa vende um produto por R\$120 (custo R\$100) a prazo. - **Visão Contábil:** Lucro de R\$20. - **Visão Financeira:** Fluxo de Caixa de -R\$100 (se o custo foi pago) até o recebimento do cliente.
+:::
+
+## O Foco no Curto prazo
+
+![](representacaoBP.png){fig-align="right"}
+
+## 2. Governança Corporativa
+
+<br>
+
+### O que é e por que é necessária?
+
+::: fragment
+**Governança Corporativa** é o sistema pelo qual as empresas são dirigidas e controladas.
+:::
+
+::: incremental
+-   Sua necessidade surge da **separação entre propriedade (acionistas) e gestão (administradores)** nas grandes corporações.
+-   Isso cria o **Problema de Agência**.
+:::
+
+## O Conflito de Agência
+
+<br>
+
+::: fragment
+Ocorre quando os interesses do **agente** (administrador) não estão alinhados com os do **principal** (acionista).
+:::
+
+::: incremental
+-   **Exemplo:** Um administrador pode evitar um projeto arriscado, mas lucrativo, para proteger seu emprego, mesmo que os acionistas desejem o projeto.
+-   Os custos gerados por esse conflito são chamados de **Custos de Agência**.
+:::
+
+## Conflitos de Agência: Brasil vs. EUA
+
+A natureza do principal conflito de agência varia com a estrutura de propriedade:
+
+::: columns
+::: column
+### EUA / Reino Unido
+
+::: incremental
+-   **Estrutura:** Capital pulverizado, sem acionista controlador definido.
+-   **Conflito Principal:** **Administradores vs. Acionistas**
+-   **Preocupação:** Garantir que os gestores profissionais atuem para maximizar o valor.
+:::
+:::
+
+::: column
+### Brasil / Europa Continental
+
+::: incremental
+-   **Estrutura:** Alta concentração de capital, com um acionista (ou bloco) controlador.
+-   **Conflito Principal:** **Acionista Controlador vs. Acionistas Minoritários**
+-   **Preocupação:** Proteger os minoritários de decisões que beneficiem apenas o controlador.
+:::
+:::
+:::
+
+## Mecanismos de Governança Corporativa
+
+Como alinhar os interesses e reduzir os custos de agência?
+
+::: incremental
+-   **Conselho de Administração:** Eleito pelos acionistas para supervisionar a gestão. A presença de conselheiros independentes é fundamental. - **Remuneração dos Executivos:** Planos de incentivo que atrelam a remuneração ao desempenho das ações (ex: opções de ações, bônus).
+-   **Monitoramento Externo:** Auditores independentes, analistas de mercado e grandes investidores institucionais.
+-   **Ameaça de Aquisição (Takeover):** Empresas mal administradas tornam-se alvos para outras empresas, o que motiva a gestão a performar melhor
+:::
+
+## 3. Importantes Teorias de Finanças
+
+### Pilares da Teoria Financeira (1/2)
+
+::: incremental
+-   **Teoria da Utilidade:** Investidores não maximizam apenas o retorno, mas a "utilidade" (satisfação). Isso explica por que diferentes pessoas têm diferentes apetites por risco (aversão, neutralidade ou propensão ao risco).
+
+-   **Hipótese de Mercados Eficientes (Fama):** Em um mercado eficiente, os preços dos ativos refletem instantaneamente toda a informação disponível. Consequência: é extremamente difícil "bater o mercado" de forma consistente.
+
+-   **Teoria do Portfólio (Markowitz):** O risco de um ativo não deve ser visto de forma isolada, mas por sua contribuição ao risco total de uma carteira. A diversificação é a chave para reduzir o risco sem sacrificar o retorno.
+:::
+
+## 3. Importantes Teorias de Finanças
+
+### Pilares da Teoria Financeira (2/2)
+
+::: incremental
+-   **Teoria de Precificação por Arbitragem (APT - Ross):** Um modelo alternativo ao CAPM que afirma que o retorno de um ativo pode ser previsto usando a relação entre o ativo e múltiplos fatores de risco comuns (ex: inflação, produção industrial).
+
+-   **Finanças Comportamentais (Kahneman & Tversky):** Contraponto à racionalidade total. Estuda como vieses psicológicos (ex: excesso de confiança, aversão à perda) afetam as decisões dos investidores e podem criar anomalias no mercado.
+:::
+
+## Conclusão e Próximos Passos
+
+::: incremental
+-   O objetivo da empresa é **maximizar a riqueza dos acionistas**.
+-   A **Governança Corporativa** é o sistema que alinha os interesses de gestores e acionistas.
+-   O conflito de agência no Brasil (controlador vs. minoritário) difere do modelo dos EUA (gestor vs. acionista).
+-   As teorias de finanças fornecem a base para a tomada de decisão racional.
+:::
+
+::: fragment
+**Próxima etapa:** Formação dos grupos para aprofundar e apresentar as teorias discutidas.
+:::

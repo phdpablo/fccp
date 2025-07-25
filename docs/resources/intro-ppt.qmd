@@ -1,0 +1,277 @@
+---
+title: "Introdução à Finanças Corporativas"
+subtitle: "Custo de Oportunidade"
+author: "Dr. Pablo Rogers"
+format:
+  revealjs:
+    theme: sky
+    slide-number: true
+    chalkboard: true
+    height: 750
+    width: 1600
+    preview-links: auto
+    logo: ""
+    footer: "FCCP | Custo de Oportunidade"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
+---
+
+## Roteiro da Aula
+
+<br>
+
+::: incremental
+1.  **Introdução:** O Trade-off Risco vs. Retorno
+2.  **Estudo de Caso:** Renda Fixa vs. Imóveis
+3.  **Decisão Racional:** Dominância e Prêmio pelo Risco
+4.  **Conceito-Chave:** O Custo de Oportunidade
+5.  **Fundamento Essencial:** O Valor do Dinheiro no Tempo
+6.  **A Linguagem da Matemática Financeira**
+:::
+
+## 1. O Dilema Central das Finanças
+
+<br>
+
+### O que é Finanças?
+
+A ciência da **tomada de decisão econômica** sob condições de **incerteza**.
+
+<br>
+
+### O Trade-off Fundamental
+
+Toda decisão financeira gira em torno da relação entre:
+
+-   **Retorno:** O potencial de ganho.
+-   **Risco:** A exposição à perda.
+
+## 2. Estudo de Caso: Renda Fixa vs. Imóvel
+
+<br>
+
+Para tornar os conceitos abstratos mais concretos, vamos analisar um dilema de investimento comum.
+
+<br>
+
+|     Ativo Financeiro     | vs. |          Ativo Real          |
+|:------------------------:|:---:|:----------------------------:|
+| **Renda Fixa** (ex: CDB) |     | **Imóvel** (ex: Apartamento) |
+
+## Natureza dos Retornos
+
+<br>
+
+### Renda Fixa
+
+-   **Retorno:** $Juros$
+-   **Previsibilidade:** O retorno é contratualmente definido. Você sabe o que esperar.
+
+### Imóvel
+
+-   **Retorno 1:** $Aluguel$. Análogo aos juros, mas com maior incerteza.
+-   **Retorno 2:** Ganho de Capital. A valorização do imóvel. É especulativo e não garantido.
+
+## O Panorama do Risco
+
+### Garantias e Custos
+
+-   **Renda Fixa:** Proteção do FGC (até R\$ 250 mil) sem custo direto para o investidor. Custos de manutenção quase nulos.
+-   **Imóvel:** Sem garantia institucional. Seguro é um custo extra. Altos custos de manutenção, transação (ITBI, cartório) e administração (\~10% do aluguel).
+
+### Confiabilidade do Fluxo de Caixa
+
+-   **Renda Fixa:** Altíssima. O pagamento de juros de um título do governo é quase certo.
+-   **Imóvel:** Incerteza. Risco de **vacância** (imóvel vazio) e **inadimplência** do inquilino.
+
+## O Papel Crítico da Liquidez
+
+### Definição
+
+**Liquidez** é a capacidade de um ativo ser convertido em dinheiro **rapidamente** e **sem perda significativa de valor**.
+
+-   **Renda Fixa:** **Alta liquidez**. Resgate rápido com pouco ou nenhum impacto no preço.
+-   **Imóvel:** **Baixa liquidez**. Vender pode levar meses. Para vender rápido, é preciso dar um grande desconto, ou seja, **perder valor**.
+
+> A iliquidez é uma forma de risco. Ela aprisiona o capital e gera um **custo de oportunidade**.
+
+## Previsibilidade do Valor Futuro
+
+<br>
+
+### Renda Fixa
+
+-   **Previsibilidade:** **Alta**. O valor de resgate no vencimento é conhecido desde o início.
+
+### Imóvel
+
+-   **Previsibilidade:** **Baixa**. O valor futuro é **especulativo**.
+-   A crença na valorização de longo prazo não é uma garantia. Mercados imobiliários podem estagnar ou cair.
+-   Ex: Crise de 2008 (EUA), ciclos de baixa no Brasil.
+
+## Análise Comparativa: Resumo
+
+| Característica        | Renda Fixa (ex: CDB)   | Imóvel (Residencial)         |
+|:-----------------------|:-----------------------|:-----------------------|
+| **Perfil de Retorno** | Primariamente Juros    | Aluguel & Ganho de Capital   |
+| **Previsibilidade**   | Alta (Contratual)      | Baixa (Mercado)              |
+| **Garantia**          | FGC (sem custo direto) | Inexistente (Seguro é custo) |
+| **Liquidez**          | Alta                   | Muito Baixa                  |
+| **Custos**            | Insignificantes        | Significativos e contínuos   |
+| **Fluxo de Caixa**    | Confiável              | Risco de interrupção         |
+| **Perfil de Risco**   | **Menor**              | **Maior**                    |
+
+## 3. O Cálculo da Escolha Racional
+
+<br>
+
+Como um investidor "racional" escolhe entre diferentes ativos? Vamos usar um modelo simples com 3 ativos hipotéticos: A, B e C.
+
+<br>
+
+| Ativo | Risco Esperado | Retorno Esperado |
+|:-----:|:--------------:|:----------------:|
+| **A** |       X        |       10%        |
+| **B** |    Y (\>X)     |       15%        |
+| **C** |       X        |       15%        |
+
+## O Princípio da Dominância
+
+### Cenário 1: Mesmo Risco, Retorno Diferente
+
+-   **Comparando A e C:** Ambos têm Risco X.
+-   O Ativo C oferece 15% de retorno, enquanto o A oferece 10%.
+-   **Escolha Racional:** **Ativo C**. Ele **domina** o Ativo A.
+
+### Cenário 2: Mesmo Retorno, Risco Diferente
+
+-   **Comparando B e C:** Ambos oferecem 15% de retorno.
+-   O Ativo C tem Risco X, enquanto o B tem Risco Y (maior).
+-   **Escolha Racional:** **Ativo C**. Ele também **domina** o Ativo B.
+
+## Risco e Retorno Esperado
+
+<br>
+
+A máxima popular "quanto maior o risco, maior o retorno" é uma simplificação...
+
+A formulação correta é:
+
+> Um maior **retorno esperado** é exigido como compensação por um maior **risco percebido**.
+
+-   A decisão é tomada *ex-ante* (antes do fato).
+-   O resultado *ex-post* (depois do fato) pode ser diferente, mas isso não invalida a racionalidade da decisão inicial.
+
+## O Prêmio pelo Risco
+
+<br>
+
+E quando não há dominância?
+
+-   **Comparando A e B:**
+    -   **Ativo A:** Menor Risco (X), Menor Retorno (10%)
+    -   **Ativo B:** Maior Risco (Y), Maior Retorno (15%)
+
+Aqui temos um **trade-off** real. A escolha depende do **perfil de investidor**.
+
+A diferença de retorno ($15\% - 10\% = 5\%$) é o **prêmio pelo risco**: o retorno adicional que o investidor exige para aceitar o risco extra do Ativo B.
+
+## 4. Custo de Oportunidade: A Definição Correta
+
+<br>
+
+O que acontece se um investidor escolhe o Ativo A (dominado) em vez do Ativo C (dominante)?
+
+> **Custo de Oportunidade** é o valor da **melhor alternativa preterida** entre opções com um **perfil de risco comparável**.
+
+-   Ao escolher A (10%) em vez de C (15%), o custo de oportunidade foi o retorno de 15%. O investidor sacrificou 5% de retorno sem reduzir seu risco.
+
+A frase-chave é: **"de igual risco"**.
+
+## Custo de Oportunidade na Prática
+
+<br>
+
+Comparar o retorno de um imóvel com o a renda fixa pode ser um erro.
+
+-   **Por quê?** Porque os perfis de risco são diferentes.
+-   **O correto:** O retorno de um imóvel deve ser comparado com o de outro investimento de **risco equiparável** (ex: fundo imobiliário, LCIs, outro empreendimento).
+
+> O conceito de custo de oportunidade ajustado pelo risco é fundamental para decisões financeiras racionais. Ele evita comparações inadequadas entre ativos com perfis de risco distintos.
+
+## 5. O Valor do Dinheiro no Tempo
+
+<br>
+
+Princípio fundamental:
+
+> **R\$ 1.000 hoje valem mais do que R\$ 1.000 daqui a um ano.**
+
+Por quê?
+
+1.  **Inflação:** O aumento dos preços corrói o poder de compra do dinheiro. Com R\$ 1.000, você compra menos coisas no futuro.
+
+2.  **Custo de Oportunidade:** R\$ 1.000 hoje podem ser investidos para se tornarem mais de R\$ 1.000 no futuro. Deixar de receber hoje significa perder esse potencial de ganho.
+
+## A Taxa de Juros ($i$)
+
+<br>
+
+A **taxa de juros** é o "preço do dinheiro". Ela representa o **custo de oportunidade de deter dinheiro**.
+
+É a compensação exigida para:
+
+-   Adiar o consumo.
+-   Abrir mão da liquidez.
+-   Assumir o risco da inflação e do não pagamento.
+
+> A taxa de juros é um dos "insumos" principais das finanças.
+
+## 6. A Linguagem da Matemática Financeira
+
+<br>
+
+### Variáveis Centrais
+
+-   **M** ou **VF (FV)**: Montante ou Valor Futuro
+-   **C** ou **VP (PV)**: Capital ou Valor Presente
+-   **J**: Juros
+-   $i$: Taxa de juros (por período)
+-   **n**: Prazo (número de períodos)
+
+## Equações Fundamentais (Juros Simples)
+
+<br>
+
+O montante é o capital inicial mais os juros acumulados. $$M = C + J$$
+
+O montante pode ser calculado diretamente a partir do capital. $$M = C \times (1 + i \times n)$$\
+
+## Diagrama de Fluxo de Caixa
+
+<br>
+
+Uma ferramenta visual para representar problemas financeiros.
+
+-   **Eixo horizontal:** Linha do tempo ($n$)
+-   **Setas verticais:** Fluxos de caixa
+
+**Convenção Universal:**
+
+-   **Seta para baixo** $\downarrow$ (ou valor negativo): Saída de caixa (investimento, pagamento).
+-   **Seta para cima** $\uparrow$ (ou valor positivo): Entrada de caixa (resgate, recebimento).
+
+## Convenções Essenciais
+
+<br>
+
+1.  **Foco no Caixa:** Matemática financeira usa o regime de **caixa** (quando o dinheiro entra/sai), não o de **competência** da contabilidade (quando a venda ocorre).
+
+2.  **Alinhamento Taxa-Período:** A taxa ($i$) e o prazo ($n$) devem estar **sempre na mesma unidade de tempo** (ex: taxa ao mês, prazo em meses).
+
+3.  **Forma Unitária:** Nas fórmulas, a taxa de juros entra como decimal (12% = **0,12**).
