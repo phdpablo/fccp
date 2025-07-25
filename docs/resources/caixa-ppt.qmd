@@ -224,7 +224,7 @@ format:
     -   Uso de moeda constante
     -   Ajuste por índices de correção monetária
 :::
-::::
+:::
 
 ------------------------------------------------------------------------
 
@@ -310,19 +310,34 @@ format:
 
 <br>
 
-::: incremental
+
 **Principais Restrições:**
 
+::::: columns
+::: {.column width="30%"}
+::: incremental
 -   **Ausência de Incerteza:**
     -   Não admite condições de incerteza na administração de caixa
     -   Fluxos considerados determinísticos
+:::
+:::
+
+::: {.column width="30%"}
+::: incremental
 -   **Taxa de Variação Constante:**
     -   Variação do saldo não ocorre geralmente a uma taxa constante
     -   Simplificação excessiva da realidade
+:::
+:::
+
+::: {.column width="30%"}
+::: incremental
 -   **Unidirecionalidade:**
     -   Não prevê variações para cima e para baixo nos saldos
     -   Ignora diferentes tipos de transações simultâneas
 :::
+:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -359,35 +374,47 @@ format:
 <br>
 
 ::: incremental
-**Cálculo do Nível de Retorno Ótimo:**
+- **Cálculo do Nível de Retorno Ótimo:** $$z = \sqrt[3]{\frac{3b\sigma^2}{4i}} + L$$
 
-$$z = \sqrt[3]{\frac{3b\sigma^2}{4i}} + L$$
+- **Limite Superior:** $$h = 3z - 2L$$
 
-**Limite Superior:** $$h = 3z - 2L$$
-
-**Onde:** $b$ = Custo fixo de transações com títulos negociáveis; $\sigma^2$ = Variância dos saldos líquidos diários de caixa; $i$ = Taxa de juros diária de títulos negociáveis
-
+- **Onde:** $b$ = Custo fixo de transações com títulos negociáveis; $\sigma^2$ = Variância dos saldos líquidos diários de caixa; $i$ = Taxa de juros diária de títulos negociáveis
 :::
 
 ------------------------------------------------------------------------
 
-## Desafios da Gestão em Ambiente Inflacionário {.smaller}
+## Desafios da Gestão em Ambiente Inflacionário
 
 <br>
 
-::: incremental
+
 **Dificuldades Adicionais:**
 
+::::: columns
+::: {.column width="30%"}
+::: incremental
 -   **Perda de Poder de Compra:**
     -   Manutenção de caixa determina queda no poder de compra
     -   Depreciação monetária contínua dos saldos
+:::
+:::
+
+::: {.column width="30%"}
+::: incremental
 -   **Recuperação Parcial:**
     -   Recuperação de parte do desgaste somente se aplicados em títulos negociáveis
     -   Necessidade de indexação adequada
+:::
+:::
+
+::: {.column width="30%"}
+::: incremental
 -   **Estratégias Rigorosas:**
     -   Maior minimização de investimentos em contextos inflacionários
     -   Políticas mais agressivas de redução de saldos
 :::
+:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -422,8 +449,6 @@ $$z = \sqrt[3]{\frac{3b\sigma^2}{4i}} + L$$
 <br>
 
 ::: incremental
-**Síntese dos Conceitos:**
-
 -   A administração de caixa requer **equilibrio científico** entre liquidez e rentabilidade
 
 -   **Modelos quantitativos** fornecem base metodológica para decisões otimizadas
