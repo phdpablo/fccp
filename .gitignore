@@ -1,11 +1,19 @@
-.Rproj.user
+# Artefatos do RStudio
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
+
+# Quarto e builds
 .quarto/
 _book/
+_site/
 _temp/
-/adm/
-/renv/
 /site_libs/
-/.quarto/
+
+# Dependências
+/renv/
+.Rprofile
+
+# Gestão
+/adm/
