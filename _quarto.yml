@@ -5,6 +5,9 @@ project:
     - quarto render resources/*.qmd
   resources:
     - resources/
+exclude:
+    - renv/
+    - adm/
 
 execute:
   #echo: false
