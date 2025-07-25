@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Capital de Giro: Uma Análise Interativa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Chosen Palette: Professional Blue & Gray -->
+    <!-- Application Structure Plan: The SPA is structured thematically to guide the user through the concepts of Working Capital Management. It begins with '1. Conceitos Fundamentais' to establish definitions (CCL, CGP). It then moves to '2. A Dinâmica dos Ciclos', the core interactive section featuring the requested cycle calculator and a dynamic timeline. '3. Estratégias de Gestão' combines investment and financing policies into a single, comparable view using interactive cards. Finally, '4. A Necessidade de Financiamento' explains NCG and its relationship with CCL. This structure was chosen to build knowledge progressively, from definition to application and strategic thinking. -->
+    <!-- Visualization & Content Choices: 1. Definitions (CCL/CGP): Goal: Inform -> Method: HTML cards with LaTeX formulas -> Justification: Clear, scannable presentation for core formulas. 2. Cycle Calculator: Goal: Interact/Inform -> Method: HTML form + JS -> Justification: Provides a hands-on tool for students to see how changing one variable affects the entire system. 3. Cycle Timeline: Goal: Organize/Change -> Method: Dynamic HTML/CSS timeline updated by the calculator's JS -> Justification: The most effective way to visualize the time-based nature of the cycles and the concept of the cash gap. 4. Policies (Investment/Financing): Goal: Compare -> Method: Side-by-side interactive cards -> Justification: Allows for direct comparison of the risk/return trade-offs. 5. NCG/CCL Relationship: Goal: Organize -> Method: Simple HTML/CSS diagram -> Justification: Visually simplifies the key formula ST = CCL - NCG. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b; /* slate-800 */
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #0369a1; /* sky-700 */
+            border-bottom-color: #0369a1;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .btn-primary {
+            background-color: #0369a1; /* sky-700 */
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #0284c7; /* sky-600 */
+        }
+        .policy-btn {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .policy-btn.active {
+            border-color: #0369a1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-slate-800">Gestão de Capital de Giro</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#conceitos" class="nav-link">Conceitos</a>
+                <a href="#ciclos" class="nav-link">Ciclos</a>
+                <a href="#estrategias" class="nav-link">Estratégias</a>
+                <a href="#necessidade" class="nav-link">Necessidade (NCG)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="hero" class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">A Gestão Financeira do Dia a Dia</h2>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Explore os conceitos, ciclos e estratégias que governam a liquidez e a rentabilidade de curto prazo de uma empresa.</p>
+        </section>
+
+        <!-- Seção 1: Conceitos Fundamentais -->
+        <section id="conceitos" class="mb-20 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">1. Conceitos Fundamentais de Capital de Giro</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <h4 class="font-bold text-xl mb-3">Capital de Giro (CG)</h4>
+                    <p class="text-slate-600">É o total do Ativo Circulante. Representa todos os recursos que a empresa precisa para financiar sua operação diária, como caixa, estoques e contas a receber.</p>
+                </div>
+                <div class="card p-6">
+                    <h4 class="font-bold text-xl mb-3">Capital Circulante Líquido (CCL)</h4>
+                    <p class="text-slate-600 mb-4">É a "folga financeira" da empresa, indicando a parcela dos recursos de longo prazo que financia as operações de curto prazo.</p>
+                    <div class="bg-slate-50 p-3 rounded-md text-center">
+                        <p>\(CCL = \text{AC} - \text{PC}\)</p>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <h4 class="font-bold text-xl mb-3">Capital de Giro Próprio (CGP)</h4>
+                    <p class="text-slate-600 mb-4">Mede a parcela de recursos dos sócios (Patrimônio Líquido) que financia o capital de giro, após cobrir os ativos de longo prazo.</p>
+                    <div class="bg-slate-50 p-3 rounded-md text-center">
+                        <p>\(CGP = \text{PL} - \text{AP}\)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Dinâmica dos Ciclos -->
+        <section id="ciclos" class="mb-20 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">2. A Dinâmica dos Ciclos</h3>
+            <div class="card p-8">
+                <h4 class="text-2xl font-semibold mb-2 text-center">Calculadora de Ciclos Operacional e de Caixa</h4>
+                <p class="text-slate-600 mb-8 text-center max-w-2xl mx-auto">Insira os prazos médios da sua empresa para calcular os ciclos e visualizar o tempo em que o dinheiro fica "empatado" na operação.</p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div>
+                        <label for="pme" class="block text-sm font-medium text-slate-700">Prazo Médio de Estoques (PME)</label>
+                        <input type="number" id="pme" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-sky-500 focus:ring-sky-500" placeholder="dias">
+                    </div>
+                    <div>
+                        <label for="pmr" class="block text-sm font-medium text-slate-700">Prazo Médio de Recebimento (PMR)</label>
+                        <input type="number" id="pmr" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-sky-500 focus:ring-sky-500" placeholder="dias">
+                    </div>
+                    <div>
+                        <label for="pmp" class="block text-sm font-medium text-slate-700">Prazo Médio de Pagamento (PMP)</label>
+                        <input type="number" id="pmp" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-sky-500 focus:ring-sky-500" placeholder="dias">
+                    </div>
+                </div>
+                
+                <div id="results" class="mt-8 grid md:grid-cols-2 gap-6 text-center">
+                    <div class="bg-sky-50 p-4 rounded-lg border border-sky-200">
+                        <h5 class="font-semibold text-slate-700">Ciclo Operacional (CO)</h5>
+                        <p id="co-result" class="text-3xl font-bold text-sky-800">0 dias</p>
+                        <p class="text-xs text-slate-500">\(CO = PME + PMR\)</p>
+                    </div>
+                    <div class="bg-amber-50 p-4 rounded-lg border border-amber-200">
+                        <h5 class="font-semibold text-slate-700">Ciclo de Caixa (CC)</h5>
+                        <p id="cc-result" class="text-3xl font-bold text-amber-800">0 dias</p>
+                        <p class="text-xs text-slate-500">\(CC = CO - PMP\)</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-slate-200">
+                     <h5 class="text-lg font-semibold mb-4 text-center">Linha do Tempo dos Ciclos</h5>
+                     <div class="w-full overflow-x-auto p-4">
+                        <div class="relative h-24 min-w-[600px]">
+                            <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-300"></div>
+                            <div id="co-bar" class="absolute top-1/4 left-0 h-4 bg-sky-200 rounded-full transition-all duration-500" style="width: 0%;"></div>
+                            <div id="co-text" class="absolute top-0 text-xs text-sky-800 transition-all duration-500 font-semibold" style="left: 0%;">Ciclo Operacional</div>
+                            <div id="cc-bar" class="absolute top-3/4 left-0 h-4 bg-amber-200 rounded-full transition-all duration-500" style="width: 0%;"></div>
+                            <div id="cc-text" class="absolute top-full mt-1 text-xs text-amber-800 transition-all duration-500 font-semibold" style="left: 0%;">Ciclo de Caixa</div>
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 text-center" style="left: 0%;"><div class="w-2 h-2 bg-slate-600 rounded-full"></div><span class="text-xs">Compra</span></div>
+                            <div id="pmp-marker" class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 text-center transition-all duration-500" style="left: 0%;"><div class="w-2 h-2 bg-slate-600 rounded-full"></div><span class="text-xs">Pagamento</span></div>
+                            <div id="pme-marker" class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 text-center transition-all duration-500" style="left: 0%;"><div class="w-2 h-2 bg-slate-600 rounded-full"></div><span class="text-xs">Venda</span></div>
+                            <div id="pmr-marker" class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 text-center transition-all duration-500" style="left: 0%;"><div class="w-2 h-2 bg-slate-600 rounded-full"></div><span class="text-xs">Recebimento</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Estratégias -->
+        <section id="estrategias" class="mb-20 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">3. Estratégias de Gestão: O Dilema Risco vs. Retorno</h3>
+            <p class="text-center text-slate-600 mb-10 max-w-2xl mx-auto">Toda decisão de gestão de giro, seja de investimento ou financiamento, envolve um trade-off. Escolha uma política para ver suas características.</p>
+            <div class="flex justify-center gap-4 mb-8">
+                <button id="btn-conservadora" class="policy-btn card p-4 w-48 text-center active">
+                    <span class="text-4xl">🛡️</span>
+                    <span class="block font-bold mt-2">Conservadora</span>
+                </button>
+                <button id="btn-agressiva" class="policy-btn card p-4 w-48 text-center">
+                    <span class="text-4xl">⚡</span>
+                    <span class="block font-bold mt-2">Agressiva</span>
+                </button>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h4 class="font-bold text-xl mb-3">Política de Investimento</h4>
+                    <div id="investment-policy-content"></div>
+                </div>
+                <div class="card p-6">
+                    <h4 class="font-bold text-xl mb-3">Política de Financiamento</h4>
+                    <div id="financing-policy-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: NCG -->
+        <section id="necessidade" class="scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">4. A Necessidade de Financiamento (NCG)</h3>
+            <div class="card p-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 class="text-2xl font-semibold mb-4">Necessidade de Capital de Giro (NCG)</h4>
+                        <p class="text-slate-600 mb-4">A NCG (ou NIG) representa o volume de recursos que as operações da empresa demandam. É o que o ciclo operacional precisa para "girar", antes de o caixa das vendas entrar.</p>
+                        <p class="text-slate-600">É calculada pela diferença entre os ativos operacionais e os passivos operacionais (fontes espontâneas de financiamento).</p>
+                        <div class="bg-slate-50 p-3 rounded-md text-center my-4">
+                            <p>\(NCG = \text{ACO} - \text{PCO}\)</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-100 p-6 rounded-lg text-center">
+                        <h5 class="font-semibold text-lg mb-2">A Equação da Tesouraria</h5>
+                        <p class="text-slate-600 mb-4">O Saldo de Tesouraria (ST) mostra se a "folga financeira" (CCL) é suficiente para cobrir as necessidades operacionais (NCG).</p>
+                        <div class="font-mono text-lg space-y-2">
+                            <div class="p-2 bg-sky-100 rounded">CCL (Folga)</div>
+                            <div class="font-bold">-</div>
+                            <div class="p-2 bg-amber-100 rounded">NCG (Necessidade)</div>
+                            <div class="font-bold">=</div>
+                            <div class="p-2 bg-green-100 rounded font-bold">Saldo de Tesouraria</div>
+                        </div>
+                        <p class="text-sm text-slate-500 mt-4">Se o saldo é negativo, a empresa precisa buscar financiamento adicional de curto prazo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-6 text-center text-sm text-slate-400">
+            <p>Aplicação Interativa para Administração Financeira de Curto Prazo.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navegação
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section, #hero');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id === 'hero' ? 'conceitos' : entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === targetId);
+                        });
+                    }
+                });
+            }, { rootMargin: "-40% 0px -60% 0px" });
+            sections.forEach(section => observer.observe(section));
+
+            // Calculadora de Ciclos
+            const pmeInput = document.getElementById('pme');
+            const pmrInput = document.getElementById('pmr');
+            const pmpInput = document.getElementById('pmp');
+            const coResult = document.getElementById('co-result');
+            const ccResult = document.getElementById('cc-result');
+
+            const coBar = document.getElementById('co-bar'), ccBar = document.getElementById('cc-bar');
+            const coText = document.getElementById('co-text'), ccText = document.getElementById('cc-text');
+            const pmpMarker = document.getElementById('pmp-marker'), pmeMarker = document.getElementById('pme-marker'), pmrMarker = document.getElementById('pmr-marker');
+            
+            function calculateCycles() {
+                const pme = parseFloat(pmeInput.value) || 0;
+                const pmr = parseFloat(pmrInput.value) || 0;
+                const pmp = parseFloat(pmpInput.value) || 0;
+                const co = pme + pmr;
+                const cc = co - pmp;
+
+                coResult.textContent = `${co.toFixed(0)} dias`;
+                ccResult.textContent = `${cc.toFixed(0)} dias`;
+
+                const totalDuration = Math.max(co, pmp, 1) * 1.1;
+                const pmpPos = (pmp / totalDuration) * 100;
+                const pmePos = (pme / totalDuration) * 100;
+                const coPos = (co / totalDuration) * 100;
+
+                coBar.style.width = `${coPos}%`;
+                coText.style.left = `${coPos / 2}%`;
+                pmeMarker.style.left = `${pmePos}%`;
+                pmrMarker.style.left = `${coPos}%`;
+                pmpMarker.style.left = `${pmpPos}%`;
+
+                if (cc > 0) {
+                    ccBar.style.left = `${pmpPos}%`;
+                    ccBar.style.width = `${coPos - pmpPos}%`;
+                    ccText.style.left = `${pmpPos + (coPos - pmpPos) / 2}%`;
+                    ccBar.classList.remove('hidden');
+                    ccText.classList.remove('hidden');
+                } else {
+                    ccBar.classList.add('hidden');
+                    ccText.classList.add('hidden');
+                }
+            }
+            [pmeInput, pmrInput, pmpInput].forEach(input => input.addEventListener('input', calculateCycles));
+            calculateCycles(); // Initial calculation
+
+            // Políticas de Gestão
+            const btnConservadora = document.getElementById('btn-conservadora');
+            const btnAgressiva = document.getElementById('btn-agressiva');
+            const investmentContent = document.getElementById('investment-policy-content');
+            const financingContent = document.getElementById('financing-policy-content');
+
+            const policies = {
+                conservadora: {
+                    investment: `
+                        <p class="text-slate-600 mb-4">Mantém altos níveis de caixa, estoques e concede prazos maiores a clientes.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center"><span class="text-red-500 mr-2">▼</span> <strong>Risco:</strong> Baixo. Menor chance de insolvência.</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-2">▼</span> <strong>Rentabilidade:</strong> Baixa. Capital "ocioso" gera custo de oportunidade.</li>
+                        </ul>
+                    `,
+                    financing: `
+                        <p class="text-slate-600 mb-4">Financia todas as necessidades (permanentes e sazonais) com recursos de longo prazo.</p>
+                         <ul class="space-y-2 text-sm">
+                            <li class="flex items-center"><span class="text-red-500 mr-2">▼</span> <strong>Risco:</strong> Baixo. Sem pressão de vencimentos de curto prazo.</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-2">▼</span> <strong>Custo:</strong> Alto. Fontes de longo prazo são geralmente mais caras.</li>
+                        </ul>
+                    `
+                },
+                agressiva: {
+                    investment: `
+                        <p class="text-slate-600 mb-4">Mantém níveis mínimos de caixa e estoques, com política de crédito restritiva.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">▲</span> <strong>Risco:</strong> Alto. Maior chance de não conseguir pagar contas ou atender picos de demanda.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">▲</span> <strong>Rentabilidade:</strong> Alta. Menos capital investido em ativos menos rentáveis.</li>
+                        </ul>
+                    `,
+                    financing: `
+                        <p class="text-slate-600 mb-4">Financia parte das necessidades permanentes com dívida de curto prazo.</p>
+                         <ul class="space-y-2 text-sm">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">▲</span> <strong>Risco:</strong> Alto. Grande exposição a flutuações nas taxas de juros e na disponibilidade de crédito.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">▲</span> <strong>Custo:</strong> Baixo. Fontes de curto prazo são geralmente mais baratas.</li>
+                        </ul>
+                    `
+                }
+            };
+
+            function updatePolicies(policy) {
+                investmentContent.innerHTML = policies[policy].investment;
+                financingContent.innerHTML = policies[policy].financing;
+                btnConservadora.classList.toggle('active', policy === 'conservadora');
+                btnAgressiva.classList.toggle('active', policy === 'agressiva');
+            }
+
+            btnConservadora.addEventListener('click', () => updatePolicies('conservadora'));
+            btnAgressiva.addEventListener('click', () => updatePolicies('agressiva'));
+            updatePolicies('conservadora'); // Initial state
+        });
+    </script>
+
+</body>
+</html>

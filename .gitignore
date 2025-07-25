@@ -2,8 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
-/.quarto/
-/_book/
-/adm/
+.quarto/
+_book/
+adm/
+renv/
 _temp/
 site_libs/
+.quarto/
+
+/.quarto/

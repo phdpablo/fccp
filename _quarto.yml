@@ -5,25 +5,25 @@ project:
     - quarto render resources/*.qmd
   resources:
     - resources/
-    - img/
 
-execute: 
+execute:
   #echo: false
   warning: false
+
 #filters: 
   #- webr
   #- abstract-section:
 lang: pt
 book:
   #google-analytics: "G-JB1J9LKDKC"
-  favicon: ../img/psicoeconometria.png
+  favicon: img/psicoeconometria.png
   title: "Finanças Corporativas de Curto Prazo"
   #subtitle: "Jornada de Open Science na Prática"
   author: "Pablo Rogers"
   date: last-modified
   date-format: long
   #doi: 10.5281/zenodo.12593928
-  cover-image: ../img/cover.png
+  cover-image: img/cover.png
   downloads: pdf
   reader-mode: true
   sidebar:
