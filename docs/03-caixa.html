@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Finanças Corporativas de Curto Prazo - 3&nbsp; Administração do Caixa</title>
+<title>3&nbsp; Administração do Caixa – Finanças Corporativas de Curto Prazo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -38,12 +58,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-df6780cc2b117eb234b403a0900b78b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-229775fd8b3b9fa5809829b81cad07c1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,8 +92,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Finanças Corporativas de Curto Prazo - 3&nbsp; Administração do Caixa">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="3&nbsp; Administração do Caixa – Finanças Corporativas de Curto Prazo">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Finanças Corporativas de Curto Prazo">
 </head>
 
@@ -83,13 +133,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-caixa.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Administração do Caixa</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -106,23 +156,23 @@ ul.task-list li input[type="checkbox"] {
     <a href="https://github.com/phdpablo/fccp/" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
     <a href="./Finanças-Corporativas-de-Curto-Prazo.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-              <i class="bi bi-bi-twitter pe-1"></i>
+              <i class="bi bi-twitter pe-1"></i>
             Twitter
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
-              <i class="bi bi-bi-facebook pe-1"></i>
+              <i class="bi bi-facebook pe-1"></i>
             Facebook
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-              <i class="bi bi-bi-linkedin pe-1"></i>
+              <i class="bi bi-linkedin pe-1"></i>
             LinkedIn
             </a>
           </li>
@@ -210,19 +260,130 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#razões-para-a-manutenção-de-caixa" id="toc-razões-para-a-manutenção-de-caixa" class="nav-link active" data-scroll-target="#razões-para-a-manutenção-de-caixa"><span class="header-section-number">3.1</span> Razões para a Manutenção de Caixa</a></li>
+  <li><a href="#ciclo-de-caixa-e-estratégias-de-controle" id="toc-ciclo-de-caixa-e-estratégias-de-controle" class="nav-link" data-scroll-target="#ciclo-de-caixa-e-estratégias-de-controle"><span class="header-section-number">3.2</span> Ciclo de Caixa e Estratégias de Controle</a></li>
+  <li><a href="#modelos-quantitativos-de-administração-de-caixa" id="toc-modelos-quantitativos-de-administração-de-caixa" class="nav-link" data-scroll-target="#modelos-quantitativos-de-administração-de-caixa"><span class="header-section-number">3.3</span> Modelos Quantitativos de Administração de Caixa</a>
+  <ul class="collapse">
+  <li><a href="#modelo-de-lote-econômico-baumol" id="toc-modelo-de-lote-econômico-baumol" class="nav-link" data-scroll-target="#modelo-de-lote-econômico-baumol"><span class="header-section-number">3.3.1</span> Modelo de Lote Econômico (Baumol)</a></li>
+  <li><a href="#modelo-de-miller-e-orr" id="toc-modelo-de-miller-e-orr" class="nav-link" data-scroll-target="#modelo-de-miller-e-orr"><span class="header-section-number">3.3.2</span> Modelo de Miller e Orr</a></li>
+  <li><a href="#o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" id="toc-o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" class="nav-link" data-scroll-target="#o-dilema-da-gestão-de-caixa-em-cenários-inflacionários"><span class="header-section-number">3.3.3</span> O Dilema da Gestão de Caixa em Cenários Inflacionários</a></li>
+  </ul></li>
+  <li><a href="#outros-recursos-didáticos" id="toc-outros-recursos-didáticos" class="nav-link" data-scroll-target="#outros-recursos-didáticos">Outros recursos didáticos</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-caixa" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Administração do Caixa</span></span></h1></header>
 
 <header id="title-block-header">
-<h1 class="title display-7"><span id="sec-caixa" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Administração do Caixa</span></span></h1>
+
 
 </header>
 
 
+<p><br></p>
+<p>A administração de caixa é uma função central da gestão financeira de curto prazo, cujo objetivo é otimizar a liquidez da empresa, garantindo que ela possa honrar seus compromissos e, ao mesmo tempo, maximizar o retorno sobre os recursos monetários que, de outra forma, estariam ociosos. A gestão eficaz do caixa reside no equilíbrio entre o custo de oportunidade de manter saldos elevados e o risco de insolvência decorrente de saldos insuficientes.</p>
+<p>Ao priorizar os tópicos de Administração de Caixa que, resumidamente, discorremos abaixo, temos como objetivo garantir que os alunos recebam um conhecimento detalhado e direcionado sobre as técnicas e modelos específicos da gestão de caixa de curto prazo, sem que o conteúdo seja diluído por tópicos mais amplos que são exaustivamente tratados em outras partes do curso ou em outras disciplinas, por exemplo, a disciplina de Planejamento Financeiro e Orçamento Empresarial trata do confecção do fluxo de caixa.</p>
+<p>Isso permite uma abordagem mais eficaz e concisa para o segmento de curto prazo, conforme a estrutura e os objetivos da ementa oficial, que está mais alinhada com o livro-texto do <span class="citation" data-cites="assafneto2014">Assaf Neto (<a href="references.html#ref-assafneto2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p><br></p>
+<section id="razões-para-a-manutenção-de-caixa" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="razões-para-a-manutenção-de-caixa"><span class="header-section-number">3.1</span> Razões para a Manutenção de Caixa</h2>
+<p>A teoria da preferência pela liquidez de John Maynard Keynes fornece a base teórica para entender por que as empresas demandam e mantêm saldos de caixa. Esses motivos são:</p>
+<ul>
+<li><p><strong>Motivo Transação (ou Negócio):</strong> Esta é a razão mais fundamental para a manutenção de caixa. Surge da necessidade de cobrir os desembolsos decorrentes das operações normais e previsíveis do negócio, como pagamento de fornecedores, salários, impostos e outras despesas correntes. A necessidade de caixa para transações é diretamente influenciada pela falta de sincronia perfeita entre os fluxos de entrada (recebimentos) e saída (pagamentos) de recursos.</p></li>
+<li><p><strong>Motivo Precaução:</strong> Este motivo está associado à incerteza inerente ao ambiente de negócios. Os fluxos de caixa reais raramente correspondem exatamente aos orçados. Portanto, as empresas mantêm um saldo de caixa de precaução como uma reserva de segurança (um “colchão” de liquidez) para se proteger contra flutuações inesperadas e adversas, como um atraso no recebimento de um cliente importante ou um aumento súbito no custo de matérias-primas. Esse saldo garante a capacidade de pagamento mesmo em cenários desfavoráveis.</p></li>
+<li><p><strong>Motivo Especulação:</strong> Refere-se à manutenção de caixa para capitalizar oportunidades de mercado imprevistas e vantajosas. Uma empresa com liquidez pode, por exemplo, adquirir um grande lote de matéria-prima com um desconto significativo, realizar uma aquisição estratégica de um concorrente em dificuldades ou aproveitar outras oportunidades de investimento que exijam desembolso imediato.</p></li>
+</ul>
+<p><br></p>
+</section>
+<section id="ciclo-de-caixa-e-estratégias-de-controle" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="ciclo-de-caixa-e-estratégias-de-controle"><span class="header-section-number">3.2</span> Ciclo de Caixa e Estratégias de Controle</h2>
+<p>O Ciclo de Caixa (CC), também conhecido como Ciclo Financeiro (CF), é a métrica temporal que quantifica a necessidade de financiamento do capital de giro. Ele mede o número de dias entre o pagamento aos fornecedores pela matéria-prima e o recebimento efetivo do dinheiro pela venda do produto acabado. O objetivo estratégico do gestor financeiro é minimizar a duração deste ciclo, pois um ciclo mais curto implica uma menor necessidade de recursos para sustentar as operações e, consequentemente, um menor custo de capital.</p>
+<p>O controle e a otimização do saldo de caixa podem ser realizados por meio de duas categorias de medidas:</p>
+<ul>
+<li><p><strong>Medidas de Competência Exclusiva do Caixa:</strong> Ações táticas focadas diretamente na aceleração das entradas e no gerenciamento das saídas. Incluem a dinamização dos processos de cobrança, a redução do tempo entre a venda e a emissão da fatura, e a busca por uma sincronização ótima entre as datas de recebimento e pagamento.</p></li>
+<li><p><strong>Medidas de Política Ampla:</strong> Ações estratégicas que envolvem outras áreas da empresa. Incluem a revisão da política de crédito (prazos e condições oferecidos aos clientes), a otimização dos níveis de estoque para reduzir o capital imobilizado e a criação de uma política de aplicação dos saldos de caixa temporariamente ociosos em títulos negociáveis de alta liquidez.</p></li>
+</ul>
+<p>O Saldo Mínimo de Caixa é o nível de caixa que permite à empresa cobrir seus desembolsos programados e manter uma reserva de segurança. Um modelo determinístico para seu cálculo é:</p>
+<p><span class="math display">\[\text{Saldo Mínimo de Caixa} = \frac{\text{Desembolsos Totais de Caixa Esperados no Período}}{\text{Giro de Caixa no Período (GC)}}\]</span></p>
+<p>Onde <span class="math inline">\(GC\)</span> pode ser calculado pela divisão 360 dias pelo <span class="math inline">\(CC\)</span> (em dias).</p>
+<p>Este modelo, contudo, possui limitações por não incorporar a incerteza. Para torná-lo mais realista, ajustes são necessários, como a análise de horizontes de tempo mais curtos e a consideração da sazonalidade das operações.</p>
+<p><br></p>
+</section>
+<section id="modelos-quantitativos-de-administração-de-caixa" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="modelos-quantitativos-de-administração-de-caixa"><span class="header-section-number">3.3</span> Modelos Quantitativos de Administração de Caixa</h2>
+<p>Para refinar a decisão sobre o nível ótimo de caixa, modelos quantitativos foram desenvolvidos. Eles buscam minimizar os custos totais associados à gestão da liquidez, que são, fundamentalmente, o custo de oportunidade e o custo de transação.</p>
+<p><br></p>
+<section id="modelo-de-lote-econômico-baumol" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="modelo-de-lote-econômico-baumol"><span class="header-section-number">3.3.1</span> Modelo de Lote Econômico (Baumol)</h3>
+<p>Desenvolvido por William Baumol, este modelo determinístico trata o caixa como um estoque e aplica a lógica do lote econômico de compras. Ele busca o saldo de caixa ótimo (C) que minimiza a soma de dois custos conflitantes:</p>
+<p><strong>Custo de Oportunidade (Custo de Manutenção):</strong> Representa os juros que a empresa deixa de ganhar por manter recursos em caixa em vez de investi-los em títulos negociáveis. É calculado como:</p>
+<p><span class="math display">\[\text{Custo de Manutenção (CM)} = i \times \frac{C}{2}\]</span></p>
+<p>Onde <span class="math inline">\(i\)</span> é a taxa de juros dos títulos e <span class="math inline">\(\frac{C}{2}\)</span> é o saldo médio de caixa (<span class="math inline">\(\bar{C}\)</span>).</p>
+<p><strong>Custo de Transação (Custo de Obtenção):</strong> Representa os custos fixos incorridos cada vez que a empresa converte títulos em caixa (ex: taxas de corretagem). É calculado como:</p>
+<p><span class="math display">\[\text{Custo de Obtenção (CO)} = b \times \frac{T}{C}\]</span></p>
+<p>Onde <span class="math inline">\(b\)</span> é o custo fixo por transação, <span class="math inline">\(T\)</span> é a necessidade total de caixa no período e <span class="math inline">\(\frac{T}{C}\)</span> é o número de transações (<span class="math inline">\(N\)</span>). Ao somarmos <span class="math inline">\(CM\)</span> + <span class="math inline">\(CO\)</span>, temos:</p>
+<p><span class="math display">\[CT = \left( b \times \frac{T}{C} \right) + \left( i \times \frac{C}{2} \right)\]</span></p>
+<p>Igualando <span class="math inline">\(CT\)</span> a zero e resolvendo para <span class="math inline">\(C\)</span> obtemos a fórmula do Saldo Ótimo (<span class="math inline">\(C^*\)</span>) de Baumol:</p>
+<p><span class="math display">\[C^* = \sqrt{\frac{2 \times b \times T}{i}}\]</span></p>
+<p>A principal limitação do modelo de Baumol é sua natureza determinística: ele assume que os fluxos de caixa são perfeitamente previsíveis e que seu uso é constante ao longo do tempo, o que raramente ocorre na prática.</p>
+<p><br></p>
+</section>
+<section id="modelo-de-miller-e-orr" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="modelo-de-miller-e-orr"><span class="header-section-number">3.3.2</span> Modelo de Miller e Orr</h3>
+<p>Este é um modelo estocástico (probabilístico), mais sofisticado e realista, pois foi projetado para lidar com a incerteza dos fluxos de caixa diários. Ele assume que as variações líquidas diárias no caixa são aleatórias. O modelo funciona estabelecendo limites de controle para o saldo de caixa:</p>
+<p><strong>Limite Superior (h):</strong> Quando o saldo de caixa atinge este ponto, a empresa utiliza o excedente para comprar títulos negociáveis, retornando o saldo de caixa a um nível predefinido (o “ponto de retorno”, z).</p>
+<p><strong>Limite Inferior (L):</strong> Geralmente definido como zero ou um saldo mínimo de segurança. Quando o caixa atinge este ponto, a empresa vende títulos para obter caixa e elevar o saldo novamente até o ponto de retorno (z).</p>
+<p>O objetivo do modelo é minimizar os custos totais esperados (oportunidade e transação). O ponto de retorno ótimo (z), que é a variável chave do modelo, é calculado pela seguinte fórmula:</p>
+<p><span class="math display">\[z = \sqrt[3]{\frac{3 \times b \times \sigma^2}{4 \times i}} + L\]</span></p>
+<p>Onde: - <span class="math inline">\(z\)</span> = Ponto de retorno ótimo; <span class="math inline">\(b\)</span> = Custo fixo por transação com títulos; <span class="math inline">\(\sigma^2\)</span> = Variância dos fluxos líquidos diários de caixa; <span class="math inline">\(i\)</span> = Taxa de juros diária dos títulos negociáveis; <span class="math inline">\(L\)</span> = Limite Inferior</p>
+<p>A banda superior do caixa, na assunção de um saldo mínimo de segurança (L), pode ser calculado como:</p>
+<p><span class="math display">\[h = 3z - 2L\]</span> <br></p>
+</section>
+<section id="o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="o-dilema-da-gestão-de-caixa-em-cenários-inflacionários"><span class="header-section-number">3.3.3</span> O Dilema da Gestão de Caixa em Cenários Inflacionários</h3>
+<p>A inflação impõe um desafio adicional e significativo à administração de caixa. A principal consequência é a perda do poder de compra da moeda mantida em caixa. Isso cria um dilema com duas forças conflitantes:</p>
+<ul>
+<li><p>Por um lado, a inflação eleva os custos operacionais, o que aumenta a necessidade de investimento nominal em capital de giro para que a empresa consiga manter o mesmo nível de atividade real.</p></li>
+<li><p>Por outro lado, para se proteger da depreciação monetária, a estratégia racional é manter o saldo de caixa o mais baixo possível, aplicando quaisquer recursos excedentes em títulos negociáveis que ofereçam proteção contra a inflação (por exemplo, atrelados a um índice de preços).</p></li>
+</ul>
+<p>Em conjunturas inflacionárias, as políticas de minimização dos saldos de caixa tornam-se, portanto, ainda mais cruciais para a preservação do valor da empresa.</p>
+</section>
+</section>
+<section id="outros-recursos-didáticos" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="outros-recursos-didáticos">Outros recursos didáticos</h2>
+<p>Nesta seção, falamos sobre a gestão do caixa e apresentamos os principais conceitos e modelos utilizados, como o modelo de Baumol e o modelo de Miller e Orr. Esses modelos ajudam a determinar o saldo ótimo de caixa, equilibrando os custos de oportunidade e transação, além de considerar a incerteza dos fluxos de caixa diários. Também discutimos a importância do ciclo de caixa e as estratégias para otimizar a liquidez da empresa. Por fim, abordamos o dilema da gestão de caixa em cenários inflacionários, destacando a necessidade de manter saldos adequados para preservar o poder de compra.</p>
+<p>Abaixo, você encontrará outros recursos didáticos que objetiva resumir os conceitos apresentados por aqui:</p>
+<blockquote class="blockquote">
+<p><a href=".\resources/caixa-ppt.html"><strong>Slides da Aula</strong></a></p>
+</blockquote>
+<iframe src="./resources/caixa-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<blockquote class="blockquote">
+<p><a href=".\resources/caixa-interativo.html"><strong>Resumo Interativo</strong></a> ➔ <strong>Resumo do resumo!</strong> 🥱</p>
+</blockquote>
+<iframe src="./resources/caixa-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<blockquote class="blockquote">
+<p><a href="resources/caixa-podcast.mp3"><strong>Podcast do Conteúdo</strong></a></p>
+</blockquote>
+<div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+<audio controls="" src="resources/caixa-podcast.mp3" style="width: 400px;">
+<p>Seu navegador não suporta o elemento de áudio.</p>
+</audio>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-assafneto2014" class="csl-entry" role="listitem">
+Assaf Neto, A. (2014). <em>Finan<span>ç</span>as Corporativas e Valor</em> (7. ed.). Atlas.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -404,18 +565,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -447,7 +597,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/fccp\.phdpablo\.com\/");
@@ -455,7 +625,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -557,7 +727,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

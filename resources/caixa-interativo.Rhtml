@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interativo: Administração de Caixa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Professional Teal & Slate -->
+    <!-- Application Structure Plan: A single-page application with a primary view covering the core concepts of Cash Management (Keynesian motives, inflation). The main interactive element is a button that launches a full-screen modal. This modal contains the "Cash Models Laboratory," a detailed, interactive simulation environment for the Baumol and Miller-Orr models, including the corrected bugs and enhanced features (variance simulation, detailed transaction log). This hybrid structure provides a clean overview on the main page while offering a powerful, focused deep-dive tool in the modal. -->
+    <!-- Visualization & Content Choices: 1. Main App (Motives/Inflation): Goal: Inform -> Method: HTML cards with Unicode icons. 2. Modal App (Cash Models): Goal: Interact & Compare -> Method: A tabbed interface with JS calculators, a dynamic Chart.js line chart for 30-day simulation, a detailed HTML cash flow table, and a narrative event log. The Miller-Orr section now includes a full historical data simulation to derive the variance parameter. The formulas for each model are displayed using MathJax when the respective tab is active. Justification: This dedicated "lab" environment provides a rich, interactive experience, connecting historical data analysis with prospective simulation. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #0d9488; /* teal-600 */
+            border-bottom-color: #0d9488;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+        .btn-primary {
+            background-color: #0d9488; /* teal-600 */
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #0f766e; /* teal-700 */
+        }
+        .modal-chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            max-height: 45vh;
+        }
+         .tab-btn {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active {
+            color: #0d9488;
+            border-bottom-color: #0d9488;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/95 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-slate-800">Administração de Caixa</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#motivos" class="nav-link">Motivos</a>
+                <a href="#modelos" class="nav-link">Modelos</a>
+                <a href="#inflacao" class="nav-link">Inflação</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="hero" class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Otimizando a Liquidez</h2>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Uma exploração interativa dos modelos e estratégias para gerenciar o recurso mais vital da empresa: o caixa.</p>
+        </section>
+
+        <!-- Seção 1: Motivos -->
+        <section id="motivos" class="mb-20 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">1. Por que Manter Caixa?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-6 text-center hover:shadow-lg hover:border-slate-300 transition-all">
+                    <span class="text-4xl">🔄</span>
+                    <h4 class="font-bold text-xl mt-3 mb-2">Motivo Transação</h4>
+                    <p class="text-slate-600 text-sm">Para cobrir os desembolsos do dia a dia do negócio (salários, fornecedores, etc.), garantindo a continuidade das operações.</p>
+                </div>
+                <div class="card p-6 text-center hover:shadow-lg hover:border-slate-300 transition-all">
+                    <span class="text-4xl">🛡️</span>
+                    <h4 class="font-bold text-xl mt-3 mb-2">Motivo Precaução</h4>
+                    <p class="text-slate-600 text-sm">Como uma reserva de segurança ("colchão") para cobrir imprevistos e flutuações inesperadas nos fluxos de caixa.</p>
+                </div>
+                <div class="card p-6 text-center hover:shadow-lg hover:border-slate-300 transition-all">
+                    <span class="text-4xl">💡</span>
+                    <h4 class="font-bold text-xl mt-3 mb-2">Motivo Especulação</h4>
+                    <p class="text-slate-600 text-sm">Para aproveitar oportunidades de mercado vantajosas e inesperadas, como uma compra de matéria-prima com grande desconto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Modelos Quantitativos -->
+        <section id="modelos" class="mb-20 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-4">2. Encontrando o Saldo de Caixa Ótimo</h3>
+            <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">Modelos quantitativos ajudam a minimizar os custos totais da gestão de caixa, equilibrando o custo de oportunidade (juros perdidos) e o custo de transação (taxas de conversão).</p>
+            
+            <div class="card p-8 flex flex-col justify-center items-center text-center">
+                <span class="text-5xl mb-4">🔬</span>
+                <h4 class="text-2xl font-bold text-slate-800 mb-3">Laboratório de Modelos de Caixa</h4>
+                <p class="text-slate-600 mb-6 max-w-lg">Aprofunde seus conhecimentos simulando os modelos de Baumol e Miller-Orr para visualizar o comportamento do caixa ao longo do tempo e encontrar o saldo ótimo.</p>
+                <button id="open-modal-btn" class="btn-primary font-bold py-3 px-6 rounded-lg">Abrir Laboratório de Simulação</button>
+            </div>
+        </section>
+
+        <!-- Seção 3: Inflação -->
+        <section id="inflacao" class="scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">3. O Dilema da Gestão de Caixa em Cenários Inflacionários</h3>
+            <div class="card p-8 max-w-4xl mx-auto">
+                <p class="text-center text-slate-600 mb-6">A inflação cria um conflito para o gestor financeiro:</p>
+                <div class="flex flex-col md:flex-row gap-8 text-center">
+                    <div class="flex-1">
+                        <span class="text-5xl">📈</span>
+                        <h4 class="font-bold text-xl mt-2">Aumenta a Necessidade de Caixa</h4>
+                        <p class="text-slate-600 mt-2">A elevação dos custos operacionais exige mais caixa (em termos nominais) para manter o mesmo nível de atividade.</p>
+                    </div>
+                    <div class="flex-1">
+                        <span class="text-5xl">📉</span>
+                        <h4 class="font-bold text-xl mt-2">Incentiva a Redução de Caixa</h4>
+                        <p class="text-slate-600 mt-2">Para se proteger da perda de poder de compra, a estratégia racional é manter o mínimo de caixa ocioso, aplicando o excedente em ativos que protejam contra a inflação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Laboratório de Caixa -->
+    <div id="cash-lab-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-slate-50 rounded-lg shadow-2xl w-full max-w-7xl h-full max-h-[95vh] flex flex-col">
+            <header class="p-4 border-b bg-white flex justify-between items-center rounded-t-lg">
+                <h2 class="text-xl font-bold text-slate-900">Laboratório Interativo de Modelos de Caixa</h2>
+                <button id="close-modal-btn" class="text-3xl text-gray-400 hover:text-gray-700 transition-colors">&times;</button>
+            </header>
+            <div class="flex-grow p-6 overflow-y-auto">
+                <div class="grid lg:grid-cols-5 gap-8">
+                    <!-- Painel de Controle -->
+                    <div class="lg:col-span-2 card p-6 self-start">
+                        <div class="flex border-b border-slate-200 mb-6">
+                            <button id="tab-baumol" class="tab-btn active">Baumol</button>
+                            <button id="tab-miller-orr" class="tab-btn">Miller-Orr</button>
+                        </div>
+                        <div id="controls-baumol" class="space-y-4">
+                            <h4 class="font-semibold text-slate-800">Parâmetros (Determinístico)</h4>
+                            <div class="bg-slate-100 p-3 rounded-md text-center my-2">
+                                <p>\( C = \sqrt{\frac{2 \times b \times T}{i}} \)</p>
+                            </div>
+                            <div>
+                                <label for="baumol-t" class="block text-sm font-medium">Necessidade Mensal de Caixa (T)</label>
+                                <input type="number" id="baumol-t" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm" value="120000">
+                            </div>
+                            <div>
+                                <label for="baumol-b" class="block text-sm font-medium">Custo por Transação (b)</label>
+                                <input type="number" id="baumol-b" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm" value="50">
+                            </div>
+                            <div>
+                                <label for="baumol-i" class="block text-sm font-medium">Taxa de Juros Mensal (%) (i)</label>
+                                <input type="number" id="baumol-i" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm" value="1">
+                            </div>
+                            <div class="text-center bg-teal-50 p-4 rounded-lg border border-teal-200">
+                                <h4 class="font-semibold text-sm">Saldo Ótimo (C)</h4>
+                                <p id="baumol-result" class="text-teal-700 font-bold text-xl">R$ 0,00</p>
+                            </div>
+                        </div>
+                        <div id="controls-miller-orr" class="hidden space-y-4">
+                             <div id="variance-calculator" class="p-4 bg-slate-100 rounded-lg border">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h5 class="font-semibold text-center">Cálculo da Variância (σ²)</h5>
+                                    <button id="resimulate-history-btn" class="text-xs py-1 px-2 bg-slate-200 text-slate-700 font-semibold rounded-md hover:bg-slate-300">🔄 Re-simular</button>
+                                </div>
+                                <p class="text-xs text-center text-slate-500 mb-2">Use dados históricos (10 dias) para estimar a variância.</p>
+                                <table class="w-full text-xs text-center">
+                                    <thead><tr><th class="font-medium">Dia</th><th class="font-medium">Fluxo Líquido</th></tr></thead>
+                                    <tbody id="historical-data"></tbody>
+                                </table>
+                                <p class="text-xs text-center mt-2">Variância Calculada (σ²): <b id="variance-result" class="text-teal-700">0</b></p>
+                                <button id="use-variance-btn" class="text-xs w-full mt-2 py-1 px-2 bg-slate-200 text-slate-700 font-semibold rounded-md hover:bg-slate-300">Usar Variância Calculada na Simulação</button>
+                            </div>
+                             <h4 class="font-semibold text-slate-800 pt-4">Parâmetros (Estocástico)</h4>
+                             <div class="bg-slate-100 p-3 rounded-md text-center my-2 space-y-2">
+                                <p>\( z = \sqrt[3]{\frac{3 \times b \times \sigma^2}{4 \times i}} + L \)</p>
+                                <p>\( h = 3z - 2L \)</p>
+                            </div>
+                            <div>
+                                <label for="mo-var" class="block text-sm font-medium">Variância Diária (σ²)</label>
+                                <input type="number" id="mo-var" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm" value="4000000">
+                            </div>
+                            <div>
+                                <label for="mo-b" class="block text-sm font-medium">Custo por Transação (b)</label>
+                                <input type="number" id="mo-b" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm" value="50">
+                            </div>
+                            <div>
+                                <label for="mo-i" class="block text-sm font-medium">Taxa de Juros Diária (%) (i)</label>
+                                <input type="number" id="mo-i" step="0.001" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm" value="0.032">
+                            </div>
+                            <div>
+                                <label for="mo-l" class="block text-sm font-medium">Limite Inferior (L)</label>
+                                <input type="number" id="mo-l" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm" value="5000">
+                            </div>
+                            <button id="resimulate-mo" class="w-full py-2 px-4 bg-teal-600 text-white font-semibold rounded-md hover:bg-teal-700 transition-colors">Re-simular Fluxo Aleatório</button>
+                            <div class="text-center grid grid-cols-2 gap-2 mt-4">
+                                <div class="bg-teal-50 p-2 rounded-lg border">
+                                    <h4 class="font-semibold text-xs">Ponto de Retorno (z)</h4>
+                                    <p id="mo-z-result" class="text-teal-700 font-bold text-lg">R$ 0,00</p>
+                                </div>
+                                <div class="bg-sky-50 p-2 rounded-lg border">
+                                    <h4 class="font-semibold text-xs">Limite Superior (h)</h4>
+                                    <p id="mo-h-result" class="text-sky-700 font-bold text-lg">R$ 0,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 card p-6">
+                        <h3 class="text-xl font-bold text-center mb-4">Simulação do Saldo de Caixa (30 dias)</h3>
+                        <div class="modal-chart-container">
+                            <canvas id="cashModelChart"></canvas>
+                        </div>
+                        <div class="grid xl:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <h4 class="font-bold text-center mb-2">Fluxo de Caixa Detalhado</h4>
+                                <div id="cashflow-table-container" class="h-48 overflow-y-auto bg-slate-100 p-1 rounded-md border text-sm text-slate-600">
+                                   <table class="w-full text-left text-xs">
+                                       <thead class="sticky top-0 bg-slate-200"><tr><th class="p-2">Dia</th><th class="p-2">Mov. (R$)</th><th class="p-2">Descrição</th><th class="p-2">Saldo (R$)</th></tr></thead>
+                                       <tbody id="cashflow-table-body"></tbody>
+                                   </table>
+                                </div>
+                            </div>
+                             <div>
+                                <h4 class="font-bold text-center mb-2">Registro de Eventos Chave</h4>
+                                <div id="event-log" class="h-48 overflow-y-auto bg-slate-100 p-3 rounded-md border text-sm text-slate-600">
+                                    Ajuste os parâmetros para iniciar a simulação.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-6 text-center text-sm text-slate-400">
+            <p>Aplicação Interativa para Administração de Caixa.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- LÓGICA DA NAVEGAÇÃO E MODAL ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: "-40% 0px -60% 0px" });
+            sections.forEach(section => observer.observe(section));
+
+            const modal = document.getElementById('cash-lab-modal');
+            const openModalBtn = document.getElementById('open-modal-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            openModalBtn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                initializeChart();
+                generateAndDisplayHistoricalData();
+                runSimulation();
+            });
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+
+            // --- LÓGICA DO LABORATÓRIO DE CAIXA (DENTRO DO MODAL) ---
+            const tabBaumol = document.getElementById('tab-baumol'), tabMillerOrr = document.getElementById('tab-miller-orr');
+            const controlsBaumol = document.getElementById('controls-baumol'), controlsMillerOrr = document.getElementById('controls-miller-orr');
+            const baumolT = document.getElementById('baumol-t'), baumolB = document.getElementById('baumol-b'), baumolI = document.getElementById('baumol-i');
+            const baumolResult = document.getElementById('baumol-result');
+            const moB = document.getElementById('mo-b'), moVarInput = document.getElementById('mo-var'), moI = document.getElementById('mo-i'), moL = document.getElementById('mo-l');
+            const moZResult = document.getElementById('mo-z-result'), moHResult = document.getElementById('mo-h-result');
+            const resimulateBtn = document.getElementById('resimulate-mo');
+            const eventLog = document.getElementById('event-log');
+            const cashflowTableBody = document.getElementById('cashflow-table-body');
+            const historicalDataTable = document.getElementById('historical-data');
+            const varianceResultEl = document.getElementById('variance-result');
+            const useVarianceBtn = document.getElementById('use-variance-btn');
+            const resimulateHistoryBtn = document.getElementById('resimulate-history-btn');
+            const cashModelCtx = document.getElementById('cashModelChart').getContext('2d');
+            let cashChart;
+            let calculatedVariance = 0;
+            
+            const transactionDescriptions = {
+                inflows: ["Recebimento de Clientes", "Venda à Vista", "Aporte de Capital", "Juros de Aplicação"],
+                outflows: ["Pagamento de Fornecedores", "Pagamento de Salários", "Despesas de Aluguel", "Marketing e Vendas", "Impostos"]
+            };
+
+            let historicalFlows = [];
+
+            const formatCurrency = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+            function initializeChart() {
+                if (cashChart) cashChart.destroy();
+                cashChart = new Chart(cashModelCtx, {
+                    type: 'line',
+                    data: { labels: [], datasets: [] },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: { y: { title: { display: true, text: 'Saldo de Caixa (R$)' } }, x: { title: { display: true, text: 'Tempo (Dias)' } } },
+                        plugins: { legend: { display: true } }
+                    }
+                });
+            }
+
+            function calculateVariance(data) {
+                if (data.length < 2) return 0;
+                const mean = data.reduce((a, b) => a + b, 0) / data.length;
+                return data.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / (data.length - 1);
+            }
+
+            function generateAndDisplayHistoricalData() {
+                historicalFlows = Array.from({length: 10}, () => (Math.random() - 0.5) * 15000);
+                historicalDataTable.innerHTML = historicalFlows.map((flow, i) => `<tr><td class="p-1">${i-9}</td><td class="p-1 ${flow < 0 ? 'text-red-600' : 'text-green-600'}">${flow.toLocaleString('pt-BR')}</td></tr>`).join('');
+                calculatedVariance = calculateVariance(historicalFlows);
+                varianceResultEl.textContent = calculatedVariance.toLocaleString('pt-BR', { maximumFractionDigits: 0 });
+            }
+
+            function runSimulation() {
+                if (controlsBaumol.classList.contains('hidden')) simulateMillerOrr();
+                else simulateBaumol();
+            }
+
+            function simulateBaumol() {
+                const T = parseFloat(baumolT.value) || 0, b = parseFloat(baumolB.value) || 0, i = (parseFloat(baumolI.value) || 0) / 100;
+                eventLog.innerHTML = ""; cashflowTableBody.innerHTML = "";
+                if (T <= 0 || b <= 0 || i <= 0) {
+                    baumolResult.textContent = '---'; updateChart(null); return;
+                }
+                const C = Math.sqrt((2 * b * T) / i);
+                baumolResult.textContent = formatCurrency(C);
+                const dailyUsage = T / 30;
+                let cashBalance = C;
+                const simulationData = [C];
+                let logMessages = [`Dia 0: Saldo inicial ótimo de ${formatCurrency(C)}.`];
+                let tableRows = `<tr><td class="p-2">0</td><td class="p-2 text-blue-600">-</td><td class="p-2">Saldo Inicial</td><td class="p-2 font-semibold">${formatCurrency(cashBalance)}</td></tr>`;
+
+                for (let day = 1; day <= 30; day++) {
+                    let movement = -dailyUsage;
+                    let description = "Uso Diário Programado";
+                    cashBalance += movement;
+                    if (cashBalance <= 0) {
+                        logMessages.push(`<b>Dia ${day}:</b> Saldo esgotado. Nova captação de ${formatCurrency(C)}.`);
+                        movement += C;
+                        description = "Uso + Reposição de Caixa";
+                        cashBalance = C;
+                    }
+                    simulationData.push(cashBalance);
+                    tableRows += `<tr><td class="p-2">${day}</td><td class="p-2 ${movement < 0 ? 'text-red-600' : 'text-green-600'}">${formatCurrency(movement)}</td><td class="p-2">${description}</td><td class="p-2 font-semibold">${formatCurrency(cashBalance)}</td></tr>`;
+                }
+                eventLog.innerHTML = logMessages.join('<br>');
+                cashflowTableBody.innerHTML = tableRows;
+                updateChart('baumol', { C, simulationData });
+            }
+
+            function simulateMillerOrr() {
+                const b = parseFloat(moB.value) || 0, variance = parseFloat(moVarInput.value) || 0, i = (parseFloat(moI.value) || 0) / 100, L = parseFloat(moL.value) || 0;
+                eventLog.innerHTML = ""; cashflowTableBody.innerHTML = "";
+                if (b <= 0 || variance <= 0 || i <= 0) {
+                    moZResult.textContent = '---'; moHResult.textContent = '---'; updateChart(null); return;
+                }
+                const z = Math.cbrt((3 * b * variance) / (4 * i)) + L;
+                const h = 3 * z - 2 * L;
+                moZResult.textContent = formatCurrency(z);
+                moHResult.textContent = formatCurrency(h);
+                const stdDev = Math.sqrt(variance);
+                let cashBalance = z;
+                const simulationData = [z];
+                let logMessages = [`Dia 0: Saldo inicial no ponto de retorno ${formatCurrency(z)}.`];
+                let tableRows = `<tr><td class="p-2">0</td><td class="p-2 text-blue-600">-</td><td class="p-2">Saldo Inicial</td><td class="p-2 font-semibold">${formatCurrency(cashBalance)}</td></tr>`;
+
+                for (let day = 1; day <= 30; day++) {
+                    const netFlow = (Math.random() - 0.5) * stdDev * 2;
+                    let description = netFlow > 0 ? transactionDescriptions.inflows[Math.floor(Math.random() * transactionDescriptions.inflows.length)] : transactionDescriptions.outflows[Math.floor(Math.random() * transactionDescriptions.outflows.length)];
+                    cashBalance += netFlow;
+                    if (cashBalance > h) {
+                        logMessages.push(`<b>Dia ${day}:</b> 📈 Limite superior ultrapassado. Compra de títulos. Saldo retorna para ${formatCurrency(z)}.`);
+                        description += " + Compra Títulos";
+                        cashBalance = z;
+                    } else if (cashBalance < L) {
+                        logMessages.push(`<b>Dia ${day}:</b> 📉 Limite inferior atingido. Venda de títulos. Saldo retorna para ${formatCurrency(z)}.`);
+                        description += " + Venda Títulos";
+                        cashBalance = z;
+                    }
+                    simulationData.push(cashBalance);
+                    tableRows += `<tr><td class="p-2">${day}</td><td class="p-2 ${netFlow < 0 ? 'text-red-600' : 'text-green-600'}">${formatCurrency(netFlow)}</td><td class="p-2">${description}</td><td class="p-2 font-semibold">${formatCurrency(cashBalance)}</td></tr>`;
+                }
+                eventLog.innerHTML = logMessages.join('<br>');
+                cashflowTableBody.innerHTML = tableRows;
+                updateChart('miller-orr', { z, h, L, simulationData });
+            }
+
+            function updateChart(model, params) {
+                if (!cashChart) initializeChart();
+                let newData = { labels: Array.from({ length: 31 }, (_, i) => `${i}`), datasets: [] };
+                if (model === 'baumol') {
+                    const { C, simulationData } = params;
+                    newData.datasets.push({ label: 'Saldo de Caixa', data: simulationData, borderColor: '#0d9488', tension: 0, fill: false });
+                    newData.datasets.push({ label: 'Saldo Ótimo (C)', data: Array(31).fill(C), borderColor: '#f97316', borderDash: [5, 5], pointRadius: 0 });
+                } else if (model === 'miller-orr') {
+                    const { z, h, L, simulationData } = params;
+                    newData.datasets = [
+                        { label: 'Saldo de Caixa', data: simulationData, borderColor: '#0d9488', tension: 0.1, fill: false },
+                        { label: 'Limite Superior (h)', data: Array(31).fill(h), borderColor: '#ef4444', borderDash: [5, 5], pointRadius: 0, borderWidth: 2 },
+                        { label: 'Ponto de Retorno (z)', data: Array(31).fill(z), borderColor: '#f97316', borderDash: [5, 5], pointRadius: 0, borderWidth: 2 },
+                        { label: 'Limite Inferior (L)', data: Array(31).fill(L), borderColor: '#84cc16', borderDash: [5, 5], pointRadius: 0, borderWidth: 2 }
+                    ];
+                }
+                cashChart.data = newData;
+                cashChart.update();
+            }
+            
+            tabBaumol.addEventListener('click', () => {
+                controlsBaumol.classList.remove('hidden'); controlsMillerOrr.classList.add('hidden');
+                tabBaumol.classList.add('active'); tabMillerOrr.classList.remove('active');
+                runSimulation();
+            });
+            tabMillerOrr.addEventListener('click', () => {
+                controlsBaumol.classList.add('hidden'); controlsMillerOrr.classList.remove('hidden');
+                tabBaumol.classList.remove('active'); tabMillerOrr.classList.add('active');
+                runSimulation();
+            });
+            
+            useVarianceBtn.addEventListener('click', () => {
+                moVarInput.value = Math.round(calculatedVariance);
+                runSimulation();
+            });
+            resimulateBtn.addEventListener('click', runSimulation);
+            resimulateHistoryBtn.addEventListener('click', generateAndDisplayHistoricalData);
+            [baumolT, baumolB, baumolI, moB, moVarInput, moI, moL].forEach(el => el.addEventListener('input', runSimulation));
+            
+            // Initial Load
+            initializeChart();
+            generateAndDisplayHistoricalData();
+            runSimulation();
+        });
+    </script>
+</body>
+</html>

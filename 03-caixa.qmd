@@ -1,3 +1,131 @@
 # Administração do Caixa {#sec-caixa}
 
+<br>
 
+A administração de caixa é uma função central da gestão financeira de curto prazo, cujo objetivo é otimizar a liquidez da empresa, garantindo que ela possa honrar seus compromissos e, ao mesmo tempo, maximizar o retorno sobre os recursos monetários que, de outra forma, estariam ociosos. A gestão eficaz do caixa reside no equilíbrio entre o custo de oportunidade de manter saldos elevados e o risco de insolvência decorrente de saldos insuficientes.
+
+Ao priorizar os tópicos de Administração de Caixa que, resumidamente, discorremos abaixo, temos como objetivo garantir que os alunos recebam um conhecimento detalhado e direcionado sobre as técnicas e modelos específicos da gestão de caixa de curto prazo, sem que o conteúdo seja diluído por tópicos mais amplos que são exaustivamente tratados em outras partes do curso ou em outras disciplinas, por exemplo, a disciplina de Planejamento Financeiro e Orçamento Empresarial trata do confecção do fluxo de caixa.
+
+Isso permite uma abordagem mais eficaz e concisa para o segmento de curto prazo, conforme a estrutura e os objetivos da ementa oficial, que está mais alinhada com o livro-texto do @assafneto2014.
+
+<br>
+
+## Razões para a Manutenção de Caixa
+
+A teoria da preferência pela liquidez de John Maynard Keynes fornece a base teórica para entender por que as empresas demandam e mantêm saldos de caixa. Esses motivos são:
+
+-   **Motivo Transação (ou Negócio):** Esta é a razão mais fundamental para a manutenção de caixa. Surge da necessidade de cobrir os desembolsos decorrentes das operações normais e previsíveis do negócio, como pagamento de fornecedores, salários, impostos e outras despesas correntes. A necessidade de caixa para transações é diretamente influenciada pela falta de sincronia perfeita entre os fluxos de entrada (recebimentos) e saída (pagamentos) de recursos.
+
+-   **Motivo Precaução:** Este motivo está associado à incerteza inerente ao ambiente de negócios. Os fluxos de caixa reais raramente correspondem exatamente aos orçados. Portanto, as empresas mantêm um saldo de caixa de precaução como uma reserva de segurança (um "colchão" de liquidez) para se proteger contra flutuações inesperadas e adversas, como um atraso no recebimento de um cliente importante ou um aumento súbito no custo de matérias-primas. Esse saldo garante a capacidade de pagamento mesmo em cenários desfavoráveis.
+
+-   **Motivo Especulação:** Refere-se à manutenção de caixa para capitalizar oportunidades de mercado imprevistas e vantajosas. Uma empresa com liquidez pode, por exemplo, adquirir um grande lote de matéria-prima com um desconto significativo, realizar uma aquisição estratégica de um concorrente em dificuldades ou aproveitar outras oportunidades de investimento que exijam desembolso imediato.
+
+<br>
+
+## Ciclo de Caixa e Estratégias de Controle
+
+O Ciclo de Caixa (CC), também conhecido como Ciclo Financeiro (CF), é a métrica temporal que quantifica a necessidade de financiamento do capital de giro. Ele mede o número de dias entre o pagamento aos fornecedores pela matéria-prima e o recebimento efetivo do dinheiro pela venda do produto acabado. O objetivo estratégico do gestor financeiro é minimizar a duração deste ciclo, pois um ciclo mais curto implica uma menor necessidade de recursos para sustentar as operações e, consequentemente, um menor custo de capital.
+
+O controle e a otimização do saldo de caixa podem ser realizados por meio de duas categorias de medidas:
+
+-   **Medidas de Competência Exclusiva do Caixa:** Ações táticas focadas diretamente na aceleração das entradas e no gerenciamento das saídas. Incluem a dinamização dos processos de cobrança, a redução do tempo entre a venda e a emissão da fatura, e a busca por uma sincronização ótima entre as datas de recebimento e pagamento.
+
+-   **Medidas de Política Ampla:** Ações estratégicas que envolvem outras áreas da empresa. Incluem a revisão da política de crédito (prazos e condições oferecidos aos clientes), a otimização dos níveis de estoque para reduzir o capital imobilizado e a criação de uma política de aplicação dos saldos de caixa temporariamente ociosos em títulos negociáveis de alta liquidez.
+
+O Saldo Mínimo de Caixa é o nível de caixa que permite à empresa cobrir seus desembolsos programados e manter uma reserva de segurança. Um modelo determinístico para seu cálculo é:
+
+$$\text{Saldo Mínimo de Caixa} = \frac{\text{Desembolsos Totais de Caixa Esperados no Período}}{\text{Giro de Caixa no Período (GC)}}$$
+
+Onde $GC$ pode ser calculado pela divisão 360 dias pelo $CC$ (em dias).
+
+Este modelo, contudo, possui limitações por não incorporar a incerteza. Para torná-lo mais realista, ajustes são necessários, como a análise de horizontes de tempo mais curtos e a consideração da sazonalidade das operações.
+
+<br>
+
+## Modelos Quantitativos de Administração de Caixa
+
+Para refinar a decisão sobre o nível ótimo de caixa, modelos quantitativos foram desenvolvidos. Eles buscam minimizar os custos totais associados à gestão da liquidez, que são, fundamentalmente, o custo de oportunidade e o custo de transação.
+
+<br>
+
+### Modelo de Lote Econômico (Baumol)
+
+Desenvolvido por William Baumol, este modelo determinístico trata o caixa como um estoque e aplica a lógica do lote econômico de compras. Ele busca o saldo de caixa ótimo (C) que minimiza a soma de dois custos conflitantes:
+
+**Custo de Oportunidade (Custo de Manutenção):** Representa os juros que a empresa deixa de ganhar por manter recursos em caixa em vez de investi-los em títulos negociáveis. É calculado como:
+
+$$\text{Custo de Manutenção (CM)} = i \times \frac{C}{2}$$
+
+Onde $i$ é a taxa de juros dos títulos e $\frac{C}{2}$ é o saldo médio de caixa ($\bar{C}$).
+
+**Custo de Transação (Custo de Obtenção):** Representa os custos fixos incorridos cada vez que a empresa converte títulos em caixa (ex: taxas de corretagem). É calculado como:
+
+$$\text{Custo de Obtenção (CO)} = b \times \frac{T}{C}$$
+
+Onde $b$ é o custo fixo por transação, $T$ é a necessidade total de caixa no período e $\frac{T}{C}$ é o número de transações ($N$). Ao somarmos $CM$ + $CO$, temos:
+
+$$CT = \left( b \times \frac{T}{C} \right) + \left( i \times \frac{C}{2} \right)$$
+
+Igualando $CT$ a zero e resolvendo para $C$ obtemos a fórmula do Saldo Ótimo ($C^*$) de Baumol:
+
+$$C^* = \sqrt{\frac{2 \times b \times T}{i}}$$
+
+A principal limitação do modelo de Baumol é sua natureza determinística: ele assume que os fluxos de caixa são perfeitamente previsíveis e que seu uso é constante ao longo do tempo, o que raramente ocorre na prática.
+
+<br>
+
+### Modelo de Miller e Orr
+
+Este é um modelo estocástico (probabilístico), mais sofisticado e realista, pois foi projetado para lidar com a incerteza dos fluxos de caixa diários. Ele assume que as variações líquidas diárias no caixa são aleatórias. O modelo funciona estabelecendo limites de controle para o saldo de caixa:
+
+**Limite Superior (h):** Quando o saldo de caixa atinge este ponto, a empresa utiliza o excedente para comprar títulos negociáveis, retornando o saldo de caixa a um nível predefinido (o "ponto de retorno", z).
+
+**Limite Inferior (L):** Geralmente definido como zero ou um saldo mínimo de segurança. Quando o caixa atinge este ponto, a empresa vende títulos para obter caixa e elevar o saldo novamente até o ponto de retorno (z).
+
+O objetivo do modelo é minimizar os custos totais esperados (oportunidade e transação). O ponto de retorno ótimo (z), que é a variável chave do modelo, é calculado pela seguinte fórmula:
+
+$$z = \sqrt[3]{\frac{3 \times b \times \sigma^2}{4 \times i}} + L$$
+
+Onde: - $z$ = Ponto de retorno ótimo; $b$ = Custo fixo por transação com títulos; $\sigma^2$ = Variância dos fluxos líquidos diários de caixa; $i$ = Taxa de juros diária dos títulos negociáveis; $L$ = Limite Inferior
+
+A banda superior do caixa, na assunção de um saldo mínimo de segurança (L), pode ser calculado como:
+
+$$h = 3z - 2L$$ <br>
+
+### O Dilema da Gestão de Caixa em Cenários Inflacionários
+
+A inflação impõe um desafio adicional e significativo à administração de caixa. A principal consequência é a perda do poder de compra da moeda mantida em caixa. Isso cria um dilema com duas forças conflitantes:
+
+-   Por um lado, a inflação eleva os custos operacionais, o que aumenta a necessidade de investimento nominal em capital de giro para que a empresa consiga manter o mesmo nível de atividade real.
+
+-   Por outro lado, para se proteger da depreciação monetária, a estratégia racional é manter o saldo de caixa o mais baixo possível, aplicando quaisquer recursos excedentes em títulos negociáveis que ofereçam proteção contra a inflação (por exemplo, atrelados a um índice de preços).
+
+Em conjunturas inflacionárias, as políticas de minimização dos saldos de caixa tornam-se, portanto, ainda mais cruciais para a preservação do valor da empresa.
+
+## Outros recursos didáticos {.unnumbered}
+
+Nesta seção, falamos sobre a gestão do caixa e apresentamos os principais conceitos e modelos utilizados, como o modelo de Baumol e o modelo de Miller e Orr. Esses modelos ajudam a determinar o saldo ótimo de caixa, equilibrando os custos de oportunidade e transação, além de considerar a incerteza dos fluxos de caixa diários. Também discutimos a importância do ciclo de caixa e as estratégias para otimizar a liquidez da empresa. Por fim, abordamos o dilema da gestão de caixa em cenários inflacionários, destacando a necessidade de manter saldos adequados para preservar o poder de compra.
+
+Abaixo, você encontrará outros recursos didáticos que objetiva resumir os conceitos apresentados por aqui:
+
+> [**Slides da Aula**](/resources/caixa-ppt.html)
+
+```{=html}
+<iframe src="/resources/caixa-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+> [**Resumo Interativo**](/resources/caixa-interativo.html) ➔ **Resumo do resumo!** 🥱
+
+```{=html}
+<iframe src="/resources/caixa-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+> [**Podcast do Conteúdo**](resources/caixa-podcast.mp3)
+
+::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+<audio controls src="resources/caixa-podcast.mp3" style="width: 400px;">
+
+Seu navegador não suporta o elemento de áudio.
+
+</audio>
+:::
+:::
