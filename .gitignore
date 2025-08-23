@@ -12,7 +12,7 @@ _temp/
 /site_libs/
 
 # Dependências
-/renv/
+renv/
 .Rprofile
 
 # Gestão
