@@ -260,3 +260,19 @@ Abaixo você pode visualizar o LEC em operação, ou você pode expandir esse o 
 ```{=html}
 <iframe src="/resources/lec.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
+<br>
+
+### Resumo em áudio
+
+A seguir, você pode ouvir um resumo em áudio do conteúdo desta seção:
+
+
+:::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+<audio controls src="resources/estoque-podcast.mp3" style="width: 400px;">
+
+Seu navegador não suporta o elemento de áudio.
+
+</audio>
+:::
+::::
