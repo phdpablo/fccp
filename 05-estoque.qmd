@@ -262,7 +262,19 @@ Abaixo você pode visualizar o LEC em operação, ou você pode expandir esse o 
 ```
 <br>
 
-### Resumo em áudio
+## Slides da Aula
+
+Abaixo você pode visualizar os slides da aula, ou você pode expandir essa versão dos slides clicando no link:
+
+> [**Slides da Aula**](/resources/estoque-ppt.html)
+
+```{=html}
+<iframe src="/resources/estoque-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+<br>
+
+## Resumo em áudio
 
 A seguir, você pode ouvir um resumo em áudio do conteúdo desta seção:
 
@@ -276,3 +288,4 @@ Seu navegador não suporta o elemento de áudio.
 </audio>
 :::
 ::::
+
