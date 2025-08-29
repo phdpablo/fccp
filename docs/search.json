@@ -330,6 +330,56 @@
     ]
   },
   {
+    "objectID": "05-estoque.html",
+    "href": "05-estoque.html",
+    "title": "5  Administração de Estoques",
+    "section": "",
+    "text": "5.1 Custos Relevantes na Gestão de Estoques\nA administração de estoques é uma área crítica da gestão financeira. Os estoques, por natureza, são ativos de baixa liquidez que imobilizam um volume significativo de capital. Uma gestão ineficiente pode comprometer tanto a rentabilidade, ao inflar os custos de carregamento e o capital empatado, quanto a liquidez, ao drenar recursos que poderiam ser alocados em outras necessidades de curto prazo.\nO desafio central reside em um equilíbrio delicado:\nAs decisões sobre o nível ótimo de estoques envolvem a análise de dois custos destoantes:\nUm dos objetivos da gestão financeira de estoque é operacionar modelos de otimização para encontrar o ponto em que a soma desses dois grupos de custos seja minimizada. No entanto, antes de aplicar modelos de otimização complexos, é fundamental direcionar os esforços de gestão.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Administração de Estoques</span>"
+    ]
+  },
+  {
+    "objectID": "05-estoque.html#custos-relevantes-na-gestão-de-estoques",
+    "href": "05-estoque.html#custos-relevantes-na-gestão-de-estoques",
+    "title": "5  Administração de Estoques",
+    "section": "",
+    "text": "Custos de Manutenção ou Carregamento: Custos para manter o estoque, como custo de capital, armazenagem, seguros e perdas. Aumentam com o volume estocado.\nCustos de Pedido (Compra) ou Preparação: Custos para adquirir um novo lote, como processamento, frete e recebimento. Diminuem à medida que o tamanho dos lotes aumenta (menos pedidos são feitos).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Administração de Estoques</span>"
+    ]
+  },
+  {
+    "objectID": "05-estoque.html#controle-seletivo-a-curva-abc",
+    "href": "05-estoque.html#controle-seletivo-a-curva-abc",
+    "title": "5  Administração de Estoques",
+    "section": "5.2 Controle Seletivo: A Curva ABC",
+    "text": "5.2 Controle Seletivo: A Curva ABC\nNem todos os itens de estoque possuem a mesma importância financeira. Para otimizar os esforços de gestão, os estoques são classificados pela sua importância financeira usando a Curva ABC, uma aplicação do Princípio de Pareto.\nO Princípio de Pareto, ou regra 80/20, postula que, para muitos eventos, aproximadamente 80% dos efeitos vêm de 20% das causas. Aplicado aos estoques, isso significa que uma pequena porcentagem dos itens em inventário (os 20%) tende a ser responsável por uma grande porcentagem do valor total de consumo ou venda (os 80%).\n\nClasse A: Poucos itens (ex: 20%) que representam a maior parte do valor (ex: 80%). Exigem controle rigoroso e modelos de otimização.\nClasse B: Itens de importância intermediária.\nClasse C: Muitos itens (ex: 50%) de baixo valor individual. Admitem controles mais simples.\n\nA Curva ABC direciona a atenção gerencial para onde ela é mais crítica, garantindo que os itens mais valiosos (Classe A) sejam gerenciados com a máxima eficiência.\n\n\n5.2.1 Simulador da Curva ABC\nAbaixo você pode visualizar a metodologia de cálculo da Curva ABC em operação, ou você pode expandir essa versão interativa do simulador da Curva ABC clicando no link:\n\nSimulador da Curva ABC",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Administração de Estoques</span>"
+    ]
+  },
+  {
+    "objectID": "05-estoque.html#decisões-de-compra",
+    "href": "05-estoque.html#decisões-de-compra",
+    "title": "5  Administração de Estoques",
+    "section": "5.3 Decisões de Compra",
+    "text": "5.3 Decisões de Compra\nA decisão de quando e como pagar por um lote de estoque é um problema clássico de valor do dinheiro no tempo. A metodologia tradicionalmente apresentada em finanças corporativas pode ser perfeitamente reenquadrada e aprofundada pela ótica da Equivalência de Capitais.\nA análise compara diferentes propostas de compra (ex: à vista vs. a prazo) tratando cada uma na linha do tempo (diagrama de caixa). Nesse caso, a variável central é o período, que em nosso contexto, pode ser entendido pelo Ciclo de Caixa (CC).\n\\[\nCC~(\\text{dias}) = PME + PMR - PMP\n\\]\nOnde: \\(PME\\): Prazo Médio de Estocagem, \\(PMR\\): Prazo Médio de Recebimento e \\(PMP\\): Prazo Médio de Pagamento\nO sinal do CC define quem financia a operação e qual taxa de juros (custo de oportunidade) utilizar.\n\n\n5.3.1 Cenário 1: Ciclo de Caixa Positivo\nA empresa paga o fornecedor antes de receber do cliente, precisando financiar a operação. A taxa relevante é o Custo de Captação (\\(k_c\\)).\nO Diagrama de Fluxo de Caixa abaixo ilustra a saída de caixa (Custo) ocorrendo antes da entrada (Venda):\n\n    Empresa Financia\n    \n        \n        \n            \n            t=0\n        \n        \n            \n            \n                \n                \n                \n                    Custo (CMV)\n                    Data de Pagamento (tp)\n                \n            \n        \n        \n            \n            \n                \n                    Venda (PV)\n                    Data de Recebimento (tr)\n                \n                \n                \n            \n        \n    \n\n\n\n\n5.3.2 Cenário 2: Ciclo de Caixa Negativo\nA empresa recebe do cliente antes de pagar o fornecedor, sendo financiada pelo fornecedor. A taxa relevante é a Taxa de Aplicação (\\(k_a\\)).\nNote como a ordem dos eventos se inverte no Diagrama de Fluxo de Caixa: a entrada (Venda) agora ocorre antes da saída (Custo).\n\n    Fornecedor Financia\n    \n        \n        \n            \n            t=0\n        \n        \n            \n            \n                \n                    Venda (PV)\n                    Data de Recebimento (tr)\n                \n                \n                \n            \n        \n        \n            \n            \n                \n                \n                \n                    Custo (CMV)\n                    Data de Pagamento (tp)\n                \n            \n        \n    \n\n\n\n\n5.3.3 Formulação Geral\nO resultado da operação (\\(R\\)) é calculado em uma data focal comum (\\(t_r\\), data de recebimento), usando a taxa apropriada:\n\\[\n\\text{R}_{t_r} = \\text{PV} - \\left[ \\text{CMV} \\times (1 + i)^{\\frac{CC}{30}} \\right]\n\\]\nOnde \\(i = k_c\\) se \\(CC &gt; 0\\), e \\(i = k_a\\) se \\(CC &lt; 0\\). \\(PV\\) é preço de venda que já se encontra na data \\(t_r\\) e \\(CMV\\) é o custo da mercadoria vendida capitalizado (se \\(CC &gt; 0\\)) ou descapitalizado (se \\(CC &lt; 0\\)) para a data \\(t_r\\).\n\n\n\n5.3.4 Simulador Decisões de Compra\nAbaixo você pode visualizar a formulação geral para tomada de decisões de compra de estoque em operação, ou você pode expandir essa versão interativa do Simulador de Decisões de Compra clicando no link:\n\nSimulador Decisões de Compra",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Administração de Estoques</span>"
+    ]
+  },
+  {
+    "objectID": "05-estoque.html#o-modelo-do-lote-econômico-de-compra-lec",
+    "href": "05-estoque.html#o-modelo-do-lote-econômico-de-compra-lec",
+    "title": "5  Administração de Estoques",
+    "section": "5.4 O Modelo do Lote Econômico de Compra (LEC)",
+    "text": "5.4 O Modelo do Lote Econômico de Compra (LEC)\nO LEC é um modelo de otimização que determina a quantidade ideal a ser comprada em cada pedido para minimizar os custos totais de gestão de estoques. Ele encontra o ponto onde os custos de manutenção se igualam aos custos de pedido.\nA fórmula do LEC é:\n\\[\nLEC = \\sqrt{\\frac{2 \\times D \\times C_p}{C_m}}\n\\]\nOnde: \\(D\\): Demanda total no período, \\(C_p\\): Custo de cada pedido e \\(C_m\\): Custo de manutenção por unidade.\nEnquanto a análise anterior foca em decisões de compra pontuais, o LEC busca responder a uma pergunta recorrente: Qual a quantidade ideal a ser pedida em cada lote para minimizar os custos totais de gestão de estoques ao longo de um período?\n\n\n5.4.1 Derivação do LEC\nO LEC parte das premissas de demanda constante e conhecida, preço de compra constante, prazo de entrega (lead time) constante e conhecido e custo de manutenção e de pedido constante e conhecido, ou seja, o LEC é um modelo em condicões de certeza ou certa estabilidade preditiva.\nO modelo se baseia em um trade-off:\n\nPedir lotes grandes diminui o custo anual de pedidos (CP), mas aumenta o custo anual de manutenção (CM).\n\n\\[\n\\text{CP} = C_p \\times \\frac{D}{Q}\n\\] Onde: \\(Q\\) representa a quantidade de cada pedido (em unidades) e D/Q representa o número total de pedidos (N):\n\\[\n\\text{N} = \\frac{D}{Q}\n\\]\n\nPedir lotes pequenos diminui o custo anual de manutenção (CM), mas aumenta o custo anual de pedidos (CP).\n\n\\[\n\\text{CM} = C_m \\times \\frac{Q}{2}\n\\]\nQ/2 representa o estoque médio (EM).\nO Custo Total (CT) é a soma dos dois custos: CP + CM\n\\[\n\\text{CT} = \\left(C_p \\times \\frac{D}{Q}\\right) + \\left(C_m \\times \\frac{Q}{2}\\right)\n\\] Igualando CT a zero, ou de outra forma, CP = CM, temos:\n\\[\nC_p \\times \\frac{D}{Q} = C_m \\times \\frac{Q}{2}\n\\]\nMultiplicando ambos os lados por Q:\n\\[\nC_p \\times \\frac{D}{Q} \\times Q = C_m \\times \\frac{Q}{2} \\times Q\n\\]\n\\[\nC_p \\times D = C_m \\times \\frac{Q^2}{2}\n\\]\nMultiplicando ambos os lados por 2:\n\\[\n2 \\times C_p \\times D = C_m \\times Q^2\n\\]\nIsolando \\(Q^2\\):\n\\[\nQ^2 = \\frac{2 \\times C_p \\times D}{C_m}\n\\]\nExtraindo a raiz quadrada para obter o LEC (\\(Q^*\\)), temos:\n\\[\nQ^* = \\sqrt{\\frac{2 \\times C_p \\times D}{C_m}}\n\\] \n\n\n5.4.2 Simulador LEC\nAbaixo você pode visualizar o LEC em operação, ou você pode expandir esse o Simulador do LEC no link:\n\nSimulador LEC",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Administração de Estoques</span>"
+    ]
+  },
+  {
     "objectID": "06-aval.html",
     "href": "06-aval.html",
     "title": "6  Projetos em Grupo",

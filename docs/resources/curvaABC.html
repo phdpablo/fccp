@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Curva ABC para Controle de Estoques</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .table-header {
+            background-color: #e9ecef;
+        }
+        .class-a { background-color: #fff0f0; color: #c0392b; }
+        .class-b { background-color: #fff9e6; color: #d35400; }
+        .class-c { background-color: #e8f8f5; color: #1e8449; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-800 mb-2">Simulador Interativo da Curva ABC</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Uma ferramenta para classificar itens de estoque com base em seu valor de consumo, aplicando o Princípio de Pareto (80/20) para otimizar os esforços de gestão.</p>
+        </header>
+
+        <main class="space-y-12">
+            <!-- Seção de Dados de Entrada -->
+            <section class="card p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-700">1. Dados do Inventário</h2>
+                <p class="mb-4 text-gray-600">Insira os dados do seu inventário na tabela abaixo. Você pode editar os valores pré-preenchidos ou adicionar novas linhas. Em seguida, clique no botão para processar a análise.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="table-header">
+                            <tr>
+                                <th class="p-3 font-semibold">SKU do Item</th>
+                                <th class="p-3 font-semibold">Demanda Anual (Unidades)</th>
+                                <th class="p-3 font-semibold">Custo Unitário (R$)</th>
+                                <th class="p-3 font-semibold">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inventory-table">
+                            <!-- Linhas de exemplo são inseridas via JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-4 flex justify-between items-center">
+                    <button id="add-row-btn" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition">Adicionar Item</button>
+                    <button id="calculate-btn" class="bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition text-lg">Calcular Curva ABC</button>
+                </div>
+            </section>
+
+            <!-- Seção de Resultados -->
+            <section id="results-section" class="card p-6 hidden">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-700">2. Análise e Classificação ABC</h2>
+                <p class="mb-6 text-gray-600">A tabela abaixo mostra os itens ordenados por valor de consumo anual. A classificação (A, B, C) é determinada pelo impacto de cada item no valor total do estoque.</p>
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="table-header">
+                            <tr>
+                                <th class="p-3 font-semibold">SKU</th>
+                                <th class="p-3 font-semibold">Valor Consumo Anual (R$)</th>
+                                <th class="p-3 font-semibold">% do Valor Total</th>
+                                <th class="p-3 font-semibold">% Acumulada</th>
+                                <th class="p-3 font-semibold">Classe</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-table">
+                            <!-- Resultados são inseridos via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <!-- Gráfico de Pareto -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-center">Gráfico de Pareto (Valor x Itens)</h3>
+                        <div class="chart-container">
+                            <canvas id="pareto-chart"></canvas>
+                        </div>
+                    </div>
+                    <!-- Implicações Gerenciais -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold mb-4 text-center">Implicações Gerenciais</h3>
+                        <div id="summary-a" class="p-4 rounded-lg class-a border border-red-300">
+                            <h4 class="font-bold text-lg">Classe A: Controle Rigoroso</h4>
+                            <p class="text-sm">Itens de altíssimo valor. Exigem controle de inventário preciso, revisões frequentes, negociações estratégicas com fornecedores e aplicação de modelos como o LEC.</p>
+                        </div>
+                        <div id="summary-b" class="p-4 rounded-lg class-b border border-orange-300">
+                            <h4 class="font-bold text-lg">Classe B: Controle Moderado</h4>
+                            <p class="text-sm">Itens de valor intermediário. O controle pode ser menos intensivo que na classe A, com revisões periódicas e sistemas de controle padrão.</p>
+                        </div>
+                        <div id="summary-c" class="p-4 rounded-lg class-c border border-green-300">
+                            <h4 class="font-bold text-lg">Classe C: Controle Simplificado</h4>
+                            <p class="text-sm">Itens de baixo valor. Justificam controles mais simples, como o sistema de duas gavetas, e estoques de segurança mais generosos para evitar faltas sem incorrer em altos custos de carregamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const initialData = [
+            // Classe A (Poucos itens, alto valor)
+            { sku: 'PROC-XEON', demand: 50, cost: 20000 }, // 1,000,000
+            { sku: 'GPU-QUADRO', demand: 30, cost: 25000 }, // 750,000
+            { sku: 'SSD-NVME-4TB', demand: 200, cost: 2000 }, // 400,000
+
+            // Classe B (Itens intermediários)
+            { sku: 'RAM-32GB-DDR5', demand: 300, cost: 600 }, // 180,000
+            { sku: 'MOBO-PRO', demand: 100, cost: 1200 }, // 120,000
+            { sku: 'PSU-1000W', demand: 150, cost: 800 }, // 120,000
+            { sku: 'CASE-PREMIUM', demand: 80, cost: 900 }, // 72,000
+
+            // Classe C (Muitos itens, baixo valor)
+            { sku: 'MOUSEPAD', demand: 2000, cost: 20 }, // 40,000
+            { sku: 'USB-CABLE', demand: 3000, cost: 15 }, // 45,000
+            { sku: 'FAN-120MM', demand: 500, cost: 40 }, // 20,000
+            { sku: 'SCREW-KIT', demand: 1000, cost: 10 }, // 10,000
+            { sku: 'THERMAL-PASTE', demand: 400, cost: 30 }, // 12,000
+            { sku: 'ZIP-TIE', demand: 5000, cost: 2 }, // 10,000
+            { sku: 'CLEAN-SPRAY', demand: 200, cost: 25 }, // 5,000
+            { sku: 'HDMI-CABLE', demand: 1000, cost: 35 }, // 35,000
+        ];
+
+        const inventoryTable = document.getElementById('inventory-table');
+        const addRowBtn = document.getElementById('add-row-btn');
+        const calculateBtn = document.getElementById('calculate-btn');
+        const resultsSection = document.getElementById('results-section');
+        const resultsTable = document.getElementById('results-table');
+        const paretoChartCanvas = document.getElementById('pareto-chart');
+        let chartInstance;
+
+        const formatCurrency = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+
+        function createTableRow(item) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="p-3 border-b" contenteditable="true">${item.sku}</td>
+                <td class="p-3 border-b" contenteditable="true">${item.demand}</td>
+                <td class="p-3 border-b" contenteditable="true">${item.cost}</td>
+                <td class="p-3 border-b"><button class="text-red-500 font-semibold hover:text-red-700 remove-row-btn">Remover</button></td>
+            `;
+            row.querySelector('.remove-row-btn').addEventListener('click', () => row.remove());
+            return row;
+        }
+
+        function loadInitialData() {
+            initialData.forEach(item => {
+                inventoryTable.appendChild(createTableRow(item));
+            });
+        }
+
+        addRowBtn.addEventListener('click', () => {
+            inventoryTable.appendChild(createTableRow({ sku: 'NOVO-ITEM', demand: 0, cost: 0 }));
+        });
+
+        calculateBtn.addEventListener('click', () => {
+            const rows = inventoryTable.querySelectorAll('tr');
+            const data = Array.from(rows).map(row => {
+                const cells = row.querySelectorAll('td');
+                return {
+                    sku: cells[0].innerText,
+                    demand: parseFloat(cells[1].innerText) || 0,
+                    cost: parseFloat(cells[2].innerText) || 0,
+                };
+            });
+
+            // 1. Calculate consumption value
+            let processedData = data.map(item => ({
+                ...item,
+                consumptionValue: item.demand * item.cost,
+            }));
+
+            const totalConsumptionValue = processedData.reduce((sum, item) => sum + item.consumptionValue, 0);
+
+            // 2. Sort by consumption value
+            processedData.sort((a, b) => b.consumptionValue - a.consumptionValue);
+
+            // 3. Calculate percentages and classify
+            let cumulativeValue = 0;
+            processedData = processedData.map(item => {
+                cumulativeValue += item.consumptionValue;
+                const percentage = totalConsumptionValue > 0 ? (item.consumptionValue / totalConsumptionValue) * 100 : 0;
+                const cumulativePercentage = totalConsumptionValue > 0 ? (cumulativeValue / totalConsumptionValue) * 100 : 0;
+                let abcClass = 'C';
+                if (cumulativePercentage <= 80) {
+                    abcClass = 'A';
+                } else if (cumulativePercentage <= 95) {
+                    abcClass = 'B';
+                }
+                return { ...item, percentage, cumulativePercentage, abcClass };
+            });
+
+            renderResults(processedData, totalConsumptionValue);
+            resultsSection.classList.remove('hidden');
+            window.scrollTo({ top: resultsSection.offsetTop - 20, behavior: 'smooth' });
+        });
+
+        function renderResults(data, totalValue) {
+            resultsTable.innerHTML = '';
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.className = `class-${item.abcClass.toLowerCase()}`;
+                row.innerHTML = `
+                    <td class="p-3 border-b font-semibold">${item.sku}</td>
+                    <td class="p-3 border-b">${formatCurrency(item.consumptionValue)}</td>
+                    <td class="p-3 border-b">${item.percentage.toFixed(2)}%</td>
+                    <td class="p-3 border-b">${item.cumulativePercentage.toFixed(2)}%</td>
+                    <td class="p-3 border-b font-bold">${item.abcClass}</td>
+                `;
+                resultsTable.appendChild(row);
+            });
+
+            renderChart(data);
+            renderSummary(data, totalValue);
+        }
+
+        function renderChart(data) {
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+            const labels = data.map(item => item.sku);
+            const values = data.map(item => item.consumptionValue);
+            const cumulativePercentages = data.map(item => item.cumulativePercentage);
+
+            chartInstance = new Chart(paretoChartCanvas, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Valor de Consumo Anual (R$)',
+                            data: values,
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            yAxisID: 'y',
+                        },
+                        {
+                            label: '% Acumulada do Valor',
+                            data: cumulativePercentages,
+                            type: 'line',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            yAxisID: 'y1',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Valor de Consumo (R$)'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            min: 0,
+                            max: 100,
+                            grid: {
+                                drawOnChartArea: false,
+                            },
+                            title: {
+                                display: true,
+                                text: '% Acumulada'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + "%"
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderSummary(data, totalValue) {
+            const summary = {
+                A: { count: 0, value: 0 },
+                B: { count: 0, value: 0 },
+                C: { count: 0, value: 0 },
+            };
+
+            data.forEach(item => {
+                summary[item.abcClass].count++;
+                summary[item.abcClass].value += item.consumptionValue;
+            });
+
+            const totalItems = data.length;
+            
+            const updateSummaryText = (classChar, summaryDivId, title) => {
+                const count = summary[classChar].count;
+                const value = summary[classChar].value;
+                const countPercent = totalItems > 0 ? (count / totalItems * 100).toFixed(1) : 0;
+                const valuePercent = totalValue > 0 ? (value / totalValue * 100).toFixed(1) : 0;
+                const summaryDiv = document.getElementById(summaryDivId);
+                const h4 = summaryDiv.querySelector('h4');
+                h4.innerHTML = `${title} <span class="float-right text-base font-normal">${countPercent}% dos itens | ${valuePercent}% do valor</span>`;
+            };
+
+            updateSummaryText('A', 'summary-a', 'Classe A: Controle Rigoroso');
+            updateSummaryText('B', 'summary-b', 'Classe B: Controle Moderado');
+            updateSummaryText('C', 'summary-c', 'Classe C: Controle Simplificado');
+        }
+
+        window.onload = loadInitialData;
+    </script>
+</body>
+</html>

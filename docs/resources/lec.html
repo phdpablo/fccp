@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Interativo - Modelo do Lote Econômico de Compra (LEC)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+            border: 1px solid #e5e7eb;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .highlight {
+            background-color: #fef9c3;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+
+    <main class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Simulador do Lote Econômico de Compra (LEC)</h1>
+            <p class="text-md text-slate-600 max-w-3xl mx-auto">Ajuste os parâmetros para encontrar o Lote Econômico de Compra (LEC) e visualize o impacto nos custos e na movimentação do estoque ao longo do tempo.</p>
+        </header>
+
+        <div class="grid lg:grid-cols-12 gap-8">
+            <!-- Painel de Controle e Tabela -->
+            <div class="lg:col-span-5 space-y-8">
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-700">Painel de Controle</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="total-demand" class="block text-sm font-medium text-slate-700">Demanda Total Anual (D)</label>
+                            <input type="number" id="total-demand" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" value="12000">
+                        </div>
+                        <div>
+                            <label for="order-cost" class="block text-sm font-medium text-slate-700">Custo por Pedido (Cp)</label>
+                            <input type="number" id="order-cost" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" value="50">
+                        </div>
+                        <div>
+                            <label for="holding-cost" class="block text-sm font-medium text-slate-700">Custo de Manutenção Unitário Anual (Cm)</label>
+                            <input type="number" id="holding-cost" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" value="1.2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-700">Resultados da Simulação</h2>
+                     <div class="text-center bg-indigo-50 p-4 rounded-lg border border-indigo-200 mb-4">
+                        <h3 class="font-semibold">Lote Econômico de Compra (LEC / Q*)</h3>
+                        <p id="optimal-lot-result" class="text-indigo-700 font-bold text-2xl">0 unidades</p>
+                    </div>
+                    <div class="table-container">
+                        <table class="w-full text-sm text-left">
+                            <thead class="sticky top-0 bg-slate-100">
+                                <tr>
+                                    <th class="p-2">Lote (Q)</th>
+                                    <th class="p-2">C. Pedido Anual</th>
+                                    <th class="p-2">C. Manutenção Anual</th>
+                                    <th class="p-2">C. Total Anual</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráficos -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-700">Gráfico de Custos da Gestão de Estoque</h2>
+                    <div class="chart-container">
+                        <canvas id="costsChart"></canvas>
+                    </div>
+                </div>
+                <div class="card p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-700">Gráfico de Movimentação do Estoque (Dente de Serra)</h2>
+                    <div class="chart-container">
+                        <canvas id="sawtoothChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const formatCurrency = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            const formatUnits = (value) => `${Math.round(value).toLocaleString('pt-BR')} unidades`;
+
+            // Elementos de Input
+            const totalDemandInput = document.getElementById('total-demand');
+            const orderCostInput = document.getElementById('order-cost');
+            const holdingCostInput = document.getElementById('holding-cost');
+            
+            // Elementos de Output
+            const optimalLotResultEl = document.getElementById('optimal-lot-result');
+            const tableBody = document.getElementById('results-table-body');
+            
+            // Contextos dos Gráficos
+            const costsCtx = document.getElementById('costsChart').getContext('2d');
+            const sawtoothCtx = document.getElementById('sawtoothChart').getContext('2d');
+            let costsChart, sawtoothChart;
+
+            function initializeCharts() {
+                if (costsChart) costsChart.destroy();
+                if (sawtoothChart) sawtoothChart.destroy();
+
+                costsChart = new Chart(costsCtx, {
+                    type: 'line',
+                    data: { labels: [], datasets: [] },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            x: { title: { display: true, text: 'Tamanho do Lote de Compra (Q)' } },
+                            y: { title: { display: true, text: 'Custo Anual (R$)' } }
+                        },
+                        plugins: { tooltip: { mode: 'index', intersect: false } }
+                    }
+                });
+
+                sawtoothChart = new Chart(sawtoothCtx, {
+                    type: 'line',
+                    data: { labels: [], datasets: [] },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: {
+                            x: { title: { display: true, text: 'Tempo (Dias)' } },
+                            y: { title: { display: true, text: 'Nível de Estoque (Unidades)' } }
+                        },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+            }
+
+            function runSimulation() {
+                const D = parseFloat(totalDemandInput.value) || 0;
+                const Cp = parseFloat(orderCostInput.value) || 0;
+                const Cm = parseFloat(holdingCostInput.value) || 0;
+
+                if (D <= 0 || Cp <= 0 || Cm <= 0) return;
+
+                // 1. Calcular o Lote Econômico de Compra (LEC / Q*)
+                const optimalQ = Math.sqrt((2 * Cp * D) / Cm);
+                optimalLotResultEl.textContent = formatUnits(optimalQ);
+
+                // 2. Simular dados para a tabela e gráfico de custos
+                const simulationRange = [];
+                const step = optimalQ / 10;
+                for (let q = step; q <= optimalQ * 2; q += step) {
+                    simulationRange.push(q);
+                }
+
+                let minTotalCost = Infinity;
+                let bestQ = 0;
+                
+                const tableData = simulationRange.map(q => {
+                    const annualOrderCost = (D / q) * Cp;
+                    const annualHoldingCost = (q / 2) * Cm;
+                    const totalCost = annualOrderCost + annualHoldingCost;
+
+                    if (totalCost < minTotalCost) {
+                        minTotalCost = totalCost;
+                        bestQ = q;
+                    }
+                    
+                    return { q, annualOrderCost, annualHoldingCost, totalCost };
+                });
+
+                // Atualizar tabela
+                tableBody.innerHTML = tableData.map(row => `
+                    <tr class="${Math.abs(row.q - bestQ) < step / 2 ? 'highlight' : ''}">
+                        <td class="p-2">${formatUnits(row.q)}</td>
+                        <td class="p-2">${formatCurrency(row.annualOrderCost)}</td>
+                        <td class="p-2">${formatCurrency(row.annualHoldingCost)}</td>
+                        <td class="p-2 font-semibold">${formatCurrency(row.totalCost)}</td>
+                    </tr>
+                `).join('');
+
+                // 3. Atualizar gráfico de custos
+                costsChart.data.labels = tableData.map(d => Math.round(d.q));
+                costsChart.data.datasets = [
+                    { label: 'Custo de Pedido Anual', data: tableData.map(d => d.annualOrderCost), borderColor: '#818cf8', backgroundColor: '#818cf820', fill: false, tension: 0.1 },
+                    { label: 'Custo de Manutenção Anual', data: tableData.map(d => d.annualHoldingCost), borderColor: '#a78bfa', backgroundColor: '#a78bfa20', fill: false, tension: 0.1 },
+                    { label: 'Custo Total Anual', data: tableData.map(d => d.totalCost), borderColor: '#4338ca', backgroundColor: '#4338ca20', fill: false, tension: 0.1, borderWidth: 3 }
+                ];
+                costsChart.update();
+
+                // 4. Simular e atualizar gráfico de dente de serra
+                const dailyDemand = D / 360; // Usando ano comercial
+                let stockLevel = optimalQ;
+                const sawtoothData = [{x: 0, y: optimalQ}];
+                const cycleTime = optimalQ / dailyDemand;
+                
+                for (let day = 1; day <= 90; day++) { // Simula 90 dias
+                    stockLevel -= dailyDemand;
+                    if (stockLevel < 0) {
+                        sawtoothData.push({x: day, y: 0});
+                        stockLevel = optimalQ;
+                        sawtoothData.push({x: day, y: stockLevel});
+                    } else {
+                       sawtoothData.push({x: day, y: stockLevel});
+                    }
+                }
+
+                sawtoothChart.data.labels = sawtoothData.map(p => p.x);
+                sawtoothChart.data.datasets = [{
+                    label: 'Nível de Estoque',
+                    data: sawtoothData,
+                    borderColor: '#6366f1',
+                    backgroundColor: '#6366f130',
+                    fill: false,
+                    stepped: false,
+                    pointRadius: 0,
+                    borderWidth: 2
+                }];
+                sawtoothChart.update();
+            }
+
+            // Event Listeners
+            [totalDemandInput, orderCostInput, holdingCostInput].forEach(input => {
+                input.addEventListener('input', runSimulation);
+            });
+
+            // Initial Load
+            initializeCharts();
+            runSimulation();
+        });
+    </script>
+</body>
+</html>

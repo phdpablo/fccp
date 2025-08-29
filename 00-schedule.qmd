@@ -9,10 +9,10 @@ Na seção de cada um dos módulos (tópicos) do conteúdo programático temos a
 <br>
 
 | Aula/Conteúdo | Data | Material Complementar |
-|:------------------|:-----------------:|:---------------------------------:|
+|:------------------|:-----------------:|:--------------------------------:|
 | @sec-intro | 📅20/06/25⏲️19:00 | [🗣](/resources/intro-ppt.html)[🎥](https://youtu.be/oN2CVy1lHGc)[📓](https://medium.com/@fabiofigueiredo_44303/resenha-do-livro-desafio-aos-deuses-a-hist%C3%B3ria-do-risco-9607fab2aa30) |
 | @sec-giro | 📅27/06/25⏲️19:00 | [🗣](/resources/giro-ppt.html)[🎥](https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ)[📓](https://journalppc.com/RPPC/article/view/1229) |
 | @sec-caixa | 📅18/07/25⏲️19:00 | [🗣](/resources/caixa-ppt.html)[🎥](https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ)[📓](https://ojs.unifor.br/rca/article/view/394) |
 | @sec-credito | 📅01/08/25⏲️19:00 | 🗣[🎥](https://youtu.be/-K88ewqeV2U?si=0RFDrt-TtWLyvGSE)[📓](https://www.researchgate.net/publication/273491445_Decisoes_de_Credito_em_Situacoes_de_Risco_Uma_Aplicacao_Pratica_do_Metodo_de_Monte_Carlo) |
-| @sec-estoque | 📅19/08/25⏲️19:00 | 🗣🎥📓 |
+| @sec-estoque | 📅19/08/25⏲️19:00 | 🗣[🎥](https://youtu.be/YaK1eUuLUXk?si=Z-794zw_Vu0pHaxW)[📓](https://www.researchgate.net/publication/281934935_Avaliando_o_Risco_na_Gestao_Financeira_de_Estoques) |
 | @sec-aval | 📅29/08/25⏲️19:00 | [🗣](/resources/teorias-ppt.html)[🎥](https://www.youtube.com/live/OCt4f9IdO6U?si=tVw5wrVo7cVmkptu)[📓](https://periodicos.fclar.unesp.br/iniciativa/article/view/19172) |

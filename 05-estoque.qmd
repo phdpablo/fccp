@@ -1,3 +1,262 @@
 # Administração de Estoques {#sec-estoque}
 
+<br>
 
+A administração de estoques é uma área crítica da gestão financeira. Os estoques, por natureza, são ativos de baixa liquidez que imobilizam um volume significativo de capital. Uma gestão ineficiente pode comprometer tanto a rentabilidade, ao inflar os custos de carregamento e o capital empatado, quanto a liquidez, ao drenar recursos que poderiam ser alocados em outras necessidades de curto prazo.
+
+O desafio central reside em um equilíbrio delicado:
+
+-   **Minimização do Investimento**: Manter os níveis de estoque os mais baixos possíveis para otimizar a rotação, reduzir custos de armazenagem, seguro, obsolescência e, fundamentalmente, liberar caixa.
+
+-   **Maximização do Nível de Serviço**: Garantir que não haja rupturas no processo de produção ou vendas, o que poderia levar à perda de clientes, desgaste da imagem da marca e custos de oportunidade irrecuperáveis.
+
+<br>
+
+## Custos Relevantes na Gestão de Estoques
+
+As decisões sobre o nível ótimo de estoques envolvem a análise de dois custos destoantes:
+
+1.  **Custos de Manutenção ou Carregamento:** Custos para manter o estoque, como custo de capital, armazenagem, seguros e perdas. Aumentam com o volume estocado.
+2.  **Custos de Pedido (Compra) ou Preparação:** Custos para adquirir um novo lote, como processamento, frete e recebimento. Diminuem à medida que o tamanho dos lotes aumenta (menos pedidos são feitos).
+
+Um dos objetivos da gestão financeira de estoque é operacionar modelos de otimização para encontrar o ponto em que a soma desses dois grupos de custos seja minimizada. No entanto, antes de aplicar modelos de otimização complexos, é fundamental direcionar os esforços de gestão.
+
+<br>
+
+## Controle Seletivo: A Curva ABC
+
+Nem todos os itens de estoque possuem a mesma importância financeira. Para otimizar os esforços de gestão, os estoques são classificados pela sua importância financeira usando a **Curva ABC**, uma aplicação do **Princípio de Pareto**.
+
+O Princípio de Pareto, ou **regra 80/20**, postula que, para muitos eventos, aproximadamente *80% dos efeitos vêm de 20% das causas*. Aplicado aos estoques, isso significa que uma pequena porcentagem dos itens em inventário (os 20%) tende a ser responsável por uma grande porcentagem do valor total de consumo ou venda (os 80%).
+
+-   **Classe A:** Poucos itens (ex: 20%) que representam a maior parte do valor (ex: 80%). Exigem controle rigoroso e modelos de otimização.
+-   **Classe B:** Itens de importância intermediária.
+-   **Classe C:** Muitos itens (ex: 50%) de baixo valor individual. Admitem controles mais simples.
+
+A Curva ABC direciona a atenção gerencial para onde ela é mais crítica, garantindo que os itens mais valiosos (Classe A) sejam gerenciados com a máxima eficiência.
+
+<br>
+
+### Simulador da Curva ABC
+
+Abaixo você pode visualizar a metodologia de cálculo da Curva ABC em operação, ou você pode expandir essa versão interativa do simulador da Curva ABC clicando no link:
+
+> [**Simulador da Curva ABC**](/resources/curvaABC.html)
+
+```{=html}
+<iframe src="/resources/curvaABC.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+## Decisões de Compra
+
+A decisão de quando e como pagar por um lote de estoque é um problema clássico de valor do dinheiro no tempo. A metodologia tradicionalmente apresentada em finanças corporativas pode ser perfeitamente reenquadrada e aprofundada pela ótica da **Equivalência de Capitais**.
+
+A análise compara diferentes propostas de compra (ex: à vista vs. a prazo) tratando cada uma na linha do tempo (diagrama de caixa). Nesse caso, a variável central é o período, que em nosso contexto, pode ser entendido pelo **Ciclo de Caixa (CC)**.
+
+$$
+CC~(\text{dias}) = PME + PMR - PMP
+$$
+
+Onde: $PME$: Prazo Médio de Estocagem, $PMR$: Prazo Médio de Recebimento e $PMP$: Prazo Médio de Pagamento
+
+O sinal do CC define quem financia a operação e qual taxa de juros (custo de oportunidade) utilizar.
+
+<br>
+
+### Cenário 1: Ciclo de Caixa Positivo
+
+A empresa paga o fornecedor antes de receber do cliente, precisando **financiar a operação**. A taxa relevante é o **Custo de Captação (**$k_c$).
+
+O **Diagrama de Fluxo de Caixa** abaixo ilustra a saída de caixa (Custo) ocorrendo antes da entrada (Venda):
+
+```{=html}
+<div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1.5rem; font-family: sans-serif; overflow-x: auto;">
+    <h3 style="font-size: 1.125rem; font-weight: 600; text-align: left; margin-bottom: 1rem;">Empresa Financia</h3>
+    <div style="position: relative; width: 100%; min-width: 600px; height: 10rem;">
+        <div style="position: absolute; top: 50%; left: 0; width: 100%; height: 4px; background-color: #d1d5db; transform: translateY(-50%);"></div>
+        <div style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%);">
+            <div style="width: 4px; height: 1rem; background-color: #9ca3af; margin-left: -2px;"></div>
+            <span style="position: absolute; top: 1.5rem; left: 50%; transform: translateX(-50%); font-size: 0.875rem; font-weight: 500;">t=0</span>
+        </div>
+        <div style="position: absolute; top: 50%; left: 35%; transform: translateY(-50%);">
+            <div style="width: 4px; height: 1rem; background-color: #9ca3af; margin-left: -2px;"></div>
+            <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0.5rem; text-align: center;">
+                <div style="margin: 0 auto; width: 2px; height: 2.5rem; background-color: #ef4444;"></div>
+                <div style="margin: 0 auto; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 8px solid #ef4444;"></div>
+                <div style="margin-top: 0.5rem; width: 10rem;">
+                    <p style="font-weight: 600; color: #b91c1c;">Custo (CMV)</p>
+                    <p style="font-size: 0.75rem; color: #4b5563;">Data de Pagamento (tp)</p>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 50%; left: 85%; transform: translateY(-50%);">
+            <div style="width: 4px; height: 1rem; background-color: #9ca3af; margin-left: -2px;"></div>
+            <div style="position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 0.5rem; text-align: center;">
+                <div style="margin-bottom: 0.5rem; width: 10rem;">
+                    <p style="font-weight: 600; color: #166534;">Venda (PV)</p>
+                    <p style="font-size: 0.75rem; color: #4b5563;">Data de Recebimento (tr)</p>
+                </div>
+                <div style="margin: 0 auto; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 8px solid #22c55e;"></div>
+                <div style="margin: 0 auto; width: 2px; height: 2.5rem; background-color: #22c55e;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+
+<br>
+
+### Cenário 2: Ciclo de Caixa Negativo
+
+A empresa recebe do cliente antes de pagar o fornecedor, sendo **financiada pelo fornecedor**. A taxa relevante é a **Taxa de Aplicação (**$k_a$).
+
+Note como a ordem dos eventos se inverte no **Diagrama de Fluxo de Caixa**: a entrada (Venda) agora ocorre antes da saída (Custo).
+
+```{=html}
+<div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1.5rem; font-family: sans-serif; overflow-x: auto;">
+    <h3 style="font-size: 1.125rem; font-weight: 600; text-align: right; margin-bottom: 1rem;">Fornecedor Financia</h3>
+    <div style="position: relative; width: 100%; min-width: 600px; height: 12rem;">
+        <div style="position: absolute; top: 60%; left: 0; width: 100%; height: 4px; background-color: #d1d5db; transform: translateY(-50%);"></div>
+        <div style="position: absolute; top: 60%; left: 5%; transform: translateY(-50%);">
+            <div style="width: 4px; height: 1rem; background-color: #9ca3af; margin-left: -2px;"></div>
+            <span style="position: absolute; top: 1.5rem; left: 50%; transform: translateX(-50%); font-size: 0.875rem; font-weight: 500;">t=0</span>
+        </div>
+        <div style="position: absolute; top: 60%; left: 35%; transform: translateY(-50%);">
+            <div style="width: 4px; height: 1rem; background-color: #9ca3af; margin-left: -2px;"></div>
+            <div style="position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 0.5rem; text-align: center;">
+                <div style="margin-bottom: 0.5rem; width: 10rem;">
+                    <p style="font-weight: 600; color: #166534;">Venda (PV)</p>
+                    <p style="font-size: 0.75rem; color: #4b5563;">Data de Recebimento (tr)</p>
+                </div>
+                <div style="margin: 0 auto; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 8px solid #22c55e;"></div>
+                <div style="margin: 0 auto; width: 2px; height: 2.5rem; background-color: #22c55e;"></div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 60%; left: 85%; transform: translateY(-50%);">
+            <div style="width: 4px; height: 1rem; background-color: #9ca3af; margin-left: -2px;"></div>
+            <div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0.5rem; text-align: center;">
+                <div style="margin: 0 auto; width: 2px; height: 2.5rem; background-color: #ef4444;"></div>
+                <div style="margin: 0 auto; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 8px solid #ef4444;"></div>
+                <div style="margin-top: 0.5rem; width: 10rem;">
+                    <p style="font-weight: 600; color: #b91c1c;">Custo (CMV)</p>
+                    <p style="font-size: 0.75rem; color: #4b5563;">Data de Pagamento (tp)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```  
+
+<br>
+
+### Formulação Geral
+
+O resultado da operação ($R$) é calculado em uma data focal comum ($t_r$, data de recebimento), usando a taxa apropriada:
+
+$$
+\text{R}_{t_r} = \text{PV} - \left[ \text{CMV} \times (1 + i)^{\frac{CC}{30}} \right]
+$$
+
+Onde $i = k_c$ se $CC > 0$, e $i = k_a$ se $CC < 0$. $PV$ é preço de venda que já se encontra na data $t_r$ e $CMV$ é o custo da mercadoria vendida capitalizado (se $CC > 0$) ou descapitalizado (se $CC < 0$) para a data $t_r$.
+
+<br>
+
+### Simulador Decisões de Compra
+
+Abaixo você pode visualizar a formulação geral para tomada de decisões de compra de estoque em operação, ou você pode expandir essa versão interativa do Simulador de Decisões de Compra clicando no link:
+
+> [**Simulador Decisões de Compra**](/resources/decisoes-compra.html)
+
+```{=html}
+<iframe src="/resources/decisoes-compra.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+## O Modelo do Lote Econômico de Compra (LEC)
+
+O LEC é um modelo de otimização que determina a quantidade ideal a ser comprada em cada pedido para minimizar os custos totais de gestão de estoques. Ele encontra o ponto onde os custos de manutenção se igualam aos custos de pedido.
+
+A fórmula do LEC é:
+
+$$
+LEC = \sqrt{\frac{2 \times D \times C_p}{C_m}}
+$$
+
+Onde: $D$: Demanda total no período, $C_p$: Custo de cada pedido e $C_m$: Custo de manutenção por unidade.
+
+Enquanto a análise anterior foca em decisões de compra pontuais, o LEC busca responder a uma pergunta recorrente: *Qual a quantidade ideal a ser pedida em cada lote para minimizar os custos totais de gestão de estoques ao longo de um período?*
+
+<br>
+
+### Derivação do LEC
+
+O LEC parte das premissas de demanda constante e conhecida, preço de compra constante, prazo de entrega (lead time) constante e conhecido e custo de manutenção e de pedido constante e conhecido, ou seja, o LEC é um modelo em condicões de certeza ou certa estabilidade preditiva.
+
+O modelo se baseia em um trade-off:
+
+-   Pedir lotes grandes diminui o custo anual de pedidos (CP), mas aumenta o custo anual de manutenção (CM).
+
+$$
+\text{CP} = C_p \times \frac{D}{Q}
+$$ Onde: $Q$ representa a quantidade de cada pedido (em unidades) e *D/Q* representa o número total de pedidos (N):
+
+$$
+\text{N} = \frac{D}{Q}
+$$
+
+-   Pedir lotes pequenos diminui o custo anual de manutenção (CM), mas aumenta o custo anual de pedidos (CP).
+
+$$
+\text{CM} = C_m \times \frac{Q}{2}
+$$ 
+
+*Q/2* representa o estoque médio (EM).
+
+O Custo Total (CT) é a soma dos dois custos: CP + CM
+
+
+$$
+\text{CT} = \left(C_p \times \frac{D}{Q}\right) + \left(C_m \times \frac{Q}{2}\right)
+$$ Igualando CT a zero, ou de outra forma, CP = CM, temos:
+
+$$
+C_p \times \frac{D}{Q} = C_m \times \frac{Q}{2}
+$$
+
+Multiplicando ambos os lados por Q:
+
+$$
+C_p \times \frac{D}{Q} \times Q = C_m \times \frac{Q}{2} \times Q
+$$
+
+$$
+C_p \times D = C_m \times \frac{Q^2}{2}
+$$
+
+Multiplicando ambos os lados por 2:
+
+$$
+2 \times C_p \times D = C_m \times Q^2
+$$
+
+Isolando $Q^2$:
+
+$$
+Q^2 = \frac{2 \times C_p \times D}{C_m}
+$$
+
+Extraindo a raiz quadrada para obter o LEC ($Q^*$), temos:
+
+$$
+Q^* = \sqrt{\frac{2 \times C_p \times D}{C_m}}
+$$ <br>
+
+### Simulador LEC
+
+Abaixo você pode visualizar o LEC em operação, ou você pode expandir esse o Simulador do LEC no link:
+
+> [**Simulador LEC**](/resources/lec.html)
+
+```{=html}
+<iframe src="/resources/lec.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```

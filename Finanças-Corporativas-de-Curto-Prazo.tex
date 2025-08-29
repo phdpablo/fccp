@@ -216,7 +216,7 @@
 
 \title{Finanças Corporativas de Curto Prazo}
 \author{Pablo Rogers}
-\date{25 de julho de 2025}
+\date{29 de agosto de 2025}
 
 \begin{document}
 \frontmatter
@@ -562,9 +562,9 @@ gravadas ou indicações de vídeo (🎥{]} e \textbf{leituras
 complementares} sobre os conteúdos (📓).
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2568}}
-  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2568}}
-  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4865}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2639}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2639}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4722}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Aula/Conteúdo
@@ -583,8 +583,10 @@ Capítulo~\ref{sec-giro} & 📅27/06/25⏲️19:00 &
 \href{./resources/giro-ppt.html}{🗣}\href{https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ}{🎥}\href{https://journalppc.com/RPPC/article/view/1229}{📓} \\
 Capítulo~\ref{sec-caixa} & 📅18/07/25⏲️19:00 &
 \href{./resources/caixa-ppt.html}{🗣}\href{https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ}{🎥}\href{https://ojs.unifor.br/rca/article/view/394}{📓} \\
-Capítulo~\ref{sec-credito} & 📅01/08/25⏲️19:00 & 🗣🎥📓 \\
-Capítulo~\ref{sec-estoque} & 📅19/08/25⏲️19:00 & 🗣🎥📓 \\
+Capítulo~\ref{sec-credito} & 📅01/08/25⏲️19:00 &
+🗣\href{https://youtu.be/-K88ewqeV2U?si=0RFDrt-TtWLyvGSE}{🎥}\href{https://www.researchgate.net/publication/273491445_Decisoes_de_Credito_em_Situacoes_de_Risco_Uma_Aplicacao_Pratica_do_Metodo_de_Monte_Carlo}{📓} \\
+Capítulo~\ref{sec-estoque} & 📅19/08/25⏲️19:00 &
+🗣\href{https://youtu.be/YaK1eUuLUXk?si=Z-794zw_Vu0pHaxW}{🎥}\href{https://www.researchgate.net/publication/281934935_Avaliando_o_Risco_na_Gestao_Financeira_de_Estoques}{📓} \\
 Capítulo~\ref{sec-aval} & 📅29/08/25⏲️19:00 &
 \href{./resources/teorias-ppt.html}{🗣}\href{https://www.youtube.com/live/OCt4f9IdO6U?si=tVw5wrVo7cVmkptu}{🎥}\href{https://periodicos.fclar.unesp.br/iniciativa/article/view/19172}{📓} \\
 \end{longtable}
@@ -1060,7 +1062,7 @@ explicado por dois fatores principais:
   ganho perdido. Essa compensação é a taxa de juros.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Linguagem da Matemática Financeira}, breakable, coltitle=black, opacitybacktitle=0.6, colback=white, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, bottomtitle=1mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, left=2mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, breakable, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, left=2mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Linguagem da Matemática Financeira}, leftrule=.75mm, arc=.35mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, rightrule=.15mm, coltitle=black, colback=white]
 
 Essa secção equipa o estudante com o vocabulário básico, a notação e as
 convenções necessárias para as análises quantitativas que se seguirá nos
@@ -1727,6 +1729,267 @@ Seu navegador não suporta o elemento de áudio.
 \bookmarksetup{startatroot}
 
 \chapter{Administração de Estoques}\label{sec-estoque}
+
+A administração de estoques é uma área crítica da gestão financeira. Os
+estoques, por natureza, são ativos de baixa liquidez que imobilizam um
+volume significativo de capital. Uma gestão ineficiente pode comprometer
+tanto a rentabilidade, ao inflar os custos de carregamento e o capital
+empatado, quanto a liquidez, ao drenar recursos que poderiam ser
+alocados em outras necessidades de curto prazo.
+
+O desafio central reside em um equilíbrio delicado:
+
+\begin{itemize}
+\item
+  \textbf{Minimização do Investimento}: Manter os níveis de estoque os
+  mais baixos possíveis para otimizar a rotação, reduzir custos de
+  armazenagem, seguro, obsolescência e, fundamentalmente, liberar caixa.
+\item
+  \textbf{Maximização do Nível de Serviço}: Garantir que não haja
+  rupturas no processo de produção ou vendas, o que poderia levar à
+  perda de clientes, desgaste da imagem da marca e custos de
+  oportunidade irrecuperáveis.
+\end{itemize}
+
+\section{Custos Relevantes na Gestão de
+Estoques}\label{custos-relevantes-na-gestuxe3o-de-estoques}
+
+As decisões sobre o nível ótimo de estoques envolvem a análise de dois
+custos destoantes:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Custos de Manutenção ou Carregamento:} Custos para manter o
+  estoque, como custo de capital, armazenagem, seguros e perdas.
+  Aumentam com o volume estocado.
+\item
+  \textbf{Custos de Pedido (Compra) ou Preparação:} Custos para adquirir
+  um novo lote, como processamento, frete e recebimento. Diminuem à
+  medida que o tamanho dos lotes aumenta (menos pedidos são feitos).
+\end{enumerate}
+
+Um dos objetivos da gestão financeira de estoque é operacionar modelos
+de otimização para encontrar o ponto em que a soma desses dois grupos de
+custos seja minimizada. No entanto, antes de aplicar modelos de
+otimização complexos, é fundamental direcionar os esforços de gestão.
+
+\section{Controle Seletivo: A Curva
+ABC}\label{controle-seletivo-a-curva-abc}
+
+Nem todos os itens de estoque possuem a mesma importância financeira.
+Para otimizar os esforços de gestão, os estoques são classificados pela
+sua importância financeira usando a \textbf{Curva ABC}, uma aplicação do
+\textbf{Princípio de Pareto}.
+
+O Princípio de Pareto, ou \textbf{regra 80/20}, postula que, para muitos
+eventos, aproximadamente \emph{80\% dos efeitos vêm de 20\% das causas}.
+Aplicado aos estoques, isso significa que uma pequena porcentagem dos
+itens em inventário (os 20\%) tende a ser responsável por uma grande
+porcentagem do valor total de consumo ou venda (os 80\%).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Classe A:} Poucos itens (ex: 20\%) que representam a maior
+  parte do valor (ex: 80\%). Exigem controle rigoroso e modelos de
+  otimização.
+\item
+  \textbf{Classe B:} Itens de importância intermediária.
+\item
+  \textbf{Classe C:} Muitos itens (ex: 50\%) de baixo valor individual.
+  Admitem controles mais simples.
+\end{itemize}
+
+A Curva ABC direciona a atenção gerencial para onde ela é mais crítica,
+garantindo que os itens mais valiosos (Classe A) sejam gerenciados com a
+máxima eficiência.
+
+\subsection{Simulador da Curva ABC}\label{simulador-da-curva-abc}
+
+Abaixo você pode visualizar a metodologia de cálculo da Curva ABC em
+operação, ou você pode expandir essa versão interativa do simulador da
+Curva ABC clicando no link:
+
+\begin{quote}
+\href{./resources/curvaABC.html}{\textbf{Simulador da Curva ABC}}
+\end{quote}
+
+\section{Decisões de Compra}\label{decisuxf5es-de-compra}
+
+A decisão de quando e como pagar por um lote de estoque é um problema
+clássico de valor do dinheiro no tempo. A metodologia tradicionalmente
+apresentada em finanças corporativas pode ser perfeitamente reenquadrada
+e aprofundada pela ótica da \textbf{Equivalência de Capitais}.
+
+A análise compara diferentes propostas de compra (ex: à vista vs.~a
+prazo) tratando cada uma na linha do tempo (diagrama de caixa). Nesse
+caso, a variável central é o período, que em nosso contexto, pode ser
+entendido pelo \textbf{Ciclo de Caixa (CC)}.
+
+\[
+CC~(\text{dias}) = PME + PMR - PMP
+\]
+
+Onde: \(PME\): Prazo Médio de Estocagem, \(PMR\): Prazo Médio de
+Recebimento e \(PMP\): Prazo Médio de Pagamento
+
+O sinal do CC define quem financia a operação e qual taxa de juros
+(custo de oportunidade) utilizar.
+
+\subsection{Cenário 1: Ciclo de Caixa
+Positivo}\label{cenuxe1rio-1-ciclo-de-caixa-positivo}
+
+A empresa paga o fornecedor antes de receber do cliente, precisando
+\textbf{financiar a operação}. A taxa relevante é o \textbf{Custo de
+Captação (}\(k_c\)).
+
+O \textbf{Diagrama de Fluxo de Caixa} abaixo ilustra a saída de caixa
+(Custo) ocorrendo antes da entrada (Venda):
+
+\subsection{Cenário 2: Ciclo de Caixa
+Negativo}\label{cenuxe1rio-2-ciclo-de-caixa-negativo}
+
+A empresa recebe do cliente antes de pagar o fornecedor, sendo
+\textbf{financiada pelo fornecedor}. A taxa relevante é a \textbf{Taxa
+de Aplicação (}\(k_a\)).
+
+Note como a ordem dos eventos se inverte no \textbf{Diagrama de Fluxo de
+Caixa}: a entrada (Venda) agora ocorre antes da saída (Custo).
+
+\subsection{Formulação Geral}\label{formulauxe7uxe3o-geral}
+
+O resultado da operação (\(R\)) é calculado em uma data focal comum
+(\(t_r\), data de recebimento), usando a taxa apropriada:
+
+\[
+\text{R}_{t_r} = \text{PV} - \left[ \text{CMV} \times (1 + i)^{\frac{CC}{30}} \right]
+\]
+
+Onde \(i = k_c\) se \(CC > 0\), e \(i = k_a\) se \(CC < 0\). \(PV\) é
+preço de venda que já se encontra na data \(t_r\) e \(CMV\) é o custo da
+mercadoria vendida capitalizado (se \(CC > 0\)) ou descapitalizado (se
+\(CC < 0\)) para a data \(t_r\).
+
+\subsection{Simulador Decisões de
+Compra}\label{simulador-decisuxf5es-de-compra}
+
+Abaixo você pode visualizar a formulação geral para tomada de decisões
+de compra de estoque em operação, ou você pode expandir essa versão
+interativa do Simulador de Decisões de Compra clicando no link:
+
+\begin{quote}
+\href{./resources/decisoes-compra.html}{\textbf{Simulador Decisões de
+Compra}}
+\end{quote}
+
+\section{O Modelo do Lote Econômico de Compra
+(LEC)}\label{o-modelo-do-lote-econuxf4mico-de-compra-lec}
+
+O LEC é um modelo de otimização que determina a quantidade ideal a ser
+comprada em cada pedido para minimizar os custos totais de gestão de
+estoques. Ele encontra o ponto onde os custos de manutenção se igualam
+aos custos de pedido.
+
+A fórmula do LEC é:
+
+\[
+LEC = \sqrt{\frac{2 \times D \times C_p}{C_m}}
+\]
+
+Onde: \(D\): Demanda total no período, \(C_p\): Custo de cada pedido e
+\(C_m\): Custo de manutenção por unidade.
+
+Enquanto a análise anterior foca em decisões de compra pontuais, o LEC
+busca responder a uma pergunta recorrente: \emph{Qual a quantidade ideal
+a ser pedida em cada lote para minimizar os custos totais de gestão de
+estoques ao longo de um período?}
+
+\subsection{Derivação do LEC}\label{derivauxe7uxe3o-do-lec}
+
+O LEC parte das premissas de demanda constante e conhecida, preço de
+compra constante, prazo de entrega (lead time) constante e conhecido e
+custo de manutenção e de pedido constante e conhecido, ou seja, o LEC é
+um modelo em condicões de certeza ou certa estabilidade preditiva.
+
+O modelo se baseia em um trade-off:
+
+\begin{itemize}
+\tightlist
+\item
+  Pedir lotes grandes diminui o custo anual de pedidos (CP), mas aumenta
+  o custo anual de manutenção (CM).
+\end{itemize}
+
+\[
+\text{CP} = C_p \times \frac{D}{Q}
+\] Onde: \(Q\) representa a quantidade de cada pedido (em unidades) e
+\emph{D/Q} representa o número total de pedidos (N):
+
+\[
+\text{N} = \frac{D}{Q}
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  Pedir lotes pequenos diminui o custo anual de manutenção (CM), mas
+  aumenta o custo anual de pedidos (CP).
+\end{itemize}
+
+\[
+\text{CM} = C_m \times \frac{Q}{2}
+\]
+
+\emph{Q/2} representa o estoque médio (EM).
+
+O Custo Total (CT) é a soma dos dois custos: CP + CM
+
+\[
+\text{CT} = \left(C_p \times \frac{D}{Q}\right) + \left(C_m \times \frac{Q}{2}\right)
+\] Igualando CT a zero, ou de outra forma, CP = CM, temos:
+
+\[
+C_p \times \frac{D}{Q} = C_m \times \frac{Q}{2}
+\]
+
+Multiplicando ambos os lados por Q:
+
+\[
+C_p \times \frac{D}{Q} \times Q = C_m \times \frac{Q}{2} \times Q
+\]
+
+\[
+C_p \times D = C_m \times \frac{Q^2}{2}
+\]
+
+Multiplicando ambos os lados por 2:
+
+\[
+2 \times C_p \times D = C_m \times Q^2
+\]
+
+Isolando \(Q^2\):
+
+\[
+Q^2 = \frac{2 \times C_p \times D}{C_m}
+\]
+
+Extraindo a raiz quadrada para obter o LEC (\(Q^*\)), temos:
+
+\[
+Q^* = \sqrt{\frac{2 \times C_p \times D}{C_m}}
+\]
+
+\subsection{Simulador LEC}\label{simulador-lec}
+
+Abaixo você pode visualizar o LEC em operação, ou você pode expandir
+esse o Simulador do LEC no link:
+
+\begin{quote}
+\href{./resources/lec.html}{\textbf{Simulador LEC}}
+\end{quote}
 
 \bookmarksetup{startatroot}
 

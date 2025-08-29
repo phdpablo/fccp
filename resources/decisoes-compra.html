@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Estoques via Equivalência de Capitais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Academic Neutral -->
+    <!-- Application Structure Plan: A single-page narrative structure designed for educational purposes. It starts with a theoretical comparison, moves to an interactive simulator where users can manipulate variables and see the financial impact in real-time on a timeline chart, and concludes by deconstructing the formula. This task-oriented flow (learn -> experiment -> understand) is chosen to make the abstract connection between financial math and corporate finance tangible and intuitive for students. -->
+    <!-- Visualization & Content Choices: Report Info: Comparing two financial decision-making models. Goal: Show they are fundamentally the same. Viz/Presentation: Side-by-side text comparison, an interactive simulator with sliders, and a dynamic timeline chart. Interaction: Users change operational variables (like payment terms) and see the immediate effect on the financial outcome (VPL/Resultado), and can switch the 'Data Focal' to prove the invariance principle. Justification: This interactive model promotes discovery-based learning over passive reading. Library/Method: Chart.js for the dynamic timeline chart, Vanilla JS for calculations, Tailwind CSS for layout. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #3A3A3A;
+        }
+        .accent-color { background-color: #4A90E2; }
+        .accent-text { color: #4A90E2; }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #4A90E2;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4A90E2;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .nav-button {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-button.active {
+            background-color: #4A90E2;
+            color: white;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 40vh;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <h1 class="text-xl font-bold accent-text">Estoques & Valor no Tempo</h1>
+                <div class="flex space-x-4">
+                    <a href="#conceitos" class="text-gray-600 hover:accent-text font-medium">Conceitos</a>
+                    <a href="#simulador" class="text-gray-600 hover:accent-text font-medium">Simulador</a>
+                    <a href="#formula" class="text-gray-600 hover:accent-text font-medium">Fórmula Geral</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section id="intro" class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Simulador Decisões de Compra</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                Esta aplicação demonstra como as decisões de compra de estoques em Finanças Corporativas são uma aplicação direta do princípio da Equivalência de Capitais. A análise depende crucialmente do <strong>Ciclo de Caixa</strong> da operação, que define se a empresa financia a compra ou é financiada pelo fornecedor.
+            </p>
+        </section>
+
+        <section id="conceitos" class="mb-16">
+            <h3 class="text-3xl font-bold text-center mb-8">A Ponte Conceitual: O Ciclo de Caixa</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h4 class="text-2xl font-bold mb-3 accent-text">Ciclo de Caixa Positivo (CC > 0)</h4>
+                    <p class="text-gray-700 mb-4">A empresa paga o fornecedor antes de receber do cliente. Ela precisa <strong>financiar a operação</strong>. O custo de oportunidade é o <strong>Custo de Captação (kc)</strong>, a taxa que a empresa paga para se financiar.</p>
+                    <p class="font-mono bg-gray-100 p-2 rounded">CC = PME + PMR - PMP > 0</p>
+                </div>
+                <div class="card p-6">
+                    <h4 class="text-2xl font-bold mb-3 accent-text">Ciclo de Caixa Negativo (CC < 0)</h4>
+                    <p class="text-gray-700 mb-4">A empresa recebe do cliente antes de pagar o fornecedor. Ela é <strong>financiada pelo fornecedor</strong> e pode aplicar o caixa excedente. O custo de oportunidade é a <strong>Taxa de Aplicação (ka)</strong>, o retorno que a empresa obtém em seus investimentos.</p>
+                     <p class="font-mono bg-gray-100 p-2 rounded">CC = PME + PMR - PMP < 0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulador" class="card p-6 md:p-8 mb-16">
+            <h3 class="text-3xl font-bold text-center mb-2">Simulador Interativo</h3>
+            <p class="text-center text-gray-600 mb-8">Altere as variáveis para ver como o Ciclo de Caixa (CC) afeta o resultado. O simulador selecionará a taxa (kc ou ka) correta automaticamente.</p>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 space-y-6">
+                    <div>
+                        <label for="cmvp" class="font-medium">Custo da Mercadoria Vendida (CMV): R$ <span id="cmvp-value">10000</span></label>
+                        <input type="range" id="cmvp" min="1000" max="50000" value="10000" step="1000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                    </div>
+                    <div>
+                        <label for="pvp" class="font-medium">Preço de Venda (PV): R$ <span id="pvp-value">13000</span></label>
+                        <input type="range" id="pvp" min="1000" max="60000" value="13000" step="1000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                    </div>
+                    <div>
+                        <label for="pe" class="font-medium">Prazo Médio de Estocagem (PME): <span id="pe-value">30</span> dias</label>
+                        <input type="range" id="pe" min="0" max="180" value="30" step="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                    </div>
+                    <div>
+                        <label for="pp" class="font-medium">Prazo Médio de Pagamento (PMP): <span id="pp-value">20</span> dias</label>
+                        <input type="range" id="pp" min="0" max="180" value="20" step="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                    </div>
+                    <div>
+                        <label for="pr" class="font-medium">Prazo Médio de Recebimento (PMR): <span id="pr-value">60</span> dias</label>
+                        <input type="range" id="pr" min="0" max="180" value="60" step="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="kc" class="font-medium">Captação (kc): <span id="kc-value">3.0</span>%</label>
+                            <input type="range" id="kc" min="0.1" max="10" value="3.0" step="0.1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                        </div>
+                        <div>
+                            <label for="ka" class="font-medium">Aplicação (ka): <span id="ka-value">1.0</span>%</label>
+                            <input type="range" id="ka" min="0.1" max="5" value="1.0" step="0.1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="chart-container mb-4">
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div id="calculation-output" class="text-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formula" class="card p-6 md:p-8">
+            <h3 class="text-3xl font-bold text-center mb-4">A Formulação Geral</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-4xl mx-auto">A decisão é sempre baseada na mesma equação de valor, mas a taxa de juros utilizada (`i`) depende do sinal do Ciclo de Caixa (`CC`).</p>
+            <div class="bg-gray-100 p-6 rounded-lg text-center font-mono text-lg md:text-xl break-words">
+                <span class="font-bold">R<sub class="text-sm">tr</sub> = PV - [ CMV * (1 + i)<sup>CC / 30</sup> ]</span>
+            </div>
+            <div class="mt-6 grid md:grid-cols-2 gap-4 text-center">
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <p class="font-bold">Se CC > 0 (Empresa financia)</p>
+                    <p class="text-sm text-gray-700">`i` = `kc` (Custo de Captação)</p>
+                </div>
+                <div class="p-4 bg-green-50 rounded-lg">
+                    <p class="font-bold">Se CC < 0 (Fornecedor financia)</p>
+                    <p class="text-sm text-gray-700">`i` = `ka` (Taxa de Aplicação)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white mt-16 border-t">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-600">
+            <p>&copy; 2025 | Ferramenta Pedagógica de Análise Financeira.</p>
+        </div>
+    </footer>
+
+    <script>
+        const cmvpSlider = document.getElementById('cmvp');
+        const pvpSlider = document.getElementById('pvp');
+        const peSlider = document.getElementById('pe');
+        const ppSlider = document.getElementById('pp');
+        const prSlider = document.getElementById('pr');
+        const kcSlider = document.getElementById('kc');
+        const kaSlider = document.getElementById('ka');
+
+        const cmvpValue = document.getElementById('cmvp-value');
+        const pvpValue = document.getElementById('pvp-value');
+        const peValue = document.getElementById('pe-value');
+        const ppValue = document.getElementById('pp-value');
+        const prValue = document.getElementById('pr-value');
+        const kcValue = document.getElementById('kc-value');
+        const kaValue = document.getElementById('ka-value');
+        
+        const calculationOutput = document.getElementById('calculation-output');
+
+        const inputs = [cmvpSlider, pvpSlider, peSlider, ppSlider, prSlider, kcSlider, kaSlider];
+
+        const formatCurrency = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+
+        const ctx = document.getElementById('timelineChart').getContext('2d');
+        const timelineChart = new Chart(ctx, {
+            type: 'bar',
+            data: { labels: [], datasets: [{ data: [], backgroundColor: [], borderColor: [], borderWidth: 1, barPercentage: 0.1 }] },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: { title: { display: true, text: 'Valor (R$)' }, ticks: { callback: (value) => formatCurrency(value) } },
+                    y: { title: { display: true, text: 'Tempo (Dias)' }, beginAtZero: true }
+                },
+                plugins: { legend: { display: false }, tooltip: { callbacks: { label: (context) => formatCurrency(context.parsed.x) } } }
+            }
+        });
+
+        function updateDisplayValues() {
+            cmvpValue.textContent = parseFloat(cmvpSlider.value).toLocaleString('pt-BR');
+            pvpValue.textContent = parseFloat(pvpSlider.value).toLocaleString('pt-BR');
+            peValue.textContent = peSlider.value;
+            ppValue.textContent = ppSlider.value;
+            prValue.textContent = prSlider.value;
+            kcValue.textContent = parseFloat(kcSlider.value).toFixed(1);
+            kaValue.textContent = parseFloat(kaSlider.value).toFixed(1);
+        }
+
+        function calculateAndDisplay() {
+            const CMVP = parseFloat(cmvpSlider.value);
+            const PVP = parseFloat(pvpSlider.value);
+            const PE = parseFloat(peSlider.value);
+            const PP = parseFloat(ppSlider.value);
+            const PR = parseFloat(prSlider.value);
+            const KC = parseFloat(kcSlider.value) / 100;
+            const KA = parseFloat(kaSlider.value) / 100;
+
+            const tp = PP;
+            const tr = PE + PR;
+            const CC = tr - tp;
+            const cicloEmMeses = CC / 30;
+
+            let taxa, cenario, taxaLabel;
+            if (CC > 0) {
+                taxa = KC;
+                cenario = "Ciclo de Caixa Positivo";
+                taxaLabel = `kc = ${ (KC * 100).toFixed(1) }% a.m.`;
+            } else {
+                taxa = KA;
+                cenario = "Ciclo de Caixa Negativo";
+                taxaLabel = `ka = ${ (KA * 100).toFixed(1) }% a.m.`;
+            }
+
+            const cmvpNaDataFocal = CMVP * Math.pow(1 + taxa, cicloEmMeses);
+            const resultado = PVP - cmvpNaDataFocal;
+            
+            let outputHTML = `
+                <p class="font-bold text-lg mb-2">${cenario} (CC = ${CC} dias)</p>
+                <p class="text-sm">Custo Corrigido: ${formatCurrency(CMVP)} * (1 + ${taxa.toFixed(3)})<sup>${CC.toFixed(0)}/30</sup> = ${formatCurrency(cmvpNaDataFocal)}</p>
+                <p class="text-sm mb-2">Usando a taxa de ${taxaLabel}</p>
+                <p class="text-2xl font-bold ${resultado >= 0 ? 'text-green-600' : 'text-red-600'}">${formatCurrency(resultado)}</p>
+            `;
+            
+            calculationOutput.innerHTML = outputHTML;
+            updateChart(tp, tr, CMVP, PVP);
+        }
+        
+        function updateChart(tp, tr, cmvp, pvp) {
+            const events = [
+                { label: `Pagamento (Dia ${tp})`, value: -cmvp, color: 'rgba(227, 80, 80, 0.7)', time: tp },
+                { label: `Recebimento (Dia ${tr})`, value: pvp, color: 'rgba(80, 227, 194, 0.7)', time: tr }
+            ].sort((a, b) => a.time - b.time);
+
+            timelineChart.data.labels = events.map(e => e.label);
+            timelineChart.data.datasets[0].data = events.map(e => e.value);
+            timelineChart.data.datasets[0].backgroundColor = events.map(e => e.color);
+            timelineChart.data.datasets[0].borderColor = events.map(e => e.color.replace('0.7', '1'));
+            timelineChart.update();
+        }
+
+        function handleUpdate() {
+            updateDisplayValues();
+            calculateAndDisplay();
+        }
+
+        inputs.forEach(input => input.addEventListener('input', handleUpdate));
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        window.onload = handleUpdate;
+    </script>
+</body>
+</html>
