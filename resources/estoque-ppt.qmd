@@ -34,11 +34,10 @@ format:
 
 ------------------------------------------------------------------------
 
-
 ## Introdução
 
-::::::: incremental
-:::::: columns
+:::::: incremental
+::::: columns
 ::: {.column width="50%"}
 **Desafios dos Estoques**
 
@@ -56,15 +55,14 @@ format:
 -   Análise como decisão de investimento
 -   Equilíbrio entre custo e benefício
 :::
+:::::
 ::::::
-:::::::
 
 ------------------------------------------------------------------------
 
 ## Classificação dos Estoques
 
-
-::::::: incremental
+:::::: incremental
 ::::: columns
 ::: {.column width="50%"}
 **Categorias Principais**
@@ -90,21 +88,23 @@ format:
 
 ## Fatores Influenciadores dos Investimentos
 
-> Diferentes categorias de estoque são influenciadas por fatores específico
+> Diferentes categorias de estoque são influenciadas por fatores específicos
 
-**Materiais de Consumo:** Pecularidades operacionais e administrativas
+::: incremental
+- **Materiais de Consumo:** Pecularidades operacionais e administrativas
 
-**Matérias-primas:** Problemas logísticos e de importação ; Economia de escala nas compras
+- **Matérias-primas:** Problemas logísticos e de importação ; Economia de escala nas compras
 
-**Produtos em Elaboração:** Duração do ciclo produtivo ; Nível tecnológico da produção
+- **Produtos em Elaboração:** Duração do ciclo produtivo ; Nível tecnológico da produção
 
-**Produtos Acabados:** Padrões de demanda do mercado ; Características físicas dos produtos
+- **Produtos Acabados:** Padrões de demanda do mercado ; Características físicas dos produtos
+:::
 
 ------------------------------------------------------------------------
 
 ## Estoques em Contexto Inflacionário
 
-::::::: incremental
+:::::: incremental
 ::::: columns
 ::: {.column width="50%"}
 **Estratégias de Proteção**
@@ -133,12 +133,12 @@ format:
 A análise ABC categoriza itens de estoque conforme sua importância econômica, baseada no princípio de Pareto (80/20).
 
 ::: incremental
-**Objetivos:** 
+**Objetivos:**
 
-- Priorizar atenção gerencial 
-- Otimizar recursos de controle 
-- Melhorar eficiência do sistema 
-- Reduzir custos administrativos
+-   Priorizar atenção gerencial
+-   Otimizar recursos de controle
+-   Melhorar eficiência do sistema
+-   Reduzir custos administrativos
 :::
 
 ------------------------------------------------------------------------
@@ -170,8 +170,8 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 ::: {.column width="20%"}
 **Interpretação:** - 15% dos itens concentram 80% dos recursos - 50% dos itens representam 97% do investimento - Gestão diferenciada por categoria
 :::
-::: {.column width="80%"}
 
+::: {.column width="80%"}
 ![](curvaABC.png){fig-align="center"}
 :::
 :::::
@@ -198,14 +198,14 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 > [**Simulador da Curva ABC**](/curvaABC.html)
 
 ```{=html}
-<iframe src="/curvaABC.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+<iframe src="curvaABC.html" width="1600" height="450" style="border:1px solid black;"></iframe>
 ```
 
 ------------------------------------------------------------------------
 
 ## Estoques e Economia de Escala
 
-::::::: incremental
+:::::: incremental
 ::::: columns
 ::: {.column width="50%"}
 **Benefícios do Aumento de Produção:**
@@ -280,6 +280,7 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 ![](dc-vistaprazo.jpg){fig-align="center"}
 :::
 :::::
+
 ------------------------------------------------------------------------
 
 ## Cenário 3.1: Compra a Prazo e Venda à Vista
@@ -338,13 +339,16 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 > [**Simulador Decisões de Compra**](/decisoes-compra.html)
 
 ```{=html}
-<iframe src="/decisoes-compra.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+<iframe src="decisoes-compra.html" width="1600" height="450" style="border:1px solid black;"></iframe>
 ```
 
 ------------------------------------------------------------------------
 
 ## Modelos de Controle de Estoques
 
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
 **Objetivos dos Modelos:**
 
 -   Identificar custos relevantes
@@ -352,12 +356,24 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 -   Minimizar custos totais
 -   Otimizar decisões de compra
 
-**Tipos de Custos:** - Custos efetivos dos bens - Custos relevantes para decisão
+:::
+::: {.column width="50%"}
+
+**Tipos de Custos:**
+
+-   Custos efetivos dos bens 
+-   Custos relevantes para decisão
+:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Custos Efetivos dos Bens
 
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
 **Características:**
 
 -   Baseados em registros contábeis
@@ -365,34 +381,51 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 -   Custos totais de produção
 -   Valores históricos de aquisição
 
+:::
+::: {.column width="50%"}
+
 **Limitações:**
 
 -   Não identificam custos evitáveis
 -   Inadequados para análise decisorial
 -   Não consideram custos de oportunidade
 -   Foco em custos incorridos (sunk costs)
+:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Custos Relevantes para Gestão
 
-**Definição:** Custos evitáveis que variam com as decisões de compra
+**Definição:** Custos evitáveis que variam com as decisões de compra (exceto valor do produto)
 
-**Categorias Principais:**
-
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
 1.  **Custos de Compra (ou Pedido)**
     -   Gastos de emissão de pedidos
     -   Custos de preparação
-    -   Comportamento decrescente
+    -   *Comportamento decrescente*
+
+:::
+::: {.column width="50%"}
+
 2.  **Custos de Manutenção**
     -   Gastos de armazenamento
     -   Seguros e deterioração
-    -   Comportamento crescente
+    -   *Comportamento crescente*
+:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Custos de Compra Detalhados
 
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
 **Componentes:**
 
 -   Processamento de pedidos
@@ -400,17 +433,26 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 -   Custos de preparação da produção
 -   Gastos administrativos do processo
 
+:::
+::: {.column width="50%"}
+
 **Comportamento:**
 
--   **Fixos** por pedido
--   **Decrescentes** por unidade (diluição)
+-   *Fixos* por pedido
+-   *Decrescentes* por unidade (diluição)
 -   Independem da quantidade comprada
 -   Incluem custos de setup
+:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Custos de Manutenção Detalhados
 
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
 **Componentes:**
 
 -   Armazenagem e manuseio
@@ -418,36 +460,40 @@ A análise ABC categoriza itens de estoque conforme sua importância econômica,
 -   Obsolescência e perdas
 -   Custo de oportunidade do capital
 
+:::
+::: {.column width="50%"}
+
 **Comportamento:**
 
--   **Variáveis** com o nível de estoque
--   **Constantes** por unidade estocada
+-   *Variáveis* com o nível de estoque
+-   *Constantes* por unidade estocada
 -   Proporcionais ao tempo de permanência
 -   Incluem custo do capital investido
+:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
-## Modelo do Lote Econômico
+## Modelo do LEC
 
-**Objetivo:** Minimizar o custo total controlável do estoque
+::: incremental
+**Objetivo:** Minimizar o custo total *controlável* do estoque
 
 **Equilíbrio:** Entre custos de manutenção e custos de pedido
 
-**Comportamento do Estoque:** - Declínio a taxa constante - Reposição instantânea - Consumo uniforme ao longo do tempo
+**Comportamento do Estoque:** 
 
-```{r}
-#| echo: false
-#| fig-width: 8
-#| fig-height: 5
-
-# Inserir gráfico do slide 25 aqui
-# Mostra padrão dente de serra com Q=100, estoque médio=50
-```
+-   Declínio a taxa constante
+-   Reposição instantânea
+-   Consumo uniforme ao longo do tempo
+:::
 
 ------------------------------------------------------------------------
 
 ## Premissas do Lote Econômico
 
+::: incremental
 **Hipóteses Básicas:**
 
 a)  Volume não influencia o custo unitário
@@ -455,49 +501,58 @@ b)  Demanda uniforme ao longo do tempo
 c)  Condições de certeza (sem variabilidade)
 d)  Reposição instantânea (lead time zero)
 e)  Sem restrições financeiras
-
-::: callout-note
-Na prática, essas premissas raramente são atendidas completamente
 :::
 
-------------------------------------------------------------------------
+> Na prática, essas premissas raramente são atendidas completamente
 
-## Estoque de Segurança
-
-**Realidade Operacional:**
-
--   Demanda não é uniforme
--   Existe variabilidade no fornecimento
--   Lead times podem variar
--   Necessidade de proteção contra rupturas
-
-**Fatores Determinantes:**
-
--   Nível de incerteza da demanda
--   Custos de falta de estoque
--   Custos de manutenção
--   Nível de serviço desejado
 
 ------------------------------------------------------------------------
 
-## Representação Gráfica dos Custos
+## Representação Gráfica
 
-```{r}
-#| echo: false
-#| fig-width: 8
-#| fig-height: 6
+::::: columns
+::: {.column width="50%"}
+![](lec.png){fig-align="center"}
+:::
 
-# Inserir gráfico do slide 28 aqui
-# Mostra curvas de custo de compra (decrescente), custo de manutenção (crescente)
-# e custo total (U), com ponto mínimo no Lote Econômico (LE)
-```
+::: {.column width="50%"}
+![](lec-custos.png){fig-align="center"}
+:::
+:::::
 
-**Ponto Ótimo:** Interseção das curvas de custo de manutenção e compra
+------------------------------------------------------------------------
+
+## Fórmulas do Lote Econômico
+
+::::: columns
+::: {.column width="50%"}
+
+$$
+\text{CP} = C_p \times \frac{D}{Q}
+$$
+$$
+\text{CM} = C_m \times \frac{Q}{2}
+$$
+:::
+
+::: {.column width="50%"}
+
+$$
+\text{CT} = \left(C_p \times \frac{D}{Q}\right) + \left(C_m \times \frac{Q}{2}\right)
+$$
+$$
+Q^* = \sqrt{\frac{2 \times C_p \times D}{C_m}}
+$$
+:::
+:::::
 
 ------------------------------------------------------------------------
 
 ## Interpretação do Lote Econômico
 
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
 **Características do Ponto Ótimo:**
 
 -   Custo total mínimo
@@ -505,33 +560,53 @@ Na prática, essas premissas raramente são atendidas completamente
 -   Define quantidade ideal por pedido
 -   Estabelece frequência ótima de compras
 
+:::
+::: {.column width="50%"}
+
 **Aplicações Práticas:**
 
 -   Programação de compras
 -   Dimensionamento de estoques
 -   Otimização de custos logísticos
 -   Planejamento financeiro
+:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
-## Exemplo Prático de Cálculo
+## Estoque de Segurança
 
-**Dados do Problema:** - Demanda anual: 10.000 unidades - Custo de pedido: \$400 por pedido - Custo de manutenção: \$50 por unidade/ano
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Realidade Operacional:**
 
-**Análise de Diferentes Quantidades:**
+-   Demanda não é uniforme
+-   Existe variabilidade no fornecimento
+-   Lead times podem variar
+-   Necessidade de proteção contra rupturas
 
-| Qtd Pedido | Freq. Pedidos | Custo Pedido | Custo Manutenção | Custo Total |
-|------------|---------------|--------------|------------------|-------------|
-| 100        | 100,0         | 40.000       | 2.500            | 42.500      |
-| 200        | 50,0          | 20.000       | 5.000            | 25.000      |
-| 400        | 25,0          | 10.000       | 10.000           | 20.000      |
+:::
+::: {.column width="50%"}
 
-**Lote Econômico = 400 unidades** (menor custo total)
+**Fatores Determinantes:**
+
+-   Nível de incerteza da demanda
+-   Custos de falta de estoque
+-   Custos de manutenção
+-   Nível de serviço desejado
+:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Considerações Finais
 
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
 **Benefícios da Gestão Otimizada:**
 
 -   Redução de custos operacionais
@@ -539,13 +614,25 @@ Na prática, essas premissas raramente são atendidas completamente
 -   Maior eficiência produtiva
 -   Melhor atendimento ao cliente
 
+:::
+::: {.column width="50%"}
+
 **Desafios da Implementação:**
 
 -   Necessidade de dados confiáveis
 -   Adaptação às variações da demanda
 -   Integração com outros sistemas
 -   Monitoramento contínuo dos resultados
-
-::: callout-tip
-A gestão de estoques eficaz requer equilíbrio entre modelos teóricos e realidade operacional
 :::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Ferramenta Interativa: LEC {.smaller}
+
+> [**Simulador LEC**](/lec.html)
+
+```{=html}
+<iframe src="lec.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+```

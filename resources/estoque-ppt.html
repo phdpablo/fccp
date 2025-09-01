@@ -30,6 +30,22 @@
     }
   </style>
   <link rel="stylesheet" href="estoque-ppt_files/libs/revealjs/dist/theme/quarto-0c22b6e252e162282a19289aa8a4686d.css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
   <link href="estoque-ppt_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="estoque-ppt_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="estoque-ppt_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,12 +219,16 @@ Dr.&nbsp;Pablo Rogers
 <section id="fatores-influenciadores-dos-investimentos" class="slide level2 center">
 <h2>Fatores Influenciadores dos Investimentos</h2>
 <blockquote>
-<p>Diferentes categorias de estoque são influenciadas por fatores específico</p>
+<p>Diferentes categorias de estoque são influenciadas por fatores específicos</p>
 </blockquote>
-<p><strong>Materiais de Consumo:</strong> Pecularidades operacionais e administrativas</p>
-<p><strong>Matérias-primas:</strong> Problemas logísticos e de importação ; Economia de escala nas compras</p>
-<p><strong>Produtos em Elaboração:</strong> Duração do ciclo produtivo ; Nível tecnológico da produção</p>
-<p><strong>Produtos Acabados:</strong> Padrões de demanda do mercado ; Características físicas dos produtos</p>
+<div>
+<ul>
+<li class="fragment"><p><strong>Materiais de Consumo:</strong> Pecularidades operacionais e administrativas</p></li>
+<li class="fragment"><p><strong>Matérias-primas:</strong> Problemas logísticos e de importação ; Economia de escala nas compras</p></li>
+<li class="fragment"><p><strong>Produtos em Elaboração:</strong> Duração do ciclo produtivo ; Nível tecnológico da produção</p></li>
+<li class="fragment"><p><strong>Produtos Acabados:</strong> Padrões de demanda do mercado ; Características físicas dos produtos</p></li>
+</ul>
+</div>
 </section>
 <section id="estoques-em-contexto-inflacionário" class="slide level2 center">
 <h2>Estoques em Contexto Inflacionário</h2>
@@ -305,7 +325,7 @@ Dr.&nbsp;Pablo Rogers
 <blockquote>
 <p><a href=".\curvaABC.html"><strong>Simulador da Curva ABC</strong></a></p>
 </blockquote>
-<iframe src="/curvaABC.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+<iframe src="curvaABC.html" width="1600" height="450" style="border:1px solid black;"></iframe>
 </section>
 <section id="estoques-e-economia-de-escala" class="slide level2 center">
 <h2>Estoques e Economia de Escala</h2>
@@ -440,233 +460,262 @@ Dr.&nbsp;Pablo Rogers
 <blockquote>
 <p><a href=".\decisoes-compra.html"><strong>Simulador Decisões de Compra</strong></a></p>
 </blockquote>
-<iframe src="/decisoes-compra.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+<iframe src="decisoes-compra.html" width="1600" height="450" style="border:1px solid black;"></iframe>
 </section>
 <section id="modelos-de-controle-de-estoques" class="slide level2 center">
 <h2>Modelos de Controle de Estoques</h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Objetivos dos Modelos:</strong></p>
 <ul>
-<li>Identificar custos relevantes</li>
-<li>Determinar níveis ótimos de estoque</li>
-<li>Minimizar custos totais</li>
-<li>Otimizar decisões de compra</li>
+<li class="fragment">Identificar custos relevantes</li>
+<li class="fragment">Determinar níveis ótimos de estoque</li>
+<li class="fragment">Minimizar custos totais</li>
+<li class="fragment">Otimizar decisões de compra</li>
 </ul>
-<p><strong>Tipos de Custos:</strong> - Custos efetivos dos bens - Custos relevantes para decisão</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Tipos de Custos:</strong></p>
+<ul>
+<li class="fragment">Custos efetivos dos bens</li>
+<li class="fragment">Custos relevantes para decisão</li>
+</ul>
+</div></div>
+</div>
 </section>
 <section id="custos-efetivos-dos-bens" class="slide level2 center">
 <h2>Custos Efetivos dos Bens</h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Características:</strong></p>
 <ul>
-<li>Baseados em registros contábeis</li>
-<li>Preços de compra das matérias-primas</li>
-<li>Custos totais de produção</li>
-<li>Valores históricos de aquisição</li>
+<li class="fragment">Baseados em registros contábeis</li>
+<li class="fragment">Preços de compra das matérias-primas</li>
+<li class="fragment">Custos totais de produção</li>
+<li class="fragment">Valores históricos de aquisição</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <p><strong>Limitações:</strong></p>
 <ul>
-<li>Não identificam custos evitáveis</li>
-<li>Inadequados para análise decisorial</li>
-<li>Não consideram custos de oportunidade</li>
-<li>Foco em custos incorridos (sunk costs)</li>
+<li class="fragment">Não identificam custos evitáveis</li>
+<li class="fragment">Inadequados para análise decisorial</li>
+<li class="fragment">Não consideram custos de oportunidade</li>
+<li class="fragment">Foco em custos incorridos (sunk costs)</li>
 </ul>
+</div></div>
+</div>
 </section>
 <section id="custos-relevantes-para-gestão" class="slide level2 center scrollable">
 <h2>Custos Relevantes para Gestão</h2>
-<p><strong>Definição:</strong> Custos evitáveis que variam com as decisões de compra</p>
-<p><strong>Categorias Principais:</strong></p>
+<p><strong>Definição:</strong> Custos evitáveis que variam com as decisões de compra (exceto valor do produto)</p>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ol type="1">
-<li><strong>Custos de Compra (ou Pedido)</strong>
+<li class="fragment"><strong>Custos de Compra (ou Pedido)</strong>
 <ul>
-<li>Gastos de emissão de pedidos</li>
-<li>Custos de preparação</li>
-<li>Comportamento decrescente</li>
-</ul></li>
-<li><strong>Custos de Manutenção</strong>
-<ul>
-<li>Gastos de armazenamento</li>
-<li>Seguros e deterioração</li>
-<li>Comportamento crescente</li>
+<li class="fragment">Gastos de emissão de pedidos</li>
+<li class="fragment">Custos de preparação</li>
+<li class="fragment"><em>Comportamento decrescente</em></li>
 </ul></li>
 </ol>
+</div><div class="column" style="width:50%;">
+<ol start="2" type="1">
+<li class="fragment"><strong>Custos de Manutenção</strong>
+<ul>
+<li class="fragment">Gastos de armazenamento</li>
+<li class="fragment">Seguros e deterioração</li>
+<li class="fragment"><em>Comportamento crescente</em></li>
+</ul></li>
+</ol>
+</div></div>
+</div>
 </section>
 <section id="custos-de-compra-detalhados" class="slide level2 center">
 <h2>Custos de Compra Detalhados</h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Componentes:</strong></p>
 <ul>
-<li>Processamento de pedidos</li>
-<li>Inspeção e recebimento</li>
-<li>Custos de preparação da produção</li>
-<li>Gastos administrativos do processo</li>
+<li class="fragment">Processamento de pedidos</li>
+<li class="fragment">Inspeção e recebimento</li>
+<li class="fragment">Custos de preparação da produção</li>
+<li class="fragment">Gastos administrativos do processo</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <p><strong>Comportamento:</strong></p>
 <ul>
-<li><strong>Fixos</strong> por pedido</li>
-<li><strong>Decrescentes</strong> por unidade (diluição)</li>
-<li>Independem da quantidade comprada</li>
-<li>Incluem custos de setup</li>
+<li class="fragment"><em>Fixos</em> por pedido</li>
+<li class="fragment"><em>Decrescentes</em> por unidade (diluição)</li>
+<li class="fragment">Independem da quantidade comprada</li>
+<li class="fragment">Incluem custos de setup</li>
 </ul>
+</div></div>
+</div>
 </section>
 <section id="custos-de-manutenção-detalhados" class="slide level2 center">
 <h2>Custos de Manutenção Detalhados</h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Componentes:</strong></p>
 <ul>
-<li>Armazenagem e manuseio</li>
-<li>Seguros e deterioração</li>
-<li>Obsolescência e perdas</li>
-<li>Custo de oportunidade do capital</li>
+<li class="fragment">Armazenagem e manuseio</li>
+<li class="fragment">Seguros e deterioração</li>
+<li class="fragment">Obsolescência e perdas</li>
+<li class="fragment">Custo de oportunidade do capital</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <p><strong>Comportamento:</strong></p>
 <ul>
-<li><strong>Variáveis</strong> com o nível de estoque</li>
-<li><strong>Constantes</strong> por unidade estocada</li>
-<li>Proporcionais ao tempo de permanência</li>
-<li>Incluem custo do capital investido</li>
+<li class="fragment"><em>Variáveis</em> com o nível de estoque</li>
+<li class="fragment"><em>Constantes</em> por unidade estocada</li>
+<li class="fragment">Proporcionais ao tempo de permanência</li>
+<li class="fragment">Incluem custo do capital investido</li>
 </ul>
+</div></div>
+</div>
 </section>
-<section id="modelo-do-lote-econômico" class="slide level2 center">
-<h2>Modelo do Lote Econômico</h2>
-<p><strong>Objetivo:</strong> Minimizar o custo total controlável do estoque</p>
+<section id="modelo-do-lec" class="slide level2 center">
+<h2>Modelo do LEC</h2>
+<div>
+<p><strong>Objetivo:</strong> Minimizar o custo total <em>controlável</em> do estoque</p>
 <p><strong>Equilíbrio:</strong> Entre custos de manutenção e custos de pedido</p>
-<p><strong>Comportamento do Estoque:</strong> - Declínio a taxa constante - Reposição instantânea - Consumo uniforme ao longo do tempo</p>
+<p><strong>Comportamento do Estoque:</strong></p>
+<ul>
+<li class="fragment">Declínio a taxa constante</li>
+<li class="fragment">Reposição instantânea</li>
+<li class="fragment">Consumo uniforme ao longo do tempo</li>
+</ul>
+</div>
 </section>
 <section id="premissas-do-lote-econômico" class="slide level2 center scrollable">
 <h2>Premissas do Lote Econômico</h2>
+<div>
 <p><strong>Hipóteses Básicas:</strong></p>
 <ol type="a">
-<li>Volume não influencia o custo unitário</li>
-<li>Demanda uniforme ao longo do tempo</li>
-<li>Condições de certeza (sem variabilidade)</li>
-<li>Reposição instantânea (lead time zero)</li>
-<li>Sem restrições financeiras</li>
+<li class="fragment">Volume não influencia o custo unitário</li>
+<li class="fragment">Demanda uniforme ao longo do tempo</li>
+<li class="fragment">Condições de certeza (sem variabilidade)</li>
+<li class="fragment">Reposição instantânea (lead time zero)</li>
+<li class="fragment">Sem restrições financeiras</li>
 </ol>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
+<blockquote>
 <p>Na prática, essas premissas raramente são atendidas completamente</p>
+</blockquote>
+</section>
+<section id="representação-gráfica" class="slide level2 center">
+<h2>Representação Gráfica</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lec.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lec-custos.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
+</div></div>
+</section>
+<section id="fórmulas-do-lote-econômico" class="slide level2 center">
+<h2>Fórmulas do Lote Econômico</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="math display">
+\text{CP} = C_p \times \frac{D}{Q}
+</span> <span class="math display">
+\text{CM} = C_m \times \frac{Q}{2}
+</span></p>
+</div><div class="column" style="width:50%;">
+<p><span class="math display">
+\text{CT} = \left(C_p \times \frac{D}{Q}\right) + \left(C_m \times \frac{Q}{2}\right)
+</span> <span class="math display">
+Q^* = \sqrt{\frac{2 \times C_p \times D}{C_m}}
+</span></p>
+</div></div>
+</section>
+<section id="interpretação-do-lote-econômico" class="slide level2 center">
+<h2>Interpretação do Lote Econômico</h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Características do Ponto Ótimo:</strong></p>
+<ul>
+<li class="fragment">Custo total mínimo</li>
+<li class="fragment">Equilíbrio entre custos opostos</li>
+<li class="fragment">Define quantidade ideal por pedido</li>
+<li class="fragment">Estabelece frequência ótima de compras</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Aplicações Práticas:</strong></p>
+<ul>
+<li class="fragment">Programação de compras</li>
+<li class="fragment">Dimensionamento de estoques</li>
+<li class="fragment">Otimização de custos logísticos</li>
+<li class="fragment">Planejamento financeiro</li>
+</ul>
+</div></div>
 </div>
 </section>
 <section id="estoque-de-segurança" class="slide level2 center">
 <h2>Estoque de Segurança</h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Realidade Operacional:</strong></p>
 <ul>
-<li>Demanda não é uniforme</li>
-<li>Existe variabilidade no fornecimento</li>
-<li>Lead times podem variar</li>
-<li>Necessidade de proteção contra rupturas</li>
+<li class="fragment">Demanda não é uniforme</li>
+<li class="fragment">Existe variabilidade no fornecimento</li>
+<li class="fragment">Lead times podem variar</li>
+<li class="fragment">Necessidade de proteção contra rupturas</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <p><strong>Fatores Determinantes:</strong></p>
 <ul>
-<li>Nível de incerteza da demanda</li>
-<li>Custos de falta de estoque</li>
-<li>Custos de manutenção</li>
-<li>Nível de serviço desejado</li>
+<li class="fragment">Nível de incerteza da demanda</li>
+<li class="fragment">Custos de falta de estoque</li>
+<li class="fragment">Custos de manutenção</li>
+<li class="fragment">Nível de serviço desejado</li>
 </ul>
-</section>
-<section id="representação-gráfica-dos-custos" class="slide level2 center">
-<h2>Representação Gráfica dos Custos</h2>
-<p><strong>Ponto Ótimo:</strong> Interseção das curvas de custo de manutenção e compra</p>
-</section>
-<section id="interpretação-do-lote-econômico" class="slide level2 center">
-<h2>Interpretação do Lote Econômico</h2>
-<p><strong>Características do Ponto Ótimo:</strong></p>
-<ul>
-<li>Custo total mínimo</li>
-<li>Equilíbrio entre custos opostos</li>
-<li>Define quantidade ideal por pedido</li>
-<li>Estabelece frequência ótima de compras</li>
-</ul>
-<p><strong>Aplicações Práticas:</strong></p>
-<ul>
-<li>Programação de compras</li>
-<li>Dimensionamento de estoques</li>
-<li>Otimização de custos logísticos</li>
-<li>Planejamento financeiro</li>
-</ul>
-</section>
-<section id="exemplo-prático-de-cálculo" class="slide level2 center">
-<h2>Exemplo Prático de Cálculo</h2>
-<p><strong>Dados do Problema:</strong> - Demanda anual: 10.000 unidades - Custo de pedido: $400 por pedido - Custo de manutenção: $50 por unidade/ano</p>
-<p><strong>Análise de Diferentes Quantidades:</strong></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 20%">
-<col style="width: 19%">
-<col style="width: 25%">
-<col style="width: 18%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Qtd Pedido</th>
-<th>Freq. Pedidos</th>
-<th>Custo Pedido</th>
-<th>Custo Manutenção</th>
-<th>Custo Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>100</td>
-<td>100,0</td>
-<td>40.000</td>
-<td>2.500</td>
-<td>42.500</td>
-</tr>
-<tr class="even">
-<td>200</td>
-<td>50,0</td>
-<td>20.000</td>
-<td>5.000</td>
-<td>25.000</td>
-</tr>
-<tr class="odd">
-<td>400</td>
-<td>25,0</td>
-<td>10.000</td>
-<td>10.000</td>
-<td>20.000</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Lote Econômico = 400 unidades</strong> (menor custo total)</p>
+</div></div>
+</div>
 </section>
 <section id="considerações-finais" class="slide level2 center">
 <h2>Considerações Finais</h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Benefícios da Gestão Otimizada:</strong></p>
 <ul>
-<li>Redução de custos operacionais</li>
-<li>Melhoria do fluxo de caixa</li>
-<li>Maior eficiência produtiva</li>
-<li>Melhor atendimento ao cliente</li>
+<li class="fragment">Redução de custos operacionais</li>
+<li class="fragment">Melhoria do fluxo de caixa</li>
+<li class="fragment">Maior eficiência produtiva</li>
+<li class="fragment">Melhor atendimento ao cliente</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <p><strong>Desafios da Implementação:</strong></p>
 <ul>
-<li>Necessidade de dados confiáveis</li>
-<li>Adaptação às variações da demanda</li>
-<li>Integração com outros sistemas</li>
-<li>Monitoramento contínuo dos resultados</li>
+<li class="fragment">Necessidade de dados confiáveis</li>
+<li class="fragment">Adaptação às variações da demanda</li>
+<li class="fragment">Integração com outros sistemas</li>
+<li class="fragment">Monitoramento contínuo dos resultados</li>
 </ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</div></div>
 </div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>A gestão de estoques eficaz requer equilíbrio entre modelos teóricos e realidade operacional</p>
-</div>
-</div>
-</div>
+</section>
+<section id="ferramenta-interativa-lec" class="slide level2 smaller center">
+<h2>Ferramenta Interativa: LEC</h2>
+<blockquote>
+<p><a href=".\lec.html"><strong>Simulador LEC</strong></a></p>
+</blockquote>
+<iframe src="lec.html" width="1600" height="450" style="border:1px solid black;"></iframe>
 
 </section>
     </div>
@@ -867,82 +916,6 @@ Dr.&nbsp;Pablo Rogers
         ]
       });
     </script>
-    
-
-    <script>
-
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-      // slide changes (different for each slide format).
-
-      (function () {
-
-        // dispatch for htmlwidgets
-
-        function fireSlideEnter() {
-
-          const event = window.document.createEvent("Event");
-
-          event.initEvent("slideenter", true, true);
-
-          window.document.dispatchEvent(event);
-
-        }
-
-    
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          fireSlideEnter();
-
-    
-
-          // dispatch for shiny
-
-          if (window.jQuery) {
-
-            if (previousSlide) {
-
-              window.jQuery(previousSlide).trigger("hidden");
-
-            }
-
-            if (currentSlide) {
-
-              window.jQuery(currentSlide).trigger("shown");
-
-            }
-
-          }
-
-        }
-
-    
-
-        // hookup for slidy
-
-        if (window.w3c_slidy) {
-
-          window.w3c_slidy.add_observer(function (slide_num) {
-
-            // slide_num starts at position 1
-
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-          });
-
-        }
-
-    
-
-      })();
-
-    </script>
-
-    
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
