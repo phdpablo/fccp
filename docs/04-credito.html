@@ -72,8 +72,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="4&nbsp; Administração de Recebíveis – Finanças Corporativas de Curto Prazo">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Finanças Corporativas de Curto Prazo">
 </head>
 
@@ -209,8 +239,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#os-pilares-de-uma-política-de-crédito" id="toc-os-pilares-de-uma-política-de-crédito" class="nav-link active" data-scroll-target="#os-pilares-de-uma-política-de-crédito"><span class="header-section-number">4.1</span> Os Pilares de uma Política de Crédito</a></li>
+  <li><a href="#risco-do-crédito" id="toc-risco-do-crédito" class="nav-link" data-scroll-target="#risco-do-crédito"><span class="header-section-number">4.2</span> Risco do Crédito</a>
+  <ul class="collapse">
+  <li><a href="#dashboard-conceitual-vr" id="toc-dashboard-conceitual-vr" class="nav-link" data-scroll-target="#dashboard-conceitual-vr"><span class="header-section-number">4.2.1</span> Dashboard Conceitual VR</a></li>
+  </ul></li>
+  <li><a href="#alterações-nos-padrões-de-crédito" id="toc-alterações-nos-padrões-de-crédito" class="nav-link" data-scroll-target="#alterações-nos-padrões-de-crédito"><span class="header-section-number">4.3</span> Alterações nos Padrões de Crédito</a>
+  <ul class="collapse">
+  <li><a href="#cálculo-do-investimento-marginal-em-vr" id="toc-cálculo-do-investimento-marginal-em-vr" class="nav-link" data-scroll-target="#cálculo-do-investimento-marginal-em-vr"><span class="header-section-number">4.3.1</span> Cálculo do Investimento Marginal em VR</a></li>
+  </ul></li>
+  <li><a href="#controle-do-crédito" id="toc-controle-do-crédito" class="nav-link" data-scroll-target="#controle-do-crédito"><span class="header-section-number">4.4</span> Controle do Crédito</a>
+  <ul class="collapse">
+  <li><a href="#aging-de-valores-a-receber" id="toc-aging-de-valores-a-receber" class="nav-link" data-scroll-target="#aging-de-valores-a-receber"><span class="header-section-number">4.4.1</span> Aging de Valores a Receber</a></li>
+  <li><a href="#dias-de-vendas-a-receber-dvr" id="toc-dias-de-vendas-a-receber-dvr" class="nav-link" data-scroll-target="#dias-de-vendas-a-receber-dvr"><span class="header-section-number">4.4.2</span> Dias de Vendas a Receber (DVR)</a></li>
+  <li><a href="#simulador-agingdvr" id="toc-simulador-agingdvr" class="nav-link" data-scroll-target="#simulador-agingdvr"><span class="header-section-number">4.4.3</span> Simulador Aging/DVR</a></li>
+  </ul></li>
+  <li><a href="#slides-da-aula" id="toc-slides-da-aula" class="nav-link" data-scroll-target="#slides-da-aula"><span class="header-section-number">4.5</span> Slides da Aula</a></li>
+  <li><a href="#resumo-em-áudio" id="toc-resumo-em-áudio" class="nav-link" data-scroll-target="#resumo-em-áudio"><span class="header-section-number">4.6</span> Resumo em áudio</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-credito" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Administração de Recebíveis</span></span></h1></header>
@@ -221,8 +273,105 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><br></p>
+<p>A gestão de Valores a Receber (VR) é uma área fundamental das finanças corporativas de curto prazo que lida com a administração dos créditos concedidos aos clientes nas vendas a prazo. Para muitas empresas, essa é uma estratégia essencial para impulsionar as vendas e manter a competitividade. No entanto, conceder crédito significa também investir recursos da empresa e assumir o risco de não recebimento.</p>
+<p>O objetivo de uma boa gestão de crédito é encontrar um equilíbrio ótimo entre maximizar as vendas e a rentabilidade, e minimizar os custos e os riscos associados. Isso é alcançado por meio de uma <strong>Política de Crédito</strong> bem estruturada.</p>
+<p><br></p>
+<section id="os-pilares-de-uma-política-de-crédito" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="os-pilares-de-uma-política-de-crédito"><span class="header-section-number">4.1</span> Os Pilares de uma Política de Crédito</h2>
+<p>Uma política de crédito eficaz é construída sobre quatro elementos principais, que funcionam como alavancas que a empresa pode ajustar para atingir seus objetivos.</p>
+<ol type="1">
+<li><strong>Padrões de Crédito:</strong> Define o perfil mínimo de risco que um cliente deve ter para receber crédito. Padrões mais flexíveis podem aumentar as vendas, mas também elevam o risco de inadimplência. Padrões mais rígidos fazem o oposto.</li>
+<li><strong>Prazo de Concessão:</strong> É o tempo que o cliente tem para pagar. Prazos mais longos podem atrair mais clientes, mas aumentam o montante de dinheiro que a empresa precisa investir em suas contas a receber.</li>
+<li><strong>Descontos por Pagamento Antecipado:</strong> Oferecer um desconto para quem paga antes do vencimento é uma forma de acelerar o recebimento de caixa. A empresa deve avaliar se o custo do desconto compensa o benefício de ter o dinheiro disponível mais cedo.</li>
+<li><strong>Política de Cobrança:</strong> Refere-se aos procedimentos usados para cobrar clientes em atraso. Uma política mais agressiva pode reduzir perdas, mas também pode prejudicar o relacionamento com os clientes.</li>
+</ol>
+<p><br></p>
+</section>
+<section id="risco-do-crédito" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="risco-do-crédito"><span class="header-section-number">4.2</span> Risco do Crédito</h2>
+<p>Antes de conceder crédito, é crucial avaliar a capacidade e a disposição do cliente em pagar. Um método clássico para essa análise é o dos <strong>“Cinco Cs do Crédito”</strong>:</p>
+<ul>
+<li><strong>Caráter:</strong> A reputação e o histórico do cliente indicam sua vontade de honrar as dívidas.</li>
+<li><strong>Capacidade:</strong> A habilidade do cliente de gerar caixa suficiente para pagar o crédito.</li>
+<li><strong>Capital:</strong> A saúde financeira geral do cliente, incluindo seu patrimônio.</li>
+<li><strong>Garantias (Collateral):</strong> Ativos que o cliente pode oferecer para assegurar o pagamento da dívida.</li>
+<li><strong>Condições:</strong> O ambiente econômico e setorial que pode afetar a capacidade de pagamento do cliente.</li>
+</ul>
+<p><br></p>
+<section id="dashboard-conceitual-vr" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="dashboard-conceitual-vr"><span class="header-section-number">4.2.1</span> Dashboard Conceitual VR</h3>
+<p>Abaixo você pode explorar os conceitos acima e visualizar o impacto esperado dos elementos da política de crédito em algumas medidas financeiras, ou você pode expandir essa versão interativa do dashboard clicando no link:</p>
+<blockquote class="blockquote">
+<p><a href="resources/04-intro.html"><strong>Dashboard Conceitual VR</strong></a></p>
+</blockquote>
+<iframe src="resources/04-intro.html" width="733" height="550" style="border:1px solid black;"></iframe>
+</section>
+</section>
+<section id="alterações-nos-padrões-de-crédito" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="alterações-nos-padrões-de-crédito"><span class="header-section-number">4.3</span> Alterações nos Padrões de Crédito</h2>
+<p>Qualquer alteração na política de crédito deve ser tratada como uma <strong>decisão de investimento</strong>. A análise fundamental consiste em comparar os benefícios marginais com os custos marginais.</p>
+<ul>
+<li><strong>Benefício Marginal:</strong> Geralmente, é o lucro adicional gerado pelo aumento nas vendas decorrente da nova política.</li>
+<li><strong>Custo Marginal:</strong> Inclui o aumento das despesas com inadimplência, custos de administração e, crucialmente, o custo do investimento adicional em valores a receber.</li>
+</ul>
+<p>A regra de decisão é simples: se o retorno gerado pelo lucro adicional for maior que o custo de financiar o investimento extra, a mudança na política de crédito é vantajosa e cria valor para a empresa.</p>
+<section id="cálculo-do-investimento-marginal-em-vr" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="cálculo-do-investimento-marginal-em-vr"><span class="header-section-number">4.3.1</span> Cálculo do Investimento Marginal em VR</h3>
+<p>Abaixo você pode explorar uma calculadora que compara o cálculo do investimento marginal em VR utilizando as metodologias de <strong>Lucro Embutido</strong> e <strong>Custo Variável</strong>, ou você pode expandir essa versão interativa da calculadora clicando no link:</p>
+<blockquote class="blockquote">
+<p><a href="resources/04-invVR.html"><strong>Simulador Investimento em VR</strong></a></p>
+</blockquote>
+<iframe src="resources/04-invVR.html" width="733" height="550" style="border:1px solid black;"></iframe>
+</section>
+</section>
+<section id="controle-do-crédito" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="controle-do-crédito"><span class="header-section-number">4.4</span> Controle do Crédito</h2>
+<p>Uma vez que a política está em vigor, é essencial monitorar o desempenho da carteira de recebíveis para garantir que tudo está correndo como planejado. As duas principais ferramentas para isso são:</p>
+<section id="aging-de-valores-a-receber" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="aging-de-valores-a-receber"><span class="header-section-number">4.4.1</span> Aging de Valores a Receber</h3>
+<p>O Aging (ou classificação por idade/vencimento) é um relatório que organiza as contas a receber por faixas de tempo (ex: a vencer, vencidas há 1-30 dias, vencidas há 31-60 dias, etc.). Ele permite visualizar rapidamente a porcentagem de contas em atraso, sendo um excelente indicador da qualidade da carteira.</p>
+</section>
+<section id="dias-de-vendas-a-receber-dvr" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="dias-de-vendas-a-receber-dvr"><span class="header-section-number">4.4.2</span> Dias de Vendas a Receber (DVR)</h3>
+<p>O DVR (em inglês, <em>Days Sales Outstanding</em> - DSO) mede o número médio de dias que a empresa leva para receber o pagamento de uma venda.<br>
+A fórmula é:</p>
+<p><span class="math display">\[\text{DVR} = \frac{\text{Saldo de Valores a Receber}}{\text{Vendas Médias Diárias}}\]</span></p>
+<p>Um DVR crescente pode sinalizar problemas na cobrança. É importante usar o DVR em conjunto com o Aging, pois uma média pode esconder problemas específicos em certas faixas de vencimento.</p>
+<p><br></p>
+</section>
+<section id="simulador-agingdvr" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="simulador-agingdvr"><span class="header-section-number">4.4.3</span> Simulador Aging/DVR</h3>
+<p>Abaixo você pode explorar como utilizar essas ferramentas para controle do crédito, ou você pode expandir essa versão interativa da análise clicando no link:</p>
+<blockquote class="blockquote">
+<p><a href="resources/04-aging-dvr.html"><strong>Simulador Aging/DVR</strong></a></p>
+</blockquote>
+<iframe src="resources/04-aging-dvr.html" width="733" height="550" style="border:1px solid black;"></iframe>
+</section>
+</section>
+<section id="slides-da-aula" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="slides-da-aula"><span class="header-section-number">4.5</span> Slides da Aula</h2>
+<p>A administração de VR é uma função estratégica que equilibra objetivos de marketing e vendas com a prudência financeira. Uma política de crédito bem definida, uma análise de risco criteriosa e um monitoramento contínuo são essenciais para que a concessão de crédito se traduza em um aumento sustentável da lucratividade e do valor da empresa.</p>
+<p>Abaixo você pode visualizar os slides da aula, ou você pode expandir essa versão dos slides clicando no link:</p>
+<blockquote class="blockquote">
+<p><a href="resources/04-credito-ppt.html"><strong>Slides da Aula</strong></a></p>
+</blockquote>
+<iframe src="resources/04-credito-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<p><br></p>
+</section>
+<section id="resumo-em-áudio" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="resumo-em-áudio"><span class="header-section-number">4.6</span> Resumo em áudio</h2>
+<p>A seguir, você pode ouvir um resumo em áudio do conteúdo desta seção:</p>
+<div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+<audio controls="" src="resources/04-credito-podcast.mp3" style="width: 400px;">
+<p>Seu navegador não suporta o elemento de áudio.</p>
+</audio>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

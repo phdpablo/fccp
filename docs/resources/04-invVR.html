@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Investimento Marginal em VR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Vibrant Orange (#F18C22), Light Teal (#87CBCC), Dark Charcoal (#0D232C) -->
+    <!-- Application Structure Plan: This version enhances the tool's educational value by making the calculation process transparent. While maintaining the three-section layout (Inputs, Analysis, Verdict), the central 'Analysis' section is significantly expanded. Instead of showing only the final investment figures, each methodology card now displays a detailed, step-by-step breakdown of its calculation (e.g., showing Saldo Médio de VR, % Lucro Embutido, Giro de Contas a Receber). This change transforms the tool from a simple calculator into a clear, pedagogical demonstrator. -->
+    <!-- Visualization & Content Choices: 
+        - Input Form -> Goal: Collect Data -> Method: Simplified HTML form. -> Interaction: Real-time updates. -> Justification: Focused inputs clarify the tool's purpose.
+        - Detailed Calculation Display -> Goal: Compare/Educate -> Method: Two-column layout with expanded tables showing intermediate calculation steps. -> Interaction: Read-only, dynamically updated. -> Justification: This is the key improvement. By revealing the underlying formulas and intermediate values, the tool now actively teaches *how* the results are obtained, fulfilling the user's request for greater detail and clarity.
+        - Detailed ROIC Analysis -> Goal: Synthesize/Decide -> Method: A multi-part results card. -> Interaction: Read-only. -> Justification: The granular ROIC analysis remains, providing a comprehensive conclusion based on the now-transparent calculations. Confirms NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        :root {
+            --brand-orange: #F18C22;
+            --brand-teal: #87CBCC;
+            --brand-charcoal: #0D232C;
+            --brand-light-bg: #F8F9FA;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light-bg);
+            color: var(--brand-charcoal);
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold tracking-tight" style="color: var(--brand-charcoal);">Cálculo do Investimento Marginal em Valores a Receber</h1>
+            <p class="mt-4 text-lg text-gray-700 max-w-4xl mx-auto">Esta ferramenta demonstra e compara o cálculo do investimento marginal em VR utilizando as metodologias de <strong>Lucro Embutido</strong> e <strong>Custo Variável</strong>. Outras variáveis, como descontos ou perdas com incobráveis, são desconsideradas para focar na análise do investimento.</p>
+        </header>
+
+        <main class="space-y-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-semibold mb-6 border-b pb-4">1. Parâmetros da Análise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <fieldset class="space-y-4">
+                        <legend class="text-lg font-semibold mb-2" style="color: var(--brand-orange);">Situação Original</legend>
+                        <div>
+                            <label for="vendas_orig" class="block text-sm font-medium text-gray-700">Vendas Anuais a Prazo (R$)</label>
+                            <input type="number" id="vendas_orig" value="10000000" class="mt-1 w-full rounded-md border-gray-300 shadow-sm text-sm">
+                        </div>
+                        <div>
+                            <label for="pmc_orig" class="block text-sm font-medium text-gray-700">Prazo Médio de Cobrança (dias)</label>
+                            <input type="number" id="pmc_orig" value="30" class="mt-1 w-full rounded-md border-gray-300 shadow-sm text-sm">
+                        </div>
+                    </fieldset>
+                     <fieldset class="space-y-4">
+                        <legend class="text-lg font-semibold mb-2" style="color: var(--brand-orange);">Situação Proposta</legend>
+                        <div>
+                            <label for="vendas_prop" class="block text-sm font-medium text-gray-700">Novas Vendas Anuais a Prazo (R$)</label>
+                            <input type="number" id="vendas_prop" value="20000000" class="mt-1 w-full rounded-md border-gray-300 shadow-sm text-sm">
+                        </div>
+                        <div>
+                            <label for="pmc_prop" class="block text-sm font-medium text-gray-700">Novo Prazo Médio de Cobrança (dias)</label>
+                            <input type="number" id="pmc_prop" value="58" class="mt-1 w-full rounded-md border-gray-300 shadow-sm text-sm">
+                        </div>
+                    </fieldset>
+                    <fieldset class="space-y-4">
+                        <legend class="text-lg font-semibold mb-2" style="color: var(--brand-orange);">Estrutura de Custos e Capital</legend>
+                        <div>
+                            <label for="custo_var" class="block text-sm font-medium text-gray-700">Custos Variáveis (% da Receita)</label>
+                            <input type="number" id="custo_var" value="60" class="mt-1 w-full rounded-md border-gray-300 shadow-sm text-sm">
+                        </div>
+                        <div>
+                            <label for="custo_fixo" class="block text-sm font-medium text-gray-700">Custos Fixos Anuais (R$)</label>
+                            <input type="number" id="custo_fixo" value="2500000" class="mt-1 w-full rounded-md border-gray-300 shadow-sm text-sm">
+                        </div>
+                        <div>
+                            <label for="wacc" class="block text-sm font-medium text-gray-700">Custo de Capital (WACC % ao ano)</label>
+                            <input type="number" id="wacc" value="20" class="mt-1 w-full rounded-md border-gray-300 shadow-sm text-sm">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-semibold mb-6 border-b pb-4">2. Análise Comparativa do Investimento Marginal</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Método 1: Lucro Embutido -->
+                    <div class="space-y-4 p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-center" style="color: var(--brand-charcoal);">Método 1: Lucro Embutido</h3>
+                        <div class="space-y-3">
+                            <p class="text-sm font-semibold text-gray-700">Cálculo Original:</p>
+                            <table class="w-full text-xs text-gray-600">
+                                <tr><td>Saldo Médio de VR</td><td id="m1_smvr_orig" class="text-right font-mono"></td></tr>
+                                <tr><td>(-) Lucro Embutido</td><td id="m1_le_orig" class="text-right font-mono"></td></tr>
+                                <tr><td class="font-semibold pt-1">Investimento Original</td><td id="inv_orig_m1" class="text-right font-semibold pt-1 font-mono"></td></tr>
+                            </table>
+                        </div>
+                        <div class="space-y-3 border-t pt-3">
+                            <p class="text-sm font-semibold text-gray-700">Cálculo Proposto:</p>
+                             <table class="w-full text-xs text-gray-600">
+                                <tr><td>Saldo Médio de VR</td><td id="m1_smvr_prop" class="text-right font-mono"></td></tr>
+                                <tr><td>(-) Lucro Embutido</td><td id="m1_le_prop" class="text-right font-mono"></td></tr>
+                                <tr><td class="font-semibold pt-1">Investimento Proposto</td><td id="inv_prop_m1" class="text-right font-semibold pt-1 font-mono"></td></tr>
+                            </table>
+                        </div>
+                        <div class="bg-gray-200 p-2 rounded mt-4">
+                            <p class="flex justify-between items-center text-sm font-bold"><span>Investimento Marginal:</span><span id="inv_marg_m1" class="font-mono"></span></p>
+                        </div>
+                    </div>
+                    <!-- Método 2: Custo Variável -->
+                    <div class="space-y-4 p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-center" style="color: var(--brand-charcoal);">Método 2: Custo Variável</h3>
+                        <div class="space-y-3">
+                            <p class="text-sm font-semibold text-gray-700">Cálculo Original:</p>
+                             <table class="w-full text-xs text-gray-600">
+                                <tr><td>Custos Variáveis Totais</td><td id="m2_cv_orig" class="text-right font-mono"></td></tr>
+                                <tr><td>(÷) Giro de Contas a Receber</td><td id="m2_giro_orig" class="text-right font-mono"></td></tr>
+                                <tr><td class="font-semibold pt-1">Investimento Original</td><td id="inv_orig_m2" class="text-right font-semibold pt-1 font-mono"></td></tr>
+                            </table>
+                        </div>
+                        <div class="space-y-3 border-t pt-3">
+                            <p class="text-sm font-semibold text-gray-700">Cálculo Proposto:</p>
+                             <table class="w-full text-xs text-gray-600">
+                                <tr><td>Custos Variáveis Totais</td><td id="m2_cv_prop" class="text-right font-mono"></td></tr>
+                                <tr><td>(÷) Giro de Contas a Receber</td><td id="m2_giro_prop" class="text-right font-mono"></td></tr>
+                                <tr><td class="font-semibold pt-1">Investimento Proposto</td><td id="inv_prop_m2" class="text-right font-semibold pt-1 font-mono"></td></tr>
+                            </table>
+                        </div>
+                        <div class="bg-gray-200 p-2 rounded mt-4">
+                            <p class="flex justify-between items-center text-sm font-bold"><span>Investimento Marginal:</span><span id="inv_marg_m2" class="font-mono"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="verdict_card" class="p-8 rounded-xl shadow-lg border-2">
+                 <h2 class="text-2xl font-semibold mb-4 text-center">3. Veredito da Análise de Rentabilidade</h2>
+                 <div class="text-center mb-6">
+                    <p class="text-sm text-gray-600 uppercase tracking-wider">Lucro Operacional Marginal</p>
+                    <p id="lucro_marginal" class="text-4xl font-bold"></p>
+                </div>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center border-t border-b py-4">
+                      <div>
+                        <p class="text-sm text-gray-600">ROIC (Método Lucro Embutido)</p>
+                        <p id="roic_m1" class="text-2xl font-bold"></p>
+                    </div>
+                     <div>
+                        <p class="text-sm text-gray-600">ROIC (Método Custo Variável)</p>
+                        <p id="roic_m2" class="text-2xl font-bold"></p>
+                    </div>
+                     <div>
+                        <p class="text-sm text-gray-600">ROIC (Médio)</p>
+                        <p id="roic_medio" class="text-2xl font-bold" style="color: var(--brand-orange)"></p>
+                    </div>
+                 </div>
+                 <div class="mt-6">
+                     <p id="verdict_text" class="text-center text-lg"></p>
+                 </div>
+            </div>
+
+        </main>
+        
+        <footer class="border-t border-gray-200 mt-20 pt-8 text-center text-sm text-gray-500">
+            <p>&copy; 2025 <a href="https://fccp.phdpablo.com/" target="_blank" rel="noopener noreferrer" class="hover:underline" style="color: var(--brand-orange);">fccp.phdpablo.com</a>. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = Array.from(document.querySelectorAll('input[type="number"]'));
+            const formatCurrency = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+            const formatPercent = (value) => `${(value * 100).toFixed(2)}%`.replace('.',',');
+            const formatNumber = (value) => value.toFixed(2).replace('.',',');
+
+            function calculateAnalysis() {
+                // --- 1. Ler todos os inputs ---
+                const v_orig = parseFloat(document.getElementById('vendas_orig').value) || 0;
+                const pmc_orig = parseFloat(document.getElementById('pmc_orig').value) || 0;
+                const v_prop = parseFloat(document.getElementById('vendas_prop').value) || 0;
+                const pmc_prop = parseFloat(document.getElementById('pmc_prop').value) || 0;
+                const c_var_perc = (parseFloat(document.getElementById('custo_var').value) || 0) / 100;
+                const c_fixo = parseFloat(document.getElementById('custo_fixo').value) || 0;
+                const wacc_perc = (parseFloat(document.getElementById('wacc').value) || 0) / 100;
+                const dias_ano = 360;
+
+                // --- 2. Calcular Lucro Marginal ---
+                const lucro_orig = v_orig - (v_orig * c_var_perc) - c_fixo;
+                const lucro_prop = v_prop - (v_prop * c_var_perc) - c_fixo;
+                const lucro_marginal = lucro_prop - lucro_orig;
+
+                // --- 3. Método 1: Lucro Embutido ---
+                const saldo_vr_orig_m1 = (v_orig / dias_ano) * pmc_orig;
+                const lucro_embutido_perc_orig = (lucro_orig > 0 && v_orig > 0) ? lucro_orig / v_orig : 0;
+                const lucro_embutido_valor_orig = saldo_vr_orig_m1 * lucro_embutido_perc_orig;
+                const inv_orig_m1 = saldo_vr_orig_m1 - lucro_embutido_valor_orig;
+
+                const saldo_vr_prop_m1 = (v_prop / dias_ano) * pmc_prop;
+                const lucro_embutido_perc_prop = (lucro_prop > 0 && v_prop > 0) ? lucro_prop / v_prop : 0;
+                const lucro_embutido_valor_prop = saldo_vr_prop_m1 * lucro_embutido_perc_prop;
+                const inv_prop_m1 = saldo_vr_prop_m1 - lucro_embutido_valor_prop;
+                
+                const inv_marg_m1 = inv_prop_m1 - inv_orig_m1;
+
+                // --- 4. Método 2: Custo Variável ---
+                const cv_orig_total = v_orig * c_var_perc;
+                const giro_orig_m2 = pmc_orig > 0 ? dias_ano / pmc_orig : 0;
+                const inv_orig_m2 = giro_orig_m2 > 0 ? cv_orig_total / giro_orig_m2 : 0;
+
+                const cv_prop_total = v_prop * c_var_perc;
+                const giro_prop_m2 = pmc_prop > 0 ? dias_ano / pmc_prop : 0;
+                const inv_prop_m2 = giro_prop_m2 > 0 ? cv_prop_total / giro_prop_m2 : 0;
+
+                const inv_marg_m2 = inv_prop_m2 - inv_orig_m2;
+
+                // --- 5. Análise Final e Veredito ---
+                const roic_m1 = (inv_marg_m1 > 0) ? lucro_marginal / inv_marg_m1 : 0;
+                const roic_m2 = (inv_marg_m2 > 0) ? lucro_marginal / inv_marg_m2 : 0;
+                const inv_marg_medio = (inv_marg_m1 + inv_marg_m2) / 2;
+                const roic_medio = (inv_marg_medio > 0) ? lucro_marginal / inv_marg_medio : 0;
+
+                // --- 6. Atualizar a UI ---
+                // Método 1 - Detalhes
+                document.getElementById('m1_smvr_orig').textContent = formatCurrency(saldo_vr_orig_m1);
+                document.getElementById('m1_le_orig').textContent = `${formatCurrency(lucro_embutido_valor_orig)} (${formatPercent(lucro_embutido_perc_orig)})`;
+                document.getElementById('inv_orig_m1').textContent = formatCurrency(inv_orig_m1);
+                document.getElementById('m1_smvr_prop').textContent = formatCurrency(saldo_vr_prop_m1);
+                document.getElementById('m1_le_prop').textContent = `${formatCurrency(lucro_embutido_valor_prop)} (${formatPercent(lucro_embutido_perc_prop)})`;
+                document.getElementById('inv_prop_m1').textContent = formatCurrency(inv_prop_m1);
+                document.getElementById('inv_marg_m1').textContent = formatCurrency(inv_marg_m1);
+
+                // Método 2 - Detalhes
+                document.getElementById('m2_cv_orig').textContent = formatCurrency(cv_orig_total);
+                document.getElementById('m2_giro_orig').textContent = `${formatNumber(giro_orig_m2)}x`;
+                document.getElementById('inv_orig_m2').textContent = formatCurrency(inv_orig_m2);
+                document.getElementById('m2_cv_prop').textContent = formatCurrency(cv_prop_total);
+                document.getElementById('m2_giro_prop').textContent = `${formatNumber(giro_prop_m2)}x`;
+                document.getElementById('inv_prop_m2').textContent = formatCurrency(inv_prop_m2);
+                document.getElementById('inv_marg_m2').textContent = formatCurrency(inv_marg_m2);
+                
+                // Veredito
+                document.getElementById('lucro_marginal').textContent = formatCurrency(lucro_marginal);
+                document.getElementById('roic_m1').textContent = formatPercent(roic_m1);
+                document.getElementById('roic_m2').textContent = formatPercent(roic_m2);
+                document.getElementById('roic_medio').textContent = formatPercent(roic_medio);
+
+                const verdictCard = document.getElementById('verdict_card');
+                const verdictText = document.getElementById('verdict_text');
+                
+                verdictCard.classList.remove('border-green-400', 'bg-green-50', 'border-red-400', 'bg-red-50');
+
+                if (roic_medio > wacc_perc) {
+                    verdictCard.classList.add('border-green-400', 'bg-green-50');
+                    verdictText.innerHTML = `A proposta é <strong>vantajosa</strong>. O retorno médio sobre o investimento marginal (${formatPercent(roic_medio)}) é superior ao custo de capital (${formatPercent(wacc_perc)}).`;
+                } else {
+                    verdictCard.classList.add('border-red-400', 'bg-red-50');
+                    verdictText.innerHTML = `A proposta é <strong>desvantajosa</strong>. O retorno médio sobre o investimento marginal (${formatPercent(roic_medio)}) é inferior ao custo de capital (${formatPercent(wacc_perc)}).`;
+                }
+            }
+
+            inputs.forEach(input => input.addEventListener('input', calculateAnalysis));
+            calculateAnalysis(); // Executa ao carregar a página
+        });
+    </script>
+</body>
+</html>

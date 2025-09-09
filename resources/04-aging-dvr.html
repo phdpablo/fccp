@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Avançada de Medidas de Controle de Crédito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Vibrant Orange (#F18C22), Light Teal (#87CBCC), Dark Charcoal (#0D232C) -->
+    <!-- Application Structure Plan: The app is a two-part, in-depth learning module. Part 1, 'Aging Schedule', uses Chart.js and includes an explanatory text box on simulation. Part 2, the 'DVR Variation Analysis', uses a custom-built stacked bar visualization made with HTML/CSS. This bar now includes tooltips on hover to display the precise values for the 'Sales Effect' and 'Collection Effect', making the tool more interactive and informative. -->
+    <!-- Visualization & Content Choices: 
+        - Aging Schedule -> Goal: Analyze/Illustrate -> Method: Bar Chart (Chart.js) -> Interaction: Simulation button triggers chart update and shows a detailed explanation. -> Justification: Chart.js works well for this standard bar chart, and the added text enhances the pedagogical value.
+        - DVR Variation Analysis -> Goal: Decompose/Analyze -> Method: **Custom HTML/CSS Stacked Bar with Tooltips** -> Interaction: User inputs data; the HTML bar's segments update instantly. Hovering over a segment reveals a tooltip with its specific value, controlled by CSS `group-hover` and JS content updates. -> Justification: Adding tooltips significantly improves the usability of the custom bar chart, allowing for quick inspection of the data without needing to consult the summary text, which was a clear next step for this interactive component. Confirms NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        :root {
+            --brand-orange: #F18C22;
+            --brand-teal: #87CBCC;
+            --brand-charcoal: #0D232C;
+            --brand-light-bg: #F8F9FA;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light-bg);
+            color: var(--brand-charcoal);
+        }
+        .chart-container {
+            position: relative;
+            height: 40vh;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl font-bold tracking-tight" style="color: var(--brand-charcoal);">Análise Avançada de Medidas de Controle</h1>
+            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">Decomposição interativa da variação do Aging e do DVR.</p>
+        </header>
+
+        <main class="space-y-20">
+            <section id="aging">
+                <h2 class="text-3xl font-semibold text-center mb-10" style="color: var(--brand-charcoal);">1. Aging de Valores a Receber</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-gray-700 space-y-4">
+                        <h3 class="text-xl font-semibold" style="color: var(--brand-orange);">O que é?</h3>
+                        <p>O "Aging" (ou Envelhecimento) de Contas a Receber é um relatório que classifica os valores devidos pelos clientes de acordo com o tempo de atraso. Ele agrupa as faturas em categorias, como "A Vencer", "Vencido 1-30 dias", "Vencido 31-60 dias", etc.</p>
+                        <h3 class="text-xl font-semibold" style="color: var(--brand-orange);">Para que serve?</h3>
+                        <p>Sua principal função é fornecer uma visão clara da saúde da carteira de recebíveis. Ele ajuda a identificar rapidamente quais clientes estão com pagamentos em atraso, a estimar provisões para devedores duvidosos e a direcionar os esforços da equipe de cobrança de forma mais eficaz.</p>
+                    </div>
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-xl font-semibold text-center mb-4">Exemplo Ilustrativo</h3>
+                        <p class="text-center text-sm text-gray-600 mb-6">Abaixo, a carteira de recebíveis da Empresa Exemplo S.A. está classificada por tempo de atraso. O gráfico visualiza a distribuição desses valores.</p>
+                        <div class="chart-container">
+                            <canvas id="agingChart"></canvas>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <button id="simulateButton" class="px-6 py-2 rounded-lg font-semibold text-white transition-transform transform hover:scale-105" style="background-color: var(--brand-charcoal);">Simular Esforço de Cobrança</button>
+                        </div>
+                        <div id="simulation-explanation" class="hidden mt-4 p-4 bg-gray-50 rounded-lg text-sm text-gray-700 border">
+                            <h4 class="font-bold mb-2">Detalhe da Simulação:</h4>
+                            <p>Uma ação de cobrança focada foi realizada, resultando na liquidação de <strong>50%</strong> das dívidas na faixa de 31-60 dias (R$ 7.500) e <strong>25%</strong> das dívidas mais antigas, acima de 60 dias (R$ 2.500). Esses valores recuperados (total de R$ 10.000) foram reclassificados para o caixa (não exibido aqui), e a carteira de recebíveis em atraso foi reduzida, melhorando a saúde do crédito.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dvr">
+                <h2 class="text-3xl font-semibold text-center mb-10" style="color: var(--brand-charcoal);">2. Análise da Variação do DVR</h2>
+                 <div class="text-center max-w-3xl mx-auto text-gray-700 space-y-4 mb-12">
+                    <h3 class="text-xl font-semibold" style="color: var(--brand-orange);">Por que o saldo de Contas a Receber aumentou?</h3>
+                    <p>Frequentemente, um aumento no saldo de Valores a Receber (VR) pode ter duas causas principais: um aumento no volume de vendas (o que é positivo) ou uma demora maior para receber dos clientes (morosidade, o que é negativo). Esta ferramenta decompõe a variação total no saldo de VR para identificar a contribuição de cada um desses fatores.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 border-b pb-2">Defina o Cenário</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <fieldset class="bg-gray-50 p-4 rounded-md">
+                                    <legend class="font-semibold text-gray-800">Período Padrão</legend>
+                                    <div class="mt-2 space-y-3">
+                                        <div>
+                                            <label for="vendas_padrao" class="block text-sm font-medium text-gray-700">Vendas (R$)</label>
+                                            <input type="number" id="vendas_padrao" value="750000" class="mt-1 w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+                                        </div>
+                                        <div>
+                                            <label for="vr_padrao" class="block text-sm font-medium text-gray-700">VR Final (R$)</label>
+                                            <input type="number" id="vr_padrao" value="400000" class="mt-1 w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="bg-gray-50 p-4 rounded-md">
+                                    <legend class="font-semibold text-gray-800">Período Realizado</legend>
+                                    <div class="mt-2 space-y-3">
+                                        <div>
+                                            <label for="vendas_real" class="block text-sm font-medium text-gray-700">Vendas (R$)</label>
+                                            <input type="number" id="vendas_real" value="1500000" class="mt-1 w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+                                        </div>
+                                         <div>
+                                            <label for="vr_real" class="block text-sm font-medium text-gray-700">VR Final (R$)</label>
+                                            <input type="number" id="vr_real" value="900000" class="mt-1 w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                             <div class="mt-4">
+                                <label for="dias_periodo" class="block text-sm font-medium text-gray-700">Nº de Dias no Período</label>
+                                <input type="number" id="dias_periodo" value="30" class="mt-1 w-full rounded-md border-gray-300 shadow-sm sm:text-sm max-w-xs">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 border-b pb-2">Resultados da Análise</h3>
+                            <div class="space-y-4">
+                               <div class="flex justify-around text-center">
+                                    <div>
+                                        <p class="text-sm text-gray-600">DVR Padrão</p>
+                                        <p id="dvr_padrao_result" class="text-2xl font-bold" style="color: var(--brand-charcoal);"></p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-600">DVR Realizado</p>
+                                        <p id="dvr_real_result" class="text-2xl font-bold" style="color: var(--brand-charcoal);"></p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-100 p-4 rounded-lg">
+                                    <p class="text-center text-sm text-gray-600">Variação Total no Saldo de VR</p>
+                                    <p id="total_variacao" class="text-center text-3xl font-bold" style="color: var(--brand-orange);"></p>
+                                </div>
+                                <div>
+                                    <p class="text-center font-semibold mb-2">Decomposição da Variação</p>
+                                    <div class="w-full h-8 flex text-center">
+                                        <div id="vendas_bar_container" class="relative group transition-all duration-500" style="width: 0%;">
+                                            <div class="h-full rounded-l-full" style="background-color: var(--brand-teal);"></div>
+                                            <div id="vendas_tooltip" class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-max p-2 bg-gray-800 text-white text-sm rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none z-10"></div>
+                                        </div>
+                                        <div id="cobranca_bar_container" class="relative group transition-all duration-500" style="width: 0%;">
+                                            <div class="h-full rounded-r-full" style="background-color: var(--brand-orange);"></div>
+                                            <div id="cobranca_tooltip" class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-max p-2 bg-gray-800 text-white text-sm rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none z-10"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between text-xs mt-1 px-1">
+                                         <span class="w-1/2 text-left">Devido a Vendas</span>
+                                         <span class="w-1/2 text-right">Devido a Cobrança</span>
+                                    </div>
+                                </div>
+                                <div id="analysis_summary" class="text-center text-gray-700 text-sm mt-4 p-3 bg-teal-50 border border-teal-200 rounded-md"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="border-t border-gray-200 mt-20 pt-8 text-center text-sm text-gray-500">
+            <p>&copy; 2025 <a href="https://fccp.phdpablo.com/" target="_blank" rel="noopener noreferrer" class="hover:underline" style="color: var(--brand-orange);">fccp.phdpablo.com</a>. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Aging Chart Logic ---
+            const ctxAging = document.getElementById('agingChart').getContext('2d');
+            const initialData = [50000, 25000, 15000, 10000];
+            const originalData = [...initialData]; 
+            let isSimulated = false;
+
+            const agingChart = new Chart(ctxAging, {
+                type: 'bar',
+                data: {
+                    labels: ['A Vencer', '1-30 dias', '31-60 dias', '> 60 dias'],
+                    datasets: [{
+                        label: 'Valor a Receber (R$)',
+                        data: initialData,
+                        backgroundColor: ['#87CBCC', '#F18C22', '#f5a34e', '#f8c58f'],
+                        borderColor: '#0D232C',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, ticks: { callback: value => 'R$ ' + (value / 1000) + 'k' } } },
+                    plugins: { legend: { display: false }, tooltip: { callbacks: { label: context => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y) } } }
+                }
+            });
+
+            const simulateButton = document.getElementById('simulateButton');
+            const explanationDiv = document.getElementById('simulation-explanation');
+            simulateButton.addEventListener('click', () => {
+                if (isSimulated) {
+                    agingChart.data.datasets[0].data = [...originalData];
+                    simulateButton.textContent = 'Simular Esforço de Cobrança';
+                    simulateButton.style.backgroundColor = 'var(--brand-charcoal)';
+                    explanationDiv.classList.add('hidden');
+                } else {
+                    const recovered_31_60 = originalData[2] * 0.5;
+                    const recovered_over_60 = originalData[3] * 0.25;
+                    const simulatedData = [
+                        originalData[0], 
+                        originalData[1], 
+                        originalData[2] - recovered_31_60,
+                        originalData[3] - recovered_over_60
+                    ];
+                    agingChart.data.datasets[0].data = simulatedData;
+                    simulateButton.textContent = 'Restaurar Dados Originais';
+                    simulateButton.style.backgroundColor = 'var(--brand-teal)';
+                    explanationDiv.classList.remove('hidden');
+                }
+                isSimulated = !isSimulated;
+                agingChart.update();
+            });
+
+            // --- DVR Analysis Logic ---
+            const inputs = {
+                vendas_padrao: document.getElementById('vendas_padrao'),
+                vr_padrao: document.getElementById('vr_padrao'),
+                vendas_real: document.getElementById('vendas_real'),
+                vr_real: document.getElementById('vr_real'),
+                dias_periodo: document.getElementById('dias_periodo'),
+            };
+
+            const outputs = {
+                dvr_padrao: document.getElementById('dvr_padrao_result'),
+                dvr_real: document.getElementById('dvr_real_result'),
+                total_variacao: document.getElementById('total_variacao'),
+                summary: document.getElementById('analysis_summary'),
+                vendas_bar_container: document.getElementById('vendas_bar_container'),
+                cobranca_bar_container: document.getElementById('cobranca_bar_container'),
+                vendas_tooltip: document.getElementById('vendas_tooltip'),
+                cobranca_tooltip: document.getElementById('cobranca_tooltip'),
+            };
+
+            const formatCurrency = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+
+            function calculateAndDecomposeDVR() {
+                const v_padrao = parseFloat(inputs.vendas_padrao.value) || 0;
+                const r_padrao = parseFloat(inputs.vr_padrao.value) || 0;
+                const v_real = parseFloat(inputs.vendas_real.value) || 0;
+                const r_real = parseFloat(inputs.vr_real.value) || 0;
+                const dias = parseInt(inputs.dias_periodo.value) || 30;
+
+                const dvr_padrao = (v_padrao > 0) ? (r_padrao / v_padrao) * dias : 0;
+                const dvr_real = (v_real > 0) ? (r_real / v_real) * dias : 0;
+
+                const vendas_diarias_padrao = v_padrao / dias;
+                const vendas_diarias_real = v_real / dias;
+
+                const variacao_vendas = (vendas_diarias_real - vendas_diarias_padrao) * dvr_padrao;
+                const variacao_cobranca = (dvr_real - dvr_padrao) * vendas_diarias_real;
+                
+                const variacao_total = r_real - r_padrao;
+
+                outputs.dvr_padrao.textContent = `${dvr_padrao.toFixed(1)} dias`;
+                outputs.dvr_real.textContent = `${dvr_real.toFixed(1)} dias`;
+                outputs.total_variacao.textContent = formatCurrency(variacao_total);
+                
+                if (variacao_total > 0) {
+                    const vendas_percent = (variacao_vendas / variacao_total) * 100;
+                    const cobranca_percent = (variacao_cobranca / variacao_total) * 100;
+                    outputs.vendas_bar_container.style.width = `${vendas_percent}%`;
+                    outputs.cobranca_bar_container.style.width = `${cobranca_percent}%`;
+                } else {
+                    outputs.vendas_bar_container.style.width = '0%';
+                    outputs.cobranca_bar_container.style.width = '0%';
+                }
+                
+                outputs.vendas_tooltip.textContent = `Vendas: ${formatCurrency(variacao_vendas)}`;
+                outputs.cobranca_tooltip.textContent = `Cobrança: ${formatCurrency(variacao_cobranca)}`;
+
+                outputs.summary.innerHTML = `Do aumento total de <strong>${formatCurrency(variacao_total)}</strong> no saldo de VR, <strong>${formatCurrency(variacao_vendas)}</strong> são justificados pelo aumento nas vendas e <strong>${formatCurrency(variacao_cobranca)}</strong> são devidos a uma maior lentidão (morosidade) nos recebimentos.`;
+            }
+
+            Object.values(inputs).forEach(input => {
+                input.addEventListener('input', calculateAndDecomposeDVR);
+            });
+            
+            calculateAndDecomposeDVR();
+        });
+    </script>
+</body>
+</html>

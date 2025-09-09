@@ -41,10 +41,10 @@ A Curva ABC direciona a atenção gerencial para onde ela é mais crítica, gara
 
 Abaixo você pode visualizar a metodologia de cálculo da Curva ABC em operação, ou você pode expandir essa versão interativa do simulador da Curva ABC clicando no link:
 
-> [**Simulador da Curva ABC**](/resources/curvaABC.html)
+> [**Simulador da Curva ABC**](resources/05-curvaABC.html)
 
 ```{=html}
-<iframe src="/resources/curvaABC.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<iframe src="resources/05-curvaABC.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
 
 ## Decisões de Compra
@@ -104,7 +104,6 @@ O **Diagrama de Fluxo de Caixa** abaixo ilustra a saída de caixa (Custo) ocorre
 </div>
 ```
 
-
 <br>
 
 ### Cenário 2: Ciclo de Caixa Negativo
@@ -146,7 +145,7 @@ Note como a ordem dos eventos se inverte no **Diagrama de Fluxo de Caixa**: a en
         </div>
     </div>
 </div>
-```  
+```
 
 <br>
 
@@ -166,10 +165,10 @@ Onde $i = k_c$ se $CC > 0$, e $i = k_a$ se $CC < 0$. $PV$ é preço de venda que
 
 Abaixo você pode visualizar a formulação geral para tomada de decisões de compra de estoque em operação, ou você pode expandir essa versão interativa do Simulador de Decisões de Compra clicando no link:
 
-> [**Simulador Decisões de Compra**](/resources/decisoes-compra.html)
+> [**Simulador Decisões de Compra**](resources/05-decisoes-compra.html)
 
 ```{=html}
-<iframe src="/resources/decisoes-compra.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<iframe src="resources/05-decisoes-compra.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
 
 ## O Modelo do Lote Econômico de Compra (LEC)
@@ -208,12 +207,11 @@ $$
 
 $$
 \text{CM} = C_m \times \frac{Q}{2}
-$$ 
+$$
 
 *Q/2* representa o estoque médio (EM).
 
 O Custo Total (CT) é a soma dos dois custos: CP + CM
-
 
 $$
 \text{CT} = \left(C_p \times \frac{D}{Q}\right) + \left(C_m \times \frac{Q}{2}\right)
@@ -255,37 +253,36 @@ $$ <br>
 
 Abaixo você pode visualizar o LEC em operação, ou você pode expandir esse o Simulador do LEC no link:
 
-> [**Simulador LEC**](/resources/lec.html)
+> [**Simulador LEC**](resources/05-lec.html)
 
 ```{=html}
-<iframe src="/resources/lec.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<iframe src="resources/05-lec.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
+
 <br>
 
 ## Slides da Aula
 
 Abaixo você pode visualizar os slides da aula, ou você pode expandir essa versão dos slides clicando no link:
 
-> [**Slides da Aula**](/resources/estoque-ppt.html)
+> [**Slides da Aula**](resources/05-estoque-ppt.html)
 
 ```{=html}
-<iframe src="/resources/estoque-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<iframe src="resources/05-estoque-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
 
 <br>
 
-## Resumo em áudio
+## Resumo em Áudio
 
 A seguir, você pode ouvir um resumo em áudio do conteúdo desta seção:
 
-
 :::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
 ::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-<audio controls src="resources/estoque-podcast.mp3" style="width: 400px;">
+<audio controls src="resources/05-estoque-podcast.mp3" style="width: 400px;">
 
 Seu navegador não suporta o elemento de áudio.
 
 </audio>
 :::
 ::::
-

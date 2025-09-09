@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Conceitual de Valores a Receber</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Vibrant Orange (#F18C22), Light Teal (#87CBCC), Dark Charcoal (#0D232C) -->
+    <!-- Application Structure Plan: The application is structured as a single-page educational journey. It starts with the foundational '5 Cs of Credit' to establish context. It then moves to the 'Policy Levers', using a tabbed interface to explain the strategic choices a manager has. The core of this version is the new interactive 'Policy Impact Matrix', which allows users to select a policy change and immediately see its conceptual financial consequences, now including the critical impact on Sales Volume. This interactive matrix directly replaces any quantitative simulator, shifting the focus entirely to the theoretical cause-and-effect relationships. The flow is logical: What is credit analysis? -> What are my tools/levers? -> What is the impact of using these tools on sales and costs? -->
+    <!-- Visualization & Content Choices: 
+        - 5 Cs of Credit -> Goal: Inform/Organize -> Method: Themed cards (HTML/Tailwind) -> Interaction: None -> Justification: Breaks down a core framework into digestible, visually distinct components, using the new color palette.
+        - Policy Levers -> Goal: Explain/Compare -> Method: Tabbed interface (HTML/JS) -> Interaction: Click tabs -> Justification: Organizes four interrelated topics cleanly, allowing focused exploration of each strategic trade-off.
+        - Policy Impact Matrix -> Goal: Explore Relationships -> Method: Interactive Grid (HTML/JS) -> Interaction: User clicks on policy buttons (e.g., 'Flexibilizar Padrões') to dynamically update a 5-item grid showing the impact ('Aumenta'/'Reduz') on Sales Volume and key financial measures. Up/down arrows and colors provide instant visual cues. -> Justification: Transforms a static table (from the source PDF) into an engaging learning tool. It effectively demonstrates the complex relationships between credit policy and financial outcomes without needing any calculations, perfectly meeting the request. Confirms NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        :root {
+            --brand-orange: #F18C22;
+            --brand-teal: #87CBCC;
+            --brand-charcoal: #0D232C;
+            --brand-light-bg: #F8F9FA;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light-bg);
+            color: var(--brand-charcoal);
+        }
+        .tab-button.active {
+            border-color: var(--brand-orange);
+            color: var(--brand-orange);
+            font-weight: 600;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .policy-btn {
+            transition: all 0.2s ease-in-out;
+            border: 2px solid transparent;
+        }
+        .policy-btn.active {
+            background-color: var(--brand-charcoal);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .impact-card-content {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl font-bold tracking-tight" style="color: var(--brand-charcoal);">Dashboard Conceitual de Valores a Receber</h1>
+            <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">Uma exploração interativa dos conceitos e impactos da política de crédito.</p>
+        </header>
+
+        <main>
+            <section id="cinco-cs" class="mb-20">
+                <h2 class="text-3xl font-semibold text-center mb-10" style="color: var(--brand-charcoal);">Os 5 Cs da Análise de Crédito</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl mb-3">👤</div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--brand-orange);">Caráter</h3>
+                        <p class="text-gray-600 text-sm">A reputação e o histórico do cliente em cumprir suas obrigações.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl mb-3">💼</div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--brand-orange);">Capacidade</h3>
+                        <p class="text-gray-600 text-sm">A habilidade do cliente de gerar caixa suficiente para liquidar a dívida.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl mb-3">🏛️</div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--brand-orange);">Capital</h3>
+                        <p class="text-gray-600 text-sm">A saúde financeira e a base de capital (patrimônio) do cliente.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl mb-3">🔗</div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--brand-orange);">Colateral</h3>
+                        <p class="text-gray-600 text-sm">Ativos que podem ser oferecidos como garantia para mitigar o risco.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl mb-3">📈</div>
+                        <h3 class="text-xl font-semibold mb-2" style="color: var(--brand-orange);">Condições</h3>
+                        <p class="text-gray-600 text-sm">O ambiente econômico e setorial que pode afetar o pagamento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="politica-credito" class="mb-20">
+                <h2 class="text-3xl font-semibold text-center mb-10" style="color: var(--brand-charcoal);">Alavancas da Política de Crédito</h2>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div id="tabs-container" class="flex border-b border-gray-200 mb-6 space-x-4 sm:space-x-8">
+                        <button class="tab-button text-sm sm:text-base py-2 border-b-2 border-transparent active" data-target="tab1">Padrões de Crédito</button>
+                        <button class="tab-button text-sm sm:text-base py-2 border-b-2 border-transparent" data-target="tab2">Prazo de Concessão</button>
+                        <button class="tab-button text-sm sm:text-base py-2 border-b-2 border-transparent" data-target="tab3">Descontos</button>
+                        <button class="tab-button text-sm sm:text-base py-2 border-b-2 border-transparent" data-target="tab4">Política de Cobrança</button>
+                    </div>
+                    <div id="tab-content-container">
+                        <div id="tab1" class="tab-content active">
+                            <h3 class="text-xl font-bold mb-3" style="color: var(--brand-orange);">Padrões de Crédito: Para quem vender?</h3>
+                            <p class="text-gray-700 mb-4">Define a qualidade mínima do cliente para receber crédito. É a porta de entrada da sua carteira.</p>
+                        </div>
+                        <div id="tab2" class="tab-content">
+                             <h3 class="text-xl font-bold mb-3" style="color: var(--brand-orange);">Prazo de Concessão: Quanto tempo para pagar?</h3>
+                            <p class="text-gray-700 mb-4">O período que o cliente tem para quitar a fatura. Influencia tanto a atratividade da oferta quanto o capital de giro.</p>
+                        </div>
+                        <div id="tab3" class="tab-content">
+                            <h3 class="text-xl font-bold mb-3" style="color: var(--brand-orange);">Descontos Financeiros: Incentivar o pagamento antecipado?</h3>
+                            <p class="text-gray-700 mb-4">Oferecer uma redução no preço para clientes que pagam antes do vencimento (ex: 2% se pagar em 10 dias).</p>
+                        </div>
+                        <div id="tab4" class="tab-content">
+                            <h3 class="text-xl font-bold mb-3" style="color: var(--brand-orange);">Política de Cobrança: Como lidar com atrasos?</h3>
+                            <p class="text-gray-700 mb-4">Conjunto de procedimentos adotados quando um cliente não cumpre o prazo de pagamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="impacto-financeiro" class="mb-20">
+                <h2 class="text-3xl font-semibold text-center mb-4" style="color: var(--brand-charcoal);">Matriz de Impacto da Política de Crédito</h2>
+                <p class="text-center text-gray-700 mb-10 max-w-3xl mx-auto">Toda decisão de crédito gera consequências. Selecione uma ação abaixo e observe seu impacto esperado no volume de vendas e nas principais medidas financeiras.</p>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold text-center mb-4" style="color: var(--brand-charcoal);">Selecione a Ação da Política de Crédito:</h3>
+                        <div id="policy-controls" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="flex flex-col gap-2">
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="padroes-flexibilizar">Flexibilizar Padrões</button>
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="padroes-apertar">Apertar Padrões</button>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="prazo-aumentar">Aumentar Prazo</button>
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="prazo-diminuir">Diminuir Prazo</button>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="desconto-conceder">Conceder Desconto</button>
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="desconto-eliminar">Eliminar Desconto</button>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="cobranca-intensificar">Intensificar Cobrança</button>
+                                <button class="policy-btn w-full px-4 py-2 rounded-md bg-gray-200 text-gray-800 font-semibold" data-policy="cobranca-relaxar">Relaxar Cobrança</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-lg font-semibold text-center mb-6" style="color: var(--brand-charcoal);">Impacto Esperado:</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                            <div class="impact-card bg-gray-50 p-5 rounded-lg border">
+                                <h4 class="font-bold text-gray-700 mb-2">Volume de Vendas</h4>
+                                <div id="impact-volume-vendas" class="impact-card-content text-xl font-bold flex items-center justify-center h-16">Selecione uma ação</div>
+                            </div>
+                            <div class="impact-card bg-gray-50 p-5 rounded-lg border">
+                                <h4 class="font-bold text-gray-700 mb-2">Desp. com Devedores Duvidosos</h4>
+                                <div id="impact-desp-duvidosos" class="impact-card-content text-xl font-bold flex items-center justify-center h-16">Selecione uma ação</div>
+                            </div>
+                            <div class="impact-card bg-gray-50 p-5 rounded-lg border">
+                                <h4 class="font-bold text-gray-700 mb-2">Desp. Gerais de Crédito</h4>
+                                <div id="impact-desp-credito" class="impact-card-content text-xl font-bold flex items-center justify-center h-16">Selecione uma ação</div>
+                            </div>
+                            <div class="impact-card bg-gray-50 p-5 rounded-lg border">
+                                <h4 class="font-bold text-gray-700 mb-2">Desp. com Cobrança</h4>
+                                <div id="impact-desp-cobranca" class="impact-card-content text-xl font-bold flex items-center justify-center h-16">Selecione uma ação</div>
+                            </div>
+                            <div class="impact-card bg-gray-50 p-5 rounded-lg border">
+                                <h4 class="font-bold text-gray-700 mb-2">Investimento em Contas a Receber</h4>
+                                <div id="impact-inv-marginal" class="impact-card-content text-xl font-bold flex items-center justify-center h-16">Selecione uma ação</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="border-t border-gray-200 mt-20 pt-8 text-center text-sm text-gray-500">
+            <p>&copy; 2025 <a href="https://fccp.phdpablo.com/" target="_blank" rel="noopener noreferrer" class="hover:underline" style="color: var(--brand-orange);">fccp.phdpablo.com</a>. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabsContainer = document.getElementById('tabs-container');
+            const contentContainer = document.getElementById('tab-content-container');
+            
+            tabsContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('tab-button')) {
+                    const targetId = event.target.dataset.target;
+                    
+                    tabsContainer.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+                    event.target.classList.add('active');
+                    
+                    contentContainer.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                    document.getElementById(targetId).classList.add('active');
+                }
+            });
+
+            const policyImpacts = {
+                'padroes-flexibilizar': {
+                    'volume-vendas': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-duvidosos': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-credito': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-cobranca': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'inv-marginal': { text: 'Aumenta', color: 'var(--brand-orange)' }
+                },
+                'padroes-apertar': {
+                    'volume-vendas': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-duvidosos': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-credito': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-cobranca': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'inv-marginal': { text: 'Reduz', color: 'var(--brand-teal)' }
+                },
+                'prazo-aumentar': {
+                    'volume-vendas': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-duvidosos': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-credito': { text: 'Inalterado', color: '#6b7280' },
+                    'desp-cobranca': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'inv-marginal': { text: 'Aumenta', color: 'var(--brand-orange)' }
+                },
+                'prazo-diminuir': {
+                    'volume-vendas': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-duvidosos': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-credito': { text: 'Inalterado', color: '#6b7280' },
+                    'desp-cobranca': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'inv-marginal': { text: 'Reduz', color: 'var(--brand-teal)' }
+                },
+                'desconto-conceder': {
+                    'volume-vendas': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-duvidosos': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-credito': { text: 'Inalterado', color: '#6b7280' },
+                    'desp-cobranca': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'inv-marginal': { text: 'Reduz', color: 'var(--brand-teal)' }
+                },
+                'desconto-eliminar': {
+                    'volume-vendas': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-duvidosos': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-credito': { text: 'Inalterado', color: '#6b7280' },
+                    'desp-cobranca': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'inv-marginal': { text: 'Aumenta', color: 'var(--brand-orange)' }
+                },
+                 'cobranca-intensificar': {
+                    'volume-vendas': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-duvidosos': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'desp-credito': { text: 'Inalterado', color: '#6b7280' },
+                    'desp-cobranca': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'inv-marginal': { text: 'Reduz', color: 'var(--brand-teal)' }
+                },
+                'cobranca-relaxar': {
+                    'volume-vendas': { text: 'Inalterado', color: '#6b7280' },
+                    'desp-duvidosos': { text: 'Aumenta', color: 'var(--brand-orange)' },
+                    'desp-credito': { text: 'Inalterado', color: '#6b7280' },
+                    'desp-cobranca': { text: 'Reduz', color: 'var(--brand-teal)' },
+                    'inv-marginal': { text: 'Aumenta', color: 'var(--brand-orange)' }
+                }
+            };
+
+            const controlsContainer = document.getElementById('policy-controls');
+            const impactElements = {
+                'volume-vendas': document.getElementById('impact-volume-vendas'),
+                'desp-duvidosos': document.getElementById('impact-desp-duvidosos'),
+                'desp-credito': document.getElementById('impact-desp-credito'),
+                'desp-cobranca': document.getElementById('impact-desp-cobranca'),
+                'inv-marginal': document.getElementById('impact-inv-marginal')
+            };
+
+            function updateImpactDisplay(policyKey) {
+                const impacts = policyImpacts[policyKey];
+                if (!impacts) return;
+
+                for (const measure in impacts) {
+                    const element = impactElements[measure];
+                    const impact = impacts[measure];
+                    
+                    let arrow = '';
+                    if (impact.text === 'Aumenta') arrow = '↑ ';
+                    if (impact.text === 'Reduz') arrow = '↓ ';
+                    
+                    element.style.opacity = '0';
+                    setTimeout(() => {
+                        element.innerHTML = `${arrow}${impact.text}`;
+                        element.style.color = impact.color;
+                        element.style.opacity = '1';
+                    }, 200);
+                }
+            }
+
+            controlsContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    const policy = e.target.dataset.policy;
+                    
+                    controlsContainer.querySelectorAll('.policy-btn').forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+                    
+                    updateImpactDisplay(policy);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

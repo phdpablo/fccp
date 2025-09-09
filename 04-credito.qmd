@@ -1,3 +1,118 @@
 # Administração de Recebíveis {#sec-credito}
 
+<br>
 
+A gestão de Valores a Receber (VR) é uma área fundamental das finanças corporativas de curto prazo que lida com a administração dos créditos concedidos aos clientes nas vendas a prazo. Para muitas empresas, essa é uma estratégia essencial para impulsionar as vendas e manter a competitividade. No entanto, conceder crédito significa também investir recursos da empresa e assumir o risco de não recebimento.
+
+O objetivo de uma boa gestão de crédito é encontrar um equilíbrio ótimo entre maximizar as vendas e a rentabilidade, e minimizar os custos e os riscos associados. Isso é alcançado por meio de uma **Política de Crédito** bem estruturada.
+
+<br>
+
+## Os Pilares de uma Política de Crédito
+
+Uma política de crédito eficaz é construída sobre quatro elementos principais, que funcionam como alavancas que a empresa pode ajustar para atingir seus objetivos.
+
+1.  **Padrões de Crédito:** Define o perfil mínimo de risco que um cliente deve ter para receber crédito. Padrões mais flexíveis podem aumentar as vendas, mas também elevam o risco de inadimplência. Padrões mais rígidos fazem o oposto.
+2.  **Prazo de Concessão:** É o tempo que o cliente tem para pagar. Prazos mais longos podem atrair mais clientes, mas aumentam o montante de dinheiro que a empresa precisa investir em suas contas a receber.
+3.  **Descontos por Pagamento Antecipado:** Oferecer um desconto para quem paga antes do vencimento é uma forma de acelerar o recebimento de caixa. A empresa deve avaliar se o custo do desconto compensa o benefício de ter o dinheiro disponível mais cedo.
+4.  **Política de Cobrança:** Refere-se aos procedimentos usados para cobrar clientes em atraso. Uma política mais agressiva pode reduzir perdas, mas também pode prejudicar o relacionamento com os clientes.
+
+<br>
+
+## Risco do Crédito
+
+Antes de conceder crédito, é crucial avaliar a capacidade e a disposição do cliente em pagar. Um método clássico para essa análise é o dos **"Cinco Cs do Crédito"**:
+
+-   **Caráter:** A reputação e o histórico do cliente indicam sua vontade de honrar as dívidas.
+-   **Capacidade:** A habilidade do cliente de gerar caixa suficiente para pagar o crédito.
+-   **Capital:** A saúde financeira geral do cliente, incluindo seu patrimônio.
+-   **Garantias (Collateral):** Ativos que o cliente pode oferecer para assegurar o pagamento da dívida.
+-   **Condições:** O ambiente econômico e setorial que pode afetar a capacidade de pagamento do cliente.
+
+<br>
+
+### Dashboard Conceitual VR
+
+Abaixo você pode explorar os conceitos acima e visualizar o impacto esperado dos elementos da política de crédito em algumas medidas financeiras, ou você pode expandir essa versão interativa do dashboard clicando no link:
+
+> [**Dashboard Conceitual VR**](resources/04-intro.html)
+
+```{=html}
+<iframe src="resources/04-intro.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+## Alterações nos Padrões de Crédito
+
+Qualquer alteração na política de crédito deve ser tratada como uma **decisão de investimento**. A análise fundamental consiste em comparar os benefícios marginais com os custos marginais.
+
+-   **Benefício Marginal:** Geralmente, é o lucro adicional gerado pelo aumento nas vendas decorrente da nova política.
+-   **Custo Marginal:** Inclui o aumento das despesas com inadimplência, custos de administração e, crucialmente, o custo do investimento adicional em valores a receber.
+
+A regra de decisão é simples: se o retorno gerado pelo lucro adicional for maior que o custo de financiar o investimento extra, a mudança na política de crédito é vantajosa e cria valor para a empresa.
+
+### Cálculo do Investimento Marginal em VR
+
+Abaixo você pode explorar uma calculadora que compara o cálculo do investimento marginal em VR utilizando as metodologias de **Lucro Embutido** e **Custo Variável**, ou você pode expandir essa versão interativa da calculadora clicando no link:
+
+> [**Simulador Investimento em VR**](resources/04-invVR.html)
+
+```{=html}
+<iframe src="resources/04-invVR.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+## Controle do Crédito
+
+Uma vez que a política está em vigor, é essencial monitorar o desempenho da carteira de recebíveis para garantir que tudo está correndo como planejado. As duas principais ferramentas para isso são:
+
+### Aging de Valores a Receber
+
+O Aging (ou classificação por idade/vencimento) é um relatório que organiza as contas a receber por faixas de tempo (ex: a vencer, vencidas há 1-30 dias, vencidas há 31-60 dias, etc.). Ele permite visualizar rapidamente a porcentagem de contas em atraso, sendo um excelente indicador da qualidade da carteira.
+
+### Dias de Vendas a Receber (DVR)
+
+O DVR (em inglês, *Days Sales Outstanding* - DSO) mede o número médio de dias que a empresa leva para receber o pagamento de uma venda.\
+A fórmula é:
+
+$$\text{DVR} = \frac{\text{Saldo de Valores a Receber}}{\text{Vendas Médias Diárias}}$$
+
+Um DVR crescente pode sinalizar problemas na cobrança. É importante usar o DVR em conjunto com o Aging, pois uma média pode esconder problemas específicos em certas faixas de vencimento.
+
+<br>
+
+### Simulador Aging/DVR
+
+Abaixo você pode explorar como utilizar essas ferramentas para controle do crédito, ou você pode expandir essa versão interativa da análise clicando no link:
+
+> [**Simulador Aging/DVR**](resources/04-aging-dvr.html)
+
+```{=html}
+<iframe src="resources/04-aging-dvr.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+## Slides da Aula
+
+A administração de VR é uma função estratégica que equilibra objetivos de marketing e vendas com a prudência financeira. Uma política de crédito bem definida, uma análise de risco criteriosa e um monitoramento contínuo são essenciais para que a concessão de crédito se traduza em um aumento sustentável da lucratividade e do valor da empresa.
+
+Abaixo você pode visualizar os slides da aula, ou você pode expandir essa versão dos slides clicando no link:
+
+> [**Slides da Aula**](resources/04-credito-ppt.html)
+
+```{=html}
+<iframe src="resources/04-credito-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+<br>
+
+## Resumo em Áudio
+
+A seguir, você pode ouvir um resumo em áudio do conteúdo desta seção:
+
+:::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
+<audio controls src="resources/04-credito-podcast.mp3" style="width: 400px;">
+
+Seu navegador não suporta o elemento de áudio.
+
+</audio>
+:::
+::::

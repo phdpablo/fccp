@@ -1,0 +1,606 @@
+---
+title: "Administração de Recebíveis"
+subtitle: "Políticas, Padrões e Risco"
+author: "Dr. Pablo Rogers"
+format:
+  revealjs:
+    theme: sky
+    slide-number: true
+    chalkboard: true
+    height: 750
+    width: 1600
+    preview-links: auto
+    logo: ""
+    footer: "FCCP | Administração de Recebíveis"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
+---
+
+## Agenda da Apresentação
+
+<br>
+
+::: incremental
+1.  **Tipos de Crédito e Fundamentos**
+2.  **Análise de Risco Creditício**
+3.  **Componentes da Política de Crédito**
+4.  **Métricas Financeiras do Crédito**
+5.  **Controles e Indicadores de Gestão**
+:::
+
+------------------------------------------------------------------------
+
+## Categorias de Crédito
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Crédito Comercial**
+
+-   Relações entre empresas e seus clientes
+-   Operações business-to-business
+-   Vendas a prazo no mercado
+-   Financiamento de curto prazo
+:::
+
+::: {.column width="50%"}
+**Crédito ao Consumidor**
+
+-   Gerenciado por instituições financeiras
+-   Direcionado a pessoas físicas
+-   Produtos bancários diversos
+-   Cartões de crédito e empréstimos
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Fundamentos da Política de Crédito
+
+::: incremental
+**Componentes Essenciais:**
+
+-   Definição de critérios de concessão
+-   Estabelecimento de prazos de pagamento
+-   Política de descontos e incentivos
+-   Procedimentos de cobrança e recuperação
+
+**Objetivo Principal:**
+
+Estabelecer diretrizes alinhadas ao apetite de risco empresarial
+:::
+
+------------------------------------------------------------------------
+
+## Metodologia dos 5 C's do Crédito
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**1. Caráter**
+
+Histórico e intenção de pagamento do cliente
+
+**2. Capacidade**
+
+Habilidade de gerar recursos para honrar compromissos
+:::
+
+::: {.column width="50%"}
+**3. Capital**
+
+Análise patrimonial e solidez financeira do tomador
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Continuação dos 5 C's
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**4. Colateral**
+
+Garantias oferecidas como respaldo da operação
+:::
+
+::: {.column width="50%"}
+**5. Condições**
+
+Cenário econômico e setorial que afeta a capacidade de pagamento
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Metodologias de Avaliação de Risco
+
+::: incremental
+**Abordagem Tradicional:**
+
+-   Histórico de relacionamento comercial com o cliente
+-   Análise temporal das demonstrações financeiras
+-   Consultas a bureaus de crédito (Serasa, SPC, etc.)
+-   Aplicação de métricas setoriais padronizadas
+-   Modelos estatísticos e análise quantitativa
+:::
+
+------------------------------------------------------------------------
+
+## Estrutura da Política de Crédito
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Critérios de Concessão**
+
+Classificação de clientes por níveis de risco para dimensionar perdas potenciais em grupos homogêneos
+
+**Definição de Prazos**
+
+Considera concorrência, perfil do mercado, tipo de produto e conjuntura econômica
+:::
+
+::: {.column width="50%"}
+**Incentivos Financeiros**
+
+Reduções no preço para pagamentos antecipados visando acelerar recebimentos ou reduzir custo de capital
+
+**Estratégias de Recuperação**
+
+Equilibra benefícios da redução de inadimplência com possíveis impactos nas vendas por rigidez excessiva
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Métricas Financeiras Fundamentais
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Provisão para Perdas**
+
+Percentual estimado de inadimplência baseado em histórico e perfil de risco assumido
+
+**Custos Administrativos**
+
+Despesas com análise de crédito, manutenção de departamento especializado e serviços de informação
+:::
+
+::: {.column width="50%"}
+**Despesas de Recuperação**
+
+Custos com procedimentos de cobrança, ações legais e serviços bancários relacionados
+
+**Custo de Capital**
+
+Taxa de retorno requerida sobre o investimento adicional em contas a receber
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Relação Entre Política e Métricas
+
+| **Elemento da Política** | **Impacto nas Vendas** | **Investimento em Recebíveis** | **Despesas de Crédito** | **Perdas com Inadimplência** |
+|----|----|----|----|----|
+| Flexibilização dos critérios | Aumenta | Aumenta | Aumenta | Aumenta |
+| Extensão de prazos | Aumenta | Aumenta | Mantém | Pode aumentar |
+| Maior desconto à vista | Aumenta | Diminui | Diminui | Diminui |
+| Cobrança mais rigorosa | Pode diminuir | Diminui | Aumenta | Diminui |
+| Restrição de crédito | Diminui | Diminui | Diminui | Diminui |
+
+------------------------------------------------------------------------
+
+## Cenário 1: Flexibilização dos Critérios
+
+::: incremental
+**Efeitos da Liberação do Crédito:**
+
+-   Expectativa imediata de crescimento nas vendas
+-   Maior necessidade de capital de giro
+-   Aumento do investimento em contas a receber
+-   Elevação das despesas operacionais de crédito
+-   Crescimento da provisão para inadimplência
+:::
+
+------------------------------------------------------------------------
+
+## Cenário 2: Ampliação de Descontos
+
+::: incremental
+**Consequências dos Maiores Descontos:**
+
+-   Estímulo ao aumento do volume de vendas
+-   Redução do preço efetivo para o comprador
+-   Diminuição do capital investido em recebíveis
+-   Redução das despesas de crédito
+-   Incentivo à antecipação de pagamentos
+:::
+
+------------------------------------------------------------------------
+
+## Caso Prático: Empresa Modelo S.A.
+
+**Estrutura de Custos e Despesas:**
+
+::::: columns
+::: {.column width="50%"}
+**Custos Produtivos**
+
+-   Variáveis: 30% do faturamento
+-   Fixos mensais: R\$ 620.000
+:::
+
+::: {.column width="50%"}
+**Despesas Operacionais**
+
+-   Administrativas variáveis: 4% das vendas
+-   Administrativas fixas: R\$ 210.000/mês
+:::
+:::::
+
+**Política de Crédito:**
+
+-   Provisão para inadimplência: 2% das vendas a prazo
+-   Despesas de cobrança: 3% das vendas a prazo
+-   Prazo médio de recebimento: 45 dias (1,5 mês)
+
+------------------------------------------------------------------------
+
+## Análise do Cenário Base {.smaller}
+
+**Premissas:** Vendas mensais de R\$ 1.500.000 (60% a prazo)
+
+| **Demonstração de Resultados** | **Total** | **Vendas a Prazo** | **Vendas à Vista** |
+|----|----|----|----|
+| Receita de Vendas | 1.500.000 | 900.000 | 600.000 |
+| **(-) Custos e Despesas Variáveis:** |  |  |  |
+| Custos de produção (30%) | 450.000 | 270.000 | 180.000 |
+| Despesas administrativas (4%) | 60.000 | 36.000 | 24.000 |
+| Provisão inadimplência (2% VP) | 18.000 | 18.000 | \- |
+| Despesas de cobrança (3% VP) | 27.000 | 27.000 | \- |
+| **Total Variável** | 555.000 | 351.000 | 204.000 |
+| **Margem de Contribuição** | 945.000 | 549.000 | 396.000 |
+| **(-) Custos e Despesas Fixos:** |  |  |  |
+| Custos de produção | 620.000 |  |  |
+| Despesas administrativas | 210.000 |  |  |
+| **Resultado Operacional** | 115.000 |  |  |
+
+------------------------------------------------------------------------
+
+## Proposta de Mudança na Política
+
+::: incremental
+**Análise de Cenário Alternativo:**
+
+-   Maior flexibilidade nos critérios de concessão
+-   Projeção de aumento de 15% nas vendas totais
+-   Vendas a prazo passariam para R\$ 1.125.000
+-   Volume total alcançaria R\$ 1.725.000
+-   Prazo médio de recebimento aumentaria para 60 dias
+
+**Premissa inicial:** Mantém-se inalterados os percentuais de custos e despesas, incluindo a provisão para inadimplência
+:::
+
+------------------------------------------------------------------------
+
+## Resultado com Nova Política {.smaller}
+
+| **Demonstração de Resultados** | **Total** | **Vendas a Prazo** | **Vendas à Vista** |
+|----|----|----|----|
+| Receita de Vendas | 1.725.000 | 1.125.000 | 600.000 |
+| **(-) Custos e Despesas Variáveis:** |  |  |  |
+| Custos de produção (30%) | 517.500 | 337.500 | 180.000 |
+| Despesas administrativas (4%) | 69.000 | 45.000 | 24.000 |
+| Provisão inadimplência (2% VP) | 22.500 | 22.500 | \- |
+| Despesas de cobrança (3% VP) | 33.750 | 33.750 | \- |
+| **Total Variável** | 642.750 | 438.750 | 204.000 |
+| **Margem de Contribuição** | 1.082.250 | 686.250 | 396.000 |
+| **(-) Custos e Despesas Fixos:** |  |  |  |
+| Custos de produção | 620.000 |  |  |
+| Despesas administrativas | 210.000 |  |  |
+| **Resultado Operacional** | 252.250 |  |  |
+
+------------------------------------------------------------------------
+
+## Análise Comparativa Inicial
+
+::: incremental
+**Incremento na Margem de Contribuição:**
+
+-   Situação proposta: R\$ 686.250
+-   Situação original: R\$ 549.000
+-   **Ganho adicional: R\$ 137.250**
+
+**Evolução da Margem Operacional:**
+
+-   Cenário original: 115.000 ÷ 1.500.000 = **7,67%**
+-   Cenário proposto: 252.250 ÷ 1.725.000 = **14,62%**
+
+À primeira vista, a flexibilização parece vantajosa...
+:::
+
+------------------------------------------------------------------------
+
+## Cálculo do Investimento em Recebíveis
+
+**Metodologia de Cálculo:**
+
+::: incremental
+**Situação Original:**
+
+-   Saldo médio de duplicatas: R\$ 1.350.000
+-   Lucro embutido: (115.000 ÷ 1.500.000) × 1.350.000 = R\$ 103.500
+-   Investimento líquido: 1.350.000 - 103.500 = **R\$ 1.246.500**
+
+**Situação Proposta:**
+
+-   Novo saldo médio: R\$ 2.250.000
+-   Lucro embutido: (252.250 ÷ 1.725.000) × 2.250.000 = R\$ 329.022
+-   Investimento líquido: 2.250.000 - 329.022 = **R\$ 1.920.978**
+:::
+
+------------------------------------------------------------------------
+
+## Investimento Marginal Necessário
+
+::: incremental
+**Cálculo do Investimento Adicional:**
+
+Investimento proposto - Investimento original = R\$ 1.920.978 - R\$ 1.246.500 = **R\$ 674.478**
+
+**Análise de Viabilidade:**
+
+| **Indicador**              | **Original** | **Proposto** | **Incremental** |
+|----------------------------|--------------|--------------|-----------------|
+| Lucro Operacional          | 115.000      | 252.250      | 137.250         |
+| Investimento em Duplicatas | 1.093.000    | 1.700.500    | 607.500         |
+
+**Questão Central:** Vale a pena investir R\$ 607.500 adicionais para obter R\$ 137.250 de lucro incremental?
+:::
+
+------------------------------------------------------------------------
+
+## Cenário com Maior Risco
+
+**Ajuste nas Premissas de Risco:**
+
+::: incremental
+-   Provisão para inadimplência: de 2% para **4%**
+-   Despesas de cobrança: de 3% para **5%**
+
+Recalculando os resultados:
+:::
+
+| **Item**                           | **Original** | **Nova Proposta** |
+|------------------------------------|--------------|-------------------|
+| Vendas a prazo                     | 900.000      | 1.125.000         |
+| (-) Custos produção e desp. admin. | 306.000      | 382.500           |
+| (-) Provisão inadimplência         | 18.000       | 45.000            |
+| (-) Despesas de cobrança           | 27.000       | 56.250            |
+| **Total Custos Variáveis**         | 351.000      | 483.750           |
+| **Margem de Contribuição**         | 549.000      | 641.250           |
+
+------------------------------------------------------------------------
+
+## Análise Final com Risco Ajustado
+
+::: incremental
+**Novo Investimento Incremental:**
+
+-   Custos variáveis adicionais (exceto inadimplência): R\$ 105.750
+-   Multiplicado pelo prazo médio (2 meses): R\$ 211.500
+-   Mais investimento base: R\$ 441.000
+-   **Total do investimento incremental: R\$ 652.500**
+
+**Lucro Incremental:**
+
+-   Margem adicional: R\$ 641.250 - R\$ 549.000 = **R\$ 92.250**
+
+**Retorno sobre Investimento Marginal:**
+
+-   ROI = 92.250 ÷ 652.500 = **14,14% ao ano**
+:::
+
+------------------------------------------------------------------------
+
+## Ferramentas de Monitoramento
+
+::: incremental
+**Objetivos do Controle de Recebíveis:**
+
+1.  Mensurar atrasos no recebimento de clientes
+2.  Avaliar o comportamento de pagamento por segmento
+3.  Identificar causas de variações na carteira
+4.  Implementar ações corretivas tempestivas
+:::
+
+------------------------------------------------------------------------
+
+## Análise de Aging (Idade dos Recebíveis)
+
+**Conceito:** Classificação cronológica da carteira de recebíveis
+
+::: incremental
+**Características:**
+
+-   Demonstra a distribuição temporal dos valores
+-   Identifica concentrações por vencimento
+-   Facilita a gestão de cobrança
+-   Permite projeções de fluxo de caixa
+:::
+
+------------------------------------------------------------------------
+
+## Exemplo de Relatório de Aging
+
+**Posição da Carteira em 31/12/X8:**
+
+| **Classificação**                     | **Valor (R\$)** | **Percentual** |
+|---------------------------------------|-----------------|----------------|
+| **Duplicatas a Vencer:**              |                 |                |
+| Vencimento em janeiro/X9              | 153.000         | 51%            |
+| Vencimento em fevereiro/X9            | 99.000          | 33%            |
+| **Subtotal a Vencer**                 | 252.000         | 84%            |
+| **Duplicatas Vencidas:**              |                 |                |
+| Vencidas em dezembro/X8 (até 30 dias) | 33.000          | 11%            |
+| Vencidas em novembro/X8 (31-60 dias)  | 15.000          | 5%             |
+| **Subtotal Vencidas**                 | 48.000          | 16%            |
+| **Total da Carteira**                 | 300.000         | 100%           |
+
+------------------------------------------------------------------------
+
+## Indicador: Dias de Vendas a Receber (DVR)
+
+::: incremental
+**Definição:** Prazo médio para conversão das vendas em caixa
+
+**Fórmula:**
+
+$$\text{DVR} = \frac{\text{Saldo de Duplicatas a Receber}}{\text{Vendas Diárias Médias}}$$
+
+**Aplicações:**
+
+-   Medir eficiência da cobrança
+-   Estimar investimento em recebíveis
+-   Comparar com padrões do setor
+-   Avaliar tendências temporais
+:::
+
+------------------------------------------------------------------------
+
+## Cálculo Prático do DVR
+
+**Exemplo Ilustrativo:**
+
+::: incremental
+**Dados:**
+
+-   Vendas anuais: R\$ 108.000.000
+-   Duplicatas a receber (final do período): R\$ 10.200.000
+
+**Cálculo:**
+
+-   Vendas diárias médias: 108.000.000 ÷ 360 = R\$ 300.000
+-   DVR = 10.200.000 ÷ 300.000 = **34 dias**
+
+**Interpretação:** A empresa leva em média 34 dias para receber suas vendas
+:::
+
+------------------------------------------------------------------------
+
+## DVR e Composição da Carteira
+
+**Análise Comparativa entre Empresas:**
+
+| **Classificação**     | **Empresa I** |       | **Empresa II** |       |
+|-----------------------|---------------|-------|----------------|-------|
+|                       | **Valor**     | **%** | **Valor**      | **%** |
+| Vencidas mês anterior | 1.000.000     | 10%   | 1.000.000      | 10%   |
+| A vencer no mês       | 2.500.000     | 25%   | 2.500.000      | 25%   |
+| A vencer em 1 mês     | 4.500.000     | 45%   | 2.000.000      | 20%   |
+| A vencer em 2 meses   | 2.000.000     | 20%   | 2.500.000      | 25%   |
+| A vencer em 3 meses   | \-            | \-    | 2.000.000      | 20%   |
+| **Total**             | 10.000.000    | 100%  | 10.000.000     | 100%  |
+
+**DVR calculado:** Ambas = 40 dias (com vendas mensais de R\$ 7.500.000)
+
+------------------------------------------------------------------------
+
+## Análise de Variações em Recebíveis
+
+**Cenário Padrão Estabelecido (Bimestre):**
+
+| **Período**   | **Vendas** | **Saldo Final de Recebíveis** | **DVR** |
+|---------------|------------|-------------------------------|---------|
+| 1º mês padrão | 750.000    | 200.000                       | 8 dias  |
+| 2º mês padrão | 750.000    | 400.000                       | 16 dias |
+| **Total**     | 1.500.000  | 600.000                       | 24 dias |
+
+------------------------------------------------------------------------
+
+## Resultados Realizados vs. Padrão
+
+**Desempenho Real do Bimestre:**
+
+| **Período** | **Vendas** | **Saldo Final de Recebíveis** | **DVR** |
+|-------------|------------|-------------------------------|---------|
+| Janeiro     | 1.125.000  | 300.000                       | 8 dias  |
+| Fevereiro   | 1.500.000  | 900.000                       | 18 dias |
+| **Total**   | 2.625.000  | 1.200.000                     | \-      |
+
+------------------------------------------------------------------------
+
+## Decomposição das Variações
+
+**Análise dos Desvios em Recebíveis:**
+
+| **Mês** | **Padrão** | **Real** | **Variação Total** | **Devido a Vendas** | **Devido a Cobrança** |
+|----|----|----|----|----|----|
+| 1º mês | 200.000 | 300.000 | 100.000 | 100.000 | \- |
+| 2º mês | 400.000 | 900.000 | 500.000 | 400.000 | 100.000 |
+| **Total** | 600.000 | 1.200.000 | 600.000 | 500.000 | 100.000 |
+
+::: incremental
+**Interpretação:**
+
+-   Aumento de R\$ 600.000 (100%) no saldo de duplicatas
+-   R\$ 500.000 (83%) explicados por crescimento nas vendas
+-   R\$ 100.000 (17%) devido a maior prazo de recebimento
+:::
+
+------------------------------------------------------------------------
+
+## Síntese e Recomendações
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Fatores Críticos de Sucesso:**
+
+-   Alinhamento com estratégia empresarial
+-   Equilíbrio entre risco e retorno
+-   Monitoramento contínuo de indicadores
+-   Flexibilidade para ajustes rápidos
+:::
+
+::: {.column width="50%"}
+**Boas Práticas:**
+
+-   Segmentação de clientes por risco
+-   Automação de processos de análise
+-   Integração com sistemas de vendas
+-   Capacitação contínua da equipe
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Considerações Finais
+
+::: incremental
+**Gestão Eficaz de Crédito Requer:**
+
+-   Políticas claras e bem comunicadas
+-   Métricas adequadas de monitoramento
+-   Análise constante de custo-benefício
+-   Adaptação às mudanças do mercado
+
+> A política de crédito deve ser vista como investimento estratégico, não apenas como controle operacional
+
+**Mensagem Final:** O crédito bem gerenciado é alavanca de crescimento sustentável
+:::

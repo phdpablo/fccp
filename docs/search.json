@@ -330,6 +330,76 @@
     ]
   },
   {
+    "objectID": "04-credito.html",
+    "href": "04-credito.html",
+    "title": "4  Administração de Recebíveis",
+    "section": "",
+    "text": "4.1 Os Pilares de uma Política de Crédito\nA gestão de Valores a Receber (VR) é uma área fundamental das finanças corporativas de curto prazo que lida com a administração dos créditos concedidos aos clientes nas vendas a prazo. Para muitas empresas, essa é uma estratégia essencial para impulsionar as vendas e manter a competitividade. No entanto, conceder crédito significa também investir recursos da empresa e assumir o risco de não recebimento.\nO objetivo de uma boa gestão de crédito é encontrar um equilíbrio ótimo entre maximizar as vendas e a rentabilidade, e minimizar os custos e os riscos associados. Isso é alcançado por meio de uma Política de Crédito bem estruturada.\nUma política de crédito eficaz é construída sobre quatro elementos principais, que funcionam como alavancas que a empresa pode ajustar para atingir seus objetivos.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Administração de Recebíveis</span>"
+    ]
+  },
+  {
+    "objectID": "04-credito.html#os-pilares-de-uma-política-de-crédito",
+    "href": "04-credito.html#os-pilares-de-uma-política-de-crédito",
+    "title": "4  Administração de Recebíveis",
+    "section": "",
+    "text": "Padrões de Crédito: Define o perfil mínimo de risco que um cliente deve ter para receber crédito. Padrões mais flexíveis podem aumentar as vendas, mas também elevam o risco de inadimplência. Padrões mais rígidos fazem o oposto.\nPrazo de Concessão: É o tempo que o cliente tem para pagar. Prazos mais longos podem atrair mais clientes, mas aumentam o montante de dinheiro que a empresa precisa investir em suas contas a receber.\nDescontos por Pagamento Antecipado: Oferecer um desconto para quem paga antes do vencimento é uma forma de acelerar o recebimento de caixa. A empresa deve avaliar se o custo do desconto compensa o benefício de ter o dinheiro disponível mais cedo.\nPolítica de Cobrança: Refere-se aos procedimentos usados para cobrar clientes em atraso. Uma política mais agressiva pode reduzir perdas, mas também pode prejudicar o relacionamento com os clientes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Administração de Recebíveis</span>"
+    ]
+  },
+  {
+    "objectID": "04-credito.html#risco-do-crédito",
+    "href": "04-credito.html#risco-do-crédito",
+    "title": "4  Administração de Recebíveis",
+    "section": "4.2 Risco do Crédito",
+    "text": "4.2 Risco do Crédito\nAntes de conceder crédito, é crucial avaliar a capacidade e a disposição do cliente em pagar. Um método clássico para essa análise é o dos “Cinco Cs do Crédito”:\n\nCaráter: A reputação e o histórico do cliente indicam sua vontade de honrar as dívidas.\nCapacidade: A habilidade do cliente de gerar caixa suficiente para pagar o crédito.\nCapital: A saúde financeira geral do cliente, incluindo seu patrimônio.\nGarantias (Collateral): Ativos que o cliente pode oferecer para assegurar o pagamento da dívida.\nCondições: O ambiente econômico e setorial que pode afetar a capacidade de pagamento do cliente.\n\n\n\n4.2.1 Dashboard Conceitual VR\nAbaixo você pode explorar os conceitos acima e visualizar o impacto esperado dos elementos da política de crédito em algumas medidas financeiras, ou você pode expandir essa versão interativa do dashboard clicando no link:\n\nDashboard Conceitual VR",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Administração de Recebíveis</span>"
+    ]
+  },
+  {
+    "objectID": "04-credito.html#alterações-nos-padrões-de-crédito",
+    "href": "04-credito.html#alterações-nos-padrões-de-crédito",
+    "title": "4  Administração de Recebíveis",
+    "section": "4.3 Alterações nos Padrões de Crédito",
+    "text": "4.3 Alterações nos Padrões de Crédito\nQualquer alteração na política de crédito deve ser tratada como uma decisão de investimento. A análise fundamental consiste em comparar os benefícios marginais com os custos marginais.\n\nBenefício Marginal: Geralmente, é o lucro adicional gerado pelo aumento nas vendas decorrente da nova política.\nCusto Marginal: Inclui o aumento das despesas com inadimplência, custos de administração e, crucialmente, o custo do investimento adicional em valores a receber.\n\nA regra de decisão é simples: se o retorno gerado pelo lucro adicional for maior que o custo de financiar o investimento extra, a mudança na política de crédito é vantajosa e cria valor para a empresa.\n\n4.3.1 Cálculo do Investimento Marginal em VR\nAbaixo você pode explorar uma calculadora que compara o cálculo do investimento marginal em VR utilizando as metodologias de Lucro Embutido e Custo Variável, ou você pode expandir essa versão interativa da calculadora clicando no link:\n\nSimulador Investimento em VR",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Administração de Recebíveis</span>"
+    ]
+  },
+  {
+    "objectID": "04-credito.html#controle-do-crédito",
+    "href": "04-credito.html#controle-do-crédito",
+    "title": "4  Administração de Recebíveis",
+    "section": "4.4 Controle do Crédito",
+    "text": "4.4 Controle do Crédito\nUma vez que a política está em vigor, é essencial monitorar o desempenho da carteira de recebíveis para garantir que tudo está correndo como planejado. As duas principais ferramentas para isso são:\n\n4.4.1 Aging de Valores a Receber\nO Aging (ou classificação por idade/vencimento) é um relatório que organiza as contas a receber por faixas de tempo (ex: a vencer, vencidas há 1-30 dias, vencidas há 31-60 dias, etc.). Ele permite visualizar rapidamente a porcentagem de contas em atraso, sendo um excelente indicador da qualidade da carteira.\n\n\n4.4.2 Dias de Vendas a Receber (DVR)\nO DVR (em inglês, Days Sales Outstanding - DSO) mede o número médio de dias que a empresa leva para receber o pagamento de uma venda.\nA fórmula é:\n\\[\\text{DVR} = \\frac{\\text{Saldo de Valores a Receber}}{\\text{Vendas Médias Diárias}}\\]\nUm DVR crescente pode sinalizar problemas na cobrança. É importante usar o DVR em conjunto com o Aging, pois uma média pode esconder problemas específicos em certas faixas de vencimento.\n\n\n\n4.4.3 Simulador Aging/DVR\nAbaixo você pode explorar como utilizar essas ferramentas para controle do crédito, ou você pode expandir essa versão interativa da análise clicando no link:\n\nSimulador Aging/DVR",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Administração de Recebíveis</span>"
+    ]
+  },
+  {
+    "objectID": "04-credito.html#slides-da-aula",
+    "href": "04-credito.html#slides-da-aula",
+    "title": "4  Administração de Recebíveis",
+    "section": "4.5 Slides da Aula",
+    "text": "4.5 Slides da Aula\nA administração de VR é uma função estratégica que equilibra objetivos de marketing e vendas com a prudência financeira. Uma política de crédito bem definida, uma análise de risco criteriosa e um monitoramento contínuo são essenciais para que a concessão de crédito se traduza em um aumento sustentável da lucratividade e do valor da empresa.\nAbaixo você pode visualizar os slides da aula, ou você pode expandir essa versão dos slides clicando no link:\n\nSlides da Aula",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Administração de Recebíveis</span>"
+    ]
+  },
+  {
+    "objectID": "04-credito.html#resumo-em-áudio",
+    "href": "04-credito.html#resumo-em-áudio",
+    "title": "4  Administração de Recebíveis",
+    "section": "4.6 Resumo em áudio",
+    "text": "4.6 Resumo em áudio\nA seguir, você pode ouvir um resumo em áudio do conteúdo desta seção:\n\n\n\nSeu navegador não suporta o elemento de áudio.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Administração de Recebíveis</span>"
+    ]
+  },
+  {
     "objectID": "05-estoque.html",
     "href": "05-estoque.html",
     "title": "5  Administração de Estoques",

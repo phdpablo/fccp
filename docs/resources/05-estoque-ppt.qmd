@@ -1,0 +1,625 @@
+---
+title: "Administração de Estoque"
+subtitle: "Gestão Financeira"
+author: "Dr. Pablo Rogers"
+format:
+  revealjs:
+    theme: sky
+    slide-number: true
+    chalkboard: true
+    height: 750
+    width: 1600
+    preview-links: auto
+    logo: ""
+    footer: "FCCP | Administração de Estoque"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
+---
+
+## Roteiro da Aula
+
+<br>
+
+::: incremental
+1.  **Fundamentos da Gestão Financeira de Estoques**
+2.  **Curva ABC**
+3.  **Decisões de Compra**
+4.  **Lote Econômico de Compra**
+:::
+
+------------------------------------------------------------------------
+
+## Introdução
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Desafios dos Estoques**
+
+-   Níveis baixos podem interromper a produção
+-   Falta de matérias-primas compromete o atendimento
+-   Excesso de estoques reduz o giro dos ativos
+-   Impacto direto na rentabilidade empresarial
+:::
+
+::: {.column width="50%"}
+**Gestão Estratégica**
+
+-   Políticas de compras bem definidas
+-   Critérios rigorosos de controle
+-   Análise como decisão de investimento
+-   Equilíbrio entre custo e benefício
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Classificação dos Estoques
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Categorias Principais**
+
+-   Mercadorias e produtos acabados
+-   Produtos em processo de elaboração
+-   Matérias-primas e materiais de embalagem
+-   Materiais de consumo e suprimentos
+:::
+
+::: {.column width="50%"}
+**Fatores Determinantes**
+
+-   Volume e padrão da atividade empresarial
+-   Nível de investimentos necessários
+-   Características operacionais específicas
+-   Peculiaridades do setor de atuação
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Fatores Influenciadores dos Investimentos
+
+> Diferentes categorias de estoque são influenciadas por fatores específicos
+
+::: incremental
+-   **Materiais de Consumo:** Pecularidades operacionais e administrativas
+
+-   **Matérias-primas:** Problemas logísticos e de importação ; Economia de escala nas compras
+
+-   **Produtos em Elaboração:** Duração do ciclo produtivo ; Nível tecnológico da produção
+
+-   **Produtos Acabados:** Padrões de demanda do mercado ; Características físicas dos produtos
+:::
+
+------------------------------------------------------------------------
+
+## Estoques em Contexto Inflacionário
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Estratégias de Proteção**
+
+-   Reduzir ativos monetários expostos
+-   Aumentar estoques como hedge
+-   Análise criteriosa dos riscos
+-   Estudo dos custos envolvidos
+:::
+
+::: {.column width="50%"}
+**Riscos Associados**
+
+-   Redução da liquidez empresarial
+-   Dificuldade de acesso ao crédito
+-   Custo de oportunidade elevado
+-   Possível perda real de valor
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Controle de Estoques: Análise ABC
+
+A análise ABC categoriza itens de estoque conforme sua importância econômica, baseada no princípio de Pareto (80/20).
+
+::: incremental
+**Objetivos:**
+
+-   Priorizar atenção gerencial
+-   Otimizar recursos de controle
+-   Melhorar eficiência do sistema
+-   Reduzir custos administrativos
+:::
+
+------------------------------------------------------------------------
+
+## Construção da Curva ABC {.smaller}
+
+::: incremental
+**Passos para Implementação:**
+
+1.  **Calcular investimentos por item**
+    -   Quantidade média × Preço unitário
+    -   Considerar todos os custos relevantes
+    -   Ordenar do maior para o menor
+2.  **Classificar por importância**
+    -   **Categoria A:** Maior investimento (≈80% do valor)
+    -   **Categoria B:** Importância intermediária
+    -   **Categoria C:** Baixa representatividade (≈20% do valor)
+3.  **Definir políticas diferenciadas**
+    -   Controle rigoroso para itens A
+    -   Controle moderado para itens B
+    -   Controle simplificado para itens C
+:::
+
+------------------------------------------------------------------------
+
+## Representação Gráfica ABC {.smaller}
+
+::::: columns
+::: {.column width="20%"}
+**Interpretação:** - 15% dos itens concentram 80% dos recursos - 50% dos itens representam 97% do investimento - Gestão diferenciada por categoria
+:::
+
+::: {.column width="80%"}
+![](05-curvaABC.png){fig-align="center"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Limitações da Análise ABC
+
+::: incremental
+**Cuidados Necessários:**
+
+-   **Demanda esporádica:** Produtos importantes podem não aparecer em períodos curtos
+-   **Volume versus valor:** Itens de baixo custo podem ter alto volume de vendas
+-   **Criticidade operacional:** Produtos essenciais podem ter baixo valor (ex: peças importadas com restrições)
+-   **Sazonalidade:** Considerar variações temporais na demanda
+:::
+
+> A análise deve considerar múltiplos critérios além do valor financeiro
+
+------------------------------------------------------------------------
+
+## Ferramenta Interativa: Curva ABC {.smaller}
+
+> [**Simulador da Curva ABC**](05-curvaABC.html)
+
+```{=html}
+<iframe src="05-curvaABC.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+```
+
+------------------------------------------------------------------------
+
+## Estoques e Economia de Escala
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Benefícios do Aumento de Produção:**
+
+-   Redução de custos fixos por unidade
+-   Maior eficiência operacional
+-   Aproveitamento da capacidade instalada
+-   Melhor negociação com fornecedores
+:::
+
+::: {.column width="50%"}
+**Análise de Viabilidade:**
+
+-   Custo do investimento marginal
+-   Economia esperada nos custos
+-   Taxa de retorno do investimento
+-   Comparação com custo do capital
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Decisões de Compras
+
+::: incremental
+**Fatores Críticos a Considerar:**
+
+-   Prazo de permanência em estoque
+-   Tempo de recebimento das vendas
+-   Prazo de pagamento aos fornecedores
+-   Custo de captação de recursos
+-   Análise custo-benefício da antecipação
+:::
+
+> A decisão deve incluir o cálculo do custo de financiamento aos clientes quando as vendas forem a prazo
+
+------------------------------------------------------------------------
+
+## Cenário 1: Compra à Vista e Venda à Vista {.smaller}
+
+::::: columns
+::: {.column width="30%"}
+**Características:**
+
+-   Prazo de estocagem positivo gera custo financeiro
+-   Empresa financia estoques até a realização
+-   Fluxo de caixa mais previsível
+-   Menor complexidade de gestão
+:::
+
+::: {.column width="70%"}
+![](05-dc-vista.jpg){fig-align="center"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Cenário 2: Compra à Vista e Venda a Prazo {.smaller}
+
+::::: columns
+::: {.column width="30%"}
+**Implicações Financeiras:**
+
+-   Custo de estocagem se mantém
+-   Adiciona-se o custo de financiar clientes
+-   Necessidade de capital de giro aumenta
+-   Maior exposição ao risco de inadimplência
+:::
+
+::: {.column width="70%"}
+![](05-dc-vistaprazo.jpg){fig-align="center"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Cenário 3.1: Compra a Prazo e Venda à Vista
+
+::::: columns
+::: {.column width="30%"}
+**Estocagem Durante o Prazo de Pagamento**
+
+-   Custo de estocagem é reduzido pela economia obtida com pagamento a prazo
+:::
+
+::: {.column width="70%"}
+![](05-dc-prazovista1.jpg){fig-align="center"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Cenário 3.2: Compra a Prazo e Venda à Vista
+
+::::: columns
+::: {.column width="30%"}
+**Recebimento Antes do Pagamento**
+
+-   Receita da venda pode ser aplicada até o vencimento da compra, gerando ganho financeiro
+:::
+
+::: {.column width="70%"}
+![](05-dc-prazovista2.jpg){fig-align="center"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Cenário 4: Compra a Prazo e Venda a Prazo {.smaller}
+
+::::: columns
+::: {.column width="30%"}
+**Gestão Complexa:**
+
+-   Necessidade de financiamento entre pagamento e recebimento
+-   Análise cuidadosa dos prazos envolvidos
+-   Maior necessidade de capital de giro
+-   Planejamento de fluxo de caixa essencial
+:::
+
+::: {.column width="70%"}
+![](05-dc-prazo.jpg){fig-align="center"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Ferramenta Interativa: Decisões de Compra {.smaller}
+
+> [**Simulador Decisões de Compra**](05-decisoes-compra.html)
+
+```{=html}
+<iframe src="05-decisoes-compra.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+```
+
+------------------------------------------------------------------------
+
+## Modelos de Controle de Estoques
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Objetivos dos Modelos:**
+
+-   Identificar custos relevantes
+-   Determinar níveis ótimos de estoque
+-   Minimizar custos totais
+-   Otimizar decisões de compra
+:::
+
+::: {.column width="50%"}
+**Tipos de Custos:**
+
+-   Custos efetivos dos bens
+-   Custos relevantes para decisão
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Custos Efetivos dos Bens
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Características:**
+
+-   Baseados em registros contábeis
+-   Preços de compra das matérias-primas
+-   Custos totais de produção
+-   Valores históricos de aquisição
+:::
+
+::: {.column width="50%"}
+**Limitações:**
+
+-   Não identificam custos evitáveis
+-   Inadequados para análise decisorial
+-   Não consideram custos de oportunidade
+-   Foco em custos incorridos (sunk costs)
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Custos Relevantes para Gestão
+
+**Definição:** Custos evitáveis que variam com as decisões de compra (exceto valor do produto)
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+1.  **Custos de Compra (ou Pedido)**
+    -   Gastos de emissão de pedidos
+    -   Custos de preparação
+    -   *Comportamento decrescente*
+:::
+
+::: {.column width="50%"}
+2.  **Custos de Manutenção**
+    -   Gastos de armazenamento
+    -   Seguros e deterioração
+    -   *Comportamento crescente*
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Custos de Compra Detalhados
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Componentes:**
+
+-   Processamento de pedidos
+-   Inspeção e recebimento
+-   Custos de preparação da produção
+-   Gastos administrativos do processo
+:::
+
+::: {.column width="50%"}
+**Comportamento:**
+
+-   *Fixos* por pedido
+-   *Decrescentes* por unidade (diluição)
+-   Independem da quantidade comprada
+-   Incluem custos de setup
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Custos de Manutenção Detalhados
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Componentes:**
+
+-   Armazenagem e manuseio
+-   Seguros e deterioração
+-   Obsolescência e perdas
+-   Custo de oportunidade do capital
+:::
+
+::: {.column width="50%"}
+**Comportamento:**
+
+-   *Variáveis* com o nível de estoque
+-   *Constantes* por unidade estocada
+-   Proporcionais ao tempo de permanência
+-   Incluem custo do capital investido
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Modelo do LEC
+
+::: incremental
+**Objetivo:** Minimizar o custo total *controlável* do estoque
+
+**Equilíbrio:** Entre custos de manutenção e custos de pedido
+
+**Comportamento do Estoque:**
+
+-   Declínio a taxa constante
+-   Reposição instantânea
+-   Consumo uniforme ao longo do tempo
+:::
+
+------------------------------------------------------------------------
+
+## Premissas do Lote Econômico
+
+::: incremental
+**Hipóteses Básicas:**
+
+a)  Volume não influencia o custo unitário
+b)  Demanda uniforme ao longo do tempo
+c)  Condições de certeza (sem variabilidade)
+d)  Reposição instantânea (lead time zero)
+e)  Sem restrições financeiras
+:::
+
+> Na prática, essas premissas raramente são atendidas completamente
+
+------------------------------------------------------------------------
+
+## Representação Gráfica
+
+::::: columns
+::: {.column width="50%"}
+![](05-lec.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](05-lec-custos.png){fig-align="center"}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Fórmulas do Lote Econômico
+
+::::: columns
+::: {.column width="50%"}
+$$
+\text{CP} = C_p \times \frac{D}{Q}
+$$ $$
+\text{CM} = C_m \times \frac{Q}{2}
+$$
+:::
+
+::: {.column width="50%"}
+$$
+\text{CT} = \left(C_p \times \frac{D}{Q}\right) + \left(C_m \times \frac{Q}{2}\right)
+$$ $$
+Q^* = \sqrt{\frac{2 \times C_p \times D}{C_m}}
+$$
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Interpretação do Lote Econômico
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Características do Ponto Ótimo:**
+
+-   Custo total mínimo
+-   Equilíbrio entre custos opostos
+-   Define quantidade ideal por pedido
+-   Estabelece frequência ótima de compras
+:::
+
+::: {.column width="50%"}
+**Aplicações Práticas:**
+
+-   Programação de compras
+-   Dimensionamento de estoques
+-   Otimização de custos logísticos
+-   Planejamento financeiro
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Estoque de Segurança
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Realidade Operacional:**
+
+-   Demanda não é uniforme
+-   Existe variabilidade no fornecimento
+-   Lead times podem variar
+-   Necessidade de proteção contra rupturas
+:::
+
+::: {.column width="50%"}
+**Fatores Determinantes:**
+
+-   Nível de incerteza da demanda
+-   Custos de falta de estoque
+-   Custos de manutenção
+-   Nível de serviço desejado
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Considerações Finais
+
+:::::: incremental
+::::: columns
+::: {.column width="50%"}
+**Benefícios da Gestão Otimizada:**
+
+-   Redução de custos operacionais
+-   Melhoria do fluxo de caixa
+-   Maior eficiência produtiva
+-   Melhor atendimento ao cliente
+:::
+
+::: {.column width="50%"}
+**Desafios da Implementação:**
+
+-   Necessidade de dados confiáveis
+-   Adaptação às variações da demanda
+-   Integração com outros sistemas
+-   Monitoramento contínuo dos resultados
+:::
+:::::
+::::::
+
+------------------------------------------------------------------------
+
+## Ferramenta Interativa: LEC {.smaller}
+
+> [**Simulador LEC**](05-lec.html)
+
+```{=html}
+<iframe src="05-lec.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+```
