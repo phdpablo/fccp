@@ -12,7 +12,7 @@ O desafio central reside em um equilíbrio delicado:
 
 <br>
 
-## Custos Relevantes na Gestão de Estoques
+## Custos Relevantes
 
 As decisões sobre o nível ótimo de estoques envolvem a análise de dois custos destoantes:
 
@@ -171,7 +171,7 @@ Abaixo você pode visualizar a formulação geral para tomada de decisões de co
 <iframe src="resources/05-decisoes-compra.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
 
-## O Modelo do Lote Econômico de Compra (LEC)
+## Lote Econômico de Compra (LEC)
 
 O LEC é um modelo de otimização que determina a quantidade ideal a ser comprada em cada pedido para minimizar os custos totais de gestão de estoques. Ele encontra o ponto onde os custos de manutenção se igualam aos custos de pedido.
 
