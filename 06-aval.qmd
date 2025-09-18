@@ -1,130 +1,298 @@
-# Projetos em Grupo {#sec-aval}
+# Estudo de Caso {#sec-aval}
 
 <br>
 
-O objetivo desse módulo final é criar a oportunidade de o aluno aprofundar (um pouco mais!) nas bases fundamentais das finanças. Em cursos de graduação em negócios (Economia, Administração e Contábeis) temos outras disciplinas de finanças, que o aluno aprende sobre teorias importantes, tal como Estrutura de Capital em Finanças Corporativas (II) de Longo Prazo, no entanto, algumas relevantes teorias são relegadas como optativas ou de carácter secundário, pelo menos, na graduação. A intenção aqui é que o aluno tenha um primeiro contato sobre esses fundamentos.
+Essa seção apresenta as instruções para a realização de uma **Análise de Capital de Giro** em casos reais, utilizando dados financeiros de empresas de capital aberto.
 
-Abaixo eu apresento um resumo dos capítulos 1 e 2 do @assafneto2014, que faz parte de nossa ementa oficial, principalmente, o conteúdo de Governança Corporativa (Propriedade e administração, e Conflitos de Agência), no entanto, nos projetos em grupos, além da Governança Corporativa, discutiremos a Teoria da Utilidade, Hipóteses de Mercados Eficientes, Teoria do Portfólio, Teoria de Precificação por Arbitragem e Finanças Comportamentais.
-
-<br>
-
-## O Objetivo da Empresa e da Administração Financeira
-
-A administração financeira é a área que se ocupa da gestão dos recursos de uma organização, com o objetivo de criar valor. Para entender suas funções, é primordial definir o objetivo central da empresa.
+Trata-se de uma atividade prática em grupo (Projeto em Grupo) que visa elaborar um **Relatório de Diagnóstico e Plano de Ações** sobre a gestão do capital de giro de uma empresa específica.
 
 <br>
 
-### O Objetivo da Empresa
+## 🎯 Objetivo Geral
 
-Embora a maximização do lucro seja uma resposta intuitiva, ela é insuficiente como objetivo principal da administração financeira por três razões críticas:
+O objetivo desse projeto é aplicar os conceitos teóricos de **Administração Financeira de Curto Prazo** na análise prática da gestão do capital de giro de uma empresa de capital aberto.
 
-1.  **Ignora o Tempo:** A maximização do lucro não especifica o horizonte temporal. Uma empresa pode aumentar os lucros de curto prazo ao cortar custos essenciais, como manutenção ou pesquisa, mas essa atitude pode destruir valor no longo prazo.
-2.  **Ignora o Fluxo de Caixa:** O lucro contábil não é sinônimo de dinheiro em caixa. Uma empresa pode registrar lucro em suas demonstrações e, ainda assim, não ter liquidez para honrar seus compromissos, o que pode levá-la à falência.
-3.  **Ignora o Risco:** A meta de maximizar o lucro não considera o risco associado à geração desses lucros. Dois projetos podem ter o mesmo lucro esperado, mas um pode ser significativamente mais arriscado que o outro.
-
-O objetivo mais apropriado e abrangente da administração financeira é, portanto, **maximizar a riqueza dos acionistas**, que é mensurada pelo valor de mercado de suas ações. O preço da ação reflete as expectativas do mercado sobre os fluxos de caixa futuros da empresa, devidamente ajustados pelo risco e pelo tempo.
+A partir da análise de dados públicos, cada grupo deverá elaborar um **diagnóstico da saúde financeira de curto prazo** da empresa escolhida, culminando em recomendações estratégicas fundamentadas.
 
 <br>
 
-### Visão dos Shareholders vs. Stakeholders
+## 🛠️ Etapas do Projeto
 
-No centro da discussão sobre o objetivo da empresa está a distinção entre dois grupos:
+O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos de controle definidos. Cada grupo deverá cumprir rigorosamente cada etapa, conforme descrito abaixo:
 
-* **Shareholders (Acionistas):** São os proprietários da empresa. A maximização de sua riqueza é o foco principal da gestão financeira, especialmente em modelos de mercado anglo-saxônicos (EUA, Reino Unido). Os acionistas são considerados os "proprietários residuais", pois só recebem seu retorno após todos os outros compromissos da empresa serem pagos.
-* **Stakeholders (Partes Interessadas):** É um grupo mais amplo que inclui qualquer indivíduo ou entidade com interesse na empresa, como funcionários, clientes, fornecedores, credores e a comunidade.
+### 📌 Fase 1 – Preparação e Cálculos na Planilha
 
-Embora o objetivo primário seja a maximização do valor para o acionista, uma gestão eficaz reconhece que a criação de valor no longo prazo depende de um relacionamento saudável com todos os stakeholders. Ignorar os interesses dos funcionários ou clientes, por exemplo, inevitavelmente prejudicaria a reputação e os resultados da empresa, destruindo o valor para o acionista.
+1.  **👥 Formação dos Grupos**
 
-<br>
+    -   Cada grupo será composto por até **cinco alunos**.\
 
-### As Decisões Fundamentais: Investimento e Financiamento
+    -   Os nomes dos integrantes e seus e-mails deverão ser informados em uma atividade com data estipulada no Moodle (em torno de quatro semanas de curso).\
 
-A atividade do administrador financeiro pode ser resumida em duas decisões centrais, que se refletem diretamente no balanço patrimonial da empresa:
+    -   Os e-mails informados deverão corresponder ao cadastro da conta Microsoft como aluno da UFU[^06-aval-1].
 
-1.  **Decisão de Investimento (Orçamento de Capital):** Refere-se à alocação de recursos em ativos de longo prazo. Envolve decidir em quais projetos investir, como a construção de uma nova fábrica ou o lançamento de um produto. Essas decisões determinam a composição do lado esquerdo do balanço (Ativos) e são consideradas as mais importantes para a criação de valor.
-2.  **Decisão de Financiamento (Estrutura de Capital):** Refere-se à forma como a empresa obterá os fundos necessários para seus investimentos. Envolve a escolha entre capital de terceiros (dívida) e capital próprio (ações). Essas decisões moldam o lado direito do balanço (Passivo e Patrimônio Líquido).
+[^06-aval-1]: 📧 Para acessar os serviços Microsoft como aluno da UFU:
 
-<br>
+    1.  **Crie seu e-mail institucional (\@ufu.br)**
+        -   Acesse <https://www.idufu.ufu.br/>
+        -   Clique em "Escolha seu vínculo com a UFU", selecione **Aluno** e insira o número de matrícula e senha do Portal do Estudante.
+        -   Preencha as informações solicitadas e siga as instruções para criar sua conta de e-mail \@ufu.br.
+    2.  **Cadastre-se no Office 365 Education**
+        -   Acesse <https://www.microsoft.com/pt-br/education/products/office>
+        -   Clique em **Comece já** ou **Inscreva-se já**.
+        -   Insira o endereço do seu e-mail institucional (\@ufu.br).
+        -   Selecione a opção que indica que você é estudante e complete o processo de cadastro.
+    3.  **Benefícios do Office 365 para alunos da UFU**
+        -   📄 Acesso gratuito ao pacote Office (Word, Excel, PowerPoint, OneNote).
+        -   💬 Utilização do Microsoft Teams para comunicação e colaboração.
+        -   🔒 Ferramentas de conformidade e proteção de informações.
+        -   ☁️ Armazenamento em nuvem para seus arquivos.
 
-### Gestão de Curto e Longo Prazo e o Foco no Fluxo de Caixa
+<!-- -->
 
-As decisões financeiras também se dividem pelo horizonte de tempo:
+2.  **🏢 Definição da Empresa**
 
-* **Gestão de Longo Prazo:** Envolve as decisões de investimento e financiamento mencionadas acima, que definem o futuro estratégico da empresa.
-* **Gestão de Curto Prazo:** Foca na administração do capital de giro (ativos e passivos circulantes), garantindo que a empresa tenha liquidez para suas operações diárias.
+    -   Cada grupo será **sorteado** para uma empresa brasileira de capital aberto (não financeira), conforme um pool inicial levantado pelo professor, que dependerá do número de grupos formados e empresas não avaliadas por turmas anteriores.\
 
-Um princípio fundamental que norteia todas essas decisões é o **foco no fluxo de caixa**. A contabilidade opera sob o regime de competência, registrando receitas quando a venda é feita, e não quando o dinheiro é recebido. Finanças, por outro lado, operam sob o regime de caixa, preocupando-se com as entradas e saídas efetivas de dinheiro. Uma empresa pode ser lucrativa do ponto de vista contábil, mas insolvente se não gerar caixa suficiente para pagar suas obrigações.
+    -   O nome da empresa será informado para o grupo na mesma atividade do Moodle onde foram indicados os integrantes da equipe.\
 
-<br>
+    -   As demonstrações financeiras da empresa (**Balanço Patrimonial** e **Demonstração de Resultados**), referentes aos últimos quatro anos fiscais completos, serão baixadas do site: <https://www.fundamentus.com.br>.\
 
-## Governança Corporativa
+        -   Esse site disponibiliza essas demonstrações financeiras, com layout padronizado, na forma de planilha eletrônica e de fácil/gratuito acesso.
 
-Governança corporativa é o sistema de regras, práticas e processos pelo qual uma empresa é dirigida e controlada. Sua principal função é alinhar os interesses dos gestores com os dos acionistas, mitigando os conflitos que surgem da separação entre propriedade e gestão.
+3.  **🔒 Marcação Digital e Compartilhamento da Planilha**
 
-<br>
+    -   O professor baixará as planilhas com as demonstrações financeiras das empresas, aplicará **marcação digital** no arquivo e compartilhará o documento via **OneDrive institucional** com os integrantes do grupo.\
 
-### O Conflito de Agência
+    -   O link da planilha, apesar de não necessário, será disponibilizado na mesma atividade Moodle onde foram indicados os integrantes da equipe e informado o nome da empresa.\
 
-O problema de agência surge quando há um conflito de interesses entre o **principal** (os acionistas) e o **agente** (os administradores contratados para agir em nome dos acionistas). Os gestores podem, por exemplo, priorizar a segurança de seus empregos ou benefícios pessoais em detrimento de projetos arriscados que poderiam maximizar o valor para os acionistas. Os custos decorrentes desse desalinhamento são chamados de **custos de agência**.
+    -   Somente os integrantes do grupo e o professor terão acesso à planilha.\
 
-<br>
+    -   A planilha deverá ser editada **exclusivamente** dentro do ambiente compartilhado, garantindo **rastreabilidade e controle de versões**.
 
-### Conflitos de Agência: Diferenças entre Brasil e EUA
+4.  **🧮 Desenvolvimento dos Cálculos e Primeiro Ponto de Controle**
 
-A natureza do principal conflito de agência varia conforme a estrutura de propriedade do capital, que é notavelmente diferente entre o Brasil e mercados como os EUA e o Reino Unido:
+    -   Os alunos deverão realizar os cálculos exigidos diretamente na planilha compartilhada.\
 
-* **Nos EUA e Reino Unido,** o capital das grandes empresas é tipicamente **pulverizado**, sem um acionista controlador claro. Nesse cenário, o principal conflito de agência ocorre entre **gestores profissionais e os acionistas dispersos**. A preocupação central da governança é garantir que os executivos atuem no melhor interesse dos proprietários.
-* **No Brasil e na Europa Continental,** a estrutura de propriedade é caracterizada pela **alta concentração de capital**, onde um único acionista ou um pequeno bloco de acionistas detém o controle da empresa. O principal conflito, portanto, ocorre entre os **acionistas controladores e os acionistas minoritários**. A governança busca proteger os minoritários de decisões que possam beneficiar desproporcionalmente os controladores.
+    -   Após o prazo estipulado para essa etapa, o professor realizará a **primeira avaliação técnica**:
 
-<br>
-
-### Mecanismos de Governança
-
-Para mitigar os problemas de agência, as empresas utilizam diversos mecanismos de governança:
-
-* **Conselho de Administração:** Eleito pelos acionistas para supervisionar a gestão e tomar decisões estratégicas. A presença de conselheiros independentes é crucial para um monitoramento eficaz.
-* **Remuneração dos Executivos:** Planos de incentivo, como opções de ações e bônus atrelados ao desempenho, que alinham a riqueza dos gestores à dos acionistas.
-* **Monitoramento Externo:** Auditorias independentes, analistas de mercado e grandes investidores institucionais que fiscalizam as ações da empresa.
-* **Ameaça de Aquisição (Takeover):** Empresas mal administradas podem se tornar alvos de aquisição, o que pressiona a gestão a melhorar o desempenho para evitar ser substituída.
-
-<br>
-
-## Importantes Teorias de Finanças
-
-A moderna teoria financeira é sustentada por diversos pilares teóricos que buscam explicar o comportamento dos mercados e dos investidores.
-
-* **Teoria da Utilidade:** Proposta por Bernoulli, esta teoria postula que os investidores não buscam maximizar o retorno em si, mas a "utilidade" ou satisfação que a riqueza proporciona. Isso explica por que indivíduos têm diferentes perfis de risco (aversão, neutralidade ou propensão ao risco), pois a utilidade marginal da riqueza é decrescente para a maioria das pessoas.
-* **Hipótese dos Mercados Eficientes:** Desenvolvida por Eugene Fama, esta teoria afirma que os preços dos ativos em um mercado eficiente refletem instantaneamente toda a informação disponível. Uma consequência direta é que se torna extremamente difícil obter retornos anormais (ou "bater o mercado") de forma consistente, pois não haveria ativos sub ou sobreavaliados.
-* **Teoria do Portfólio:** Formulada por Harry Markowitz, esta teoria revolucionou a gestão de investimentos ao demonstrar que o risco de um ativo não deve ser avaliado isoladamente, mas por sua contribuição ao risco total de uma carteira diversificada. A diversificação permite reduzir o risco não-sistemático sem necessariamente sacrificar o retorno esperado.
-* **Teoria de Precificação por Arbitragem (APT):** Proposta por Stephen Ross, a APT é um modelo de precificação de ativos que, diferentemente do CAPM (que usa um único fator de risco, o mercado), sugere que o retorno de um ativo é uma função linear de múltiplos fatores de risco macroeconômicos, como inflação, produção industrial, entre outros.
-* **Finanças Comportamentais:** Este campo de estudo, impulsionado por psicólogos como Daniel Kahneman e Amos Tversky, desafia o pressuposto da racionalidade total dos investidores. Ele investiga como vieses cognitivos e emocionais (como excesso de confiança, aversão à perda e comportamento de manada) afetam as decisões financeiras e podem levar a anomalias e ineficiências nos mercados.
+        -   ✅ Grupos que atenderem aos critérios mínimos serão liberados para iniciar o relatório textual.\
+        -   ⚠️ Grupos com erros conceituais ou estruturais serão orientados a corrigir a planilha antes de prosseguir.
 
 <br>
 
-## Outros recursos didáticos {.unnumbered}
+### 📌 Fase 2 – Relatório Final e Avaliação Conclusiva
 
-Nesta seção, falamos um pouco sobre o objetivo da empresa, os conflitos de interesse que podem existir na perseguição desses objetivos (Governança Corporativa) e apresentamos algumas teorias basilares que nos ajudam a entender as finanças. A introdução desses princípios é importante para vocês continuarem a busca.
+5.  **📝 Desenvolvimento do Relatório Textual**
 
-Abaixo, você encontrará outros recursos didáticos que objetiva resumir os conceitos apresentados por aqui:
+    -   Após a adequação da planilha, os alunos deverão elaborar o relatório final diretamente em um documento `.docx` também compartilhado via OneDrive e previamente marcado digitalmente pelo professor.
 
-> [**Slides da Aula**](/resources/teorias-ppt.html)
+    -   O compartilhamento seguirá o mesmo procedimento da planilha de cálculo.\
 
-```{=html}
-<iframe src="/resources/teorias-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
-```
-> [**Resumo Interativo**](/resources/teorias-interativo.html) ➔ **Resumo do resumo!** 🥱
+    -   A edição do relatório será **livre**, cabendo ao grupo definir sua estrutura e abordagem, conforme orientações gerais na seção seguinte.
 
-```{=html}
-<iframe src="/resources/teorias-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
-```
-> [**Podcast do Conteúdo**](resources/teoria-podcast.mp3)
+6.  **📅 Encerramento do Compartilhamento e Avaliação Final**
 
-::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-<audio controls src="resources/teoria-podcast.mp3" style="width: 400px;">
+    -   Na data estipulada para conclusão do projeto, o professor encerrará o compartilhamento dos arquivos e realizará a **avaliação final diretamente no OneDrive**, considerando os documentos efetivamente trabalhados ao longo do período (planilha + relatório).
 
-Seu navegador não suporta o elemento de áudio.
+7.  **🔍 Revisão de Nota ou Defesa Presencial (se necessário)**
 
-</audio>
-:::
-:::
+    -   Trabalhos com baixa qualidade técnica poderão ser convidados a realizar ajustes e melhorias para reavaliação.\
+
+    -   Em casos de suspeita de cópia, uso indevido de IA ou ausência de autoria intelectual, o grupo será convocado para uma **defesa presencial**, na qual deverá demonstrar domínio sobre o conteúdo desenvolvido.
+
+<br>
+
+## 📑 Estrutura do Relatório de Análise
+
+O relatório deve ser um documento **profissional e bem estruturado**, seguindo a sequência de tópicos abaixo:
+
+1.  **Introdução**
+
+    -   **Apresentação da Empresa:** Descreva a empresa selecionada, seu histórico, seu setor de atuação e seus principais produtos ou serviços.\
+    -   **Contexto de Negócio:** Explique a importância da gestão do capital de giro para o modelo de negócio e o setor específico da empresa analisada.\
+
+2.  **Análise do Capital de Giro**
+
+Nessa seção, apresente a análise quantitativa da evolução dos principais componentes do capital de giro ao longo dos quatro anos. É fundamental que a análise não se limite a apresentar os números, mas que os interprete, explicando o que suas variações significam para a empresa.
+
+         
+-   *2.1 Indicadores de Capital de Giro (CCL e CGP):*
+    -   Analise a evolução do Capital Circulante Líquido (CCL) e do Capital de Giro Próprio (CGP). Discuta as implicações da trajetória desses indicadores para a liquidez e a estrutura de financiamento da empresa.\
+-   *2.2 Prazos Médios (PME, PMR, PMP):*
+    -   Apresente e analise a evolução do Prazo Médio de Estocagem (PME), Prazo Médio de Recebimento (PMR) e Prazo Médio de Pagamento (PMP).\
+-   *2.3 Ciclos Operacional e de Caixa (CO e CC):*
+    -   Apresente e analise a evolução do Ciclo Operacional (CO) e do Ciclo de Caixa (CC). Discuta a eficiência operacional da empresa com base na duração e na tendência desses ciclos.\
+-   *2.4 Necessidade de Investimento em Giro (NIG ou NCG):*
+    -   Analise a evolução da Necessidade de Investimento em Giro (NIG ou NCG). Relacione a NIG com o CCL para determinar se a empresa gera folga ou déficit de tesouraria.\
+
+
+> Para cada um dos itens acima, **crie gráficos** que ilustrem claramente a evolução dos indicadores ao longo dos quatro anos. A visualização dos dados é um componente essencial da análise.
+
+3.  **Análise Qualitativa e Estratégica**
+
+Conecte os números da sua análise com a estratégia da empresa. Para isso, é recomendado que o grupo consulte os Relatórios da Administração (disponíveis no site de Relações com Investidores da empresa) dos anos analisados.
+
+         
+-   *Diagnóstico das Políticas de Gestão:* Com base nos indicadores calculados, infira e discuta as políticas de investimento e financiamento do capital de giro da empresa (por exemplo, agressiva, conservadora ou equilibrada).\
+-   *Justificativa dos Resultados:* Busque nos relatórios da empresa informações que ajudem a explicar as variações encontradas nos indicadores. Por exemplo, um aumento no PME foi causado por uma estratégia de aumento de estoques para uma nova linha de produtos ou por uma queda nas vendas?\
+
+
+4.  **Conclusão e Recomendações**
+
+    -   *Síntese da Análise:* Apresente um diagnóstico consolidado da gestão do capital de giro da empresa, destacando seus principais pontos fortes e fracos\
+    -   *Recomendações Estratégicas:* Com base em toda a análise, proponha de duas a três recomendações claras e objetivas para aprimorar a gestão do capital de giro da empresa. As recomendações devem ser factíveis e justificadas pelos dados quantitativos e qualitativos levantados.\
+
+<br>
+
+## 📑 Estrutura da Planilha de Cálculos
+
+A planilha deve ser **organizada, clara e rastreável**. Estrutura sugerida:
+
+-   📂 Planilhas 1 e 2: **Dados Brutos (Balanço + DRE)**
+    -   As informações das demonstrações financeiras (Balanço Patrimonial + Demonstração de Resultados) estarão disponíveis na planilha baixada do site [Fundamentus](https://www.fundamentus.com.br) para vários anos. As contas estarão nas linhas e os anos nas colunas. Apesar de utilizarmos apenas os quatro últimos anos para a análise, se recomenda que essas planilhas permaneçam originais.\
+-   📂 Planilhas 3 e/ou 4: **Dados Intermediários (opcional)**
+    -   Se necessário, opcionalmente, o grupo de trabalho pode compilar as informações que serão utilizadas nas análises em outra(s) planilha(s). Não se reconhece necessidade de mais de duas planilhas (Balanço + DRE) para compilar essas informações e, impreterivelemente, elas devem estar vinculadas com as planilhas de Dados Brutos.\
+-   📂 Planilha 5: **Cálculos (com fórmulas vinculadas)**
+    -   Crie uma seção para cada grupo de indicadores (Capital de Giro, Prazos Médios, Ciclos, NIG). Demonstre os cálculos de forma organizada para cada um dos quatro anos. As células devem conter as fórmulas, e não apenas os valores finais, vinculadas às planilhas anteriores.\
+-   📊 Planilha 6: **Gráficos (vinculados aos cálculos)**
+    -   Insira nesta aba todos os gráficos que foram utilizados no relatório. Os gráficos devem ser vinculados aos dados da planilha de Cálculos, de modo que qualquer alteração nos cálculos seja refletida automaticamente.
+
+<br>
+
+## 🧮 Avaliação do Projeto
+
+O projeto será avaliado com base nos seguintes critérios:
+
+-   📊 **Análise Quantitativa (30%)**
+
+    -   Correção dos cálculos na planilha.
+    -   Profundidade e coerência da interpretação dos indicadores e de sua evolução no relatório.
+
+-   📈 **Análise Qualitativa e Estratégica (30%)**
+
+    -   Capacidade de conectar os dados quantitativos com a estratégia e o contexto da empresa.
+    -   Qualidade da pesquisa em fontes qualitativas (como relatórios da administração).
+
+-   💡 **Recomendações (20%)**
+
+    -   Clareza, relevância e fundamentação das recomendações propostas.
+
+-   🗂️ **Qualidade dos Materiais (20%)**
+
+    -   *Relatório:* Estrutura, clareza da escrita, correção gramatical e uso eficaz de gráficos para apoiar a análise.
+    -   *Planilha:* Organização, clareza na apresentação dos cálculos e rastreabilidade das fórmulas.
+
+> Todos os integrantes do grupo são corresponsáveis pelo conteúdo da planilha e do relatório.\
+> A ausência de participação ativa poderá ser considerada na avaliação individual, conforme critérios definidos pelo professor.
+
+<br>
+
+### 🔒 Verificação da Originalidade das Planilhas
+
+Para garantir a autenticidade e a autoria dos trabalhos entregues, será adotado um processo estruturado de controle digital das planilhas de cálculo, conforme adiantamos acima e detalhamos abaixo.
+
+**Marcação Digital da Planilha**
+
+-   A planilha baixada do site [Fundamentus](https://www.fundamentus.com.br) será considerada a **base oficial** de trabalho do grupo.
+
+-   O professor aplicará uma marcação digital personalizada no arquivo, que poderá incluir:
+
+    -   Inserção de células ocultas com identificadores únicos.
+    -   Inclusão de metadados técnicos (como hash SHA-256 ou código de rastreio).
+    -   Adição de elementos visuais discretos (marca d'água, cabeçalhos personalizados, fórmulas de verificação).
+
+-   Essa marcação permitirá identificar se o arquivo final corresponde ao original fornecido, mesmo após edições.
+
+**Compartilhamento via OneDrive**
+
+-   A planilha marcada será compartilhada diretamente pelo professor via OneDrive, com acesso restrito ao(s) aluno(s) do grupo.
+
+-   O arquivo será editado **dentro do ambiente do OneDrive**, garantindo:
+
+    -   Registro automático do histórico de versões.
+    -   Identificação de quem editou o quê e quando.
+    -   Preservação dos elementos de marcação digital.
+
+**Desenvolvimento do Trabalho**
+
+-   Os alunos deverão realizar todos os cálculos e análises diretamente na planilha compartilhada.
+
+-   É proibido copiar o conteúdo para outro arquivo ou substituir a planilha por uma versão externa.
+
+-   Qualquer tentativa de burlar o processo de rastreabilidade poderá ser identificada por meio da marcação digital e do histórico de edição.
+
+**Avaliação e Certificação**
+
+-   Ao final do prazo, o professor acessará a planilha no OneDrive e verificará:
+
+    -   A presença dos elementos de marcação digital.
+    -   A consistência do histórico de versões.
+    -   A evolução do trabalho e o envolvimento dos membros do grupo.
+    -   A nota será atribuída com base na qualidade técnica do trabalho e na conformidade com o processo de autoria digital.
+
+> Planilhas que não forem editadas dentro do ambiente compartilhado, que apresentarem inconsistências de autoria ou que não preservarem os elementos de marcação digital poderão ser desconsideradas para fins de avaliação.
+
+<br>
+
+### 📝 Verificação da Originalidade do Relatório
+
+Com o objetivo de assegurar a autenticidade, autoria e integridade acadêmica dos relatórios entregues pelos grupos, será adotado um conjunto de medidas técnicas e pedagógicas que visam coibir o uso indevido de conteúdo externo, inclusive gerado por inteligência artificial (IA) generativa, e garantir que o trabalho reflita o esforço intelectual dos alunos.
+
+#### Controle Digital do Arquivo `.docx`
+
+-   Os relatórios deverão ser elaborados a partir de um documento fornecido pelo professor, previamente marcado e compartilhado via OneDrive.
+
+-   O documento conterá elementos técnicos discretos, como:
+
+    -   Código único no cabeçalho ou rodapé (ex: `Grupo03_ALPARGATAS_2025`).
+    -   Texto oculto com identificador interno (CTRL-ID) inserido no início do documento.
+    -   Propriedades do documento preenchidas (Autor, Título, Comentários).
+
+-   O arquivo deverá ser editado **exclusivamente** no OneDrive, garantindo:
+
+    -   Registro automático do histórico de versões.
+    -   Identificação de quem editou o quê e quando.
+    -   Preservação dos elementos de marcação digital.
+
+-   Na avaliação, será verificado:
+
+    -   A integridade dos identificadores inseridos.
+    -   A consistência dos metadados e histórico de edição.
+    -   A presença de conteúdo original desenvolvido pelo grupo.
+
+> Relatórios fora do ambiente compartilhado ou sem marcação poderão ser **desconsiderados**.
+
+#### Uso Responsável de Inteligência Artificial 🤖
+
+O uso de recursos de IA é permitido desde que siga princípios éticos e responsáveis, conforme as *Diretrizes para o Uso Ético e Responsável da Inteligência Artificial Generativa* [@sampaio2024a]. Isso significa que a IA pode ser utilizada como apoio — por exemplo, para **revisão de texto, sugestão de estrutura ou aprimoramento da clareza** — mas o conteúdo final deve refletir a análise, interpretação e pensamento crítico do grupo. Os alunos devem observar os seguintes critérios:
+
+**Declaração de Uso:**
+
+-   Caso tenham utilizado IA (como ChatGPT, Copilot, Gemini, etc.), devem incluir uma seção no final do relatório intitulada “**Apoio Tecnológico Utilizado**”, especificando:
+
+    -   Ferramenta utilizada.
+    -   Tipo de auxílio (ex: sugestão de estrutura, revisão gramatical, geração de tópicos).
+    -   Trechos eventualmente gerados com suporte da IA.
+
+**Proibição de Geração Integral:**
+
+-   Relatórios gerados integralmente por IA, sem intervenção crítica e intelectual dos alunos, serão considerados inválidos.
+
+**Análise de Originalidade:**
+
+-   O conteúdo textual poderá ser submetido a ferramentas de detecção de plágio (**CopySpyder, Turnitin etc.**) e geração automática (**Copyleaks, GPTZero etc.**) para verificar autenticidade.
+
+> O relatório deve refletir o entendimento e a capacidade analítica dos alunos. O uso de IA deve ser transparente, ético e complementar — jamais substitutivo da autoria acadêmica.
+
+<br>
+
+#### 📊 Exemplos de Uso da IA
+
+| ✅ Aceitável | ❌ Não Aceitável |
+|------------------------------------|------------------------------------|
+| Usar IA para revisar ortografia, gramática e clareza. | Gerar o relatório inteiro por IA e entregar sem alterações significativas. |
+| Solicitar à IA sugestões de tópicos ou estrutura para organizar o conteúdo. | Copiar e colar o texto gerado pela IA como produto final, sem revisão crítica. |
+| Utilizar IA para gerar imagens ou gráficos de apoio, devidamente citados e interpretados. | Inserir gráficos, tabelas ou textos gerados pela IA sem verificar ou validar as informações. |
+| Pedir à IA exemplos de referências para depois verificar e usar conforme normas acadêmicas. | Usar referências fictícias criadas pela IA sem conferência em fontes reais. |
+
+> ℹ️ Sempre que a IA for utilizada, deve-se citar de forma clara no relatório, descrevendo como e em que etapa ela contribuiu para o trabalho.
