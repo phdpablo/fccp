@@ -2,7 +2,7 @@
 
 <br>
 
-Essa seção apresenta as instruções para a realização de uma **Análise de Capital de Giro** em casos reais, utilizando dados financeiros de empresas de capital aberto.
+Essa seção apresenta as instruções para a realização de uma **Análise de Capital de Giro** num caso real, utilizando dados financeiros de uma empresa de capital aberto.
 
 Trata-se de uma atividade prática em grupo (Projeto em Grupo) que visa elaborar um **Relatório de Diagnóstico e Plano de Ações** sobre a gestão do capital de giro de uma empresa específica.
 
@@ -10,7 +10,7 @@ Trata-se de uma atividade prática em grupo (Projeto em Grupo) que visa elaborar
 
 ## 🎯 Objetivo Geral
 
-O objetivo desse projeto é aplicar os conceitos teóricos de **Administração Financeira de Curto Prazo** na análise prática da gestão do capital de giro de uma empresa de capital aberto.
+O objetivo desse projeto é aplicar os conceitos teóricos de [**Administração Financeira de Curto Prazo**](#sec-giro) na análise prática da gestão do capital de giro de uma empresa de capital aberto.
 
 A partir da análise de dados públicos, cada grupo deverá elaborar um **diagnóstico da saúde financeira de curto prazo** da empresa escolhida, culminando em recomendações estratégicas fundamentadas.
 
@@ -26,7 +26,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   Cada grupo será composto por até **cinco alunos**.\
 
-    -   Os nomes dos integrantes e seus e-mails deverão ser informados em uma atividade com data estipulada no Moodle (em torno de quatro semanas de curso).\
+    -   Os nomes dos integrantes e seus e-mails deverão ser informados na atividade da **Aula 5** (1º Ponto de Contole).\
 
     -   Os e-mails informados deverão corresponder ao cadastro da conta Microsoft como aluno da UFU[^06-aval-1].
 
@@ -53,7 +53,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   Cada grupo será **sorteado** para uma empresa brasileira de capital aberto (não financeira), conforme um pool inicial levantado pelo professor, que dependerá do número de grupos formados e empresas não avaliadas por turmas anteriores.\
 
-    -   O nome da empresa será informado para o grupo na mesma atividade do Moodle onde foram indicados os integrantes da equipe.\
+    -   O nome da empresa será informado para o grupo na mesma atividade da **Aula 5**.\
 
     -   As demonstrações financeiras da empresa (**Balanço Patrimonial** e **Demonstração de Resultados**), referentes aos últimos quatro anos fiscais completos, serão baixadas do site: <https://www.fundamentus.com.br>.\
 
@@ -63,17 +63,17 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   O professor baixará as planilhas com as demonstrações financeiras das empresas, aplicará **marcação digital** no arquivo e compartilhará o documento via **OneDrive institucional** com os integrantes do grupo.\
 
-    -   O link da planilha, apesar de não necessário, será disponibilizado na mesma atividade Moodle onde foram indicados os integrantes da equipe e informado o nome da empresa.\
+    -   O link da planilha (pasta de trabalho) será acessado na mesma data da atividade da **Aula 5**.\
 
-    -   Somente os integrantes do grupo e o professor terão acesso à planilha.\
+    -   Somente os integrantes do grupo e o professor terão acesso à planilha (pasta de trabalho).\
 
     -   A planilha deverá ser editada **exclusivamente** dentro do ambiente compartilhado, garantindo **rastreabilidade e controle de versões**.
 
-4.  **🧮 Desenvolvimento dos Cálculos e Primeiro Ponto de Controle**
+4.  **🧮 Desenvolvimento dos Cálculos**
 
     -   Os alunos deverão realizar os cálculos exigidos diretamente na planilha compartilhada.\
 
-    -   Após o prazo estipulado para essa etapa, o professor realizará a **primeira avaliação técnica**:
+    -   Após o prazo estipulado para essa etapa, o professor realizará a **primeira avaliação técnica,** estipulada para acontecer na data da **Aula 11** (2º Ponto de Contole):
 
         -   ✅ Grupos que atenderem aos critérios mínimos serão liberados para iniciar o relatório textual.\
         -   ⚠️ Grupos com erros conceituais ou estruturais serão orientados a corrigir a planilha antes de prosseguir.
@@ -92,7 +92,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
 6.  **📅 Encerramento do Compartilhamento e Avaliação Final**
 
-    -   Na data estipulada para conclusão do projeto, o professor encerrará o compartilhamento dos arquivos e realizará a **avaliação final diretamente no OneDrive**, considerando os documentos efetivamente trabalhados ao longo do período (planilha + relatório).
+    -   Na data estipulada para conclusão do projeto (**Aula 15**), o professor encerrará o compartilhamento dos arquivos e realizará a **avaliação final diretamente no OneDrive**, considerando os documentos efetivamente trabalhados ao longo do período (planilha + relatório).
 
 7.  **🔍 Revisão de Nota ou Defesa Presencial (se necessário)**
 
@@ -115,7 +115,6 @@ O relatório deve ser um documento **profissional e bem estruturado**, seguindo 
 
 Nessa seção, apresente a análise quantitativa da evolução dos principais componentes do capital de giro ao longo dos quatro anos. É fundamental que a análise não se limite a apresentar os números, mas que os interprete, explicando o que suas variações significam para a empresa.
 
-         
 -   *2.1 Indicadores de Capital de Giro (CCL e CGP):*
     -   Analise a evolução do Capital Circulante Líquido (CCL) e do Capital de Giro Próprio (CGP). Discuta as implicações da trajetória desses indicadores para a liquidez e a estrutura de financiamento da empresa.\
 -   *2.2 Prazos Médios (PME, PMR, PMP):*
@@ -125,17 +124,14 @@ Nessa seção, apresente a análise quantitativa da evolução dos principais co
 -   *2.4 Necessidade de Investimento em Giro (NIG ou NCG):*
     -   Analise a evolução da Necessidade de Investimento em Giro (NIG ou NCG). Relacione a NIG com o CCL para determinar se a empresa gera folga ou déficit de tesouraria.\
 
-
 > Para cada um dos itens acima, **crie gráficos** que ilustrem claramente a evolução dos indicadores ao longo dos quatro anos. A visualização dos dados é um componente essencial da análise.
 
 3.  **Análise Qualitativa e Estratégica**
 
 Conecte os números da sua análise com a estratégia da empresa. Para isso, é recomendado que o grupo consulte os Relatórios da Administração (disponíveis no site de Relações com Investidores da empresa) dos anos analisados.
 
-         
 -   *Diagnóstico das Políticas de Gestão:* Com base nos indicadores calculados, infira e discuta as políticas de investimento e financiamento do capital de giro da empresa (por exemplo, agressiva, conservadora ou equilibrada).\
 -   *Justificativa dos Resultados:* Busque nos relatórios da empresa informações que ajudem a explicar as variações encontradas nos indicadores. Por exemplo, um aumento no PME foi causado por uma estratégia de aumento de estoques para uma nova linha de produtos ou por uma queda nas vendas?\
-
 
 4.  **Conclusão e Recomendações**
 
@@ -151,11 +147,11 @@ A planilha deve ser **organizada, clara e rastreável**. Estrutura sugerida:
 -   📂 Planilhas 1 e 2: **Dados Brutos (Balanço + DRE)**
     -   As informações das demonstrações financeiras (Balanço Patrimonial + Demonstração de Resultados) estarão disponíveis na planilha baixada do site [Fundamentus](https://www.fundamentus.com.br) para vários anos. As contas estarão nas linhas e os anos nas colunas. Apesar de utilizarmos apenas os quatro últimos anos para a análise, se recomenda que essas planilhas permaneçam originais.\
 -   📂 Planilhas 3 e/ou 4: **Dados Intermediários (opcional)**
-    -   Se necessário, opcionalmente, o grupo de trabalho pode compilar as informações que serão utilizadas nas análises em outra(s) planilha(s). Não se reconhece necessidade de mais de duas planilhas (Balanço + DRE) para compilar essas informações e, impreterivelemente, elas devem estar vinculadas com as planilhas de Dados Brutos.\
+    -   Se necessário o grupo de trabalho pode compilar as informações que serão utilizadas nas análises em outra(s) planilha(s). Não se reconhece necessidade de mais de duas planilhas (Balanço + DRE) para compilar essas informações e, impreterivelemente, elas devem estar vinculadas com as planilhas de Dados Brutos.\
 -   📂 Planilha 5: **Cálculos (com fórmulas vinculadas)**
     -   Crie uma seção para cada grupo de indicadores (Capital de Giro, Prazos Médios, Ciclos, NIG). Demonstre os cálculos de forma organizada para cada um dos quatro anos. As células devem conter as fórmulas, e não apenas os valores finais, vinculadas às planilhas anteriores.\
 -   📊 Planilha 6: **Gráficos (vinculados aos cálculos)**
-    -   Insira nesta aba todos os gráficos que foram utilizados no relatório. Os gráficos devem ser vinculados aos dados da planilha de Cálculos, de modo que qualquer alteração nos cálculos seja refletida automaticamente.
+    -   Insira nesta planilha todos os gráficos que foram utilizados no relatório. Os gráficos devem ser vinculados aos dados da planilha de Cálculos, de modo que qualquer alteração nos cálculos seja refletida automaticamente.
 
 <br>
 
@@ -183,7 +179,7 @@ O projeto será avaliado com base nos seguintes critérios:
     -   *Planilha:* Organização, clareza na apresentação dos cálculos e rastreabilidade das fórmulas.
 
 > Todos os integrantes do grupo são corresponsáveis pelo conteúdo da planilha e do relatório.\
-> A ausência de participação ativa poderá ser considerada na avaliação individual, conforme critérios definidos pelo professor.
+> A ausência de participação ativa poderá ser considerada na avaliação individual, conforme critérios definidos pelo professor. O cumprimento dos prazos também será avaliado.
 
 <br>
 
@@ -289,7 +285,7 @@ O uso de recursos de IA é permitido desde que siga princípios éticos e respon
 #### 📊 Exemplos de Uso da IA
 
 | ✅ Aceitável | ❌ Não Aceitável |
-|------------------------------------|------------------------------------|
+|----|----|
 | Usar IA para revisar ortografia, gramática e clareza. | Gerar o relatório inteiro por IA e entregar sem alterações significativas. |
 | Solicitar à IA sugestões de tópicos ou estrutura para organizar o conteúdo. | Copiar e colar o texto gerado pela IA como produto final, sem revisão crítica. |
 | Utilizar IA para gerar imagens ou gráficos de apoio, devidamente citados e interpretados. | Inserir gráficos, tabelas ou textos gerados pela IA sem verificar ou validar as informações. |

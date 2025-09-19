@@ -1,12 +1,12 @@
 # 🏢 O Curso {#sec-home .unnumbered}
 
-Página da disciplina **"Finanças Corporativas I"** do curso da [Faculdade de Ciência Contábeis](https://www.facic.ufu.br/) (FACIC) da [Universidade Federal de Uberlândia](https://ufu.br/) (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre **Finanças Corporativas de Curto Prazo** (artigos, notas de aulas, blogs, vídeos, etc.).
+Página da disciplina **"Finanças Corporativas I"** do curso da [Faculdade de Ciência Contábeis](https://www.facic.ufu.br/) (FACIC) da [Universidade Federal de Uberlândia](https://ufu.br/) (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre **Finanças Corporativas de Curto Prazo** (artigos, slides, recursos interativos, resumos em áudio, vídeos etc.).
 
-## Sobre o professor {#sec-instrutor .unnumbered .unlisted}
+# 🧠 Professor {#sec-instrutor .unnumbered}
 
-A disciplina é ministrada e mantida nesse hub por mim, Pablo Rogers 😉, doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu [site pessoal](https://phdpablo.com/) você encontrará mais detalhes sobre minhas formações, competências, trajetória e projetos.
+A disciplina é ministrada e mantida nesse *hub* por mim, Pablo Rogers 😉, doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu [site pessoal](https://phdpablo.com/) você encontrará mais detalhes sobre minhas formações, competências, trajetória e projetos.
 
-## Objetivos {#sec-about .unnumbered .unlisted}
+# 🎯 Objetivos {#sec-about .unnumbered}
 
 O curso tem como objetivo apresentar os principais conceitos e práticas de finanças corporativas de curto prazo. A disciplina visa prover aos alunos uma visão teórica e prática da **Administração do Capital de Giro** como base fundamental para o planejamento e controle financeiro do curto prazo. Especificamente, ao final do curso pretende-se que o aluno:
 
@@ -20,65 +20,87 @@ O curso tem como objetivo apresentar os principais conceitos e práticas de fina
 
 -   Assimile os aspectos gerais da gestão de estoques e seus modelos de análise.
 
-## Programa {#sec-programa .unnumbered .unlisted}
+# 📚 Programa {#sec-programa .unnumbered}
 
 A ementa oficial da disciplina encontra-se [aqui](https://www.facic.ufu.br/system/files/conteudo/28fagen39532_financas_corporativas_i.pdf). O Plano de Ensino aprovado pela coordenação da FACIC/UFU pode ser acessado no [Moodle](https://moodle.ufu.br/login/index.php), onde materemos a comunicação e organização das avaliações. Em linhas gerais o programa do curso versará sobre os seguintes conteúdos:
 
-1.  Introdução às Finanças Corporativas de Curto Prazo (FCCP)
+1.  [Introdução às Finanças Corporativas de Curto Prazo (FCCP)](#sec-intro)
 
-    Relação Risco e Retorno em Finanças
+    -   Relação Risco e Retorno em Finanças
 
-    Gestão de Curto Prazo x Gestão de Longo Prazo
+    -   Gestão de Curto Prazo x Gestão de Longo Prazo
 
-    Teorias de Finanças
+    -   Teorias de Finanças
 
-2.  Administração Financeira do Curto Prazo (Capital de Giro)
+2.  [Administração Financeira do Curto Prazo (Capital de Giro)](#sec-giro)
 
-    Conceitos de Capital de Giro
+    -   Conceitos de Capital de Giro
 
-    Dinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro
+    -   Dinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro
 
-    Investimento em Capital de Giro
+    -   Investimento em Capital de Giro
 
-    Financiamento do Capital de Giro
+    -   Financiamento do Capital de Giro
 
-    Necessidade de Investimento em Giro (NIG)
+    -   Necessidade de Investimento em Giro (NIG)
 
-3.  Administração de Caixa
+3.  [Administração de Caixa](#sec-caixa)
 
-    Razões da demanda de moeda e manutenção de caixa
+    -   Razões da demanda de moeda e manutenção de caixa
 
-    Ciclo de caixa e controle de seu saldo
+    -   Ciclo de caixa e controle de seu saldo
 
-    Modelos de administração de caixa
+    -   Modelos de administração de caixa
 
-4.  Administração de Valores a Receber (Recebíveis)
+4.  [Administração de Valores a Receber (Recebíveis)](#sec-credito)
 
-    Avaliação do risco de crédito
+    -   Avaliação do risco de crédito
 
-    Elementos de uma política geral de crédito
+    -   Elementos de uma política geral de crédito
 
-5.  Administração de Estoques
+5.  [Administração de Estoques](#sec-estoque)
 
-    Aspectos básicos dos estoques
+    -   Aspectos básicos dos estoques
 
-    Modelos de análise e controle dos estoques
+    -   Modelos de análise e controle dos estoques
 
-## Metodologia {#sec-method .unnumbered .unlisted}
+6.  [Estudo de Caso (Projeto em Grupo)](#sec-aval)
 
-O material do curso organizado nesse repositório refere-se ao roteiro estruturado (enredo) de parte que discutiremos nas aulas presenciais e conteúdos adicionais (bibliografia, notas de aulas, links, dicas de vídeos, etc). Na sala de aula teremos discussões conceituais e resoluções de exercícios, e por aqui, num primeiro momento, focarei em introduzir os **conceitos basilares da FCCP**.
+    -   Análise de Capital de Giro em Casos Reais
 
-A proposta do curso busca seguir de perto a mensagem de @dogucu2022. Nesse artigo as autoras abordam a importância da reprodutibilidade na pesquisa e ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
+    -   Elaboração de Relatório de Diagnóstico e Plano de Acões
 
-## Bibliografia {#sec-biblio .unnumbered .unlisted}
+# ⚙️ Metodologia {#sec-method .unnumbered}
+
+O material do curso organizado nesse repositório refere-se ao **roteiro estruturado (enredo)** de parte que discutiremos nas aulas presenciais e conteúdos adicionais (bibliografia, slides, recursos interativos, resumos, dicas de vídeos etc.). Na sala de aula teremos **discussões conceituais e resoluções de exercícios**, e por aqui, num primeiro momento, o foco é resumir o conteúdo e apresentar materiais adicionais. Em suma, o que é apresentado por aqui não substituí a leitura da bibliografia base: **complementa**.
+
+A proposta do curso, materializada nesse *site*, busca seguir de perto a mensagem de @dogucu2022. Nesse artigo as autoras abordam a importância da reprodutibilidade na pesquisa e ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
+
+Este curso adota o uso de **Inteligência Artificial** Generativa (IA) como ferramenta de apoio pedagógico, alinhado às diretrizes éticas e responsáveis propostas por @sampaio2024a. A IA é utilizada exclusivamente em funções complementares, que ampliam a acessibilidade e a interatividade dos conteúdos, sem substituir o trabalho intelectual, crítico e autoral do professor. Inclusive, o professor tem artigos científicos publicados sobre todos os temas lecionados na disciplina (alguns temas, mais de uma dezena de artigos).
+
+Considero que o uso da IA generativa na educação representa um **caminho sem volta**. Por isso, o ensino deve ser adaptado para essa nova realidade — tanto no processo de **transmissão do conhecimento**, quanto na **avaliação do aprendizado**. Ignorar essa transformação tecnológica seria negligenciar o potencial de inovação e inclusão que ela oferece.
+
+Entre os recursos desenvolvidos com suporte de IA, destacam-se:
+
+-   🧭 **Elementos interativos do site** que facilitam a navegação e a compreensão dos conceitos.\
+-   🎧 **Resumos em áudio** gerados com auxílio de IA para promover inclusão e autonomia no estudo.\
+-   📄 **Apoio à redação de conteúdos**, buscando sempre preservar a autoria, com revisão e curadoria humana[^index-1].
+
+[^index-1]: Por exemplo, i) transcrever um vídeo do professor e redigir textualmente com estrutura lógica; ii) resumir os pontos importantes de um artigo científico do professor e retornar um texto com linguagem não técnica e simples para o site; iii) gerar variações diferentes de exercícios consultados ou criados pelo professor, etc. Vide que nesses exemplos a autoria da fonte sempre é do professor, e a IA é uma ferramenta de apoio à redação.
+
+O uso da IA neste ambiente é transparente, contextualizado e limitado às funções recomendadas pelos autores [@sampaio2024a], respeitando os princípios de autoria, originalidade e responsabilidade acadêmica. Nenhum conteúdo é gerado de forma integral ou automatizada sem supervisão docente.
+
+> Conforme @sampaio2024a, a IA deve ser utilizada como apoio à expressão humana — e não como substituto da reflexão, da análise ou da autoria. É essa perspectiva que orienta todas as aplicações tecnológicas neste curso.
+
+# 📖 Bibliografia {#sec-biblio .unnumbered}
 
 A literatura de finanças é vasta. No Brasil, temos vários bons manuais em língua portuguesa. Muitos livros-textos são traduções de autores americanos, ou seja, conteúdo ambientado em um mercado diferente do nosso. No entanto, existem alguns manuais de autores brasileiros, cujo conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois! 😉
 
-Geralmente, esses manuais percorrem diversos assuntos de finanças, entretanto, nosso foco será na **FCCP**. Os outros assuntos serão tratados em disciplinas correlatas: Matemática Financeira, Finanças Corporativas II (Longo Prazo), Governança Corporativa, Avaliação Econômica de Empresas e Mercado de Capitais. Sem falar das áreas correlatas, tais como Economia (Micro e Macroeconomia), Matemática, Estatística e Ciência da Computação. Na verdade, o conteúdo do curso de Ciências Contábeis, no meu entender, é aquele que talvez dá a melhor base para a formação de **Administrador Financeiro**, até mesmo mais que o próprio curso de Administração 🤐🤫.
+Geralmente, esses manuais percorrem diversos assuntos de finanças, entretanto, nosso foco será na **FCCP**. Os outros assuntos são tratados em disciplinas correlatas: Matemática Financeira, Finanças Corporativas II (Longo Prazo), Governança Corporativa, Avaliação Econômica de Empresas e Mercado de Capitais. Sem falar das áreas correlatas, tais como Economia (Micro e Macroeconomia), Matemática, Estatística e Ciência da Computação.
 
-Como bibliografia base para os fundamentos do curso, utilizaremos as recomendações da ementa oficial, e adotaremos as referências atualizadas das bibliografias básica e complementar: @assafneto2014, @gitman2010, @matias2007, @ross2015 e @brealey2013.
+Como bibliografia base para os fundamentos do curso, utilizaremos as recomendações da ementa oficial, e adotaremos as referências atualizadas das bibliografias básica e complementar: @assafneto2014, @assafneto2021, @gitman2010, @matias2007, @ross2015 e @brealey2013.
 
-## Licença {.unnumbered .unlisted}
+# Licença {.unnumbered .unlisted}
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 
