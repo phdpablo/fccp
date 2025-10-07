@@ -10,9 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* 1. Definição da Paleta de Cores Solicitada */
+        :root {
+            --dark-blue: #0D232C;
+            --vibrant-orange: #F18C22;
+            --light-teal: #87CBCC;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8f9fa;
+            color: var(--dark-blue); /* Cor principal do texto */
         }
         .card {
             background-color: #ffffff;
@@ -20,11 +28,14 @@
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
         .table-header {
-            background-color: #e9ecef;
+            background-color: #e1f7f7; /* Tom claro do light-teal para o cabeçalho da tabela */
         }
-        .class-a { background-color: #fff0f0; color: #c0392b; }
-        .class-b { background-color: #fff9e6; color: #d35400; }
-        .class-c { background-color: #e8f8f5; color: #1e8449; }
+        
+        /* Cores para as classes ABC na tabela e nos resumos */
+        .class-a { background-color: #fff2e4; color: #d0751a; border: 1px solid #fde6ce; }
+        .class-b { background-color: #e3f8f8; color: #007a7a; border: 1px solid #cceeee; }
+        .class-c { background-color: #f5f5f5; color: #616161; border: 1px solid #e0e0e0; }
+        
         .chart-container {
             position: relative;
             width: 100%;
@@ -36,11 +47,11 @@
         }
     </style>
 </head>
-<body class="antialiased text-gray-800">
+<body class="antialiased">
 
     <div class="container mx-auto p-4 md:p-8">
         <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-blue-800 mb-2">Simulador Interativo da Curva ABC</h1>
+            <h1 class="text-4xl font-bold mb-2" style="color: var(--dark-blue);">Simulador Interativo da Curva ABC</h1>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">Uma ferramenta para classificar itens de estoque com base em seu valor de consumo, aplicando o Princípio de Pareto (80/20) para otimizar os esforços de gestão.</p>
         </header>
 
@@ -64,9 +75,9 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="mt-4 flex justify-between items-center">
-                    <button id="add-row-btn" class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition">Adicionar Item</button>
-                    <button id="calculate-btn" class="bg-blue-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition text-lg">Calcular Curva ABC</button>
+                <div class="mt-4 flex flex-wrap justify-between items-center gap-4">
+                    <button id="add-row-btn" class="font-semibold py-2 px-4 rounded-lg transition" style="background-color: var(--light-teal); color: var(--dark-blue);">Adicionar Item</button>
+                    <button id="calculate-btn" class="text-white font-bold py-3 px-6 rounded-lg transition text-lg" style="background-color: var(--vibrant-orange);">Calcular Curva ABC</button>
                 </div>
             </section>
 
@@ -102,15 +113,15 @@
                     <!-- Implicações Gerenciais -->
                     <div class="space-y-4">
                         <h3 class="text-xl font-semibold mb-4 text-center">Implicações Gerenciais</h3>
-                        <div id="summary-a" class="p-4 rounded-lg class-a border border-red-300">
+                        <div id="summary-a" class="p-4 rounded-lg class-a">
                             <h4 class="font-bold text-lg">Classe A: Controle Rigoroso</h4>
                             <p class="text-sm">Itens de altíssimo valor. Exigem controle de inventário preciso, revisões frequentes, negociações estratégicas com fornecedores e aplicação de modelos como o LEC.</p>
                         </div>
-                        <div id="summary-b" class="p-4 rounded-lg class-b border border-orange-300">
+                        <div id="summary-b" class="p-4 rounded-lg class-b">
                             <h4 class="font-bold text-lg">Classe B: Controle Moderado</h4>
                             <p class="text-sm">Itens de valor intermediário. O controle pode ser menos intensivo que na classe A, com revisões periódicas e sistemas de controle padrão.</p>
                         </div>
-                        <div id="summary-c" class="p-4 rounded-lg class-c border border-green-300">
+                        <div id="summary-c" class="p-4 rounded-lg class-c">
                             <h4 class="font-bold text-lg">Classe C: Controle Simplificado</h4>
                             <p class="text-sm">Itens de baixo valor. Justificam controles mais simples, como o sistema de duas gavetas, e estoques de segurança mais generosos para evitar faltas sem incorrer em altos custos de carregamento.</p>
                         </div>
@@ -118,30 +129,32 @@
                 </div>
             </section>
         </main>
+        
+        <!-- 2. Rodapé com Copyright e Hyperlink Adicionado -->
+        <footer class="text-center py-6 mt-12 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+                © 2025 <a href="https://fccp.phdpablo.com" target="_blank" rel="noopener noreferrer" class="font-semibold transition hover:underline" style="color: var(--vibrant-orange);">fccp.phdpablo.com</a>. Todos os direitos reservados.
+            </p>
+        </footer>
     </div>
 
     <script>
         const initialData = [
-            // Classe A (Poucos itens, alto valor)
-            { sku: 'PROC-XEON', demand: 50, cost: 20000 }, // 1,000,000
-            { sku: 'GPU-QUADRO', demand: 30, cost: 25000 }, // 750,000
-            { sku: 'SSD-NVME-4TB', demand: 200, cost: 2000 }, // 400,000
-
-            // Classe B (Itens intermediários)
-            { sku: 'RAM-32GB-DDR5', demand: 300, cost: 600 }, // 180,000
-            { sku: 'MOBO-PRO', demand: 100, cost: 1200 }, // 120,000
-            { sku: 'PSU-1000W', demand: 150, cost: 800 }, // 120,000
-            { sku: 'CASE-PREMIUM', demand: 80, cost: 900 }, // 72,000
-
-            // Classe C (Muitos itens, baixo valor)
-            { sku: 'MOUSEPAD', demand: 2000, cost: 20 }, // 40,000
-            { sku: 'USB-CABLE', demand: 3000, cost: 15 }, // 45,000
-            { sku: 'FAN-120MM', demand: 500, cost: 40 }, // 20,000
-            { sku: 'SCREW-KIT', demand: 1000, cost: 10 }, // 10,000
-            { sku: 'THERMAL-PASTE', demand: 400, cost: 30 }, // 12,000
-            { sku: 'ZIP-TIE', demand: 5000, cost: 2 }, // 10,000
-            { sku: 'CLEAN-SPRAY', demand: 200, cost: 25 }, // 5,000
-            { sku: 'HDMI-CABLE', demand: 1000, cost: 35 }, // 35,000
+            { sku: 'PROC-XEON', demand: 50, cost: 20000 },
+            { sku: 'GPU-QUADRO', demand: 30, cost: 25000 },
+            { sku: 'SSD-NVME-4TB', demand: 200, cost: 2000 },
+            { sku: 'RAM-32GB-DDR5', demand: 300, cost: 600 },
+            { sku: 'MOBO-PRO', demand: 100, cost: 1200 },
+            { sku: 'PSU-1000W', demand: 150, cost: 800 },
+            { sku: 'CASE-PREMIUM', demand: 80, cost: 900 },
+            { sku: 'MOUSEPAD', demand: 2000, cost: 20 },
+            { sku: 'USB-CABLE', demand: 3000, cost: 15 },
+            { sku: 'FAN-120MM', demand: 500, cost: 40 },
+            { sku: 'SCREW-KIT', demand: 1000, cost: 10 },
+            { sku: 'THERMAL-PASTE', demand: 400, cost: 30 },
+            { sku: 'ZIP-TIE', demand: 5000, cost: 2 },
+            { sku: 'CLEAN-SPRAY', demand: 200, cost: 25 },
+            { sku: 'HDMI-CABLE', demand: 1000, cost: 35 },
         ];
 
         const inventoryTable = document.getElementById('inventory-table');
@@ -160,7 +173,7 @@
                 <td class="p-3 border-b" contenteditable="true">${item.sku}</td>
                 <td class="p-3 border-b" contenteditable="true">${item.demand}</td>
                 <td class="p-3 border-b" contenteditable="true">${item.cost}</td>
-                <td class="p-3 border-b"><button class="text-red-500 font-semibold hover:text-red-700 remove-row-btn">Remover</button></td>
+                <td class="p-3 border-b"><button class="font-semibold remove-row-btn" style="color: var(--vibrant-orange);">Remover</button></td>
             `;
             row.querySelector('.remove-row-btn').addEventListener('click', () => row.remove());
             return row;
@@ -187,7 +200,6 @@
                 };
             });
 
-            // 1. Calculate consumption value
             let processedData = data.map(item => ({
                 ...item,
                 consumptionValue: item.demand * item.cost,
@@ -195,10 +207,8 @@
 
             const totalConsumptionValue = processedData.reduce((sum, item) => sum + item.consumptionValue, 0);
 
-            // 2. Sort by consumption value
             processedData.sort((a, b) => b.consumptionValue - a.consumptionValue);
 
-            // 3. Calculate percentages and classify
             let cumulativeValue = 0;
             processedData = processedData.map(item => {
                 cumulativeValue += item.consumptionValue;
@@ -253,16 +263,16 @@
                         {
                             label: 'Valor de Consumo Anual (R$)',
                             data: values,
-                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                            borderColor: 'rgba(54, 162, 235, 1)',
+                            backgroundColor: 'rgba(135, 203, 204, 0.7)', // Cor: light-teal
+                            borderColor: 'rgba(135, 203, 204, 1)',
                             yAxisID: 'y',
                         },
                         {
                             label: '% Acumulada do Valor',
                             data: cumulativePercentages,
                             type: 'line',
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(241, 140, 34, 1)',      // Cor: vibrant-orange
+                            backgroundColor: 'rgba(241, 140, 34, 0.2)',
                             yAxisID: 'y1',
                             tension: 0.1
                         }
@@ -276,10 +286,7 @@
                             type: 'linear',
                             display: true,
                             position: 'left',
-                            title: {
-                                display: true,
-                                text: 'Valor de Consumo (R$)'
-                            }
+                            title: { display: true, text: 'Valor de Consumo (R$)' }
                         },
                         y1: {
                             type: 'linear',
@@ -287,18 +294,9 @@
                             position: 'right',
                             min: 0,
                             max: 100,
-                            grid: {
-                                drawOnChartArea: false,
-                            },
-                            title: {
-                                display: true,
-                                text: '% Acumulada'
-                            },
-                            ticks: {
-                                callback: function(value) {
-                                    return value + "%"
-                                }
-                            }
+                            grid: { drawOnChartArea: false },
+                            title: { display: true, text: '% Acumulada' },
+                            ticks: { callback: function(value) { return value + "%" } }
                         }
                     }
                 }

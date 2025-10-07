@@ -9,18 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Academic Neutral -->
-    <!-- Application Structure Plan: A single-page narrative structure designed for educational purposes. It starts with a theoretical comparison, moves to an interactive simulator where users can manipulate variables and see the financial impact in real-time on a timeline chart, and concludes by deconstructing the formula. This task-oriented flow (learn -> experiment -> understand) is chosen to make the abstract connection between financial math and corporate finance tangible and intuitive for students. -->
-    <!-- Visualization & Content Choices: Report Info: Comparing two financial decision-making models. Goal: Show they are fundamentally the same. Viz/Presentation: Side-by-side text comparison, an interactive simulator with sliders, and a dynamic timeline chart. Interaction: Users change operational variables (like payment terms) and see the immediate effect on the financial outcome (VPL/Resultado), and can switch the 'Data Focal' to prove the invariance principle. Justification: This interactive model promotes discovery-based learning over passive reading. Library/Method: Chart.js for the dynamic timeline chart, Vanilla JS for calculations, Tailwind CSS for layout. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
+        /* 1. Definição da Paleta de Cores Solicitada */
+        :root {
+            --dark-blue: #0D232C;
+            --vibrant-orange: #F18C22;
+            --light-teal: #87CBCC;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FDFBF7;
-            color: #3A3A3A;
+            background-color: #f8f9fa; /* Fundo neutro para melhor contraste */
+            color: var(--dark-blue);
         }
-        .accent-color { background-color: #4A90E2; }
-        .accent-text { color: #4A90E2; }
+        .accent-color { background-color: var(--vibrant-orange); }
+        .accent-text { color: var(--vibrant-orange); }
         .card {
             background-color: #FFFFFF;
             border-radius: 0.75rem;
@@ -35,22 +38,19 @@
             appearance: none;
             width: 20px;
             height: 20px;
-            background: #4A90E2;
+            background: var(--vibrant-orange);
             cursor: pointer;
             border-radius: 50%;
         }
         .slider::-moz-range-thumb {
             width: 20px;
             height: 20px;
-            background: #4A90E2;
+            background: var(--vibrant-orange);
             cursor: pointer;
             border-radius: 50%;
         }
-        .nav-button {
-            transition: all 0.2s ease-in-out;
-        }
         .nav-button.active {
-            background-color: #4A90E2;
+            background-color: var(--vibrant-orange);
             color: white;
         }
         .chart-container {
@@ -68,11 +68,11 @@
     <header class="bg-white shadow-sm sticky top-0 z-10">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <h1 class="text-xl font-bold accent-text">Estoques & Valor no Tempo</h1>
+                <h1 class="text-xl font-bold" style="color: var(--dark-blue);">Estoques & Valor no Tempo</h1>
                 <div class="flex space-x-4">
-                    <a href="#conceitos" class="text-gray-600 hover:accent-text font-medium">Conceitos</a>
-                    <a href="#simulador" class="text-gray-600 hover:accent-text font-medium">Simulador</a>
-                    <a href="#formula" class="text-gray-600 hover:accent-text font-medium">Fórmula Geral</a>
+                    <a href="#conceitos" class="text-gray-600 font-medium hover:text-orange-500">Conceitos</a>
+                    <a href="#simulador" class="text-gray-600 font-medium hover:text-orange-500">Simulador</a>
+                    <a href="#formula" class="text-gray-600 font-medium hover:text-orange-500">Fórmula Geral</a>
                 </div>
             </div>
         </nav>
@@ -80,7 +80,7 @@
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <section id="intro" class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">Simulador Decisões de Compra</h2>
+            <h2 class="text-4xl font-bold mb-4" style="color: var(--dark-blue);">Simulador Decisões de Compra</h2>
             <p class="max-w-3xl mx-auto text-lg text-gray-700">
                 Esta aplicação demonstra como as decisões de compra de estoques em Finanças Corporativas são uma aplicação direta do princípio da Equivalência de Capitais. A análise depende crucialmente do <strong>Ciclo de Caixa</strong> da operação, que define se a empresa financia a compra ou é financiada pelo fornecedor.
             </p>
@@ -159,11 +159,11 @@
                 <span class="font-bold">R<sub class="text-sm">tr</sub> = PV - [ CMV * (1 + i)<sup>CC / 30</sup> ]</span>
             </div>
             <div class="mt-6 grid md:grid-cols-2 gap-4 text-center">
-                <div class="p-4 bg-blue-50 rounded-lg">
+                <div class="p-4 rounded-lg" style="background-color: #fff2e4;">
                     <p class="font-bold">Se CC > 0 (Empresa financia)</p>
                     <p class="text-sm text-gray-700">`i` = `kc` (Custo de Captação)</p>
                 </div>
-                <div class="p-4 bg-green-50 rounded-lg">
+                <div class="p-4 rounded-lg" style="background-color: #e3f8f8;">
                     <p class="font-bold">Se CC < 0 (Fornecedor financia)</p>
                     <p class="text-sm text-gray-700">`i` = `ka` (Taxa de Aplicação)</p>
                 </div>
@@ -171,10 +171,11 @@
         </section>
     </main>
 
-    <footer class="bg-white mt-16 border-t">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-600">
-            <p>&copy; 2025 | Ferramenta Pedagógica de Análise Financeira.</p>
-        </div>
+    <!-- 2. Rodapé com Copyright e Hyperlink Adicionado -->
+    <footer class="text-center py-6 mt-12 border-t border-gray-200">
+        <p class="text-sm text-gray-500">
+            © 2025 <a href="https://fccp.phdpablo.com" target="_blank" rel="noopener noreferrer" class="font-semibold transition hover:underline" style="color: var(--vibrant-orange);">fccp.phdpablo.com</a>. Todos os direitos reservados.
+        </p>
     </footer>
 
     <script>
@@ -266,8 +267,10 @@
         
         function updateChart(tp, tr, cmvp, pvp) {
             const events = [
-                { label: `Pagamento (Dia ${tp})`, value: -cmvp, color: 'rgba(227, 80, 80, 0.7)', time: tp },
-                { label: `Recebimento (Dia ${tr})`, value: pvp, color: 'rgba(80, 227, 194, 0.7)', time: tr }
+                // Cor do pagamento (saída de caixa) alterada para vibrant-orange
+                { label: `Pagamento (Dia ${tp})`, value: -cmvp, color: 'rgba(241, 140, 34, 0.7)', time: tp },
+                // Cor do recebimento (entrada de caixa) alterada para light-teal
+                { label: `Recebimento (Dia ${tr})`, value: pvp, color: 'rgba(135, 203, 204, 0.7)', time: tr }
             ].sort((a, b) => a.time - b.time);
 
             timelineChart.data.labels = events.map(e => e.label);

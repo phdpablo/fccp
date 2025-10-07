@@ -1,0 +1,472 @@
+---
+title: "Introdução à Finanças Corporativas"
+#subtitle: "XXX"
+author: "Dr. Pablo Rogers"
+format:
+  revealjs:
+    theme: sky
+    slide-number: true
+    chalkboard: true
+    height: 750
+    width: 1600
+    preview-links: auto
+    logo: ""
+    footer: "FCCP | Introdução"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
+---
+
+## Roteiro da Aula
+
+<br>
+
+::: incremental
+1.  **Introdução:** O Trade-off Risco vs. Retorno
+2.  **Estudo de Caso:** Renda Fixa vs. Imóveis
+3.  **Decisão Racional:** Dominância e Prêmio pelo Risco
+4.  **Conceito-Chave:** O Custo de Oportunidade
+5.  **Fundamento Essencial:** O Valor do Dinheiro no Tempo
+6.  **O Objetivo da Empresa:** Maximização do Valor
+7.  **Governança Corporativa:** Conflitos de Agência
+8.  **Teorias de Finanças:** Visão Geral
+:::
+
+## O Dilema Central das Finanças
+
+<br>
+
+### O que é Finanças?
+
+A ciência da **tomada de decisão econômica** sob condições de **incerteza**.
+
+<br>
+
+### O Trade-off Fundamental
+
+Toda decisão financeira gira em torno da relação entre:
+
+-   **Retorno:** O potencial de ganho.
+-   **Risco:** A exposição à perda.
+
+## Estudo de Caso: Renda Fixa vs. Imóvel
+
+<br>
+
+Para tornar os conceitos abstratos mais concretos, vamos analisar um dilema de investimento comum.
+
+<br>
+
+|     Ativo Financeiro     | vs. |          Ativo Real          |
+|:------------------------:|:---:|:----------------------------:|
+| **Renda Fixa** (ex: CDB) |     | **Imóvel** (ex: Apartamento) |
+
+## Natureza dos Retornos
+
+<br>
+
+### Renda Fixa
+
+-   **Retorno:** $Juros$
+-   **Previsibilidade:** O retorno é contratualmente definido. Você sabe o que esperar.
+
+### Imóvel
+
+-   **Retorno 1:** $Aluguel$. Análogo aos juros, mas com maior incerteza.
+-   **Retorno 2:** Ganho de Capital. A valorização do imóvel. É especulativo e não garantido.
+
+## O Panorama do Risco
+
+### Garantias e Custos
+
+-   **Renda Fixa:** Proteção do FGC (até R\$ 250 mil) sem custo direto para o investidor. Custos de manutenção quase nulos.
+-   **Imóvel:** Sem garantia institucional. Seguro é um custo extra. Altos custos de manutenção, transação (ITBI, cartório) e administração (\~10% do aluguel).
+
+### Confiabilidade do Fluxo de Caixa
+
+-   **Renda Fixa:** Altíssima. O pagamento de juros de um título do governo é quase certo.
+-   **Imóvel:** Incerteza. Risco de **vacância** (imóvel vazio) e **inadimplência** do inquilino.
+
+## O Papel Crítico da Liquidez
+
+### Definição
+
+**Liquidez** é a capacidade de um ativo ser convertido em dinheiro **rapidamente** e **sem perda significativa de valor**.
+
+-   **Renda Fixa:** **Alta liquidez**. Resgate rápido com pouco ou nenhum impacto no preço.
+-   **Imóvel:** **Baixa liquidez**. Vender pode levar meses. Para vender rápido, é preciso dar um grande desconto, ou seja, **perder valor**.
+
+> A iliquidez é uma forma de risco. Ela aprisiona o capital e gera um **custo de oportunidade**.
+
+## Previsibilidade do Valor Futuro
+
+<br>
+
+### Renda Fixa
+
+-   **Previsibilidade:** **Alta**. O valor de resgate no vencimento é conhecido desde o início.
+
+### Imóvel
+
+-   **Previsibilidade:** **Baixa**. O valor futuro é **especulativo**.
+-   A crença na valorização de longo prazo não é uma garantia. Mercados imobiliários podem estagnar ou cair.
+-   Ex: Crise de 2008 (EUA), ciclos de baixa no Brasil.
+
+## Análise Comparativa: Resumo
+
+| Característica        | Renda Fixa (ex: CDB)   | Imóvel (Residencial)         |
+|:---------------------|:----------------------|:---------------------------|
+| **Perfil de Retorno** | Primariamente Juros    | Aluguel & Ganho de Capital   |
+| **Previsibilidade**   | Alta (Contratual)      | Baixa (Mercado)              |
+| **Garantia**          | FGC (sem custo direto) | Inexistente (Seguro é custo) |
+| **Liquidez**          | Alta                   | Muito Baixa                  |
+| **Custos**            | Insignificantes        | Significativos e contínuos   |
+| **Fluxo de Caixa**    | Confiável              | Risco de interrupção         |
+| **Perfil de Risco**   | **Menor**              | **Maior**                    |
+
+## O Cálculo da Escolha Racional
+
+<br>
+
+Como um investidor "racional" escolhe entre diferentes ativos? Vamos usar um modelo simples com 3 ativos hipotéticos: A, B e C.
+
+<br>
+
+| Ativo | Risco Esperado | Retorno Esperado |
+|:-----:|:--------------:|:----------------:|
+| **A** |       X        |       10%        |
+| **B** |    Y (\>X)     |       15%        |
+| **C** |       X        |       15%        |
+
+## O Princípio da Dominância
+
+### Cenário 1: Mesmo Risco, Retorno Diferente
+
+-   **Comparando A e C:** Ambos têm Risco X.
+-   O Ativo C oferece 15% de retorno, enquanto o A oferece 10%.
+-   **Escolha Racional:** **Ativo C**. Ele **domina** o Ativo A.
+
+### Cenário 2: Mesmo Retorno, Risco Diferente
+
+-   **Comparando B e C:** Ambos oferecem 15% de retorno.
+-   O Ativo C tem Risco X, enquanto o B tem Risco Y (maior).
+-   **Escolha Racional:** **Ativo C**. Ele também **domina** o Ativo B.
+
+## Risco e Retorno Esperado
+
+<br>
+
+A máxima popular "quanto maior o risco, maior o retorno" é uma simplificação...
+
+A formulação correta é:
+
+> Um maior **retorno esperado** é exigido como compensação por um maior **risco percebido**.
+
+-   A decisão é tomada *ex-ante* (antes do fato).
+-   O resultado *ex-post* (depois do fato) pode ser diferente, mas isso não invalida a racionalidade da decisão inicial.
+
+## O Prêmio pelo Risco
+
+<br>
+
+E quando não há dominância?
+
+-   **Comparando A e B:**
+    -   **Ativo A:** Menor Risco (X), Menor Retorno (10%)
+    -   **Ativo B:** Maior Risco (Y), Maior Retorno (15%)
+
+Aqui temos um **trade-off** real. A escolha depende do **perfil de investidor**.
+
+A diferença de retorno ($15\% - 10\% = 5\%$) é o **prêmio pelo risco**: o retorno adicional que o investidor exige para aceitar o risco extra do Ativo B.
+
+## Custo de Oportunidade: A Definição Correta
+
+<br>
+
+O que acontece se um investidor escolhe o Ativo A (dominado) em vez do Ativo C (dominante)?
+
+> **Custo de Oportunidade** é o valor da **melhor alternativa preterida** entre opções com um **perfil de risco comparável**.
+
+-   Ao escolher A (10%) em vez de C (15%), o custo de oportunidade foi o retorno de 15%. O investidor sacrificou 5% de retorno sem reduzir seu risco.
+
+A frase-chave é: **"de igual risco"**.
+
+## Custo de Oportunidade na Prática
+
+<br>
+
+Comparar o retorno de um imóvel com o a renda fixa pode ser um erro.
+
+-   **Por quê?** Porque os perfis de risco são diferentes.
+-   **O correto:** O retorno de um imóvel deve ser comparado com o de outro investimento de **risco equiparável** (ex: fundo imobiliário, LCIs, outro empreendimento).
+
+> O conceito de custo de oportunidade ajustado pelo risco é fundamental para decisões financeiras racionais. Ele evita comparações inadequadas entre ativos com perfis de risco distintos.
+
+## O Valor do Dinheiro no Tempo
+
+<br>
+
+Princípio fundamental:
+
+> **R\$ 1.000 hoje valem mais do que R\$ 1.000 daqui a um ano.**
+
+Por quê?
+
+1.  **Inflação:** O aumento dos preços corrói o poder de compra do dinheiro. Com R\$ 1.000, você compra menos coisas no futuro.
+
+2.  **Custo de Oportunidade:** R\$ 1.000 hoje podem ser investidos para se tornarem mais de R\$ 1.000 no futuro. Deixar de receber hoje significa perder esse potencial de ganho.
+
+## A Taxa de Juros
+
+<br>
+
+A **taxa de juros** é o "preço do dinheiro". Ela representa o **custo de oportunidade de deter dinheiro**.
+
+É a compensação exigida para:
+
+-   Adiar o consumo.
+-   Abrir mão da liquidez.
+-   Assumir o risco da inflação e do não pagamento.
+
+> A taxa de juros é um dos "insumos" principais das finanças.
+
+## A Linguagem da Matemática Financeira
+
+<br>
+
+### Variáveis Centrais
+
+-   **M** ou **VF (FV)**: Montante ou Valor Futuro
+-   **C** ou **VP (PV)**: Capital ou Valor Presente
+-   **J**: Juros
+-   $i$: Taxa de juros (por período)
+-   **n**: Prazo (número de períodos)
+
+## Equações Fundamentais (Juros Compostos)
+
+<br>
+
+O montante é o capital inicial mais os juros acumulados. $$M = C + J$$
+
+O montante pode ser calculado diretamente a partir do capital. $$M = C \times (1 + i)^n$$\
+
+## Diagrama de Fluxo de Caixa
+
+<br>
+
+Uma ferramenta visual para representar problemas financeiros.
+
+-   **Eixo horizontal:** Linha do tempo ($n$)
+-   **Setas verticais:** Fluxos de caixa
+
+**Convenção Universal:**
+
+-   **Seta para baixo** $\downarrow$ (ou valor negativo): Saída de caixa (investimento, pagamento).
+-   **Seta para cima** $\uparrow$ (ou valor positivo): Entrada de caixa (resgate, recebimento).
+
+## Convenções Essenciais
+
+<br>
+
+1.  **Foco no Caixa:** Matemática financeira usa o regime de **caixa** (quando o dinheiro entra/sai), não o de **competência** da contabilidade (quando a venda ocorre).
+
+2.  **Alinhamento Taxa-Período:** A taxa ($i$) e o prazo ($n$) devem estar **sempre na mesma unidade de tempo** (ex: taxa ao mês, prazo em meses).
+
+3.  **Forma Unitária:** Nas fórmulas, a taxa de juros entra como decimal (12% = **0,12**).
+
+## Resumo Visual
+
+> [**Dashboard Conceitual**](01-intro-interativo.html)
+
+```{=html}
+<iframe src="01-intro-interativo.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+```
+
+## O Objetivo da Empresa
+
+<br>
+
+### Qual é o objetivo principal de uma empresa?
+
+::: incremental
+-   Uma resposta comum: **Maximizar o Lucro**.
+
+-   Por que essa resposta é **insuficiente**?
+:::
+
+::: incremental
+1.  **Ignora o Tempo:** Lucros de que ano? Aumentar o lucro hoje cortando custos de manutenção pode destruir valor no longo prazo.
+2.  **Ignora o Caixa:** Lucro contábil não é dinheiro no bolso do acionista. Uma empresa pode ter lucro e não ter caixa para pagar suas contas (dividendos).
+3.  **Ignora o Risco:** Dois projetos podem gerar o mesmo lucro, mas um pode ser muito mais arriscado que o outro.
+:::
+
+## O Objetivo da Administração Financeira
+
+<br>
+
+::: incremental
+O objetivo correto é **maximizar a riqueza dos acionistas**, o que é medido pelo **valor de mercado de suas ações**.
+
+-   O preço da ação reflete as expectativas sobre os **fluxos de caixa futuros**, ajustados pelo **risco** e pelo **tempo**.
+-   Se os acionistas estão ganhando, significa que todos os outros stakeholders (funcionários, credores, fornecedores) já foram pagos. Eles são os "proprietários residuais".
+:::
+
+## Shareholders vs. Stakeholders
+
+::: incremental
+-   **Shareholders (Acionistas):** Os proprietários da empresa. O foco principal da gestão financeira em modelos anglo-saxônicos (EUA, Reino Unido).
+-   **Stakeholders (Partes Interessadas):** Qualquer um com interesse na empresa (funcionários, clientes, fornecedores, governo, comunidade).
+:::
+
+::: fragment
+A visão de que a empresa deve servir a todos os stakeholders é mais forte em países como Alemanha e Japão.
+
+*A busca pela maximização da riqueza do acionista, no longo prazo, geralmente beneficia também os stakeholders (gera empregos, produtos de qualidade, etc.).*
+:::
+
+## As Decisões do Administrador Financeiro
+
+O administrador financeiro lida com duas questões fundamentais, refletidas no balanço patrimonial:
+
+<br>
+
+::::::: columns
+:::: column
+### Decisão de Investimento
+
+::: incremental
+-   Onde aplicar os recursos?
+-   Compra de ativos reais (tangíveis e intangíveis).
+-   **Lado Esquerdo do Balanço.**
+-   Ex: Construir uma nova fábrica, lançar um novo produto.
+:::
+::::
+
+:::: column
+### Decisão de Financiamento
+
+::: incremental
+-   Como obter os recursos?
+-   Venda de ativos financeiros (ações, dívidas).
+-   **Lado Direito do Balanço.**
+-   Ex: Emitir novas ações, tomar um empréstimo bancário.
+:::
+::::
+:::::::
+
+## Horizontes de Gestão e o Foco no Caixa
+
+::: incremental
+-   **Gestão de Longo Prazo:** Decisões de investimento (orçamento de capital) e financiamento (estrutura de capital).
+-   **Gestão de Curto Prazo:** Administração do capital de giro (caixa, estoques, contas a receber/pagar).
+:::
+
+::: fragment
+### O Foco no Fluxo de Caixa
+
+A contabilidade usa o **regime de competência** (reconhece a receita na venda). Finanças foca no **regime de caixa** (quando o dinheiro efetivamente entra ou sai).
+
+**Exemplo:** Uma empresa vende um produto por R\$120 (custo R\$100) a prazo. - **Visão Contábil:** Lucro de R\$20. - **Visão Financeira:** Fluxo de Caixa de -R\$100 (se o custo foi pago) até o recebimento do cliente.
+:::
+
+## O Foco no Curto prazo
+
+![](01-representacaoBP.png){fig-align="right"}
+
+## Governança Corporativa
+
+<br>
+
+### O que é e por que é necessária?
+
+::: fragment
+**Governança Corporativa** é o sistema pelo qual as empresas são dirigidas e controladas.
+:::
+
+::: incremental
+-   Sua necessidade surge da **separação entre propriedade (acionistas) e gestão (administradores)** nas grandes corporações.
+-   Isso cria o **Problema de Agência**.
+:::
+
+## O Conflito de Agência
+
+<br>
+
+::: fragment
+Ocorre quando os interesses do **agente** (administrador) não estão alinhados com os do **principal** (acionista).
+:::
+
+::: incremental
+-   **Exemplo:** Um administrador pode evitar um projeto arriscado, mas lucrativo, para proteger seu emprego, mesmo que os acionistas desejem o projeto.
+-   Os custos gerados por esse conflito são chamados de **Custos de Agência**.
+:::
+
+## Conflitos de Agência: Brasil vs. EUA
+
+A natureza do principal conflito de agência varia com a estrutura de propriedade:
+
+::::::: columns
+:::: column
+### EUA / Reino Unido
+
+::: incremental
+-   **Estrutura:** Capital pulverizado, sem acionista controlador definido.
+-   **Conflito Principal:** **Administradores vs. Acionistas**
+-   **Preocupação:** Garantir que os gestores profissionais atuem para maximizar o valor.
+:::
+::::
+
+:::: column
+### Brasil / Europa Continental
+
+::: incremental
+-   **Estrutura:** Alta concentração de capital, com um acionista (ou bloco) controlador.
+-   **Conflito Principal:** **Acionista Controlador vs. Acionistas Minoritários**
+-   **Preocupação:** Proteger os minoritários de decisões que beneficiem apenas o controlador.
+:::
+::::
+:::::::
+
+## Mecanismos de Governança Corporativa
+
+Como alinhar os interesses e reduzir os custos de agência?
+
+::: incremental
+-   **Conselho de Administração:** Eleito pelos acionistas para supervisionar a gestão. A presença de conselheiros independentes é fundamental. - **Remuneração dos Executivos:** Planos de incentivo que atrelam a remuneração ao desempenho das ações (ex: opções de ações, bônus).
+-   **Monitoramento Externo:** Auditores independentes, analistas de mercado e grandes investidores institucionais.
+-   **Ameaça de Aquisição (Takeover):** Empresas mal administradas tornam-se alvos para outras empresas, o que motiva a gestão a performar melhor
+:::
+
+## Importantes Teorias de Finanças
+
+### Pilares da Teoria Financeira (1/2)
+
+::: incremental
+-   **Teoria da Utilidade:** Investidores não maximizam apenas o retorno, mas a "utilidade" (satisfação). Isso explica por que diferentes pessoas têm diferentes apetites por risco (aversão, neutralidade ou propensão ao risco).
+
+-   **Hipótese de Mercados Eficientes (Fama):** Em um mercado eficiente, os preços dos ativos refletem instantaneamente toda a informação disponível. Consequência: é extremamente difícil "bater o mercado" de forma consistente.
+
+-   **Teoria do Portfólio (Markowitz):** O risco de um ativo não deve ser visto de forma isolada, mas por sua contribuição ao risco total de uma carteira. A diversificação é a chave para reduzir o risco sem sacrificar o retorno.
+:::
+
+## Importantes Teorias de Finanças
+
+### Pilares da Teoria Financeira (2/2)
+
+::: incremental
+-   **Teoria de Precificação por Arbitragem (APT - Ross):** Um modelo alternativo ao CAPM que afirma que o retorno de um ativo pode ser previsto usando a relação entre o ativo e múltiplos fatores de risco comuns (ex: inflação, produção industrial).
+
+-   **Finanças Comportamentais (Kahneman & Tversky):** Contraponto à racionalidade total. Estuda como vieses psicológicos (ex: excesso de confiança, aversão à perda) afetam as decisões dos investidores e podem criar anomalias no mercado.
+:::
+
+## Resumo Visual
+
+> [**Dashboard Conceitual**](01-teorias-interativo.html)
+
+```{=html}
+<iframe src="01-teorias-interativo.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+```
