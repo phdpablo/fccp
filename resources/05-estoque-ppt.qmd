@@ -1,6 +1,6 @@
 ---
 title: "Administração de Estoque"
-subtitle: "Gestão Financeira"
+#subtitle: "Gestão Financeira"
 author: "Dr. Pablo Rogers"
 format:
   revealjs:
@@ -10,7 +10,7 @@ format:
     height: 750
     width: 1600
     preview-links: auto
-    logo: ""
+    logo: "../img/psicoeconometria.png"
     footer: "FCCP | Administração de Estoque"
     transition: slide
     background-transition: fade

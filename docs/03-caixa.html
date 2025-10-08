@@ -274,14 +274,20 @@ window.Quarto = {
    
   <ul>
   <li><a href="#razões-para-a-manutenção-de-caixa" id="toc-razões-para-a-manutenção-de-caixa" class="nav-link active" data-scroll-target="#razões-para-a-manutenção-de-caixa"><span class="header-section-number">3.1</span> Razões para a Manutenção de Caixa</a></li>
-  <li><a href="#ciclo-de-caixa-e-estratégias-de-controle" id="toc-ciclo-de-caixa-e-estratégias-de-controle" class="nav-link" data-scroll-target="#ciclo-de-caixa-e-estratégias-de-controle"><span class="header-section-number">3.2</span> Ciclo de Caixa e Estratégias de Controle</a></li>
+  <li><a href="#ciclo-de-caixa-e-estratégias-de-controle" id="toc-ciclo-de-caixa-e-estratégias-de-controle" class="nav-link" data-scroll-target="#ciclo-de-caixa-e-estratégias-de-controle"><span class="header-section-number">3.2</span> Ciclo de Caixa e Estratégias de Controle</a>
+  <ul class="collapse">
+  <li><a href="#dashboard-conceitual-caixa" id="toc-dashboard-conceitual-caixa" class="nav-link" data-scroll-target="#dashboard-conceitual-caixa"><span class="header-section-number">3.2.1</span> Dashboard Conceitual Caixa</a></li>
+  </ul></li>
   <li><a href="#modelos-quantitativos-de-administração-de-caixa" id="toc-modelos-quantitativos-de-administração-de-caixa" class="nav-link" data-scroll-target="#modelos-quantitativos-de-administração-de-caixa"><span class="header-section-number">3.3</span> Modelos Quantitativos de Administração de Caixa</a>
   <ul class="collapse">
   <li><a href="#modelo-de-lote-econômico-baumol" id="toc-modelo-de-lote-econômico-baumol" class="nav-link" data-scroll-target="#modelo-de-lote-econômico-baumol"><span class="header-section-number">3.3.1</span> Modelo de Lote Econômico (Baumol)</a></li>
-  <li><a href="#modelo-de-miller-e-orr" id="toc-modelo-de-miller-e-orr" class="nav-link" data-scroll-target="#modelo-de-miller-e-orr"><span class="header-section-number">3.3.2</span> Modelo de Miller e Orr</a></li>
-  <li><a href="#o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" id="toc-o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" class="nav-link" data-scroll-target="#o-dilema-da-gestão-de-caixa-em-cenários-inflacionários"><span class="header-section-number">3.3.3</span> O Dilema da Gestão de Caixa em Cenários Inflacionários</a></li>
+  <li><a href="#simulador-baumol" id="toc-simulador-baumol" class="nav-link" data-scroll-target="#simulador-baumol"><span class="header-section-number">3.3.2</span> Simulador Baumol</a></li>
+  <li><a href="#modelo-de-miller-e-orr" id="toc-modelo-de-miller-e-orr" class="nav-link" data-scroll-target="#modelo-de-miller-e-orr"><span class="header-section-number">3.3.3</span> Modelo de Miller e Orr</a></li>
+  <li><a href="#simulador-miller-orr" id="toc-simulador-miller-orr" class="nav-link" data-scroll-target="#simulador-miller-orr"><span class="header-section-number">3.3.4</span> Simulador Miller-Orr</a></li>
+  <li><a href="#o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" id="toc-o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" class="nav-link" data-scroll-target="#o-dilema-da-gestão-de-caixa-em-cenários-inflacionários"><span class="header-section-number">3.3.5</span> O Dilema da Gestão de Caixa em Cenários Inflacionários</a></li>
   </ul></li>
-  <li><a href="#outros-recursos-didáticos" id="toc-outros-recursos-didáticos" class="nav-link" data-scroll-target="#outros-recursos-didáticos">Outros recursos didáticos</a></li>
+  <li><a href="#slides-da-aula" id="toc-slides-da-aula" class="nav-link" data-scroll-target="#slides-da-aula"><span class="header-section-number">3.4</span> Slides da Aula</a></li>
+  <li><a href="#resumo-em-áudio" id="toc-resumo-em-áudio" class="nav-link" data-scroll-target="#resumo-em-áudio"><span class="header-section-number">3.5</span> Resumo em Áudio</a></li>
   </ul>
 </nav>
     </div>
@@ -321,12 +327,19 @@ window.Quarto = {
 <p><span class="math display">\[\text{Saldo Mínimo de Caixa} = \frac{\text{Desembolsos Totais de Caixa Esperados no Período}}{\text{Giro de Caixa no Período (GC)}}\]</span></p>
 <p>Onde <span class="math inline">\(GC\)</span> pode ser calculado pela divisão 360 dias pelo <span class="math inline">\(CC\)</span> (em dias).</p>
 <p>Este modelo, contudo, possui limitações por não incorporar a incerteza. Para torná-lo mais realista, ajustes são necessários, como a análise de horizontes de tempo mais curtos e a consideração da sazonalidade das operações.</p>
+<section id="dashboard-conceitual-caixa" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="dashboard-conceitual-caixa"><span class="header-section-number">3.2.1</span> Dashboard Conceitual Caixa</h3>
+<p>Abaixo você pode explorar os conceitos acima e visualizar o impacto esperado das variações nos componentes do ciclo de caixa em algumas medidas financeiras, ou você pode expandir essa versão interativa do dashboard clicando no link:</p>
+<blockquote class="blockquote">
+<p><a href=".\resources/03-caixa.html"><strong>Dashboard Conceitual Caixa</strong></a></p>
+</blockquote>
+<iframe src="./resources/03-caixa.html" width="733" height="550" style="border:1px solid black;"></iframe>
 <p><br></p>
+</section>
 </section>
 <section id="modelos-quantitativos-de-administração-de-caixa" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="modelos-quantitativos-de-administração-de-caixa"><span class="header-section-number">3.3</span> Modelos Quantitativos de Administração de Caixa</h2>
 <p>Para refinar a decisão sobre o nível ótimo de caixa, modelos quantitativos foram desenvolvidos. Eles buscam minimizar os custos totais associados à gestão da liquidez, que são, fundamentalmente, o custo de oportunidade e o custo de transação.</p>
-<p><br></p>
 <section id="modelo-de-lote-econômico-baumol" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="modelo-de-lote-econômico-baumol"><span class="header-section-number">3.3.1</span> Modelo de Lote Econômico (Baumol)</h3>
 <p>Desenvolvido por William Baumol, este modelo determinístico trata o caixa como um estoque e aplica a lógica do lote econômico de compras. Ele busca o saldo de caixa ótimo (C) que minimiza a soma de dois custos conflitantes:</p>
@@ -340,10 +353,18 @@ window.Quarto = {
 <p>Igualando <span class="math inline">\(CT\)</span> a zero e resolvendo para <span class="math inline">\(C\)</span> obtemos a fórmula do Saldo Ótimo (<span class="math inline">\(C^*\)</span>) de Baumol:</p>
 <p><span class="math display">\[C^* = \sqrt{\frac{2 \times b \times T}{i}}\]</span></p>
 <p>A principal limitação do modelo de Baumol é sua natureza determinística: ele assume que os fluxos de caixa são perfeitamente previsíveis e que seu uso é constante ao longo do tempo, o que raramente ocorre na prática.</p>
+</section>
+<section id="simulador-baumol" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="simulador-baumol"><span class="header-section-number">3.3.2</span> Simulador Baumol</h3>
+<p>Abaixo você pode explorar uma calculadora que determina o saldo ótimo de caixa utilizando o modelo de Baumol, ou você pode expandir essa versão interativa da calculadora clicando no link:</p>
+<blockquote class="blockquote">
+<p><a href=".\resources/03-baumol.html"><strong>Simulador Baumol</strong></a></p>
+</blockquote>
+<iframe src="./resources/03-baumol.html" width="733" height="550" style="border:1px solid black;"></iframe>
 <p><br></p>
 </section>
-<section id="modelo-de-miller-e-orr" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="modelo-de-miller-e-orr"><span class="header-section-number">3.3.2</span> Modelo de Miller e Orr</h3>
+<section id="modelo-de-miller-e-orr" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="modelo-de-miller-e-orr"><span class="header-section-number">3.3.3</span> Modelo de Miller e Orr</h3>
 <p>Este é um modelo estocástico (probabilístico), mais sofisticado e realista, pois foi projetado para lidar com a incerteza dos fluxos de caixa diários. Ele assume que as variações líquidas diárias no caixa são aleatórias. O modelo funciona estabelecendo limites de controle para o saldo de caixa:</p>
 <p><strong>Limite Superior (h):</strong> Quando o saldo de caixa atinge este ponto, a empresa utiliza o excedente para comprar títulos negociáveis, retornando o saldo de caixa a um nível predefinido (o “ponto de retorno”, z).</p>
 <p><strong>Limite Inferior (L):</strong> Geralmente definido como zero ou um saldo mínimo de segurança. Quando o caixa atinge este ponto, a empresa vende títulos para obter caixa e elevar o saldo novamente até o ponto de retorno (z).</p>
@@ -351,36 +372,42 @@ window.Quarto = {
 <p><span class="math display">\[z = \sqrt[3]{\frac{3 \times b \times \sigma^2}{4 \times i}} + L\]</span></p>
 <p>Onde: - <span class="math inline">\(z\)</span> = Ponto de retorno ótimo; <span class="math inline">\(b\)</span> = Custo fixo por transação com títulos; <span class="math inline">\(\sigma^2\)</span> = Variância dos fluxos líquidos diários de caixa; <span class="math inline">\(i\)</span> = Taxa de juros diária dos títulos negociáveis; <span class="math inline">\(L\)</span> = Limite Inferior</p>
 <p>A banda superior do caixa, na assunção de um saldo mínimo de segurança (L), pode ser calculado como:</p>
-<p><span class="math display">\[h = 3z - 2L\]</span> <br></p>
+<p><span class="math display">\[h = 3z - 2L\]</span></p>
 </section>
-<section id="o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="o-dilema-da-gestão-de-caixa-em-cenários-inflacionários"><span class="header-section-number">3.3.3</span> O Dilema da Gestão de Caixa em Cenários Inflacionários</h3>
+<section id="simulador-miller-orr" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="simulador-miller-orr"><span class="header-section-number">3.3.4</span> Simulador Miller-Orr</h3>
+<p>Abaixo você pode explorar uma calculadora que determina o saldo ótimo de caixa utilizando o modelo de Baumol, ou você pode expandir essa versão interativa da calculadora clicando no link:</p>
+<blockquote class="blockquote">
+<p><a href=".\resources/03-millerorr.html"><strong>Simulador Miller-Orr</strong></a></p>
+</blockquote>
+<iframe src="./resources/03-millerorr.html" width="733" height="550" style="border:1px solid black;"></iframe>
+</section>
+<section id="o-dilema-da-gestão-de-caixa-em-cenários-inflacionários" class="level3" data-number="3.3.5">
+<h3 data-number="3.3.5" class="anchored" data-anchor-id="o-dilema-da-gestão-de-caixa-em-cenários-inflacionários"><span class="header-section-number">3.3.5</span> O Dilema da Gestão de Caixa em Cenários Inflacionários</h3>
 <p>A inflação impõe um desafio adicional e significativo à administração de caixa. A principal consequência é a perda do poder de compra da moeda mantida em caixa. Isso cria um dilema com duas forças conflitantes:</p>
 <ul>
 <li><p>Por um lado, a inflação eleva os custos operacionais, o que aumenta a necessidade de investimento nominal em capital de giro para que a empresa consiga manter o mesmo nível de atividade real.</p></li>
 <li><p>Por outro lado, para se proteger da depreciação monetária, a estratégia racional é manter o saldo de caixa o mais baixo possível, aplicando quaisquer recursos excedentes em títulos negociáveis que ofereçam proteção contra a inflação (por exemplo, atrelados a um índice de preços).</p></li>
 </ul>
 <p>Em conjunturas inflacionárias, as políticas de minimização dos saldos de caixa tornam-se, portanto, ainda mais cruciais para a preservação do valor da empresa.</p>
+<p><br></p>
 </section>
 </section>
-<section id="outros-recursos-didáticos" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="outros-recursos-didáticos">Outros recursos didáticos</h2>
-<p>Nesta seção, falamos sobre a gestão do caixa e apresentamos os principais conceitos e modelos utilizados, como o modelo de Baumol e o modelo de Miller e Orr. Esses modelos ajudam a determinar o saldo ótimo de caixa, equilibrando os custos de oportunidade e transação, além de considerar a incerteza dos fluxos de caixa diários. Também discutimos a importância do ciclo de caixa e as estratégias para otimizar a liquidez da empresa. Por fim, abordamos o dilema da gestão de caixa em cenários inflacionários, destacando a necessidade de manter saldos adequados para preservar o poder de compra.</p>
-<p>Abaixo, você encontrará outros recursos didáticos que objetiva resumir os conceitos apresentados por aqui:</p>
+<section id="slides-da-aula" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="slides-da-aula"><span class="header-section-number">3.4</span> Slides da Aula</h2>
+<p>Abaixo você pode acessar os slides utilizados na aula, ou você pode expandir os slides clicando no link:</p>
 <blockquote class="blockquote">
-<p><a href=".\resources/caixa-ppt.html"><strong>Slides da Aula</strong></a></p>
+<p><a href="resources/03-caixa-ppt.html"><strong>Slides da Aula</strong></a></p>
 </blockquote>
-<iframe src="./resources/caixa-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
-<blockquote class="blockquote">
-<p><a href=".\resources/caixa-interativo.html"><strong>Resumo Interativo</strong></a> ➔ <strong>Resumo do resumo!</strong> 🥱</p>
-</blockquote>
-<iframe src="./resources/caixa-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
-<blockquote class="blockquote">
-<p><a href="resources/caixa-podcast.mp3"><strong>Podcast do Conteúdo</strong></a></p>
-</blockquote>
+<iframe src="resources/03-caixa-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<p><br></p>
+</section>
+<section id="resumo-em-áudio" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="resumo-em-áudio"><span class="header-section-number">3.5</span> Resumo em Áudio</h2>
+<p>Abaixo você pode ouvir um resumo em áudio do conteúdo desta seção.</p>
 <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
 <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
-<audio controls="" src="resources/caixa-podcast.mp3" style="width: 400px;">
+<audio controls="" src="resources/03-caixa-podcast.mp3" style="width: 400px;">
 <p>Seu navegador não suporta o elemento de áudio.</p>
 </audio>
 </div>

@@ -10,9 +10,9 @@ A ideia aqui nessa página é apenas roterizar o conteúdo da disciplina FCCP, c
 
 | Conteúdo | Aula | Material Complementar |
 |:--------------------------|:-----------------:|:-------------------------:|
-| @sec-intro | 1️⃣ | [🗣](/resources/01-intro-ppt.html)[🎥](https://www.youtube.com/live/OCt4f9IdO6U)📓 |
-| @sec-giro | 3️⃣ | [🗣](/resources/giro-ppt.html)[🎥](https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ)[📓](https://journalppc.com/RPPC/article/view/1229) |
-| @sec-caixa | 7️⃣ | [🗣](/resources/caixa-ppt.html)[🎥](https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ)[📓](https://ojs.unifor.br/rca/article/view/394) |
+| @sec-intro | 1️⃣ | [🗣](resources/01-intro-ppt.html)[🎥](https://www.youtube.com/live/OCt4f9IdO6U)📓 |
+| @sec-giro | 3️⃣ | [🗣](resources/02-giro-ppt.html)[🎥](https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ)[📓](https://journalppc.com/RPPC/article/view/1229) |
+| @sec-caixa | 7️⃣ | [🗣](resources/03-caixa-ppt.html)[🎥](https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ)[📓](https://ojs.unifor.br/rca/article/view/394) |
 | @sec-credito | 9️⃣ | [🗣](resources/04-credito-ppt.html)[🎥](https://youtu.be/-K88ewqeV2U?si=0RFDrt-TtWLyvGSE)[📓](https://www.researchgate.net/publication/273491445_Decisoes_de_Credito_em_Situacoes_de_Risco_Uma_Aplicacao_Pratica_do_Metodo_de_Monte_Carlo) |
 | @sec-estoque | 1️⃣2️⃣ | [🗣](resources/05-estoque-ppt.html)[🎥](https://youtu.be/YaK1eUuLUXk?si=Z-794zw_Vu0pHaxW)[📓](https://www.researchgate.net/publication/281934935_Avaliando_o_Risco_na_Gestao_Financeira_de_Estoques) |
-| @sec-aval | 5️⃣,1️⃣1️⃣,1️⃣5️⃣ | [🗣](/resources/teorias-ppt.html)🎥📓 |
+| @sec-aval | 5️⃣,1️⃣1️⃣,1️⃣5️⃣ | 🗣🎥📓 |

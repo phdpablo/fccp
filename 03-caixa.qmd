@@ -40,13 +40,23 @@ Onde $GC$ pode ser calculado pela divisão 360 dias pelo $CC$ (em dias).
 
 Este modelo, contudo, possui limitações por não incorporar a incerteza. Para torná-lo mais realista, ajustes são necessários, como a análise de horizontes de tempo mais curtos e a consideração da sazonalidade das operações.
 
+::: {.content-visible unless-format="pdf"}
+### Dashboard Conceitual Caixa
+
+Abaixo você pode explorar os conceitos acima e visualizar o impacto esperado das variações nos componentes do ciclo de caixa em algumas medidas financeiras, ou você pode expandir essa versão interativa do dashboard clicando no link:
+
+> [**Dashboard Conceitual Caixa**](/resources/03-caixa.html)
+
+```{=html}
+<iframe src="/resources/03-caixa.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+:::
+
 <br>
 
 ## Modelos Quantitativos de Administração de Caixa
 
 Para refinar a decisão sobre o nível ótimo de caixa, modelos quantitativos foram desenvolvidos. Eles buscam minimizar os custos totais associados à gestão da liquidez, que são, fundamentalmente, o custo de oportunidade e o custo de transação.
-
-<br>
 
 ### Modelo de Lote Econômico (Baumol)
 
@@ -72,6 +82,18 @@ $$C^* = \sqrt{\frac{2 \times b \times T}{i}}$$
 
 A principal limitação do modelo de Baumol é sua natureza determinística: ele assume que os fluxos de caixa são perfeitamente previsíveis e que seu uso é constante ao longo do tempo, o que raramente ocorre na prática.
 
+::: {.content-visible unless-format="pdf"}
+### Simulador Baumol
+
+Abaixo você pode explorar uma calculadora que determina o saldo ótimo de caixa utilizando o modelo de Baumol, ou você pode expandir essa versão interativa da calculadora clicando no link:
+
+> [**Simulador Baumol**](/resources/03-baumol.html)
+
+```{=html}
+<iframe src="/resources/03-baumol.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+:::
+
 <br>
 
 ### Modelo de Miller e Orr
@@ -90,7 +112,19 @@ Onde: - $z$ = Ponto de retorno ótimo; $b$ = Custo fixo por transação com tít
 
 A banda superior do caixa, na assunção de um saldo mínimo de segurança (L), pode ser calculado como:
 
-$$h = 3z - 2L$$ <br>
+$$h = 3z - 2L$$
+
+::: {.content-visible unless-format="pdf"}
+### Simulador Miller-Orr
+
+Abaixo você pode explorar uma calculadora que determina o saldo ótimo de caixa utilizando o modelo de Baumol, ou você pode expandir essa versão interativa da calculadora clicando no link:
+
+> [**Simulador Miller-Orr**](/resources/03-millerorr.html)
+
+```{=html}
+<iframe src="/resources/03-millerorr.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+:::
 
 ### O Dilema da Gestão de Caixa em Cenários Inflacionários
 
@@ -102,30 +136,32 @@ A inflação impõe um desafio adicional e significativo à administração de c
 
 Em conjunturas inflacionárias, as políticas de minimização dos saldos de caixa tornam-se, portanto, ainda mais cruciais para a preservação do valor da empresa.
 
-## Outros recursos didáticos {.unnumbered}
+<br>
 
-Nesta seção, falamos sobre a gestão do caixa e apresentamos os principais conceitos e modelos utilizados, como o modelo de Baumol e o modelo de Miller e Orr. Esses modelos ajudam a determinar o saldo ótimo de caixa, equilibrando os custos de oportunidade e transação, além de considerar a incerteza dos fluxos de caixa diários. Também discutimos a importância do ciclo de caixa e as estratégias para otimizar a liquidez da empresa. Por fim, abordamos o dilema da gestão de caixa em cenários inflacionários, destacando a necessidade de manter saldos adequados para preservar o poder de compra.
+::::: {.content-visible unless-format="pdf"}
+## Slides da Aula
 
-Abaixo, você encontrará outros recursos didáticos que objetiva resumir os conceitos apresentados por aqui:
+Abaixo você pode acessar os slides utilizados na aula, ou você pode expandir os slides clicando no link:
 
-> [**Slides da Aula**](/resources/caixa-ppt.html)
-
-```{=html}
-<iframe src="/resources/caixa-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
-```
-> [**Resumo Interativo**](/resources/caixa-interativo.html) ➔ **Resumo do resumo!** 🥱
+> [**Slides da Aula**](resources/03-caixa-ppt.html)
 
 ```{=html}
-<iframe src="/resources/caixa-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<iframe src="resources/03-caixa-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
-> [**Podcast do Conteúdo**](resources/caixa-podcast.mp3)
 
+<br>
+
+## Resumo em Áudio
+
+Abaixo você pode ouvir um resumo em áudio do conteúdo desta seção.
+
+:::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
 ::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-<audio controls src="resources/caixa-podcast.mp3" style="width: 400px;">
+<audio controls src="resources/03-caixa-podcast.mp3" style="width: 400px;">
 
 Seu navegador não suporta o elemento de áudio.
 
 </audio>
 :::
-:::
+::::
+:::::

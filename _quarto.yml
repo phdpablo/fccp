@@ -40,7 +40,6 @@ book:
   #repo-actions: [edit,issue]
   sharing: [twitter, facebook, linkedin]
   open-graph: true
-  
   chapters:
     - index.qmd
     - 00-prework.qmd

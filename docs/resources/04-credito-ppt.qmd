@@ -1,6 +1,6 @@
 ---
 title: "Administração de Recebíveis"
-subtitle: "Políticas, Padrões e Risco"
+#subtitle: "Políticas, Padrões e Risco"
 author: "Dr. Pablo Rogers"
 format:
   revealjs:
@@ -749,4 +749,3 @@ Valores dados no decorrer do bimestre. - **Valores padrão**, considerados ideia
 
 **Mensagem Final:** O crédito bem gerenciado é alavanca de crescimento sustentável
 :::
-

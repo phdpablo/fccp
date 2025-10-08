@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interativo: Administração de Caixa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0D232C;
+            --vibrant-orange: #F18C22;
+            --light-teal: #87CBCC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; 
+            color: var(--dark-blue);
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--vibrant-orange);
+            border-bottom-color: var(--vibrant-orange);
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0; 
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/95 backdrop-blur-lg sticky top-0 z-40 border-b border-slate-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold" style="color: var(--dark-blue);">Administração de Caixa</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#motivos" class="nav-link font-semibold">Motivos</a>
+                <a href="#modelos" class="nav-link font-semibold">Modelos</a>
+                <a href="#inflacao" class="nav-link font-semibold">Inflação</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="hero" class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color: var(--dark-blue);">Otimizando a Liquidez</h2>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Uma exploração dos conceitos e estratégias para gerenciar o recurso mais vital da empresa: o caixa.</p>
+        </section>
+
+        <!-- Seção 1: Motivos -->
+        <section id="motivos" class="mb-20 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">1. Por que Manter Caixa?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-6 text-center hover:shadow-lg hover:border-slate-300 transition-all">
+                    <span class="text-4xl">🔄</span>
+                    <h4 class="font-bold text-xl mt-3 mb-2">Motivo Transação</h4>
+                    <p class="text-slate-600 text-sm">Para cobrir os desembolsos do dia a dia do negócio (salários, fornecedores, etc.), garantindo a continuidade das operações.</p>
+                </div>
+                <div class="card p-6 text-center hover:shadow-lg hover:border-slate-300 transition-all">
+                    <span class="text-4xl">🛡️</span>
+                    <h4 class="font-bold text-xl mt-3 mb-2">Motivo Precaução</h4>
+                    <p class="text-slate-600 text-sm">Como uma reserva de segurança ("colchão") para cobrir imprevistos e flutuações inesperadas nos fluxos de caixa.</p>
+                </div>
+                <div class="card p-6 text-center hover:shadow-lg hover:border-slate-300 transition-all">
+                    <span class="text-4xl">💡</span>
+                    <h4 class="font-bold text-xl mt-3 mb-2">Motivo Especulação</h4>
+                    <p class="text-slate-600 text-sm">Para aproveitar oportunidades de mercado vantajosas e inesperadas, como uma compra de matéria-prima com grande desconto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Modelos Quantitativos -->
+        <section id="modelos" class="mb-20 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-4">2. Encontrando o Saldo de Caixa Ótimo</h3>
+            <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">Modelos quantitativos ajudam a minimizar os custos totais da gestão de caixa, equilibrando o custo de oportunidade (juros perdidos) e o custo de transação (taxas de conversão). Os principais modelos são os de Baumol e Miller-Orr.</p>
+            
+            <div class="card p-8 flex flex-col justify-center items-center text-center bg-gray-50">
+                 <span class="text-5xl mb-4">🔬</span>
+                <h4 class="text-2xl font-bold mb-3" style="color: var(--dark-blue);">Modelos de Otimização</h4>
+                <p class="text-slate-600 max-w-lg">Existem modelos clássicos para a determinação do saldo ótimo de caixa. O <strong>Modelo de Baumol</strong> é determinístico, ideal para fluxos de caixa previsíveis. Já o <strong>Modelo de Miller-Orr</strong> é estocástico, aplicando-se a cenários com fluxos de caixa incertos e aleatórios.</p>
+            </div>
+        </section>
+
+        <!-- Seção 3: Inflação -->
+        <section id="inflacao" class="scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-10">3. O Dilema da Gestão de Caixa em Cenários Inflacionários</h3>
+            <div class="card p-8 max-w-4xl mx-auto">
+                <p class="text-center text-slate-600 mb-6">A inflação cria um conflito para o gestor financeiro:</p>
+                <div class="flex flex-col md:flex-row gap-8 text-center">
+                    <div class="flex-1">
+                        <span class="text-5xl">📈</span>
+                        <h4 class="font-bold text-xl mt-2">Aumenta a Necessidade de Caixa</h4>
+                        <p class="text-slate-600 mt-2">A elevação dos custos operacionais exige mais caixa (em termos nominais) para manter o mesmo nível de atividade.</p>
+                    </div>
+                    <div class="flex-1">
+                        <span class="text-5xl">📉</span>
+                        <h4 class="font-bold text-xl mt-2">Incentiva a Redução de Caixa</h4>
+                        <p class="text-slate-600 mt-2">Para se proteger da perda de poder de compra, a estratégia racional é manter o mínimo de caixa ocioso, aplicando o excedente em ativos que protejam contra a inflação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 mt-12 border-t border-gray-200">
+        <p class="text-sm text-gray-500">
+            © 2025 <a href="https://fccp.phdpablo.com" target="_blank" rel="noopener noreferrer" class="font-semibold transition hover:underline" style="color: var(--vibrant-orange);">fccp.phdpablo.com</a>. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: "-40% 0px -60% 0px" });
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
