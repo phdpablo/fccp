@@ -31,6 +31,7 @@ Antes de conceder crédito, é crucial avaliar a capacidade e a disposição do 
 
 <br>
 
+::: {.content-visible unless-format="pdf"}
 ### Dashboard Conceitual VR
 
 Abaixo você pode explorar os conceitos acima e visualizar o impacto esperado dos elementos da política de crédito em algumas medidas financeiras, ou você pode expandir essa versão interativa do dashboard clicando no link:
@@ -40,6 +41,7 @@ Abaixo você pode explorar os conceitos acima e visualizar o impacto esperado do
 ```{=html}
 <iframe src="resources/04-intro.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
+:::
 
 ## Alterações nos Padrões de Crédito
 
@@ -50,6 +52,8 @@ Qualquer alteração na política de crédito deve ser tratada como uma **decis�
 
 A regra de decisão é simples: se o retorno gerado pelo lucro adicional for maior que o custo de financiar o investimento extra, a mudança na política de crédito é vantajosa e cria valor para a empresa.
 
+
+::: {.content-visible unless-format="pdf"}
 ### Cálculo do Investimento Marginal em VR
 
 Abaixo você pode explorar uma calculadora que compara o cálculo do investimento marginal em VR utilizando as metodologias de **Lucro Embutido** e **Custo Variável**, ou você pode expandir essa versão interativa da calculadora clicando no link:
@@ -59,6 +63,7 @@ Abaixo você pode explorar uma calculadora que compara o cálculo do investiment
 ```{=html}
 <iframe src="resources/04-invVR.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
+:::
 
 ## Controle do Crédito
 
@@ -79,6 +84,7 @@ Um DVR crescente pode sinalizar problemas na cobrança. É importante usar o DVR
 
 <br>
 
+::::: {.content-visible unless-format="pdf"}
 ### Simulador Aging/DVR
 
 Abaixo você pode explorar como utilizar essas ferramentas para controle do crédito, ou você pode expandir essa versão interativa da análise clicando no link:
@@ -116,3 +122,4 @@ Seu navegador não suporta o elemento de áudio.
 </audio>
 :::
 ::::
+:::::

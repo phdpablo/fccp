@@ -1,6 +1,6 @@
 ---
-title: "Gestão do Capital de Giro"
-subtitle: "Dinâmica dos Ciclos, Investimento e Financiamento "
+title: "Administração do Capital de Giro"
+#subtitle: "Dinâmica dos Ciclos, Investimento e Financiamento "
 author: "Dr. Pablo Rogers"
 format:
   revealjs:
@@ -79,15 +79,15 @@ A **importância do capital de giro** varia em função de:
 
 ## O Fluxo do Ativo Circulante {.smaller}
 
-::: columns
+::::: columns
 ::: {.column width="20%"}
 O fluxo do ativo circulante é **cíclico e contínuo**, passando por todas as etapas operacionais da empresa.
 :::
 
 ::: {.column width="80%"}
-![](fluxoAC.png){fig-alt="Fonte: Assaf Neto (2014)" fig-align="right"}
+![](02-fluxoAC.png){fig-alt="Fonte: Assaf Neto (2014)" fig-align="right"}
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -107,7 +107,7 @@ O fluxo do ativo circulante é **cíclico e contínuo**, passando por todas as e
 
 ## Representação do CCL
 
-![](representacaoBP.png){fig-align="right"}
+![](01-representacaoBP.png){fig-align="right"}
 
 ------------------------------------------------------------------------
 
@@ -141,7 +141,7 @@ O fluxo do ativo circulante é **cíclico e contínuo**, passando por todas as e
 
 ## Fases do Ciclo Operacional {.smaller}
 
-::: columns
+::::: columns
 ::: {.column width="20%"}
 **PME~MP~**: Prazo Médio de Estocagem de Matérias-Primas
 
@@ -155,9 +155,9 @@ O fluxo do ativo circulante é **cíclico e contínuo**, passando por todas as e
 :::
 
 ::: {.column width="80%"}
-![](fasesCO.png){fig-align="center"}
+![](02-fasesCO.png){fig-align="center"}
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -193,8 +193,8 @@ O fluxo do ativo circulante é **cíclico e contínuo**, passando por todas as e
 
 <br>
 
-::: incremental
-::: columns
+:::::: incremental
+::::: columns
 ::: {.column width="50%"}
 -   **Economias Estáveis:** Manutenção do nível ideal de capital de giro mediante transferências de receitas de um ciclo operacional para outro
 :::
@@ -202,8 +202,8 @@ O fluxo do ativo circulante é **cíclico e contínuo**, passando por todas as e
 ::: {.column width="50%"}
 -   **Economias Inflacionárias:** Variações desproporcionais nos preços dos fatores de produção determinam necessidades **geometricamente crescentes** de investimentos em capital de giro
 :::
-:::
-:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -240,7 +240,7 @@ O fluxo do ativo circulante é **cíclico e contínuo**, passando por todas as e
 Níveis de Aplicações em Capital de Giro
 
 |                        | BAIXO            | MÉDIO            | ALTO             |
-|:-------------------|:-----------------|:-----------------|:-----------------|
+|:--------------------|:----------------|:----------------|:----------------|
 | Ativo circulante       | \$ 800.000       | \$ 1.100.000     | \$ 1.400.000     |
 | Ativo não circulante   | \$ 1.200.000     | \$ 1.200.000     | \$ 1.200.000     |
 | **Total**              | **\$ 2.000.000** | **\$ 2.300.000** | **\$ 2.600.000** |
@@ -256,16 +256,16 @@ Níveis de Aplicações em Capital de Giro
 
 Análise de Rentabilidade
 
-|                    | BAIXA                     | MÉDIA                     | ALTA                      |
+|   | BAIXA | MÉDIA | ALTA |
 |:-----------------|:-----------------|:-----------------|:-----------------|
-| Lucro Op. Bruto    | \$ 1.000.000              | \$ 1.000.000              | \$ 1.000.000              |
-| Desp. Financeiras: |                           |                           |                           |
-| Passivo Circulante | 15% x 400.000 = (60.000)  | 15% x 460.000 = (69.000)  | 15% x 520.000 = (78.000)  |
-| PNC                | 20% x 600.000 = (120.000) | 20% x 690.000 = (138.000) | 20% x 780.000 = (156.000) |
-| Lucro antes do IR  | \$ 820.000                | \$ 793.000                | \$ 766.000                |
-| IR (40%)           | (328.000)                 | (317.200)                 | (306.400)                 |
-| Lucro Líquido      | \$ 492.000                | \$ 475.800                | \$ 459.600                |
-| ROE                | 49,2%                     | 41,4%                     | 35,4%                     |
+| Lucro Op. Bruto | \$ 1.000.000 | \$ 1.000.000 | \$ 1.000.000 |
+| Desp. Financeiras: |  |  |  |
+| Passivo Circulante | 15% x 400.000 = (60.000) | 15% x 460.000 = (69.000) | 15% x 520.000 = (78.000) |
+| PNC | 20% x 600.000 = (120.000) | 20% x 690.000 = (138.000) | 20% x 780.000 = (156.000) |
+| Lucro antes do IR | \$ 820.000 | \$ 793.000 | \$ 766.000 |
+| IR (40%) | (328.000) | (317.200) | (306.400) |
+| Lucro Líquido | \$ 492.000 | \$ 475.800 | \$ 459.600 |
+| ROE | 49,2% | 41,4% | 35,4% |
 
 ------------------------------------------------------------------------
 
@@ -323,8 +323,8 @@ Análise de Rentabilidade
 
 <br>
 
-::: incremental
-::: columns
+:::::: incremental
+::::: columns
 ::: {.column width="50%"}
 -   **RETORNO:** Utilizando-se mais de créditos de **curto prazo**, a empresa poderá obter melhores resultados operacionais (quando custos forem inferiores aos de longo prazo)
 :::
@@ -335,8 +335,8 @@ Análise de Rentabilidade
     -   Maior sensibilidade dos juros de curto prazo às alterações conjunturais
     -   Maior dependência da empresa às disponibilidades de crédito no mercado
 :::
-:::
-:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -344,8 +344,8 @@ Análise de Rentabilidade
 
 <br>
 
-::: incremental
-::: columns
+:::::: incremental
+::::: columns
 ::: {.column width="50%"}
 **Capital de Giro Permanente (Fixo):**
 
@@ -363,14 +363,14 @@ Análise de Rentabilidade
 
 -   **Exemplos:** - Maiores vendas em determinados períodos do ano - Grandes aquisições de estoques na entressafra
 :::
-:::
-:::
+:::::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Capitais de giro permanente e sazonal
 
-![](financiamentoCG.png){fig-align="center"}
+![](02-financiamentoCG.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -378,15 +378,15 @@ Análise de Rentabilidade
 
 <br>
 
-::: columns
+::::: columns
 ::: {.column width="20%"}
 **Princípio:** Ativo não circulante e capital de giro permanente são financiados por recursos de **longo prazo** (próprios ou de terceiros) e Capital de giro sazonal é financiado por recursos de **curto prazo**
 :::
 
 ::: {.column width="80%"}
-![](equilibrio.png){fig-align="center"}
+![](02-equilibrio.png){fig-align="center"}
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -394,15 +394,15 @@ Análise de Rentabilidade
 
 <br>
 
-::: columns
+::::: columns
 ::: {.column width="20%"}
 **Princípio:** A empresa encontra-se **totalmente financiada** por recursos permanentes (longo prazo), inclusive em suas necessidades **sazonais** de fundos: Abordagem mais conservadora
 :::
 
 ::: {.column width="80%"}
-![](riscominimo.png){fig-align="center"}
+![](02-riscominimo.png){fig-align="center"}
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -427,8 +427,8 @@ Análise de Rentabilidade
 
 <br>
 
-::: columns
-::: {.column width="30%"}
+:::::: columns
+:::: {.column width="30%"}
 ::: incremental
 **Condições:**
 
@@ -438,19 +438,19 @@ Análise de Rentabilidade
 -   Porcentagem do custo de produção: 40% do preço de venda
 -   Volume mínimo de caixa: R\$ 1.500 para 10 dias
 :::
-:::
+::::
 
 ::: {.column width="70%"}
-| Ativo                | Valor         | Passivo e Patrimônio Líquido | Valor         |
-|:----------------|:----------------|:---------------------|:----------------|
-| **Ativo circulante** | **\$ 20.000** | **Passivo circulante**       | **\$ 10.000** |
-| Caixa                | \$ 2.000      | **Exigível a longo prazo**   | **\$ 20.000** |
-| Valores a receber    | \$ 10.000     | **Patrimônio líquido**       | **\$ 20.000** |
-| Estoques             | \$ 8.000      |                              |               |
-| **Ativo permanente** | **\$ 30.000** |                              |               |
-| **Total:**           | **\$ 50.000** | **Total:**                   | **\$ 50.000** |
+| Ativo | Valor | Passivo e Patrimônio Líquido | Valor |
+|:-----------------|:-----------------|:-----------------|:-----------------|
+| **Ativo circulante** | **\$ 20.000** | **Passivo circulante** | **\$ 10.000** |
+| Caixa | \$ 2.000 | **Exigível a longo prazo** | **\$ 20.000** |
+| Valores a receber | \$ 10.000 | **Patrimônio líquido** | **\$ 20.000** |
+| Estoques | \$ 8.000 |  |  |
+| **Ativo permanente** | **\$ 30.000** |  |  |
+| **Total:** | **\$ 50.000** | **Total:** | **\$ 50.000** |
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -478,27 +478,27 @@ Análise de Rentabilidade
 
 <br>
 
-::: columns
+::::: columns
 ::: {.column width="20%"}
 A análise mostra a segregação entre necessidades permanentes e sazonais de capital de giro.
 :::
 
 ::: {.column width="80%"}
-|                                       |                 |              |            |
-|---------------------------|--------------:|--------------:|--------------:|
-|                                       | Permanente (\$) | Sazonal (\$) | Total (\$) |
-| Caixa                                 |           1.500 |          500 |      2.000 |
-| Valores a receber (\$ 10.000 x 18/30) |           6.000 |        4.000 |     10.000 |
-| Estoques (40% x \$ 40.000 x 15/30)    |           8.000 |           \- |      8.000 |
-| **Total:**                            |      **15.500** |    **4.500** | **20.000** |
+|  |  |  |  |
+|----|---:|---:|---:|
+|  | Permanente (\$) | Sazonal (\$) | Total (\$) |
+| Caixa | 1.500 | 500 | 2.000 |
+| Valores a receber (\$ 10.000 x 18/30) | 6.000 | 4.000 | 10.000 |
+| Estoques (40% x \$ 40.000 x 15/30) | 8.000 | \- | 8.000 |
+| **Total:** | **15.500** | **4.500** | **20.000** |
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
 ## Representação Patrimonial
 
-![](nigexemplo.png){fig-align="center"}
+![](02-nigexemplo.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -530,3 +530,11 @@ A análise mostra a segregação entre necessidades permanentes e sazonais de ca
 
 -   **Consequência:** Empresa é levada a se financiar com créditos **onerosos** de curto prazo
 :::
+
+## Resumo Visual
+
+> [**Dashboard Conceitual**](02-giro-interativo.html)
+
+```{=html}
+<iframe src="02-giro-interativo.html" width="1600" height="450" style="border:1px solid black;"></iframe>
+```

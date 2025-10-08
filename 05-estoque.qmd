@@ -37,6 +37,7 @@ A Curva ABC direciona a atenção gerencial para onde ela é mais crítica, gara
 
 <br>
 
+::: {.content-visible unless-format="pdf"}
 ### Simulador da Curva ABC
 
 Abaixo você pode visualizar a metodologia de cálculo da Curva ABC em operação, ou você pode expandir essa versão interativa do simulador da Curva ABC clicando no link:
@@ -46,6 +47,7 @@ Abaixo você pode visualizar a metodologia de cálculo da Curva ABC em operaçã
 ```{=html}
 <iframe src="resources/05-curvaABC.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
+:::
 
 ## Decisões de Compra
 
@@ -161,6 +163,7 @@ Onde $i = k_c$ se $CC > 0$, e $i = k_a$ se $CC < 0$. $PV$ é preço de venda que
 
 <br>
 
+::: {.content-visible unless-format="pdf"}
 ### Simulador Decisões de Compra
 
 Abaixo você pode visualizar a formulação geral para tomada de decisões de compra de estoque em operação, ou você pode expandir essa versão interativa do Simulador de Decisões de Compra clicando no link:
@@ -170,6 +173,7 @@ Abaixo você pode visualizar a formulação geral para tomada de decisões de co
 ```{=html}
 <iframe src="resources/05-decisoes-compra.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
+:::
 
 ## Lote Econômico de Compra (LEC)
 
@@ -249,6 +253,8 @@ $$
 Q^* = \sqrt{\frac{2 \times C_p \times D}{C_m}}
 $$ <br>
 
+
+::::: {.content-visible unless-format="pdf"}
 ### Simulador LEC
 
 Abaixo você pode visualizar o LEC em operação, ou você pode expandir esse o Simulador do LEC no link:
@@ -286,3 +292,4 @@ Seu navegador não suporta o elemento de áudio.
 </audio>
 :::
 ::::
+:::::

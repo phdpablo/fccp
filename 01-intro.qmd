@@ -188,7 +188,7 @@ O princípio fundamental de que "dinheiro tem valor no tempo" é explicado por d
 
 Essa seção revisa o vocabulário básico, a notação e as convenções da Matemática Financeira, que faremos uso em conteúdos subsequentes.
 
-## Variáveis Centrais e a Equação Fundamental {.unnumbered}
+## Variáveis Centrais e a Equação Fundamental {.unnumbered .unlisted}
 
 -   **M (Montante):** Valor Futuro (VF ou FV)
 -   **C (Capital):** Valor Presente (VP ou PV)
@@ -210,7 +210,7 @@ $$
 
 Essas fórmulas traduzem o raciocínio de que o valor final de um investimento (montante) é igual ao valor inicial (capital) acrescido dos juros ganhos sobre ele durante o período.
 
-## Visualizando Investimentos {.unnumbered}
+## Visualizando Investimentos {.unnumbered .unlisted}
 
 O **diagrama de fluxo de caixa**, ou linha do tempo, é a ferramenta padrão para representar visualmente problemas financeiros. O tempo (n) é representado em um eixo horizontal, e os fluxos de dinheiro são representados por setas verticais. A convenção universal é a seguinte:
 
@@ -222,7 +222,7 @@ O **diagrama de fluxo de caixa**, ou linha do tempo, é a ferramenta padrão par
 
 ![](resources/01-diagrama.png){fig-align="center" width="400"}
 
-## Convenções e Distinções Essenciais {.unnumbered}
+## Convenções e Distinções Essenciais {.unnumbered .unlisted}
 
 Para aplicar corretamente as ferramentas da matemática financeira, algumas convenções e distinções são cruciais.
 
@@ -233,6 +233,7 @@ Para aplicar corretamente as ferramentas da matemática financeira, algumas conv
 -   **Forma Unitária nos Cálculos:** Embora as taxas sejam comumente discutidas em formato percentual (ex: 12%), elas devem ser inseridas nas equações em sua **forma unitária (decimal)**. *Uma taxa de 12% ao ano entra na fórmula como 0,12*. Esquecer essa conversão é uma fonte comum de erros para iniciantes e deve ser evitado rigorosamente.
 :::
 
+::: {.content-visible unless-format="pdf"}
 ### Dashboard Conceitual
 
 Abaixo, você encontra um resumo interativo que sintetiza os conceitos apresentados até aqui. Ele serve como um painel de revisão rápida e uma ferramenta para reforçar a compreensão dos princípios fundamentais discutidos.
@@ -242,6 +243,7 @@ Abaixo, você encontra um resumo interativo que sintetiza os conceitos apresenta
 ```{=html}
 <iframe src="/resources/01-intro-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
+:::
 
 <br>
 
@@ -322,6 +324,8 @@ A moderna teoria financeira é sustentada por diversos pilares teóricos que bus
 -   **Teoria de Precificação por Arbitragem (APT):** Proposta por Stephen Ross, a APT é um modelo de precificação de ativos que, diferentemente do CAPM (que usa um único fator de risco, o mercado), sugere que o retorno de um ativo é uma função linear de múltiplos fatores de risco macroeconômicos, como inflação, produção industrial, entre outros.
 -   **Finanças Comportamentais:** Este campo de estudo, impulsionado por psicólogos como Daniel Kahneman e Amos Tversky, desafia o pressuposto da racionalidade total dos investidores. Ele investiga como vieses cognitivos e emocionais (como excesso de confiança, aversão à perda e comportamento de manada) afetam as decisões financeiras e podem levar a anomalias e ineficiências nos mercados.
 
+::::: {.content-visible unless-format="pdf"}
+
 ### Dashboard Conceitual
 
 O recurso abaixo é um resumo do objetivo da empresa, os conflitos de interesse que podem existir na perseguição desses objetivos (Governança Corporativa) e algumas teorias basilares que nos ajudam a entender as finanças.
@@ -373,3 +377,4 @@ Seu navegador não suporta o elemento de áudio.
 </audio>
 :::
 ::::
+:::::

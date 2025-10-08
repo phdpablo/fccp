@@ -14,8 +14,6 @@ As decisões de compra e venda da empresa, assim como suas atividades operaciona
 
 A importância e o volume do capital de giro variam em função das características da empresa (como volume de vendas e sazonalidade), do desempenho da economia (fatores cíclicos), da tecnologia empregada e da política de negócios adotada.
 
-<br>
-
 ### Capital Circulante Líquido (CCL) ou Capital de Giro Líquido (CGL)
 
 O Capital Circulante Líquido (CCL), frequentemente chamado de Capital de Giro Líquido (CGL), é uma das interpretações mais usuais do capital de giro. Ele representa o valor líquido das aplicações processadas no ativo circulante da empresa, após a dedução das dívidas de curto prazo.
@@ -35,20 +33,17 @@ $$
 
 Ambas as identidades resultam no mesmo valor para o CCL. Para uma empresa, um CCL positivo indica que parte de suas obrigações de longo prazo está financiando seu ativo circulante, proporcionando uma folga na liquidez. Isso significa que a empresa possui mais direitos a receber do que a pagar no curto prazo. No mundo real, espera-se que essa diferença seja positiva.
 
-<br>
-
 ### Capital de Giro Próprio (CGP)
 
-O Capital de Giro Próprio (CGP) é um indicador de capital de giro que representa a parcela de recursos próprios que a empresa tem aplicada em seu ativo circulante. Ele é comumente obtido pela seguinte expressão: 
+O Capital de Giro Próprio (CGP) é um indicador de capital de giro que representa a parcela de recursos próprios que a empresa tem aplicada em seu ativo circulante. Ele é comumente obtido pela seguinte expressão:
 
-$$CGP = \text{Patrimônio Líquido (PL)} - \text{Ativo Não Circulante (ANC)}$$
+$$CGP = \text{Patrimônio Líquido (PL)} - \text{Ativo Não Circulante (ANC)}$$ 
+
 <br>
 
 ## Dinâmica Empresarial: Análise dos Ciclos Operacional e Financeiro
 
 Entender os ciclos operacionais e financeiros de uma empresa é essencial para a administração financeira de curto prazo, pois eles revelam a dinâmica dos fluxos de caixa e a necessidade de financiamento.
-
-<br>
 
 ### Ciclo Operacional
 
@@ -56,35 +51,30 @@ O ciclo operacional é o período que a empresa leva desde a compra de matéria-
 
 Para uma manufatura, o ciclo operacional pode ser decomposto nas seguintes fases:
 
-* PME~MP~ (Prazo Médio de Estocagem de Matéria-Prima)
-* PMF (Prazo Médio de Fabricação)
-* PME~PA~ (Prazo Médio de Estocagem de Produtos Acabados)
-* PMR (Prazo Médio de Recebimento) ou PMC (Prazo Médio de Cobrança)
+-   PME~MP~ (Prazo Médio de Estocagem de Matéria-Prima)
+-   PMF (Prazo Médio de Fabricação)
+-   PME~PA~ (Prazo Médio de Estocagem de Produtos Acabados)
+-   PMR (Prazo Médio de Recebimento) ou PMC (Prazo Médio de Cobrança)
 
 Ciclo Operacional Total (CO) = PME~MP~ + PMF + PME~PA~ (ou PME) + PMR (ou PMC)
 
-No entanto, em um comércio essa "sopa de letrinhas pode ser simplificada":
+No entanto, para um comércio essa "sopa de letrinhas pode ser simplificada":
 
-$$CO = PME + PMR$$
-<br>
+$$CO = PME + PMR$$ 
 
 ### Ciclo Financeiro (Ciclo de Caixa)
 
 O ciclo financeiro (CF), também conhecido como ciclo de caixa (CC), focaliza as movimentações de caixa, abrangendo o período entre o momento em que a empresa realiza os pagamentos e o momento em que recebe pelas vendas.
 
-$$CC = CO - PMP$$
-<br>
+$$CC = CO - PMP$$ 
 
 ### Cálculo dos Prazos Médios
 
 As expressões de cálculo das durações de cada fase operacional, considerando um empresa comercial, são:
 
-* **Prazo Médio de Estoques (PME):**
-    $$PME = \frac{\text{Estoque Médio}}{\text{Custo das Mercadorias Vendidas Diário}}$$
-* **Prazo Médio de Recebimento (PMR):**
-    $$PMR = \frac{\text{Contas a Receber Médias}}{\text{Vendas Líquidas Diárias}}$$
-* **Prazo Médio de Pagamento a Fornecedores (PMP):**
-    $$PMP = \frac{\text{Contas a Pagar Médias}}{\text{Custo das Mercadorias Vendidas Diário}}$$
+-   **Prazo Médio de Estoques (PME):** $$PME = \frac{\text{Estoque Médio}}{\text{Custo das Mercadorias Vendidas Diário}}$$
+-   **Prazo Médio de Recebimento (PMR):** $$PMR = \frac{\text{Contas a Receber Médias}}{\text{Vendas Líquidas Diárias}}$$
+-   **Prazo Médio de Pagamento a Fornecedores (PMP):** $$PMP = \frac{\text{Contas a Pagar Médias}}{\text{Custo das Mercadorias Vendidas Diário}}$$
 
 <br>
 
@@ -92,9 +82,9 @@ As expressões de cálculo das durações de cada fase operacional, considerando
 
 O investimento em capital de giro é fundamentalmente direcionado à sustentação da atividade operacional da empresa. As empresas enfrentam um dilema risco-rentabilidade na definição de suas políticas de investimento em capital de giro:
 
-* **Conservadora:** Maiores saldos de caixa, política de crédito mais frouxa e maiores estoques. Reduz o risco de liquidez, mas pode diminuir a rentabilidade.
-* **Agressiva:** Reduções progressivas nos investimentos em ativos circulantes. Eleva o risco da empresa, mas incrementa a rentabilidade.
-* **Média:** Uma abordagem intermediária que busca um equilíbrio entre risco e rentabilidade.
+-   **Conservadora:** Maiores saldos de caixa, política de crédito mais frouxa e maiores estoques. Reduz o risco de liquidez, mas pode diminuir a rentabilidade.
+-   **Agressiva:** Reduções progressivas nos investimentos em ativos circulantes. Eleva o risco da empresa, mas incrementa a rentabilidade.
+-   **Média:** Uma abordagem intermediária que busca um equilíbrio entre risco e rentabilidade.
 
 A determinação do nível ideal de investimento exige um balanço entre os **custos de carregamento** (carrying costs) e os **custos de falta** (shortage costs).
 
@@ -104,25 +94,21 @@ A determinação do nível ideal de investimento exige um balanço entre os **cu
 
 As decisões de financiamento buscam a melhor proporção entre capital de terceiros e capital próprio.
 
-* **Comportamento das Taxas de Juros a Curto e Longo Prazos**
+-   **Comportamento das Taxas de Juros a Curto e Longo Prazos**
 
 Geralmente, o custo de um crédito a longo prazo é mais caro que o de curto prazo.
 
-* **Dilema Risco-Retorno na Composição de Financiamento**
+-   **Dilema Risco-Retorno na Composição de Financiamento**
 
 Optar por uma maior participação do passivo circulante pode aumentar os resultados líquidos (menores custos), mas também aumenta o risco financeiro.
-
-<br>
 
 ### Abordagens para o Financiamento do Capital de Giro
 
 O capital de giro é classificado como **permanente** (ou fixo) e **sazonal** (ou variável). As principais abordagens de financiamento são:
 
-* **Abordagem pelo Equilíbrio Financeiro Tradicional:** Ativo permanente e capital de giro permanente financiados por recursos de longo prazo; necessidades sazonais de capital de giro cobertas por exigibilidades de curto prazo.
-* **Abordagem de Risco Mínimo (Conservadora):** A empresa é totalmente financiada por recursos permanentes (longo prazo).
-* **Abordagem Restritiva (Agressiva):** Usa financiamento de longo prazo apenas para as necessidades permanentes de ativos imobilizados e capital de giro.
-
-<br>
+-   **Abordagem pelo Equilíbrio Financeiro Tradicional:** Ativo permanente e capital de giro permanente financiados por recursos de longo prazo; necessidades sazonais de capital de giro cobertas por exigibilidades de curto prazo.
+-   **Abordagem de Risco Mínimo (Conservadora):** A empresa é totalmente financiada por recursos permanentes (longo prazo).
+-   **Abordagem Restritiva (Agressiva):** Usa financiamento de longo prazo apenas para as necessidades permanentes de ativos imobilizados e capital de giro.
 
 ### Fontes de Financiamento de Curto Prazo
 
@@ -134,14 +120,11 @@ As fontes podem ser **espontâneas** (contas a pagar a fornecedores, despesas a 
 
 A Necessidade de Investimento em Giro (NIG) reflete o volume líquido de recursos demandado pelo ciclo operacional da empresa.
 
-<br>
-
 ### Distinção entre Componentes da NIG
 
 A Necessidade de Capital de Giro (NCG) é a diferença entre os usos operacionais (Ativo Circulante Operacional - ACO) e as fontes operacionais (Passivo Circulante Operacional - PCO):
 
-$$NCG = ACO - PCO$$
-<br>
+$$NCG = ACO - PCO$$ 
 
 ### Saldo de Tesouraria e o Efeito Tesoura
 
@@ -153,30 +136,43 @@ O "efeito tesoura" é uma situação crítica que ocorre quando o índice NCG/Ve
 
 <br>
 
-## Outros recursos didáticos {.unnumbered}
+::::: {.content-visible unless-format="pdf"}
 
-Nesta seção, falamos um pouco sobre os principais indicadores de eficiência da gestão de curto prazo, tal como ciclos (operacional e de caixa), prazos médios e investimento/financiamento do capital de giro.
+## Dashboard Conceitual
 
-Abaixo, você encontrará outros recursos didáticos que objetiva resumir os conceitos apresentados por aqui:
+Abaixo, você tem um recurso didático que objetiva resumir os conceitos apresentados por aqui. O material elenca os principais conceitos da gestão de curto prazo, tal como ciclos (operacional e de caixa), prazos médios e investimento/financiamento do capital de giro.
 
-> [**Slides da Aula**](/resources/giro-ppt.html)
-
-```{=html}
-<iframe src="/resources/giro-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
-```
-> [**Resumo Interativo**](/resources/giro-interativo.html) ➔ **Resumo do resumo!** 🥱
+> [**Dashboard Conceitual**](resources/02-giro-interativo.html)
 
 ```{=html}
-<iframe src="/resources/giro-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
+<iframe src="resources/02-giro-interativo.html" width="733" height="550" style="border:1px solid black;"></iframe>
 ```
-> [**Podcast do Conteúdo**](resources/giro-podcast.mp3)
 
+<br>
+
+## Slides da Aula
+
+Abaixo, você encontra os slides utilizados na aula sobre capital de giro.
+
+> [**Slides da Aula**](resources/02-giro-ppt.html)
+
+```{=html}
+<iframe src="resources/02-giro-ppt.html" width="733" height="550" style="border:1px solid black;"></iframe>
+```
+
+<br>
+
+## Resumo em Áudio
+
+A seguir, você encontra um resumo em áudio dos principais conceitos abordados nesta seção.
+
+:::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
 ::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-::: {style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;"}
-<audio controls src="resources/giro-podcast.mp3" style="width: 400px;">
+<audio controls src="resources/02-giro-podcast.mp3" style="width: 400px;">
 
 Seu navegador não suporta o elemento de áudio.
 
 </audio>
 :::
-:::
+::::
+:::::
