@@ -10,7 +10,7 @@ format:
     height: 750
     width: 1600
     preview-links: auto
-    logo: ""
+    logo: "../img/psicoeconometria.png"
     footer: "FCCP | Administração de Caixa"
     transition: slide
     background-transition: fade

@@ -1,5 +1,7 @@
 # Finanças Corporativas de Curto Prazo (FCCP)
 
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17305482.svg)](https://doi.org/10.5281/zenodo.17305482) [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![R version](https://img.shields.io/badge/R-4.5.1-orange)](https://www.r-project.org/) [![Quarto](https://img.shields.io/badge/Quarto-1.6.42-orange)](https://quarto.org/)
+
 Este repositório contém o material didático e a estrutura programática da disciplina de Finanças Corporativas de Curto Prazo (FCCP), oferecida no curso de Ciência Contábeis da Universidade Federal de Uberlândia (UFU). O objetivo é fornecer um recurso abrangente e de fácil acesso para estudantes e interessados na área.
 
 ## Sobre o Repositório
@@ -7,7 +9,7 @@ Este repositório contém o material didático e a estrutura programática da di
 Este projeto visa organizar e estruturar o conteúdo programático da disciplina de Finanças Corporativas de Curto Prazo (FCCP) de forma aberta e reprodutível. Utilizando a plataforma Quarto, o material é desenvolvido e disponibilizado online, permitindo que alunos e a comunidade acadêmica tenham acesso facilitado a:
 
 -   **Conteúdo Programático Detalhado**: Abordagem dos principais conceitos e práticas de finanças corporativas de curto prazo, incluindo administração de capital de giro, caixa, recebíveis e estoques.
--   **Materiais de Apoio**: Sugestões de leituras, artigos, notas de aulas, blogs e vídeos para aprofundamento.
+-   **Materiais de Apoio**: Recursos interativos, sugestões de leituras, artigos, notas de aulas e vídeos para aprofundamento.
 -   **Metodologia Transparente**: Adoção de um fluxo de trabalho reprodutível, seguindo as melhores práticas de ciência aberta para o ensino.
 
 O projeto está em constante desenvolvimento, com atualizações e melhorias contínuas para garantir a relevância e a qualidade do material didático.
@@ -44,6 +46,27 @@ O repositório está organizado de forma modular para facilitar a navegação e 
 -   `01-intro.qmd` a `06-aval.qmd`: Arquivos Quarto (.qmd) que correspondem aos capítulos ou seções do conteúdo principal da disciplina. Cada arquivo aborda um tópico específico de Finanças Corporativas de Curto Prazo.
 -   `CNAME`: Configuração para o domínio personalizado do GitHub Pages (`fccp.phdpablo.com`).
 -   `.gitignore`, `.Rprofile`, `.nojekyll`, `.quartoignore`: Arquivos de configuração do ambiente de desenvolvimento e do Quarto.
+
+## Citação
+
+Se você utilizar o material desse curso em algum trabalho acadêmico, por favor, cite o livro do curso da seguinte forma:
+
+Rogers, Pablo (2025). Finanças Corporativas de Curto Prazo (1.0). Zenodo. <https://doi.org/10.5281/zenodo.17305482>. Disponível em: <https://fccp.phdpablo.com>
+
+BibTex:
+
+``` r
+@misc{rogers2025,
+  author       = {Rogers, Pablo},
+  title        = {Finanças Corporativas de Curto Prazo},
+  month        = out,
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.17305482},
+  url          = {https://fccp.phdpablo.com}
+}
+```
 
 ## Licença
 

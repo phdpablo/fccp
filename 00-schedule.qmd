@@ -1,18 +1,18 @@
-# 📅 Cronograma {#sec-schedule .unnumbered .unlisted}
+## \emojitext{📅} Cronograma {#sec-schedule .unnumbered}
 
 <br>
 
 De uma forma geral, as aulas presenciais da disciplina ocorrerão às sexta-feiras das 19:00 às 22:30, em torno de 16 semanas. O cronograma detalhado, com as datas de todas as avaliações, encontra-se em nosso **Plano de Ensino no Moodle**.
 
-A ideia aqui nessa página é apenas roterizar o conteúdo da disciplina FCCP, com direcionamento de materiais suplementares, para o aluno **organizar suas leituras prévias**. Por aqui o aluno pode acessar diretamente os **slides** utilizados nas aulas (🗣️), aulas gravadas ou indicações de **vídeo** (🎥\] e **leituras complementares** sobre os conteúdos (📓).
+A ideia aqui nessa página é apenas roterizar o conteúdo da disciplina FCCP, com direcionamento de materiais suplementares, para o aluno **organizar suas leituras prévias**. Por aqui o aluno pode acessar diretamente os **slides** utilizados nas aulas \emojitext{🗣️}, aulas gravadas ou indicações de **vídeo** \emojitext{🎥} e **leituras complementares** sobre os conteúdos \emojitext{📓}.
 
 <br>
 
 | Conteúdo | Aula | Material Complementar |
-|:--------------------------|:-----------------:|:-------------------------:|
-| @sec-intro | 1️⃣ | [🗣](resources/01-intro-ppt.html)[🎥](https://www.youtube.com/live/OCt4f9IdO6U)📓 |
-| @sec-giro | 3️⃣ | [🗣](resources/02-giro-ppt.html)[🎥](https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ)[📓](https://journalppc.com/RPPC/article/view/1229) |
-| @sec-caixa | 7️⃣ | [🗣](resources/03-caixa-ppt.html)[🎥](https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ)[📓](https://ojs.unifor.br/rca/article/view/394) |
-| @sec-credito | 9️⃣ | [🗣](resources/04-credito-ppt.html)[🎥](https://youtu.be/-K88ewqeV2U?si=0RFDrt-TtWLyvGSE)[📓](https://www.researchgate.net/publication/273491445_Decisoes_de_Credito_em_Situacoes_de_Risco_Uma_Aplicacao_Pratica_do_Metodo_de_Monte_Carlo) |
-| @sec-estoque | 1️⃣2️⃣ | [🗣](resources/05-estoque-ppt.html)[🎥](https://youtu.be/YaK1eUuLUXk?si=Z-794zw_Vu0pHaxW)[📓](https://www.researchgate.net/publication/281934935_Avaliando_o_Risco_na_Gestao_Financeira_de_Estoques) |
-| @sec-aval | 5️⃣,1️⃣1️⃣,1️⃣5️⃣ | 🗣🎥📓 |
+|:---|:--:|:--:|
+| [Introdução](01-intro.html) | 1️⃣ | [\emojitext{🗣}](resources/01-intro-ppt.html)[\emojitext{🎥}](https://www.youtube.com/live/OCt4f9IdO6U)[\emojitext{📓}](https://periodicos.fclar.unesp.br/iniciativa/article/view/19172) |
+| [Capital de Giro](02-giro.html) | 3️⃣ | [\emojitext{🗣}](resources/02-giro-ppt.html)[\emojitext{🎥}](https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ)[\emojitext{📓}](https://journalppc.com/RPPC/article/view/1229) |
+| [Administração de Caixa](03-caixa.html) | 7️⃣ | [\emojitext{🗣}](resources/03-caixa-ppt.html)[\emojitext{🎥}](https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ)[\emojitext{📓}](https://ojs.unifor.br/rca/article/view/394) |
+| [Gestão de Recebíveis](04-credito.html) | 9️⃣ | [\emojitext{🗣}](resources/04-credito-ppt.html)[\emojitext{🎥}](https://youtu.be/-K88ewqeV2U?si=0RFDrt-TtWLyvGSE)[\emojitext{📓}](https://www.researchgate.net/publication/273491445_Decisoes_de_Credito_em_Situacoes_de_Risco_Uma_Aplicacao_Pratica_do_Metodo_de_Monte_Carlo) |
+| [Adminitração de Estoques](05-estoque.html) | 1️⃣2️⃣ | [\emojitext{🗣}](resources/05-estoque-ppt.html)[\emojitext{🎥}](https://youtu.be/YaK1eUuLUXk?si=Z-794zw_Vu0pHaxW)[\emojitext{📓}](https://www.researchgate.net/publication/281934935_Avaliando_o_Risco_na_Gestao_Financeira_de_Estoques) |
+| [Estudo de Caso](06-aval.html) | 5️⃣,1️⃣1️⃣,1️⃣5️⃣ | [\emojitext{🗣}](resources/02-giro-ppt.html)[\emojitext{🎥}](https://youtu.be/hMK057spPIc?si=al3XqehfjyOZy7_F)[\emojitext{📓}](http://periodicos.unifacef.com.br/rea/article/view/2823) |

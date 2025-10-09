@@ -188,13 +188,15 @@ O princípio fundamental de que "dinheiro tem valor no tempo" é explicado por d
 
 Essa seção revisa o vocabulário básico, a notação e as convenções da Matemática Financeira, que faremos uso em conteúdos subsequentes.
 
-## Variáveis Centrais e a Equação Fundamental {.unnumbered .unlisted}
+### Variáveis Centrais e a Equação Fundamental {.unnumbered .unlisted}
 
 -   **M (Montante):** Valor Futuro (VF ou FV)
 -   **C (Capital):** Valor Presente (VP ou PV)
 -   **J (Juros):** Rendimento do capital
 -   **i (taxa de juros):** Taxa por período
 -   **n (período):** Prazo
+
+\vspace{0.5cm}
 
 Equações:
 
@@ -210,19 +212,19 @@ $$
 
 Essas fórmulas traduzem o raciocínio de que o valor final de um investimento (montante) é igual ao valor inicial (capital) acrescido dos juros ganhos sobre ele durante o período.
 
-## Visualizando Investimentos {.unnumbered .unlisted}
+### Visualizando Investimentos {.unnumbered .unlisted}
 
 O **diagrama de fluxo de caixa**, ou linha do tempo, é a ferramenta padrão para representar visualmente problemas financeiros. O tempo (n) é representado em um eixo horizontal, e os fluxos de dinheiro são representados por setas verticais. A convenção universal é a seguinte:
 
 -   **Saídas de caixa**: Representam investimentos feitos, pagamentos ou qualquer desembolso de dinheiro. São indicadas por uma seta para baixo ou por um valor negativo.
 
 -   **Entradas de caixa**: Representam retornos recebidos, resgates ou qualquer recebimento de dinheiro. São indicadas por uma seta para cima ou por um valor positivo.
-
+\vspace{0.5cm}
     <br>
 
 ![](resources/01-diagrama.png){fig-align="center" width="400"}
 
-## Convenções e Distinções Essenciais {.unnumbered .unlisted}
+### Convenções e Distinções Essenciais {.unnumbered .unlisted}
 
 Para aplicar corretamente as ferramentas da matemática financeira, algumas convenções e distinções são cruciais.
 

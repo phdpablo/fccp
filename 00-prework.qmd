@@ -1,8 +1,8 @@
-# 🔑 Pré-requisitos {#sec-prework .unnumbered}
+# \emojitext{🔑} Pré-requisitos {#sec-prework .unnumbered}
 
 <br>
 
-Se pudermos condensar os pré-requisitos para a disciplina, resumiriámos: **boa vontade e fazer as pré-leituras indicadas antes de cada aula**. Para isso, sempre monitorar nosso [Cronograma](http://fccp.phdpablo.com/00-schedule.html), para não perder nenhum prazo, é importante 🤢. Diferente de disciplinas essencialmente quantitativas, tais como Matemática Financeira e Análise de Investimentos, que, geralmente, vem antes do conteúdo de finanças de curto prazo (FCCP) nos currículos programáticos das universidades brasileiras, essa disciplina depende muito de teorias (conceitos) subjacentes.
+Se pudermos condensar os pré-requisitos para a disciplina, resumiriámos: **boa vontade e fazer as pré-leituras indicadas antes de cada aula**. Para isso, sempre monitorar nosso [Cronograma](http://fccp.phdpablo.com/00-schedule.html), para não perder nenhum prazo, é importante \emojitext{🤢}. Diferente de disciplinas essencialmente quantitativas, tais como Matemática Financeira e Análise de Investimentos, que, geralmente, vem antes do conteúdo de finanças de curto prazo (FCCP) nos currículos programáticos das universidades brasileiras, essa disciplina depende muito de teorias (conceitos) subjacentes.
 
 De qualquer forma, torna-se importante situar os alunos sobre os assuntos (disciplinas) correlatos que perfaz (vem antes e depois) o conteúdo típico de finanças em currículos da área de negócios. Especialmente, na FACIC/UFU temos o seguinte panorama:
 

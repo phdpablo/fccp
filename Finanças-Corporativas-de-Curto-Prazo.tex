@@ -129,6 +129,24 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \makeatletter
+\@openrightfalse
+\makeatother
+
+\usepackage{makeidx}
+\makeindex
+\usepackage{titling}
+\usepackage{pdfpages}
+\usepackage{atbegshi}
+\let\oldmaketitle\maketitle
+\AtBeginDocument{\let\maketitle\relax}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily\emoji{Segoe UI Emoji}
+\newcommand{\emojitext}[1]{{\emoji #1}}
+
+\makeatletter
 \@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
 \@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
 \definecolor{quarto-callout-color}{HTML}{909090}
@@ -216,11 +234,20 @@
 
 \title{Finanças Corporativas de Curto Prazo}
 \author{Pablo Rogers}
-\date{8 de outubro de 2025}
+\date{9 de outubro de 2025}
 
 \begin{document}
 \frontmatter
 \maketitle
+
+\begin{center}
+\includepdf[fitpaper=true,pages=-]{img/cover-book}
+\end{center}
+\let\maketitle\oldmaketitle
+\maketitle
+\AtBeginShipoutNext{\AtBeginShipoutDiscard}
+\mainmatter
+%\pagestyle{plain}
 
 \renewcommand*\contentsname{Índice}
 {
@@ -232,10 +259,11 @@
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter*{🏢 O Curso}\label{sec-home}
-\addcontentsline{toc}{chapter}{🏢 O Curso}
+\chapter*{\texorpdfstring{\emojitext{🏢} O
+Curso}{ O Curso}}\label{sec-home}
+\addcontentsline{toc}{chapter}{\emojitext{🏢} O Curso}
 
-\markboth{🏢 O Curso}{🏢 O Curso}
+\markboth{\emojitext{🏢} O Curso}{\emojitext{🏢} O Curso}
 
 Página da disciplina \textbf{``Finanças Corporativas I''} do curso da
 \href{https://www.facic.ufu.br/}{Faculdade de Ciência Contábeis} (FACIC)
@@ -245,22 +273,24 @@ para seu acompanhamento e sugestões de leituras sobre \textbf{Finanças
 Corporativas de Curto Prazo} (artigos, slides, recursos interativos,
 resumos em áudio, vídeos etc.).
 
-\section*{🧠 Professor}\label{sec-instrutor}
-\addcontentsline{toc}{section}{🧠 Professor}
+\section*{\texorpdfstring{\emojitext{🧠}
+Professor}{ Professor}}\label{sec-instrutor}
+\addcontentsline{toc}{section}{\emojitext{🧠} Professor}
 
-\markright{🧠 Professor}
+\markright{\emojitext{🧠} Professor}
 
 A disciplina é ministrada e mantida nesse \emph{hub} por mim, Pablo
-Rogers 😉, doutor em Administração pela Universidade de São Paulo
-(FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na
-UFU. Em meu \href{https://phdpablo.com/}{site pessoal} você encontrará
-mais detalhes sobre minhas formações, competências, trajetória e
-projetos.
+Rogers \emojitext{😉}, doutor em Administração pela Universidade de São
+Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde
+2005 na UFU. Em meu \href{https://phdpablo.com/}{site pessoal} você
+encontrará mais detalhes sobre minhas formações, competências,
+trajetória e projetos.
 
-\section*{🎯 Objetivos}\label{sec-about}
-\addcontentsline{toc}{section}{🎯 Objetivos}
+\section*{\texorpdfstring{\emojitext{🎯}
+Objetivos}{ Objetivos}}\label{sec-about}
+\addcontentsline{toc}{section}{\emojitext{🎯} Objetivos}
 
-\markright{🎯 Objetivos}
+\markright{\emojitext{🎯} Objetivos}
 
 O curso tem como objetivo apresentar os principais conceitos e práticas
 de finanças corporativas de curto prazo. A disciplina visa prover aos
@@ -284,10 +314,11 @@ aluno:
   análise.
 \end{itemize}
 
-\section*{📚 Programa}\label{sec-programa}
-\addcontentsline{toc}{section}{📚 Programa}
+\section*{\texorpdfstring{\emojitext{📚}
+Programa}{ Programa}}\label{sec-programa}
+\addcontentsline{toc}{section}{\emojitext{📚} Programa}
 
-\markright{📚 Programa}
+\markright{\emojitext{📚} Programa}
 
 A ementa oficial da disciplina encontra-se
 \href{https://www.facic.ufu.br/system/files/conteudo/28fagen39532_financas_corporativas_i.pdf}{aqui}.
@@ -367,10 +398,11 @@ programa do curso versará sobre os seguintes conteúdos:
   \end{itemize}
 \end{enumerate}
 
-\section*{⚙️ Metodologia}\label{sec-method}
-\addcontentsline{toc}{section}{⚙️ Metodologia}
+\section*{\texorpdfstring{\emojitext{⚙️}
+Metodologia}{ Metodologia}}\label{sec-method}
+\addcontentsline{toc}{section}{\emojitext{⚙️} Metodologia}
 
-\markright{⚙️ Metodologia}
+\markright{\emojitext{⚙️} Metodologia}
 
 O material do curso organizado nesse repositório refere-se ao
 \textbf{roteiro estruturado (enredo)} de parte que discutiremos nas
@@ -412,16 +444,16 @@ Entre os recursos desenvolvidos com suporte de IA, destacam-se:
 \begin{itemize}
 \tightlist
 \item
-  🧭 \textbf{Elementos interativos do site} que facilitam a navegação e
-  a compreensão dos conceitos.\\
+  \emojitext{🧭} \textbf{Elementos interativos do site} que facilitam a
+  navegação e a compreensão dos conceitos.\\
 \item
-  🎧 \textbf{Resumos em áudio} gerados com auxílio de IA para promover
-  inclusão e autonomia no estudo.\\
+  \emojitext{🎧} \textbf{Resumos em áudio} gerados com auxílio de IA
+  para promover inclusão e autonomia no estudo.\\
 \item
-  📄 \textbf{Apoio à redação de conteúdos}, buscando sempre preservar a
-  autoria, com revisão e curadoria humana\footnote{Por exemplo, i)
-    transcrever um vídeo do professor e redigir textualmente com
-    estrutura lógica; ii) resumir os pontos importantes de um artigo
+  \emojitext{📄} \textbf{Apoio à redação de conteúdos}, buscando sempre
+  preservar a autoria, com revisão e curadoria humana\footnote{Por
+    exemplo, i) transcrever um vídeo do professor e redigir textualmente
+    com estrutura lógica; ii) resumir os pontos importantes de um artigo
     científico do professor e retornar um texto com linguagem não
     técnica e simples para o site; iii) gerar variações diferentes de
     exercícios consultados ou criados pelo professor, etc. Vide que
@@ -442,17 +474,18 @@ autoria. É essa perspectiva que orienta todas as aplicações tecnológicas
 neste curso.
 \end{quote}
 
-\section*{📖 Bibliografia}\label{sec-biblio}
-\addcontentsline{toc}{section}{📖 Bibliografia}
+\section*{\texorpdfstring{\emojitext{📖}
+Bibliografia}{ Bibliografia}}\label{sec-biblio}
+\addcontentsline{toc}{section}{\emojitext{📖} Bibliografia}
 
-\markright{📖 Bibliografia}
+\markright{\emojitext{📖} Bibliografia}
 
 A literatura de finanças é vasta. No Brasil, temos vários bons manuais
 em língua portuguesa. Muitos livros-textos são traduções de autores
 americanos, ou seja, conteúdo ambientado em um mercado diferente do
 nosso. No entanto, existem alguns manuais de autores brasileiros, cujo
 conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois!
-😉
+\emojitext{😉}
 
 Geralmente, esses manuais percorrem diversos assuntos de finanças,
 entretanto, nosso foco será na \textbf{FCCP}. Os outros assuntos são
@@ -468,30 +501,50 @@ das bibliografias básica e complementar: Assaf Neto (2014), Assaf Neto
 (2021), Gitman (2010), Matias (2007), Ross et al. (2015) e Brealey et
 al. (2013).
 
-\section*{Licença}\label{licenuxe7a}
+\section*{\texorpdfstring{\emojitext{🔍}
+Citação}{ Citação}}\label{sec-cite}
+\addcontentsline{toc}{section}{\emojitext{🔍} Citação}
 
-\markright{Licença}
+\markright{\emojitext{🔍} Citação}
+
+Se você utilizar qualquer conteúdo deste curso em seus trabalhos
+acadêmicos, por favor, cite da seguinte forma:
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, colback=white, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, opacityback=0, toprule=.15mm, arc=.35mm, rightrule=.15mm, leftrule=.75mm, left=2mm]
+
+Rogers, Pablo (2025). Finanças Corporativas de Curto Prazo (1.0).
+Zenodo. \url{https://doi.org/10.5281/zenodo.17305482}. Disponível em:
+\url{https://fccp.phdpablo.com}
+
+\end{tcolorbox}
+
+\section*{\texorpdfstring{\emojitext{🔓}
+Licença}{ Licença}}\label{sec-lice}
+\addcontentsline{toc}{section}{\emojitext{🔓} Licença}
+
+\markright{\emojitext{🔓} Licença}
 
 Finanças Corporativas de Curto Prazo by Pablo Rogers is licensed under
 CC BY-NC-SA 4.0
 
 \bookmarksetup{startatroot}
 
-\chapter*{🔑 Pré-requisitos}\label{sec-prework}
-\addcontentsline{toc}{chapter}{🔑 Pré-requisitos}
+\chapter*{\texorpdfstring{\emojitext{🔑}
+Pré-requisitos}{ Pré-requisitos}}\label{sec-prework}
+\addcontentsline{toc}{chapter}{\emojitext{🔑} Pré-requisitos}
 
-\markboth{🔑 Pré-requisitos}{🔑 Pré-requisitos}
+\markboth{\emojitext{🔑} Pré-requisitos}{\emojitext{🔑} Pré-requisitos}
 
 Se pudermos condensar os pré-requisitos para a disciplina, resumiriámos:
 \textbf{boa vontade e fazer as pré-leituras indicadas antes de cada
 aula}. Para isso, sempre monitorar nosso
 \href{http://fccp.phdpablo.com/00-schedule.html}{Cronograma}, para não
-perder nenhum prazo, é importante 🤢. Diferente de disciplinas
-essencialmente quantitativas, tais como Matemática Financeira e Análise
-de Investimentos, que, geralmente, vem antes do conteúdo de finanças de
-curto prazo (FCCP) nos currículos programáticos das universidades
-brasileiras, essa disciplina depende muito de teorias (conceitos)
-subjacentes.
+perder nenhum prazo, é importante \emojitext{🤢}. Diferente de
+disciplinas essencialmente quantitativas, tais como Matemática
+Financeira e Análise de Investimentos, que, geralmente, vem antes do
+conteúdo de finanças de curto prazo (FCCP) nos currículos programáticos
+das universidades brasileiras, essa disciplina depende muito de teorias
+(conceitos) subjacentes.
 
 De qualquer forma, torna-se importante situar os alunos sobre os
 assuntos (disciplinas) correlatos que perfaz (vem antes e depois) o
@@ -624,9 +677,11 @@ no dia a dia das empresas.
 
 \bookmarksetup{startatroot}
 
-\chapter*{📅 Cronograma}\label{sec-schedule}
+\chapter*{\texorpdfstring{\emojitext{📅}
+Cronograma}{ Cronograma}}\label{sec-schedule}
+\addcontentsline{toc}{chapter}{\emojitext{📅} Cronograma}
 
-\markboth{📅 Cronograma}{📅 Cronograma}
+\markboth{\emojitext{📅} Cronograma}{\emojitext{📅} Cronograma}
 
 De uma forma geral, as aulas presenciais da disciplina ocorrerão às
 sexta-feiras das 19:00 às 22:30, em torno de 16 semanas. O cronograma
@@ -636,14 +691,14 @@ detalhado, com as datas de todas as avaliações, encontra-se em nosso
 A ideia aqui nessa página é apenas roterizar o conteúdo da disciplina
 FCCP, com direcionamento de materiais suplementares, para o aluno
 \textbf{organizar suas leituras prévias}. Por aqui o aluno pode acessar
-diretamente os \textbf{slides} utilizados nas aulas (🗣️), aulas gravadas
-ou indicações de \textbf{vídeo} (🎥{]} e \textbf{leituras
-complementares} sobre os conteúdos (📓).
+diretamente os \textbf{slides} utilizados nas aulas \emojitext{🗣️},
+aulas gravadas ou indicações de \textbf{vídeo} \emojitext{🎥} e
+\textbf{leituras complementares} sobre os conteúdos \emojitext{📓}.
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3699}}
-  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2603}}
-  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3699}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Conteúdo
@@ -656,17 +711,18 @@ Material Complementar
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Capítulo~\ref{sec-intro} & 1️⃣ &
-\href{resources/01-intro-ppt.html}{🗣}\href{https://www.youtube.com/live/OCt4f9IdO6U}{🎥}📓 \\
-Capítulo~\ref{sec-giro} & 3️⃣ &
-\href{resources/02-giro-ppt.html}{🗣}\href{https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ}{🎥}\href{https://journalppc.com/RPPC/article/view/1229}{📓} \\
-Capítulo~\ref{sec-caixa} & 7️⃣ &
-\href{resources/03-caixa-ppt.html}{🗣}\href{https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ}{🎥}\href{https://ojs.unifor.br/rca/article/view/394}{📓} \\
-Capítulo~\ref{sec-credito} & 9️⃣ &
-\href{resources/04-credito-ppt.html}{🗣}\href{https://youtu.be/-K88ewqeV2U?si=0RFDrt-TtWLyvGSE}{🎥}\href{https://www.researchgate.net/publication/273491445_Decisoes_de_Credito_em_Situacoes_de_Risco_Uma_Aplicacao_Pratica_do_Metodo_de_Monte_Carlo}{📓} \\
-Capítulo~\ref{sec-estoque} & 1️⃣2️⃣ &
-\href{resources/05-estoque-ppt.html}{🗣}\href{https://youtu.be/YaK1eUuLUXk?si=Z-794zw_Vu0pHaxW}{🎥}\href{https://www.researchgate.net/publication/281934935_Avaliando_o_Risco_na_Gestao_Financeira_de_Estoques}{📓} \\
-Capítulo~\ref{sec-aval} & 5️⃣,1️⃣1️⃣,1️⃣5️⃣ & 🗣🎥📓 \\
+\href{01-intro.html}{Introdução} & 1️⃣ &
+\href{resources/01-intro-ppt.html}{\emojitext{🗣}}\href{https://www.youtube.com/live/OCt4f9IdO6U}{\emojitext{🎥}}\href{https://periodicos.fclar.unesp.br/iniciativa/article/view/19172}{\emojitext{📓}} \\
+\href{02-giro.html}{Capital de Giro} & 3️⃣ &
+\href{resources/02-giro-ppt.html}{\emojitext{🗣}}\href{https://youtu.be/p2tTUL2QILo?si=m4GFKwyvEaDLkMpJ}{\emojitext{🎥}}\href{https://journalppc.com/RPPC/article/view/1229}{\emojitext{📓}} \\
+\href{03-caixa.html}{Administração de Caixa} & 7️⃣ &
+\href{resources/03-caixa-ppt.html}{\emojitext{🗣}}\href{https://youtu.be/CjIFO_G76Po?si=mpfl8y-QNR5JB-TQ}{\emojitext{🎥}}\href{https://ojs.unifor.br/rca/article/view/394}{\emojitext{📓}} \\
+\href{04-credito.html}{Gestão de Recebíveis} & 9️⃣ &
+\href{resources/04-credito-ppt.html}{\emojitext{🗣}}\href{https://youtu.be/-K88ewqeV2U?si=0RFDrt-TtWLyvGSE}{\emojitext{🎥}}\href{https://www.researchgate.net/publication/273491445_Decisoes_de_Credito_em_Situacoes_de_Risco_Uma_Aplicacao_Pratica_do_Metodo_de_Monte_Carlo}{\emojitext{📓}} \\
+\href{05-estoque.html}{Adminitração de Estoques} & 1️⃣2️⃣ &
+\href{resources/05-estoque-ppt.html}{\emojitext{🗣}}\href{https://youtu.be/YaK1eUuLUXk?si=Z-794zw_Vu0pHaxW}{\emojitext{🎥}}\href{https://www.researchgate.net/publication/281934935_Avaliando_o_Risco_na_Gestao_Financeira_de_Estoques}{\emojitext{📓}} \\
+\href{06-aval.html}{Estudo de Caso} & 5️⃣,1️⃣1️⃣,1️⃣5️⃣ &
+\href{resources/02-giro-ppt.html}{\emojitext{🗣}}\href{https://youtu.be/hMK057spPIc?si=al3XqehfjyOZy7_F}{\emojitext{🎥}}\href{http://periodicos.unifacef.com.br/rea/article/view/2823}{\emojitext{📓}} \\
 \end{longtable}
 
 \bookmarksetup{startatroot}
@@ -1121,15 +1177,13 @@ explicado por dois fatores principais:
   ganho perdido. Essa compensação é a taxa de juros.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Linguagem da Matemática Financeira}, colback=white, colframe=quarto-callout-note-color-frame, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, breakable, bottomtitle=1mm, toptitle=1mm, coltitle=black, toprule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Linguagem da Matemática Financeira}, breakable, arc=.35mm, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, titlerule=0mm, left=2mm, toprule=.15mm, coltitle=black, colback=white, toptitle=1mm, bottomtitle=1mm]
 
 Essa seção revisa o vocabulário básico, a notação e as convenções da
 Matemática Financeira, que faremos uso em conteúdos subsequentes.
 
-\section*{Variáveis Centrais e a Equação
+\subsection*{Variáveis Centrais e a Equação
 Fundamental}\label{variuxe1veis-centrais-e-a-equauxe7uxe3o-fundamental}
-
-\markright{Variáveis Centrais e a Equação Fundamental}
 
 \begin{itemize}
 \tightlist
@@ -1144,6 +1198,8 @@ Fundamental}\label{variuxe1veis-centrais-e-a-equauxe7uxe3o-fundamental}
 \item
   \textbf{n (período):} Prazo
 \end{itemize}
+
+\vspace{0.5cm}
 
 Equações:
 
@@ -1161,9 +1217,8 @@ Essas fórmulas traduzem o raciocínio de que o valor final de um
 investimento (montante) é igual ao valor inicial (capital) acrescido dos
 juros ganhos sobre ele durante o período.
 
-\section*{Visualizando Investimentos}\label{visualizando-investimentos}
-
-\markright{Visualizando Investimentos}
+\subsection*{Visualizando
+Investimentos}\label{visualizando-investimentos}
 
 O \textbf{diagrama de fluxo de caixa}, ou linha do tempo, é a ferramenta
 padrão para representar visualmente problemas financeiros. O tempo (n) é
@@ -1178,17 +1233,15 @@ representados por setas verticais. A convenção universal é a seguinte:
 \item
   \textbf{Entradas de caixa}: Representam retornos recebidos, resgates
   ou qualquer recebimento de dinheiro. São indicadas por uma seta para
-  cima ou por um valor positivo.
+  cima ou por um valor positivo. \vspace{0.5cm}
 \end{itemize}
 
 \begin{center}
 \includegraphics[width=4.16667in,height=\textheight,keepaspectratio]{resources/01-diagrama.png}
 \end{center}
 
-\section*{Convenções e Distinções
+\subsection*{Convenções e Distinções
 Essenciais}\label{convenuxe7uxf5es-e-distinuxe7uxf5es-essenciais}
-
-\markright{Convenções e Distinções Essenciais}
 
 Para aplicar corretamente as ferramentas da matemática financeira,
 algumas convenções e distinções são cruciais.
@@ -2144,18 +2197,12 @@ A empresa paga o fornecedor antes de receber do cliente, precisando
 \textbf{financiar a operação}. A taxa relevante é o \textbf{Custo de
 Captação (}\(k_c\)).
 
-O \textbf{Diagrama de Fluxo de Caixa} abaixo ilustra a saída de caixa
-(Custo) ocorrendo antes da entrada (Venda):
-
 \subsection{Cenário 2: Ciclo de Caixa
 Negativo}\label{cenuxe1rio-2-ciclo-de-caixa-negativo}
 
 A empresa recebe do cliente antes de pagar o fornecedor, sendo
 \textbf{financiada pelo fornecedor}. A taxa relevante é a \textbf{Taxa
 de Aplicação (}\(k_a\)).
-
-Note como a ordem dos eventos se inverte no \textbf{Diagrama de Fluxo de
-Caixa}: a entrada (Venda) agora ocorre antes da saída (Custo).
 
 \subsection{Formulação Geral}\label{formulauxe7uxe3o-geral}
 
@@ -2281,7 +2328,7 @@ Trata-se de uma atividade prática em grupo (Projeto em Grupo) que visa
 elaborar um \textbf{Relatório de Diagnóstico e Plano de Ações} sobre a
 gestão do capital de giro de uma empresa específica.
 
-\section{🎯 Objetivo Geral}\label{objetivo-geral}
+\section{Objetivo Geral 🎯}\label{objetivo-geral}
 
 O objetivo desse projeto é aplicar os conceitos teóricos de
 \hyperref[sec-giro]{\textbf{Administração Financeira de Curto Prazo}} na
@@ -2292,19 +2339,19 @@ A partir da análise de dados públicos, cada grupo deverá elaborar um
 \textbf{diagnóstico da saúde financeira de curto prazo} da empresa
 escolhida, culminando em recomendações estratégicas fundamentadas.
 
-\section{🛠️ Etapas do Projeto}\label{etapas-do-projeto}
+\section{Etapas do Projeto 🛠}\label{etapas-do-projeto}
 
 O projeto será desenvolvido em \textbf{duas fases}, com etapas
 sequenciais e pontos de controle definidos. Cada grupo deverá cumprir
 rigorosamente cada etapa, conforme descrito abaixo:
 
-\subsection{📌 Fase 1 -- Preparação e Cálculos na
-Planilha}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
+\subsection{Fase 1 -- Preparação e Cálculos na Planilha
+📌}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \textbf{👥 Formação dos Grupos}
+  \textbf{Formação dos Grupos} 👥
 
   \begin{itemize}
   \item
@@ -2314,7 +2361,7 @@ Planilha}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
     atividade da \textbf{Aula 5} (1º Ponto de Contole).\\
   \item
     Os e-mails informados deverão corresponder ao cadastro da conta
-    Microsoft como aluno da UFU\footnote{📧 Para acessar os serviços
+    Microsoft como aluno da UFU\footnote{Para acessar os serviços
       Microsoft como aluno da UFU:
 
       \begin{enumerate}
@@ -2357,15 +2404,16 @@ Planilha}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
         \begin{itemize}
         \tightlist
         \item
-          📄 Acesso gratuito ao pacote Office (Word, Excel, PowerPoint,
-          OneNote).
+          \emojitext{📄} Acesso gratuito ao pacote Office (Word, Excel,
+          PowerPoint, OneNote).
         \item
-          💬 Utilização do Microsoft Teams para comunicação e
-          colaboração.
+          \emojitext{💬} Utilização do Microsoft Teams para comunicação
+          e colaboração.
         \item
-          🔒 Ferramentas de conformidade e proteção de informações.
+          \emojitext{🔒} Ferramentas de conformidade e proteção de
+          informações.
         \item
-          ☁️ Armazenamento em nuvem para seus arquivos.
+          \emojitext{☁️} Armazenamento em nuvem para seus arquivos.
         \end{itemize}
       \end{enumerate}}.
   \end{itemize}
@@ -2375,7 +2423,7 @@ Planilha}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
 \item
-  \textbf{🏢 Definição da Empresa}
+  \textbf{Definição da Empresa} 🏢
 
   \begin{itemize}
   \item
@@ -2401,7 +2449,7 @@ Planilha}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
     \end{itemize}
   \end{itemize}
 \item
-  \textbf{🔒 Marcação Digital e Compartilhamento da Planilha}
+  \textbf{Marcação Digital e Compartilhamento da Planilha} 🔒
 
   \begin{itemize}
   \item
@@ -2421,7 +2469,7 @@ Planilha}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
     controle de versões}.
   \end{itemize}
 \item
-  \textbf{🧮 Desenvolvimento dos Cálculos}
+  \textbf{Desenvolvimento dos Cálculos} 🧮
 
   \begin{itemize}
   \item
@@ -2435,23 +2483,23 @@ Planilha}\label{fase-1-preparauxe7uxe3o-e-cuxe1lculos-na-planilha}
     \begin{itemize}
     \tightlist
     \item
-      ✅ Grupos que atenderem aos critérios mínimos serão liberados para
-      iniciar o relatório textual.\\
+      \emojitext{✅} Grupos que atenderem aos critérios mínimos serão
+      liberados para iniciar o relatório textual.\\
     \item
-      ⚠️ Grupos com erros conceituais ou estruturais serão orientados a
-      corrigir a planilha antes de prosseguir.
+      \emojitext{⚠️} Grupos com erros conceituais ou estruturais serão
+      orientados a corrigir a planilha antes de prosseguir.
     \end{itemize}
   \end{itemize}
 \end{enumerate}
 
-\subsection{📌 Fase 2 -- Relatório Final e Avaliação
-Conclusiva}\label{fase-2-relatuxf3rio-final-e-avaliauxe7uxe3o-conclusiva}
+\subsection{Fase 2 -- Relatório Final e Avaliação Conclusiva
+📌}\label{fase-2-relatuxf3rio-final-e-avaliauxe7uxe3o-conclusiva}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{4}
 \item
-  \textbf{📝 Desenvolvimento do Relatório Textual}
+  \textbf{Desenvolvimento do Relatório Textual} 📝
 
   \begin{itemize}
   \item
@@ -2468,7 +2516,7 @@ Conclusiva}\label{fase-2-relatuxf3rio-final-e-avaliauxe7uxe3o-conclusiva}
     seguinte.
   \end{itemize}
 \item
-  \textbf{📅 Encerramento do Compartilhamento e Avaliação Final}
+  \textbf{Encerramento do Compartilhamento e Avaliação Final} 📅
 
   \begin{itemize}
   \tightlist
@@ -2480,7 +2528,7 @@ Conclusiva}\label{fase-2-relatuxf3rio-final-e-avaliauxe7uxe3o-conclusiva}
     relatório).
   \end{itemize}
 \item
-  \textbf{🔍 Revisão de Nota ou Defesa Presencial (se necessário)}
+  \textbf{Revisão de Nota ou Defesa Presencial (se necessário)} 🔍
 
   \begin{itemize}
   \item
@@ -2494,8 +2542,8 @@ Conclusiva}\label{fase-2-relatuxf3rio-final-e-avaliauxe7uxe3o-conclusiva}
   \end{itemize}
 \end{enumerate}
 
-\section{📑 Estrutura do Relatório de
-Análise}\label{estrutura-do-relatuxf3rio-de-anuxe1lise}
+\section{Estrutura do Relatório de Análise
+📑}\label{estrutura-do-relatuxf3rio-de-anuxe1lise}
 
 O relatório deve ser um documento \textbf{profissional e bem
 estruturado}, seguindo a sequência de tópicos abaixo:
@@ -2624,8 +2672,8 @@ analisados.
   \end{itemize}
 \end{enumerate}
 
-\section{📑 Estrutura da Planilha de
-Cálculos}\label{estrutura-da-planilha-de-cuxe1lculos}
+\section{Estrutura da Planilha de Cálculos
+📑}\label{estrutura-da-planilha-de-cuxe1lculos}
 
 A planilha deve ser \textbf{organizada, clara e rastreável}. Estrutura
 sugerida:
@@ -2633,7 +2681,7 @@ sugerida:
 \begin{itemize}
 \tightlist
 \item
-  📂 Planilhas 1 e 2: \textbf{Dados Brutos (Balanço + DRE)}
+  \emojitext{📂} Planilhas 1 e 2: \textbf{Dados Brutos (Balanço + DRE)}
 
   \begin{itemize}
   \tightlist
@@ -2646,7 +2694,8 @@ sugerida:
     se recomenda que essas planilhas permaneçam originais.\\
   \end{itemize}
 \item
-  📂 Planilhas 3 e/ou 4: \textbf{Dados Intermediários (opcional)}
+  \emojitext{📂} Planilhas 3 e/ou 4: \textbf{Dados Intermediários
+  (opcional)}
 
   \begin{itemize}
   \tightlist
@@ -2658,7 +2707,7 @@ sugerida:
     vinculadas com as planilhas de Dados Brutos.\\
   \end{itemize}
 \item
-  📂 Planilha 5: \textbf{Cálculos (com fórmulas vinculadas)}
+  \emojitext{📂} Planilha 5: \textbf{Cálculos (com fórmulas vinculadas)}
 
   \begin{itemize}
   \tightlist
@@ -2670,7 +2719,7 @@ sugerida:
     anteriores.\\
   \end{itemize}
 \item
-  📊 Planilha 6: \textbf{Gráficos (vinculados aos cálculos)}
+  \emojitext{📊} Planilha 6: \textbf{Gráficos (vinculados aos cálculos)}
 
   \begin{itemize}
   \tightlist
@@ -2682,13 +2731,13 @@ sugerida:
   \end{itemize}
 \end{itemize}
 
-\section{🧮 Avaliação do Projeto}\label{avaliauxe7uxe3o-do-projeto}
+\section{Avaliação do Projeto 🧮}\label{avaliauxe7uxe3o-do-projeto}
 
 O projeto será avaliado com base nos seguintes critérios:
 
 \begin{itemize}
 \item
-  📊 \textbf{Análise Quantitativa (30\%)}
+  \emojitext{📊} \textbf{Análise Quantitativa (30\%)}
 
   \begin{itemize}
   \tightlist
@@ -2699,7 +2748,7 @@ O projeto será avaliado com base nos seguintes critérios:
     evolução no relatório.
   \end{itemize}
 \item
-  📈 \textbf{Análise Qualitativa e Estratégica (30\%)}
+  \emojitext{📈} \textbf{Análise Qualitativa e Estratégica (30\%)}
 
   \begin{itemize}
   \tightlist
@@ -2711,7 +2760,7 @@ O projeto será avaliado com base nos seguintes critérios:
     administração).
   \end{itemize}
 \item
-  💡 \textbf{Recomendações (20\%)}
+  \emojitext{💡} \textbf{Recomendações (20\%)}
 
   \begin{itemize}
   \tightlist
@@ -2719,7 +2768,7 @@ O projeto será avaliado com base nos seguintes critérios:
     Clareza, relevância e fundamentação das recomendações propostas.
   \end{itemize}
 \item
-  🗂️ \textbf{Qualidade dos Materiais (20\%)}
+  \emojitext{🗂️} \textbf{Qualidade dos Materiais (20\%)}
 
   \begin{itemize}
   \tightlist
@@ -2740,8 +2789,8 @@ individual, conforme critérios definidos pelo professor. O cumprimento
 dos prazos também será avaliado.
 \end{quote}
 
-\subsection{🔒 Verificação da Originalidade das
-Planilhas}\label{verificauxe7uxe3o-da-originalidade-das-planilhas}
+\subsection{Verificação da Originalidade das Planilhas
+🔒}\label{verificauxe7uxe3o-da-originalidade-das-planilhas}
 
 Para garantir a autenticidade e a autoria dos trabalhos entregues, será
 adotado um processo estruturado de controle digital das planilhas de
@@ -2837,8 +2886,8 @@ elementos de marcação digital poderão ser desconsideradas para fins de
 avaliação.
 \end{quote}
 
-\subsection{📝 Verificação da Originalidade do
-Relatório}\label{verificauxe7uxe3o-da-originalidade-do-relatuxf3rio}
+\subsection{Verificação da Originalidade do Relatório
+📝}\label{verificauxe7uxe3o-da-originalidade-do-relatuxf3rio}
 
 Com o objetivo de assegurar a autenticidade, autoria e integridade
 acadêmica dos relatórios entregues pelos grupos, será adotado um
@@ -2958,16 +3007,16 @@ alunos. O uso de IA deve ser transparente, ético e complementar ---
 jamais substitutivo da autoria acadêmica.
 \end{quote}
 
-\subsubsection{📊 Exemplos de Uso da IA}\label{exemplos-de-uso-da-ia}
+\subsubsection{Exemplos de Uso da IA 📊}\label{exemplos-de-uso-da-ia}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-✅ Aceitável
+\emojitext{✅} Aceitável
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-❌ Não Aceitável
+\emojitext{❌} Não Aceitável
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -2987,9 +3036,9 @@ conferência em fontes reais. \\
 \end{longtable}
 
 \begin{quote}
-ℹ️ Sempre que a IA for utilizada, deve-se citar de forma clara no
-relatório, descrevendo como e em que etapa ela contribuiu para o
-trabalho.
+\emojitext{ℹ️} Sempre que a IA for utilizada, deve-se citar de forma
+clara no relatório, descrevendo como e em que etapa ela contribuiu para
+o trabalho.
 \end{quote}
 
 \bookmarksetup{startatroot}
@@ -3045,6 +3094,11 @@ de Estudos Interdisciplinares da Comunica{ç}{ã}o - Intercom.
 
 
 \backmatter
+
+\printindex
+%back cover
+\includepdf[fitpaper=true,pages=-]{img/back-cover}
+\pagenumbering{gobble} 
 
 
 \end{document}

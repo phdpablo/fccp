@@ -13,9 +13,6 @@ execute:
   #echo: false
   warning: false
 
-#filters: 
-  #- webr
-  #- abstract-section:
 lang: pt
 book:
   google-analytics: "G-WTYPFCDXTZ"
@@ -25,7 +22,7 @@ book:
   author: "Pablo Rogers"
   date: last-modified
   date-format: long
-  #doi: 10.5281/zenodo.12593928
+  doi: 10.5281/zenodo.17305482
   cover-image: img/cover.png
   downloads: pdf
   reader-mode: true
@@ -72,10 +69,12 @@ format:
     fig-width: 5
     fig-height: 5
     fig-align: left
+    filters:
+      - emoji-html.lua
   
   pdf:
+    pdf-engine: lualatex
     documentclass: book
-    #cover-image: img/cover-book.pdf
     papersize: A4
     #abstract: "Working in progress"
     author: "Pablo Rogers"
@@ -91,9 +90,9 @@ format:
       - top=1.00in
       - textheight=8.25in
       #- showframe
-    #include-in-header: preamble.tex
-    #include-before-body: first.tex
-    #include-after-body: backcover.tex
+    include-in-header: preamble.tex
+    include-before-body: first.tex
+    include-after-body: backcover.tex
     toc: true
     colorlinks: true
     fig-width: 5
@@ -101,4 +100,4 @@ format:
     fig-align: left
     keep-tex: true
 
-editor: visual
+editor: source

@@ -8,7 +8,7 @@ Trata-se de uma atividade prática em grupo (Projeto em Grupo) que visa elaborar
 
 <br>
 
-## 🎯 Objetivo Geral
+## Objetivo Geral 🎯
 
 O objetivo desse projeto é aplicar os conceitos teóricos de [**Administração Financeira de Curto Prazo**](#sec-giro) na análise prática da gestão do capital de giro de uma empresa de capital aberto.
 
@@ -16,13 +16,13 @@ A partir da análise de dados públicos, cada grupo deverá elaborar um **diagn�
 
 <br>
 
-## 🛠️ Etapas do Projeto
+##  Etapas do Projeto 🛠
 
 O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos de controle definidos. Cada grupo deverá cumprir rigorosamente cada etapa, conforme descrito abaixo:
 
-### 📌 Fase 1 – Preparação e Cálculos na Planilha
+### Fase 1 – Preparação e Cálculos na Planilha 📌
 
-1.  **👥 Formação dos Grupos**
+1.  **Formação dos Grupos** 👥
 
     -   Cada grupo será composto por até **cinco alunos**.\
 
@@ -30,7 +30,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   Os e-mails informados deverão corresponder ao cadastro da conta Microsoft como aluno da UFU[^06-aval-1].
 
-[^06-aval-1]: 📧 Para acessar os serviços Microsoft como aluno da UFU:
+[^06-aval-1]: Para acessar os serviços Microsoft como aluno da UFU:
 
     1.  **Crie seu e-mail institucional (\@ufu.br)**
         -   Acesse <https://www.idufu.ufu.br/>
@@ -42,14 +42,14 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
         -   Insira o endereço do seu e-mail institucional (\@ufu.br).
         -   Selecione a opção que indica que você é estudante e complete o processo de cadastro.
     3.  **Benefícios do Office 365 para alunos da UFU**
-        -   📄 Acesso gratuito ao pacote Office (Word, Excel, PowerPoint, OneNote).
-        -   💬 Utilização do Microsoft Teams para comunicação e colaboração.
-        -   🔒 Ferramentas de conformidade e proteção de informações.
-        -   ☁️ Armazenamento em nuvem para seus arquivos.
+        -   \emojitext{📄} Acesso gratuito ao pacote Office (Word, Excel, PowerPoint, OneNote).
+        -   \emojitext{💬} Utilização do Microsoft Teams para comunicação e colaboração.
+        -   \emojitext{🔒} Ferramentas de conformidade e proteção de informações.
+        -   \emojitext{☁️} Armazenamento em nuvem para seus arquivos.
 
 <!-- -->
 
-2.  **🏢 Definição da Empresa**
+2.  **Definição da Empresa** 🏢
 
     -   Cada grupo será **sorteado** para uma empresa brasileira de capital aberto (não financeira), conforme um pool inicial levantado pelo professor, que dependerá do número de grupos formados e empresas não avaliadas por turmas anteriores.\
 
@@ -59,7 +59,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
         -   Esse site disponibiliza essas demonstrações financeiras, com layout padronizado, na forma de planilha eletrônica e de fácil/gratuito acesso.
 
-3.  **🔒 Marcação Digital e Compartilhamento da Planilha**
+3.  **Marcação Digital e Compartilhamento da Planilha** 🔒
 
     -   O professor baixará as planilhas com as demonstrações financeiras das empresas, aplicará **marcação digital** no arquivo e compartilhará o documento via **OneDrive institucional** com os integrantes do grupo.\
 
@@ -69,20 +69,20 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   A planilha deverá ser editada **exclusivamente** dentro do ambiente compartilhado, garantindo **rastreabilidade e controle de versões**.
 
-4.  **🧮 Desenvolvimento dos Cálculos**
+4.  **Desenvolvimento dos Cálculos** 🧮
 
     -   Os alunos deverão realizar os cálculos exigidos diretamente na planilha compartilhada.\
 
     -   Após o prazo estipulado para essa etapa, o professor realizará a **primeira avaliação técnica,** estipulada para acontecer na data da **Aula 11** (2º Ponto de Contole):
 
-        -   ✅ Grupos que atenderem aos critérios mínimos serão liberados para iniciar o relatório textual.\
-        -   ⚠️ Grupos com erros conceituais ou estruturais serão orientados a corrigir a planilha antes de prosseguir.
+        -   \emojitext{✅} Grupos que atenderem aos critérios mínimos serão liberados para iniciar o relatório textual.\
+        -   \emojitext{⚠️} Grupos com erros conceituais ou estruturais serão orientados a corrigir a planilha antes de prosseguir.
 
 <br>
 
-### 📌 Fase 2 – Relatório Final e Avaliação Conclusiva
+### Fase 2 – Relatório Final e Avaliação Conclusiva 📌
 
-5.  **📝 Desenvolvimento do Relatório Textual**
+5.  **Desenvolvimento do Relatório Textual** 📝
 
     -   Após a adequação da planilha, os alunos deverão elaborar o relatório final diretamente em um documento `.docx` também compartilhado via OneDrive e previamente marcado digitalmente pelo professor.
 
@@ -90,11 +90,11 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   A edição do relatório será **livre**, cabendo ao grupo definir sua estrutura e abordagem, conforme orientações gerais na seção seguinte.
 
-6.  **📅 Encerramento do Compartilhamento e Avaliação Final**
+6.  **Encerramento do Compartilhamento e Avaliação Final** 📅
 
     -   Na data estipulada para conclusão do projeto (**Aula 15**), o professor encerrará o compartilhamento dos arquivos e realizará a **avaliação final diretamente no OneDrive**, considerando os documentos efetivamente trabalhados ao longo do período (planilha + relatório).
 
-7.  **🔍 Revisão de Nota ou Defesa Presencial (se necessário)**
+7.  **Revisão de Nota ou Defesa Presencial (se necessário)** 🔍
 
     -   Trabalhos com baixa qualidade técnica poderão ser convidados a realizar ajustes e melhorias para reavaliação.\
 
@@ -102,7 +102,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
 <br>
 
-## 📑 Estrutura do Relatório de Análise
+## Estrutura do Relatório de Análise 📑
 
 O relatório deve ser um documento **profissional e bem estruturado**, seguindo a sequência de tópicos abaixo:
 
@@ -140,40 +140,40 @@ Conecte os números da sua análise com a estratégia da empresa. Para isso, é 
 
 <br>
 
-## 📑 Estrutura da Planilha de Cálculos
+## Estrutura da Planilha de Cálculos 📑
 
 A planilha deve ser **organizada, clara e rastreável**. Estrutura sugerida:
 
--   📂 Planilhas 1 e 2: **Dados Brutos (Balanço + DRE)**
+-   \emojitext{📂} Planilhas 1 e 2: **Dados Brutos (Balanço + DRE)**
     -   As informações das demonstrações financeiras (Balanço Patrimonial + Demonstração de Resultados) estarão disponíveis na planilha baixada do site [Fundamentus](https://www.fundamentus.com.br) para vários anos. As contas estarão nas linhas e os anos nas colunas. Apesar de utilizarmos apenas os quatro últimos anos para a análise, se recomenda que essas planilhas permaneçam originais.\
--   📂 Planilhas 3 e/ou 4: **Dados Intermediários (opcional)**
+-   \emojitext{📂} Planilhas 3 e/ou 4: **Dados Intermediários (opcional)**
     -   Se necessário o grupo de trabalho pode compilar as informações que serão utilizadas nas análises em outra(s) planilha(s). Não se reconhece necessidade de mais de duas planilhas (Balanço + DRE) para compilar essas informações e, impreterivelemente, elas devem estar vinculadas com as planilhas de Dados Brutos.\
--   📂 Planilha 5: **Cálculos (com fórmulas vinculadas)**
+-   \emojitext{📂} Planilha 5: **Cálculos (com fórmulas vinculadas)**
     -   Crie uma seção para cada grupo de indicadores (Capital de Giro, Prazos Médios, Ciclos, NIG). Demonstre os cálculos de forma organizada para cada um dos quatro anos. As células devem conter as fórmulas, e não apenas os valores finais, vinculadas às planilhas anteriores.\
--   📊 Planilha 6: **Gráficos (vinculados aos cálculos)**
+-   \emojitext{📊} Planilha 6: **Gráficos (vinculados aos cálculos)**
     -   Insira nesta planilha todos os gráficos que foram utilizados no relatório. Os gráficos devem ser vinculados aos dados da planilha de Cálculos, de modo que qualquer alteração nos cálculos seja refletida automaticamente.
 
 <br>
 
-## 🧮 Avaliação do Projeto
+## Avaliação do Projeto 🧮
 
 O projeto será avaliado com base nos seguintes critérios:
 
--   📊 **Análise Quantitativa (30%)**
+-   \emojitext{📊} **Análise Quantitativa (30%)**
 
     -   Correção dos cálculos na planilha.
     -   Profundidade e coerência da interpretação dos indicadores e de sua evolução no relatório.
 
--   📈 **Análise Qualitativa e Estratégica (30%)**
+-   \emojitext{📈} **Análise Qualitativa e Estratégica (30%)**
 
     -   Capacidade de conectar os dados quantitativos com a estratégia e o contexto da empresa.
     -   Qualidade da pesquisa em fontes qualitativas (como relatórios da administração).
 
--   💡 **Recomendações (20%)**
+-   \emojitext{💡} **Recomendações (20%)**
 
     -   Clareza, relevância e fundamentação das recomendações propostas.
 
--   🗂️ **Qualidade dos Materiais (20%)**
+-   \emojitext{🗂️} **Qualidade dos Materiais (20%)**
 
     -   *Relatório:* Estrutura, clareza da escrita, correção gramatical e uso eficaz de gráficos para apoiar a análise.
     -   *Planilha:* Organização, clareza na apresentação dos cálculos e rastreabilidade das fórmulas.
@@ -183,7 +183,7 @@ O projeto será avaliado com base nos seguintes critérios:
 
 <br>
 
-### 🔒 Verificação da Originalidade das Planilhas
+### Verificação da Originalidade das Planilhas 🔒
 
 Para garantir a autenticidade e a autoria dos trabalhos entregues, será adotado um processo estruturado de controle digital das planilhas de cálculo, conforme adiantamos acima e detalhamos abaixo.
 
@@ -230,7 +230,7 @@ Para garantir a autenticidade e a autoria dos trabalhos entregues, será adotado
 
 <br>
 
-### 📝 Verificação da Originalidade do Relatório
+### Verificação da Originalidade do Relatório 📝
 
 Com o objetivo de assegurar a autenticidade, autoria e integridade acadêmica dos relatórios entregues pelos grupos, será adotado um conjunto de medidas técnicas e pedagógicas que visam coibir o uso indevido de conteúdo externo, inclusive gerado por inteligência artificial (IA) generativa, e garantir que o trabalho reflita o esforço intelectual dos alunos.
 
@@ -282,13 +282,13 @@ O uso de recursos de IA é permitido desde que siga princípios éticos e respon
 
 <br>
 
-#### 📊 Exemplos de Uso da IA
+#### Exemplos de Uso da IA 📊
 
-| ✅ Aceitável | ❌ Não Aceitável |
+| \emojitext{✅} Aceitável | \emojitext{❌} Não Aceitável |
 |----|----|
 | Usar IA para revisar ortografia, gramática e clareza. | Gerar o relatório inteiro por IA e entregar sem alterações significativas. |
 | Solicitar à IA sugestões de tópicos ou estrutura para organizar o conteúdo. | Copiar e colar o texto gerado pela IA como produto final, sem revisão crítica. |
 | Utilizar IA para gerar imagens ou gráficos de apoio, devidamente citados e interpretados. | Inserir gráficos, tabelas ou textos gerados pela IA sem verificar ou validar as informações. |
 | Pedir à IA exemplos de referências para depois verificar e usar conforme normas acadêmicas. | Usar referências fictícias criadas pela IA sem conferência em fontes reais. |
 
-> ℹ️ Sempre que a IA for utilizada, deve-se citar de forma clara no relatório, descrevendo como e em que etapa ela contribuiu para o trabalho.
+> \emojitext{ℹ️} Sempre que a IA for utilizada, deve-se citar de forma clara no relatório, descrevendo como e em que etapa ela contribuiu para o trabalho.

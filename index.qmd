@@ -1,12 +1,12 @@
-# 🏢 O Curso {#sec-home .unnumbered}
+## \emojitext{🏢} O Curso {#sec-home .unnumbered}
 
 Página da disciplina **"Finanças Corporativas I"** do curso da [Faculdade de Ciência Contábeis](https://www.facic.ufu.br/) (FACIC) da [Universidade Federal de Uberlândia](https://ufu.br/) (UFU). Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre **Finanças Corporativas de Curto Prazo** (artigos, slides, recursos interativos, resumos em áudio, vídeos etc.).
 
-## 🧠 Professor {#sec-instrutor .unnumbered}
+## \emojitext{🧠} Professor {#sec-instrutor .unnumbered}
 
-A disciplina é ministrada e mantida nesse *hub* por mim, Pablo Rogers 😉, doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu [site pessoal](https://phdpablo.com/) você encontrará mais detalhes sobre minhas formações, competências, trajetória e projetos.
+A disciplina é ministrada e mantida nesse *hub* por mim, Pablo Rogers \emojitext{😉}, doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005 na UFU. Em meu [site pessoal](https://phdpablo.com/) você encontrará mais detalhes sobre minhas formações, competências, trajetória e projetos.
 
-## 🎯 Objetivos {#sec-about .unnumbered}
+## \emojitext{🎯} Objetivos {#sec-about .unnumbered}
 
 O curso tem como objetivo apresentar os principais conceitos e práticas de finanças corporativas de curto prazo. A disciplina visa prover aos alunos uma visão teórica e prática da **Administração do Capital de Giro** como base fundamental para o planejamento e controle financeiro do curto prazo. Especificamente, ao final do curso pretende-se que o aluno:
 
@@ -20,7 +20,7 @@ O curso tem como objetivo apresentar os principais conceitos e práticas de fina
 
 -   Assimile os aspectos gerais da gestão de estoques e seus modelos de análise.
 
-## 📚 Programa {#sec-programa .unnumbered}
+## \emojitext{📚} Programa {#sec-programa .unnumbered}
 
 A ementa oficial da disciplina encontra-se [aqui](https://www.facic.ufu.br/system/files/conteudo/28fagen39532_financas_corporativas_i.pdf). O Plano de Ensino aprovado pela coordenação da FACIC/UFU pode ser acessado no [Moodle](https://moodle.ufu.br/login/index.php), onde materemos a comunicação e organização das avaliações. Em linhas gerais o programa do curso versará sobre os seguintes conteúdos:
 
@@ -70,7 +70,7 @@ A ementa oficial da disciplina encontra-se [aqui](https://www.facic.ufu.br/syste
 
     -   Elaboração de Relatório de Diagnóstico e Plano de Acões
 
-## ⚙️ Metodologia {#sec-method .unnumbered}
+## \emojitext{⚙️} Metodologia {#sec-method .unnumbered}
 
 O material do curso organizado nesse repositório refere-se ao **roteiro estruturado (enredo)** de parte que discutiremos nas aulas presenciais e conteúdos adicionais (bibliografia, slides, recursos interativos, resumos, dicas de vídeos etc.). Na sala de aula teremos **discussões conceituais e resoluções de exercícios**, e por aqui, num primeiro momento, o foco é resumir o conteúdo e apresentar materiais adicionais. Em suma, o que é apresentado por aqui não substituí a leitura da bibliografia base: **complementa**.
 
@@ -82,9 +82,9 @@ Considero que o uso da IA generativa na educação representa um **caminho sem v
 
 Entre os recursos desenvolvidos com suporte de IA, destacam-se:
 
--   🧭 **Elementos interativos do site** que facilitam a navegação e a compreensão dos conceitos.\
--   🎧 **Resumos em áudio** gerados com auxílio de IA para promover inclusão e autonomia no estudo.\
--   📄 **Apoio à redação de conteúdos**, buscando sempre preservar a autoria, com revisão e curadoria humana[^index-1].
+-   \emojitext{🧭} **Elementos interativos do site** que facilitam a navegação e a compreensão dos conceitos.\
+-   \emojitext{🎧} **Resumos em áudio** gerados com auxílio de IA para promover inclusão e autonomia no estudo.\
+-   \emojitext{📄} **Apoio à redação de conteúdos**, buscando sempre preservar a autoria, com revisão e curadoria humana[^index-1].
 
 [^index-1]: Por exemplo, i) transcrever um vídeo do professor e redigir textualmente com estrutura lógica; ii) resumir os pontos importantes de um artigo científico do professor e retornar um texto com linguagem não técnica e simples para o site; iii) gerar variações diferentes de exercícios consultados ou criados pelo professor, etc. Vide que nesses exemplos a autoria da fonte sempre é do professor, e a IA é uma ferramenta de apoio à redação.
 
@@ -92,15 +92,40 @@ O uso da IA neste ambiente é transparente, contextualizado e limitado às funç
 
 > Conforme @sampaio2024a, a IA deve ser utilizada como apoio à expressão humana — e não como substituto da reflexão, da análise ou da autoria. É essa perspectiva que orienta todas as aplicações tecnológicas neste curso.
 
-## 📖 Bibliografia {#sec-biblio .unnumbered}
+## \emojitext{📖} Bibliografia {#sec-biblio .unnumbered}
 
-A literatura de finanças é vasta. No Brasil, temos vários bons manuais em língua portuguesa. Muitos livros-textos são traduções de autores americanos, ou seja, conteúdo ambientado em um mercado diferente do nosso. No entanto, existem alguns manuais de autores brasileiros, cujo conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois! 😉
+A literatura de finanças é vasta. No Brasil, temos vários bons manuais em língua portuguesa. Muitos livros-textos são traduções de autores americanos, ou seja, conteúdo ambientado em um mercado diferente do nosso. No entanto, existem alguns manuais de autores brasileiros, cujo conteúdo é adaptado para o contexto nacional. Vamos fazer uso dos dois! \emojitext{😉}
 
 Geralmente, esses manuais percorrem diversos assuntos de finanças, entretanto, nosso foco será na **FCCP**. Os outros assuntos são tratados em disciplinas correlatas: Matemática Financeira, Finanças Corporativas II (Longo Prazo), Governança Corporativa, Avaliação Econômica de Empresas e Mercado de Capitais. Sem falar das áreas correlatas, tais como Economia (Micro e Macroeconomia), Matemática, Estatística e Ciência da Computação.
 
 Como bibliografia base para os fundamentos do curso, utilizaremos as recomendações da ementa oficial, e adotaremos as referências atualizadas das bibliografias básica e complementar: @assafneto2014, @assafneto2021, @gitman2010, @matias2007, @ross2015 e @brealey2013.
 
-## Licença {.unnumbered .unlisted}
+## \emojitext{🔍} Citação {#sec-cite .unnumbered}
+
+Se você utilizar qualquer conteúdo deste curso em seus trabalhos acadêmicos, por favor, cite da seguinte forma:
+
+::: {.callout-note appearance="minimal" icon="false"}
+Rogers, Pablo (2025). Finanças Corporativas de Curto Prazo (1.0). Zenodo. <https://doi.org/10.5281/zenodo.17305482>. Disponível em: <https://fccp.phdpablo.com>
+:::
+
+::: {.content-visible unless-format="pdf"}
+**BibTex:**
+
+``` r
+@misc{rogers2025,
+  author       = {Rogers, Pablo},
+  title        = {Finanças Corporativas de Curto Prazo},
+  month        = out,
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.17305482},
+  url          = {https://fccp.phdpablo.com}
+}
+```
+:::
+
+## \emojitext{🔓} Licença {#sec-lice .unnumbered}
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 

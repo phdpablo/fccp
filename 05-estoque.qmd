@@ -69,6 +69,7 @@ O sinal do CC define quem financia a operação e qual taxa de juros (custo de o
 
 A empresa paga o fornecedor antes de receber do cliente, precisando **financiar a operação**. A taxa relevante é o **Custo de Captação (**$k_c$).
 
+::: {.content-visible unless-format="pdf"}
 O **Diagrama de Fluxo de Caixa** abaixo ilustra a saída de caixa (Custo) ocorrendo antes da entrada (Venda):
 
 ```{=html}
@@ -105,13 +106,14 @@ O **Diagrama de Fluxo de Caixa** abaixo ilustra a saída de caixa (Custo) ocorre
     </div>
 </div>
 ```
-
+:::
 <br>
 
 ### Cenário 2: Ciclo de Caixa Negativo
 
 A empresa recebe do cliente antes de pagar o fornecedor, sendo **financiada pelo fornecedor**. A taxa relevante é a **Taxa de Aplicação (**$k_a$).
 
+::: {.content-visible unless-format="pdf"}
 Note como a ordem dos eventos se inverte no **Diagrama de Fluxo de Caixa**: a entrada (Venda) agora ocorre antes da saída (Custo).
 
 ```{=html}
@@ -148,7 +150,7 @@ Note como a ordem dos eventos se inverte no **Diagrama de Fluxo de Caixa**: a en
     </div>
 </div>
 ```
-
+:::
 <br>
 
 ### Formulação Geral

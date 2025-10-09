@@ -1,6 +1,6 @@
 ---
 title: "Introdução à Finanças Corporativas"
-#subtitle: "XXX"
+#subtitle: "Escopo, Objetivos e Fundamentos"
 author: "Dr. Pablo Rogers"
 format:
   revealjs:
@@ -10,7 +10,7 @@ format:
     height: 750
     width: 1600
     preview-links: auto
-    logo: ""
+    logo: "../img/psicoeconometria.png"
     footer: "FCCP | Introdução"
     transition: slide
     background-transition: fade
