@@ -26,7 +26,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   Cada grupo será composto por até **cinco alunos**.\
 
-    -   Os nomes dos integrantes e seus e-mails deverão ser informados na atividade da **Aula 5** (1º Ponto de Contole).\
+    -   Os nomes dos integrantes e seus e-mails deverão ser informados na atividade da **Aula 4** (1º Ponto de Contole).\
 
     -   Os e-mails informados deverão corresponder ao cadastro da conta Microsoft como aluno da UFU[^06-aval-1].
 
@@ -53,7 +53,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   Cada grupo será **sorteado** para uma empresa brasileira de capital aberto (não financeira), conforme um pool inicial levantado pelo professor, que dependerá do número de grupos formados e empresas não avaliadas por turmas anteriores.\
 
-    -   O nome da empresa será informado para o grupo na mesma atividade da **Aula 5**.\
+    -   O nome da empresa será informado para o grupo na mesma atividade da **Aula 4**.\
 
     -   As demonstrações financeiras da empresa (**Balanço Patrimonial** e **Demonstração de Resultados**), referentes aos últimos quatro anos fiscais completos, serão baixadas do site: <https://www.fundamentus.com.br>.\
 
@@ -63,7 +63,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   O professor baixará as planilhas com as demonstrações financeiras das empresas, aplicará **marcação digital** no arquivo e compartilhará o documento via **OneDrive institucional** com os integrantes do grupo.\
 
-    -   O link da planilha (pasta de trabalho) será acessado na mesma data da atividade da **Aula 5**.\
+    -   O link da planilha (pasta de trabalho) será acessado na mesma data da atividade da **Aula 4**.\
 
     -   Somente os integrantes do grupo e o professor terão acesso à planilha (pasta de trabalho).\
 
@@ -73,7 +73,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
     -   Os alunos deverão realizar os cálculos exigidos diretamente na planilha compartilhada.\
 
-    -   Após o prazo estipulado para essa etapa, o professor realizará a **primeira avaliação técnica,** estipulada para acontecer na data da **Aula 11** (2º Ponto de Contole):
+    -   Após o prazo estipulado para essa etapa, o professor realizará a **primeira avaliação técnica,** estipulada para acontecer na data da **Aula 9** (2º Ponto de Contole):
 
         -   \emojitext{✅} Grupos que atenderem aos critérios mínimos serão liberados para iniciar o relatório textual.\
         -   \emojitext{⚠️} Grupos com erros conceituais ou estruturais serão orientados a corrigir a planilha antes de prosseguir.
@@ -92,7 +92,7 @@ O projeto será desenvolvido em **duas fases**, com etapas sequenciais e pontos 
 
 6.  **Encerramento do Compartilhamento e Avaliação Final** 📅
 
-    -   Na data estipulada para conclusão do projeto (**Aula 15**), o professor encerrará o compartilhamento dos arquivos e realizará a **avaliação final diretamente no OneDrive**, considerando os documentos efetivamente trabalhados ao longo do período (planilha + relatório).
+    -   Na data estipulada para conclusão do projeto (**Aula 12**), o professor encerrará o compartilhamento dos arquivos e realizará a **avaliação final diretamente no OneDrive**, considerando os documentos efetivamente trabalhados ao longo do período (planilha + relatório).
 
 7.  **Revisão de Nota ou Defesa Presencial (se necessário)** 🔍
 
